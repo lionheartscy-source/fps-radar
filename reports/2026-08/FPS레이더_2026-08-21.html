@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 · 2026-08-21</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#E8EEF9; --ink:#26303f;
+    --line:#dbe2ee; --zebra:#f4f7fc; --bg:#f7f9fc; --white:#ffffff;
+    --red:#c0392b; --red-soft:#fdecea; --amber:#b7791f; --green:#2f855a;
+    --muted:#6b7688;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1060px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+    border-radius:16px;padding:26px 28px;box-shadow:0 6px 22px rgba(31,42,68,.18);}
+  header.top h1{margin:0 0 6px;font-size:25px;letter-spacing:-.3px;}
+  header.top .sub{font-size:14px;opacity:.92;}
+  .cover{display:inline-block;margin-top:12px;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:5px 14px;font-size:13px;}
+  h2{color:var(--navy);font-size:19px;margin:34px 0 12px;padding-bottom:8px;
+    border-bottom:2px solid var(--blue-soft);}
+  h2 .em{color:var(--blue);}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-top:20px;}
+  .kpi{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--blue);
+    border-radius:12px;padding:14px 16px;box-shadow:0 2px 8px rgba(31,42,68,.05);}
+  .kpi .tag{font-size:11px;font-weight:700;letter-spacing:.4px;color:var(--blue);text-transform:uppercase;}
+  .kpi .big{font-size:17px;font-weight:800;color:var(--navy);margin:5px 0 3px;line-height:1.35;}
+  .kpi .note{font-size:12.5px;color:var(--muted);}
+  .kpi.alert{border-left-color:var(--red);} .kpi.alert .tag{color:var(--red);}
+  .kpi.live{border-left-color:var(--green);} .kpi.live .tag{color:var(--green);}
+  table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;margin-top:6px;font-size:13.5px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:12.5px;}
+  td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  .g{font-weight:700;color:var(--navy);white-space:nowrap;}
+  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;white-space:nowrap;}
+  .p-event{background:#e8f0ff;color:#2e5aac;} .p-launch{background:#e6f6ec;color:#2f855a;}
+  .p-contro{background:var(--red-soft);color:var(--red);} .p-season{background:#fff4e0;color:var(--amber);}
+  a{color:var(--blue);text-decoration:none;} a:hover{text-decoration:underline;}
+  .risk{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:2px 0;margin-top:6px;}
+  .risk .item{padding:14px 18px;border-top:1px solid var(--line);}
+  .risk .item:first-child{border-top:none;}
+  .risk h3{margin:0 0 5px;font-size:15.5px;color:var(--red);}
+  .risk .lesson{background:var(--blue-soft);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:13px;}
+  .risk .lesson b{color:var(--navy);}
+  .action{background:linear-gradient(135deg,#fff,#f0f5ff);border:1px solid #cfdcf3;
+    border-left:5px solid var(--blue);border-radius:12px;padding:16px 20px;margin-top:12px;}
+  .action h3{margin:0 0 6px;color:var(--navy);font-size:16px;}
+  .action ol{margin:6px 0 0;padding-left:20px;} .action li{margin-bottom:6px;}
+  .recheck{font-size:11px;color:var(--amber);font-weight:700;}
+  footer{margin-top:38px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;}
+  footer a{word-break:break-all;}
+  .srcgrid{columns:2;column-gap:26px;} .srcgrid li{margin-bottom:5px;break-inside:avoid;}
+  @media(max-width:640px){.srcgrid{columns:1;}}
+  .note-box{background:#fff8ec;border:1px solid #f0dfbd;border-radius:10px;padding:12px 15px;
+    font-size:12.5px;color:#7a5b16;margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🎯 FPS·슈터 데일리 커뮤니티/이벤트 레이더</h1>
+  <div class="sub">FPS/슈터 게임사 CM 대상 · 커뮤니티 반응 중심 동향 브리핑</div>
+  <div class="cover">기준일 2026-08-21(금) · 커버기간 8/19~8/21 (최근 24–48h) · 현재 라이브 이슈는 8/18발 포함</div>
+</header>
+
+<div class="kpis">
+  <div class="kpi live">
+    <div class="tag">오늘의 최대 이벤트</div>
+    <div class="big">MW4 얼리액세스 베타 개막</div>
+    <div class="note">오늘(8/21) 11:00 PT 시작 · CoD:NEXT 쇼케이스 09:00 PT</div>
+  </div>
+  <div class="kpi">
+    <div class="tag">국내 주목 포인트</div>
+    <div class="big">MW4에 한국 배경 맵 2종·K2</div>
+    <div class="note">Silkworm(한국 쇼핑가)·Lotus(한국 어촌), 경찰 방패·K2 소총 등장</div>
+  </div>
+  <div class="kpi">
+    <div class="tag">신규 시즌</div>
+    <div class="big">발로란트 2026 Act 5</div>
+    <div class="note">8/18 시작 · 어비스 경쟁전 진입, Breeze 제외, Aeris 스킨</div>
+  </div>
+  <div class="kpi live">
+    <div class="tag">라이브 업데이트</div>
+    <div class="big">BF6 웨이크 아일랜드+탑건</div>
+    <div class="note">8/18 라이브 · 클래식 맵 복귀 + 첫 대형 콜라보</div>
+  </div>
+  <div class="kpi alert">
+    <div class="tag">논란·리스크</div>
+    <div class="big">마블 라이벌즈 #JusticeForStorm</div>
+    <div class="note">스톰 수영복 스킨 등급 논란 → 레전더리로 상향</div>
+  </div>
+</div>
+
+<h2>🇰🇷 국내 포커스 <span class="em">— 커뮤니티 반응 중심</span></h2>
+<table>
+  <thead><tr><th style="width:16%">게임</th><th style="width:26%">이벤트/이슈</th><th style="width:12%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="g">콜오브듀티 MW4</td>
+      <td>얼리액세스 베타 개막 — <b>한국 배경 맵 2종</b>(Silkworm·Lotus)과 K2 소총·경찰 방패 등장. 인벤 등 국내 매체 집중 보도</td>
+      <td>8/21~8/25</td>
+      <td><span class="pill p-launch">베타</span></td>
+      <td>"한국 맵·K2 나온다"에 국내 커뮤니티 기대감. 다만 시리즈 특성상 최적화·서버·핵 우려도 병행 (인벤/디시 <span class="recheck">체감 반응, 재확인 권장</span>)</td>
+    </tr>
+    <tr>
+      <td class="g">서든어택</td>
+      <td>신규 폭파맵 2종 '더 몰'(쇼핑몰·원/근거리 분리), '라인'(스카이라인 재구성) 추가 + 맵 챌린지</td>
+      <td>~8/27</td>
+      <td><span class="pill p-event">신규맵</span></td>
+      <td>소규모·속도전 지향 맵에 긍정적. 장수 FPS의 꾸준한 맵 보강 사례로 평가 (넥슨 공식)</td>
+    </tr>
+    <tr>
+      <td class="g">발로란트 KR</td>
+      <td>서울 종로 그랑서울 '라이엇 PC방' 팝업 운영 — 아테나·김된모(17일), 미미미누(18일) 현장 이벤트 매치</td>
+      <td>8/14~8/18</td>
+      <td><span class="pill p-event">오프라인</span></td>
+      <td>오프라인 접점+인플루언서 매치 조합에 호평. 방문 후기·경품 인증 활발 (라이센스뉴스 <span class="recheck">재확인 권장</span>)</td>
+    </tr>
+    <tr>
+      <td class="g">PUBG</td>
+      <td>2026 로드맵 공개 및 40.x 정기 패치 흐름 지속 (진행 업데이트)</td>
+      <td>진행중</td>
+      <td><span class="pill p-season">로드맵</span></td>
+      <td>대형 신규 이슈보다 정기 밸런스·맵 순환 중심. 반응 잔잔 (KRAFTON/PUBG 공식)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>🌐 글로벌 포커스</h2>
+<table>
+  <thead><tr><th style="width:16%">게임</th><th style="width:28%">이벤트/이슈</th><th style="width:12%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="g">MW4 (COD)</td>
+      <td>얼리액세스 베타(위켄드1) 개막 — 6v6 코어맵 5종, 신모드 Inflation, 캠페인 미션 'Entrenched', Kill Block(3v3·10v10). CoD:NEXT 쇼케이스 동시 진행</td>
+      <td>8/21~8/25</td>
+      <td><span class="pill p-launch">베타</span></td>
+      <td>시리즈 최초 '베타 내 캠페인 체험' 제공에 관심↑. 위켄드2(8/28~9/1)엔 Warzone Resurgence(Zodiac 맵) 데뷔</td>
+    </tr>
+    <tr>
+      <td class="g">배틀필드 6</td>
+      <td>웨이크 아일랜드 맵 복귀 + <b>탑건(Top Gun) 콜라보</b>(첫 대형 크로스오버) + RedSec BR에 USS Grant POI. 패치 1.4.2.0</td>
+      <td>8/18 라이브</td>
+      <td><span class="pill p-event">콜라보</span></td>
+      <td>클래식 맵 복귀에 팬 환호. 해·공중전 강화 방향 긍정적, 콜라보 IP 이질감 지적도 소수 (EA/코믹북)</td>
+    </tr>
+    <tr>
+      <td class="g">에이펙스</td>
+      <td>'Ascended Hunt' 이벤트 진행 (Marked 시즌 연계)</td>
+      <td>8/18~9/8</td>
+      <td><span class="pill p-event">이벤트</span></td>
+      <td>시즌 중반 리텐션용 이벤트. 보상 구성에 대한 평가 갈림 (EA/GoNintendo <span class="recheck">재확인 권장</span>)</td>
+    </tr>
+    <tr>
+      <td class="g">발로란트</td>
+      <td>2026 Act 5 패치 — 어비스 경쟁전·데스매치 투입, Breeze 제외, Aeris 신규 스킨, 신규 배틀패스. Champions 2026 로테이션 확정</td>
+      <td>8/18</td>
+      <td><span class="pill p-season">시즌</span></td>
+      <td>맵 풀 변경에 프로/경쟁 유저 촉각. Premier 스테이지 5주 단축 등 구조 변화 논의 (Riot/talkesport)</td>
+    </tr>
+    <tr>
+      <td class="g">마블 라이벌즈</td>
+      <td>Summer Special 수영복 스킨 중 스톰 'Sacred Skies' 등급 논란 → 무상 레전더리 승격·신규 애니메이션 추가, 연내 추가 스톰 레전더리 약속</td>
+      <td>~8/13 (진행)</td>
+      <td><span class="pill p-contro">논란</span></td>
+      <td>#JusticeForStorm 확산. 형평성 비판 vs "개발진 괴롭힘은 부적절" 성명 (GamesRadar/GosuGamers)</td>
+    </tr>
+    <tr>
+      <td class="g">델타포스</td>
+      <td>신규 시즌/업데이트 사이클 진행(무료 슈터로 지표 유지) — 세부 일정 개별 확인 필요</td>
+      <td>진행중</td>
+      <td><span class="pill p-season">시즌</span></td>
+      <td>글로벌·모바일 병행으로 유입 지속. 반응 안정적 <span class="recheck">재확인 권장</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>⚠️ 논란·리스크 신호 <span class="em">— 우리 운영 교훈</span></h2>
+<div class="risk">
+  <div class="item">
+    <h3>① 마블 라이벌즈 — 스킨 '등급 형평성' 논란 (#JusticeForStorm)</h3>
+    <p>여름 수영복 스킨에서 스톰 스킨만 다른 여성 캐릭터 대비 낮은 등급(Epic)으로 책정되어 이펙트·리컬러가 부실하다는 지적. 캐릭터 대표성 이슈와 맞물려 해시태그 캠페인으로 확산. 개발사는 <b>무상 레전더리 승격</b>과 연내 추가 스킨을 약속하되, 스태프 괴롭힘엔 선을 그음.</p>
+    <div class="lesson"><b>CM 교훈:</b> 동일 카테고리 상품(스킨·번들)의 <b>등급/가치 일관성</b>은 형평성 프레임으로 번지기 쉬움. 시즌 상품 라인업은 출시 전 '캐릭터·등급 간 가치 매트릭스'로 사전 점검하고, 여론 발생 시 <b>빠른 무상 보정 + 명확한 커뮤니케이션 + 직원 보호 원칙</b>을 함께 제시하는 것이 정석.</div>
+  </div>
+  <div class="item">
+    <h3>② 대형 베타 동시 오픈기 — 서버·최적화·핵 민감도 급상승</h3>
+    <p>MW4 베타가 오늘 개막하며 국내외 유입이 몰리는 시기. 신작 베타 초기엔 서버 안정성·최적화·치팅 이슈가 커뮤니티 첫인상을 좌우함.</p>
+    <div class="lesson"><b>CM 교훈:</b> 우리 타이틀의 이벤트/업데이트가 <b>대형 경쟁작 베타 창구와 겹치면</b> 유저 관심·스트리머 시간이 분산됨. 일정 충돌 시 티저·핵심 보상 공개 타이밍을 어긋나게 배치하고, 초기 이슈는 <b>선제 공지(알려진 이슈 리스트)+빠른 핫픽스 로그</b>로 신뢰를 확보.</div>
+  </div>
+</div>
+
+<h2>💡 CM 액션 제안</h2>
+<div class="action">
+  <h3>제안 1 — 'MW4 베타 주간' 관심 분산 대응 (즉시)</h3>
+  <ol>
+    <li>이번 주말(8/21~8/25)은 CoD:NEXT·MW4 베타로 스트리머·시청 트래픽이 집중됨. 우리 채널의 <b>대형 신규 공개는 이 창구를 피해</b> 다음 주 초로 재배치하거나, 반대로 베타 이슈에 편승한 가벼운 밈·커뮤니티 참여형 콘텐츠로 노출을 노림.</li>
+    <li>국내 커뮤니티(인벤·디시·에펨·아카)에서 <b>MW4 한국 맵(Silkworm·Lotus)·K2·경찰 방패</b> 화제성 모니터링 → 우리 게임의 '한국 로컬 요소'가 있다면 비교·어필 소재로 활용.</li>
+  </ol>
+</div>
+<div class="action">
+  <h3>제안 2 — 시즌 상품 '등급 형평성' 사전 점검 체크리스트 도입</h3>
+  <ol>
+    <li>마블 라이벌즈 사례를 참고해, 차기 스킨/번들 출시 전 <b>캐릭터·등급별 가치(이펙트·애니·리컬러) 매트릭스</b>를 내부 리뷰 항목으로 고정.</li>
+    <li>여론 리스크 발생 시 대응 템플릿(무상 보정 옵션·공지 카피·직원 보호 문구)을 미리 준비해 <b>대응 속도</b>를 확보. 기존 '공지·SNS 카피 생성기' 콘솔에 리스크 대응 프리셋 추가 검토.</li>
+  </ol>
+</div>
+
+<div class="note-box">
+  <b>유의사항:</b> 동접·시청·판매 등 서드파티/트래커 기반 수치는 본 리포트에서 확정 수치로 제시하지 않았으며, 구체 지표 인용 시 <b>공식 발표·트래커 원본으로 재확인 권장</b>. 커뮤니티 '반응'은 매체 보도와 정황 기반 요약으로, 개별 스레드 표본과 다를 수 있음. 8/18발 항목(BF6·에이펙스·발로란트)은 '현재 라이브' 상태라 포함함.
+</div>
+
+<footer>
+  <b>출처</b>
+  <ul class="srcgrid">
+    <li>MW4 베타·CoD:NEXT: <a href="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-next-early-access-beta-weekend-one">callofduty.com 공식 블로그</a></li>
+    <li>MW4 한국 반응: <a href="https://www.inven.co.kr/webzine/news/?news=319724">인벤 — 경찰 방패·K2</a>, <a href="https://www.inven.co.kr/webzine/news/?news=319580">인벤 — 베타 내 캠페인</a></li>
+    <li>BF6 웨이크 아일랜드·탑건: <a href="https://comicbook.com/gaming/news/bf6-battlefield-6-wake-island-top-gun-update-patch-notes/">ComicBook</a>, <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming">EA 공식</a></li>
+    <li>에이펙스 Ascended Hunt: <a href="https://gonintendo.com/contents/63784-apex-legends-ascended-hunt-event-runs-august-18th-to-september-8th-2026">GoNintendo</a></li>
+    <li>발로란트 Act 5: <a href="https://www.talkesport.com/news/valorant/valorant-season-2026-act-5-patch-notes/">TalkEsport</a></li>
+    <li>마블 라이벌즈 스톰 논란: <a href="https://www.gamesradar.com/games/third-person-shooter/marvel-rivals-devs-respond-to-storm-summer-skin-controversy-promise-to-do-better-but-say-harassment-is-not-acceptable/">GamesRadar</a>, <a href="https://www.gosugamers.net/entertainment/news/78958-marvel-rivals-upgrades-storm-swimsuit-skin-to-legendary-following-controversy-devs-issue-statement">GosuGamers</a></li>
+    <li>서든어택 신규 맵·발로란트 종로 팝업: <a href="https://www.lcnews.co.kr/news/articleView.html?idxno=206532">라이센스뉴스</a></li>
+    <li>PUBG 로드맵: <a href="https://pubg.com/ko/news/9855">PUBG 공식</a></li>
+    <li>델타포스 시즌: <a href="https://deltaforce.garena.com/en/news/all">Garena Delta Force 공식</a></li>
+  </ul>
+  <p style="margin-top:10px">자동 생성 — '데일리 FPS·슈터 레이더' · 2026-08-21(금) 09:00 KST 실행 · 커뮤니티 출처: 레딧/루리웹/인벤/디시/아카라이브/에펨코리아 + 게임 전문지 병행</p>
+</footer>
+
+</div>
+</body>
+</html>

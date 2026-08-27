@@ -194,7 +194,7 @@ var viewer = document.getElementById("viewer");
 var todayISO = (function(){ var t=new Date(); return t.getFullYear()+"-"+pad(t.getMonth()+1)+"-"+pad(t.getDate()); })();
 var view = new Date();
 
-function file(d){ return "FPS레이더_" + d + ".html"; }
+function file(d){ return "reports/" + d.slice(0,7) + "/FPS레이더_" + d + ".html"; }
 function pad(n){ return (n<10?"0":"")+n; }
 function label(d){ var p=d.split("-"); return p[0]+"."+p[1]+"."+p[2]; }
 function meta(d){ return META[d] || {no:"No.—",title:"",tags:[]}; }

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 2026-08-03 (주말 포함)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    background: #F4F6FB; color: #1F2A44; line-height: 1.6;
+    padding: 24px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg,#1F2A44 0%,#2E5AAC 100%);
+    color: #fff; border-radius: 16px; padding: 30px 34px; margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(31,42,68,.18);
+  }
+  header.hero .tag {
+    display: inline-block; background: rgba(255,255,255,.16);
+    padding: 4px 12px; border-radius: 999px; font-size: 12.5px;
+    letter-spacing: .5px; margin-bottom: 12px; font-weight: 700;
+  }
+  header.hero h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: -.4px; }
+  header.hero .meta { font-size: 14px; opacity: .92; }
+  header.hero .meta b { color: #FFD37E; }
+  .lead {
+    background:#fff; border-left:5px solid #2E5AAC; border-radius:10px;
+    padding:16px 20px; margin-bottom:22px; font-size:14.5px;
+    box-shadow:0 2px 8px rgba(31,42,68,.06);
+  }
+  h2.sec {
+    font-size:18px; margin:30px 0 14px; padding-bottom:8px;
+    border-bottom:2px solid #E2E8F5; color:#1F2A44;
+    display:flex; align-items:center; gap:8px;
+  }
+  h2.sec .dot { width:10px; height:10px; border-radius:3px; background:#2E5AAC; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(196px,1fr)); gap:14px; }
+  .kpi {
+    background:#fff; border-radius:12px; padding:16px 18px;
+    box-shadow:0 2px 10px rgba(31,42,68,.07); border-top:3px solid #2E5AAC;
+  }
+  .kpi .k-label { font-size:12px; color:#5A6685; font-weight:700; letter-spacing:.3px; }
+  .kpi .k-value { font-size:20px; font-weight:800; color:#1F2A44; margin:6px 0 4px; letter-spacing:-.3px; }
+  .kpi .k-sub { font-size:12px; color:#7A85A0; }
+  .kpi.alert { border-top-color:#C0392B; }
+  .kpi.alert .k-value { color:#C0392B; }
+  .kpi.good { border-top-color:#1E9E6A; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(31,42,68,.07); font-size:13.5px; }
+  thead th { background:#1F2A44; color:#fff; text-align:left; padding:11px 12px; font-weight:700; font-size:12.5px; }
+  tbody td { padding:11px 12px; border-bottom:1px solid #EEF1F8; vertical-align:top; }
+  tbody tr:nth-child(even) { background:#F7F9FD; }
+  tbody tr:hover { background:#EEF3FC; }
+  .pill { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px; font-weight:700; white-space:nowrap; }
+  .p-event { background:#E7F0FF; color:#2E5AAC; }
+  .p-launch { background:#E7F8EF; color:#1E9E6A; }
+  .p-esport { background:#F3E9FF; color:#7B4FC0; }
+  .p-risk { background:#FDECEA; color:#C0392B; }
+  .p-update { background:#FFF4E0; color:#B8860B; }
+  .react-pos { color:#1E9E6A; font-weight:700; }
+  .react-neg { color:#C0392B; font-weight:700; }
+  .react-mix { color:#B8860B; font-weight:700; }
+  a { color:#2E5AAC; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .risk-card, .action-card {
+    background:#fff; border-radius:12px; padding:16px 20px; margin-bottom:14px;
+    box-shadow:0 2px 10px rgba(31,42,68,.07);
+  }
+  .risk-card { border-left:5px solid #C0392B; }
+  .action-card { border-left:5px solid #1E9E6A; }
+  .risk-card h3, .action-card h3 { font-size:15px; margin-bottom:6px; }
+  .risk-card .lesson { margin-top:8px; font-size:13px; background:#FDF4F3; padding:8px 12px; border-radius:8px; color:#8A3529; }
+  .action-card .why { margin-top:6px; font-size:13px; color:#5A6685; }
+  .badge-n { font-size:11px; background:#2E5AAC; color:#fff; padding:1px 8px; border-radius:6px; margin-right:6px; }
+  footer.notes {
+    margin-top:30px; background:#1F2A44; color:#D6DEEE; border-radius:12px;
+    padding:20px 24px; font-size:12.5px;
+  }
+  footer.notes h3 { color:#fff; font-size:14px; margin-bottom:10px; }
+  footer.notes ul { list-style:none; }
+  footer.notes li { margin-bottom:6px; padding-left:14px; position:relative; }
+  footer.notes li::before { content:"›"; position:absolute; left:0; color:#FFD37E; }
+  footer.notes a { color:#9FC0FF; }
+  .caveat { color:#B8860B; font-weight:700; }
+  .src-note { font-size:11.5px; color:#7A85A0; margin-top:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="tag">🛰️ 데일리 FPS·슈터 레이더 · 주말 포함</span>
+    <h1>FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="meta">
+      기준일 <b>2026-08-03 (월)</b> · 커버 기간 <b>2026-07-31(금) 저녁 ~ 08-02(일) 주말</b> + 임박 소식<br>
+      대상: 발로란트·오버워치2·에이펙스·COD·CS2·R6·배틀필드·마블 라이벌즈·델타포스·THE FINALS·PUBG·서든어택 외
+    </div>
+  </header>
+
+  <div class="lead">
+    <b>이번 주말 한 줄 요약:</b> 신규 대형 이벤트보다 <b>e스포츠·시즌 전환</b>이 주도한 주말이었습니다.
+    글로벌은 <b>마블 라이벌즈 Ignite 미드시즌 파이널(NAVI 우승, LA, 상금 $50만)</b>이 최대 화제였고,
+    <b>에이펙스 시즌30 'Marked'(8/4 런칭)</b>·<b>발로란트 2026 Act 4(신맵 Summit·신모드 임박)</b> 전환 하이프가 커뮤니티를 달궜습니다.
+    리스크 신호는 <b>CS2 케이스(루트박스) 논란</b>이 지속 관찰 대상입니다.
+    국내는 특기할 신규 대형 이벤트가 적어(<span class="caveat">특기사항 적음</span>) 진행 중 이슈 위주로 정리합니다.
+  </div>
+
+  <h2 class="sec"><span class="dot"></span>핵심 요약 (KPI)</h2>
+  <div class="kpis">
+    <div class="kpi p-esport" style="border-top-color:#7B4FC0;">
+      <div class="k-label">주말 최대 화제</div>
+      <div class="k-value">마블 라이벌즈 결승</div>
+      <div class="k-sub">Ignite 미드시즌 파이널 · NAVI 우승 · LA</div>
+    </div>
+    <div class="kpi good">
+      <div class="k-label">임박 시즌 전환</div>
+      <div class="k-value">에이펙스 S30 'Marked'</div>
+      <div class="k-sub">8/4 17:00 UTC 런칭 · 루팅 개편</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">임박 대형 패치</div>
+      <div class="k-value">발로란트 Act 4</div>
+      <div class="k-sub">신맵 Summit · 신모드 · 메타 개편</div>
+    </div>
+    <div class="kpi alert">
+      <div class="k-label">지속 리스크 신호</div>
+      <div class="k-value">CS2 케이스 논란</div>
+      <div class="k-sub">루트박스 소송 → 신규 케이스 축소설</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">국내 온도</div>
+      <div class="k-value">신규 이벤트 소강</div>
+      <div class="k-sub">서든어택 21주년·PUBG 진행 업데이트</div>
+    </div>
+  </div>
+
+  <h2 class="sec"><span class="dot"></span>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:130px;">게임</th><th>이벤트/소식</th><th style="width:90px;">시점</th><th style="width:90px;">유형</th><th style="width:150px;">커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>서든어택</b></td>
+        <td>서비스 <b>21주년 기념 무기 스킨 아이디어 공모전</b> 진행 중 — 유저 참여형 크리에이티브 이벤트. <a href="https://www.inven.co.kr/webzine/news/?news=318556" target="_blank">인벤</a></td>
+        <td>7월~ 진행</td>
+        <td><span class="pill p-event">이벤트</span></td>
+        <td><span class="react-pos">호의적</span> · 장수 IP 유저 소통</td>
+      </tr>
+      <tr>
+        <td><b>PUBG (배그)</b></td>
+        <td><b>2026 로드맵</b> 공개 후 시즌 업데이트 이어짐 — 특별 보급 등 상시 이벤트 운영. <a href="https://pubg.com/ko/news/9855" target="_blank">공식 로드맵</a></td>
+        <td>진행 업데이트</td>
+        <td><span class="pill p-update">시즌</span></td>
+        <td><span class="react-mix">관망</span> · 로드맵 기대 vs 실행 검증</td>
+      </tr>
+      <tr>
+        <td><b>발로란트 KR</b></td>
+        <td><b>2026 Act 4</b> 전환 임박 — 신규 맵·모드·에이전트 조정에 국내 커뮤니티 사전 반응 형성. <a href="https://playvalorant.com/ko-kr/news/game-updates/" target="_blank">공식 업데이트</a></td>
+        <td>임박</td>
+        <td><span class="pill p-update">시즌</span></td>
+        <td><span class="react-pos">기대</span> · 메타 환기 요구</td>
+      </tr>
+      <tr>
+        <td><b>배틀필드6</b></td>
+        <td>런칭 이후 라이브 운영 지속 — 안티치트/타 게임 보안 프로그램 충돌 등 과거 이슈는 <b>진행 업데이트</b>로만 관찰. <a href="https://namu.wiki/w/%EB%B0%B0%ED%8B%80%ED%95%84%EB%93%9C%206" target="_blank">개요</a></td>
+        <td>진행</td>
+        <td><span class="pill p-update">라이브</span></td>
+        <td><span class="react-mix">혼재</span> · 안정화 체감 논쟁</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="src-note">※ 이번 주말 국내발 신규 대형 이벤트/콜라보는 뚜렷하지 않음 — 진행 중 이슈 위주로 정리(솔직 고지).</p>
+
+  <h2 class="sec"><span class="dot"></span>🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:135px;">게임</th><th>이벤트/소식</th><th style="width:95px;">시점</th><th style="width:90px;">유형</th><th style="width:150px;">커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>마블 라이벌즈</b></td>
+        <td><b>Ignite 2026 미드시즌 파이널</b> LA 개최, <b>NAVI 우승</b> — 상금 총 $50만. 주말 최대 시청·화제 이벤트. <a href="https://esports.gg/news/marvel-rivals/navi-wins-marvel-rivals-ignite-mid-season-finals-2026-ive-proved-to-the-world-that-i-can-beat-lan-i-beat-na-i-can-beat-eu/" target="_blank">esports.gg</a></td>
+        <td><b>8/1~2 주말</b></td>
+        <td><span class="pill p-esport">e스포츠</span></td>
+        <td><span class="react-pos">뜨거움</span> · 언더독 서사 흥행</td>
+      </tr>
+      <tr>
+        <td><b>에이펙스 레전드</b></td>
+        <td><b>시즌30 'Marked'</b> — 8/4 17:00 UTC 런칭(다운타임 0). <b>루팅/인게임 경제 대개편</b>, 레전드 리워크, 월즈엣지 경쟁 개편, 구형 닌텐도 스위치 지원 종료. <a href="https://help.ea.com/en/articles/apex-legends/seasons-and-updates/" target="_blank">EA</a></td>
+        <td><b>8/4 런칭</b></td>
+        <td><span class="pill p-launch">시즌 런칭</span></td>
+        <td><span class="react-mix">기대+경계</span> · 경제 개편 성패 주목</td>
+      </tr>
+      <tr>
+        <td><b>발로란트</b></td>
+        <td><b>2026 Act 4 (Patch 13.0)</b> — 신맵 <b>Summit</b>, 신모드 <b>Retake</b>, 킬조이·베토 버프, 오멘 오디오 조정 등 <b>대규모 메타 환기</b>. <a href="https://www.talkesport.com/news/valorant/valorant-patch-13-0-agent-changes-season-2026-act-4/" target="_blank">TalkEsport</a></td>
+        <td>임박</td>
+        <td><span class="pill p-update">대형 패치</span></td>
+        <td><span class="react-pos">환영</span> · 정체 메타 탈출 기대</td>
+      </tr>
+      <tr>
+        <td><b>오버워치2</b></td>
+        <td>YOASOBI 콜라보(전설 스킨 6종) 등 여름 시즌 콜라보 사이클 지속 — '2026 큰 계획' 티저 유지. <a href="https://overwatch.blizzard.com/ko-kr/news/" target="_blank">공식</a></td>
+        <td>진행</td>
+        <td><span class="pill p-event">콜라보</span></td>
+        <td><span class="react-pos">호평</span> · 아티스트 콜라보 만족</td>
+      </tr>
+      <tr>
+        <td><b>CS2</b></td>
+        <td>루트박스(케이스) 소송 여파로 <b>신규 케이스 축소/중단설</b> 지속 — '사실상 카지노' 비판 여론. <a href="https://ixbt.games/en/news/2026/03/13/valve-otkazalas-ot-novyx-keisov-v-counter-strike-2-iz-za-suda-o-lutboksax-datamainer.html" target="_blank">데이터마이닝</a></td>
+        <td>지속 이슈</td>
+        <td><span class="pill p-risk">논란</span></td>
+        <td><span class="react-neg">불만</span> · 수익모델 신뢰 저하</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec"><span class="dot"></span>⚠️ 논란·리스크 신호 (운영 교훈)</h2>
+
+  <div class="risk-card">
+    <h3><span class="pill p-risk">수익모델</span> CS2 — 루트박스(케이스) 소송 → 신규 케이스 축소설</h3>
+    <p>Valve가 루트박스 관련 소송 리스크로 신규 케이스 발매를 줄이거나 중단할 수 있다는 데이터마이닝·보도가 이어지며, 커뮤니티에서는 '게임이 아니라 카지노'라는 강한 비판이 재점화됐습니다. 확률형 아이템 규제·소송 환경이 글로벌 슈터 수익모델 전반의 리스크로 확산되는 흐름입니다.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 확률형 요소는 <b>확률 고지·페이백(천장) 장치·비확률 직구매 경로</b>를 처음부터 병행 설계. 규제 변화 대비 "케이스 없는 매출 라인"을 미리 확보해 두면 정책 리스크에 흔들리지 않습니다.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3><span class="pill p-risk">시즌 전환</span> 에이펙스 S30 — 인게임 경제 대개편의 양날</h3>
+    <p>루팅/경제 시스템을 크게 바꾸는 시즌은 '신선함' 기대와 동시에 <b>숙련 유저의 습관 붕괴·밸런스 혼란</b> 리스크가 큽니다. 과거 대형 개편 시즌은 초기 백래시 후 회복 패턴이 반복돼 왔습니다.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 대개편 런칭 시 <b>D+1/D+3/D+7 핫픽스 로드맵을 사전 공지</b>하고, 초기 부정 여론을 "이미 인지·조치 중" 커뮤니케이션으로 관리. 되돌릴 지표 기준(롤백 트리거)을 내부에 미리 정의.</div>
+  </div>
+
+  <h2 class="sec"><span class="dot"></span>🎯 CM 액션 제안</h2>
+
+  <div class="action-card">
+    <h3><span class="badge-n">1</span>주말 e스포츠 화제 편승 — 마블 라이벌즈 결승 리액션 콘텐츠</h3>
+    <p>NAVI 우승 등 미드시즌 파이널 하이라이트를 자사 채널에서 <b>'주말 슈터 e스포츠 리캡'</b> 포맷으로 큐레이션. 장르 팬 유입 시점에 자연 도달을 확보하고, 자사 게임의 관전/대회 요소와 연결해 브릿지 메시지를 겁니다.</p>
+    <p class="why">왜: 신규 이벤트가 적은 주말일수록 외부 화제(대형 대회) 편승이 도달 효율이 높음. <span class="caveat">시청/동접 수치 인용 시 원본 트래커 재확인 권장.</span></p>
+  </div>
+
+  <div class="action-card">
+    <h3><span class="badge-n">2</span>시즌 전환 백래시 대비 — 사전 '핫픽스 캘린더' 공지 템플릿 준비</h3>
+    <p>에이펙스 S30·발로란트 Act 4처럼 <b>대형 전환 직후 여론이 급변</b>하는 사례를 벤치마크해, 자사 차기 업데이트용 <b>'런칭 후 7일 핫픽스 캘린더' 공지 카피</b>를 미리 제작해 두세요. (기존 '공지·SNS 카피 생성기' 콘솔 활용)</p>
+    <p class="why">왜: 초기 부정 여론의 대부분은 '방치됐다'는 인식에서 옴 — 조치 일정 선공개만으로 체감 만족도가 크게 개선됩니다.</p>
+  </div>
+
+  <footer class="notes">
+    <h3>출처 & 유의사항</h3>
+    <ul>
+      <li>마블 라이벌즈 Ignite 미드시즌 파이널 결과: <a href="https://esports.gg/news/marvel-rivals/navi-wins-marvel-rivals-ignite-mid-season-finals-2026-ive-proved-to-the-world-that-i-can-beat-lan-i-beat-na-i-can-beat-eu/" target="_blank">esports.gg</a> · <a href="https://dotesports.com/marvel/guides/marvel-rivals-ignite-2026-mid-season-finals-results" target="_blank">Dot Esports</a> · <a href="https://liquipedia.net/marvelrivals/MR_Ignite/2026/Mid_Season_Finals" target="_blank">Liquipedia</a></li>
+      <li>에이펙스 시즌30 'Marked': <a href="https://help.ea.com/en/articles/apex-legends/seasons-and-updates/" target="_blank">EA 공식</a> · <a href="https://boostmatch.gg/blog/apex-legends/articles/apex-legends-season-30-release-date" target="_blank">Boostmatch</a> · <a href="https://gonintendo.com/contents/63231-apex-legends-marked-season-launches-aug-4th-2026" target="_blank">GoNintendo</a></li>
+      <li>발로란트 2026 Act 4 / Patch 13.0: <a href="https://www.talkesport.com/news/valorant/valorant-patch-13-0-agent-changes-season-2026-act-4/" target="_blank">TalkEsport</a> · <a href="https://playvalorant.com/en-us/news/game-updates/" target="_blank">공식 업데이트</a></li>
+      <li>CS2 케이스(루트박스) 논란: <a href="https://ixbt.games/en/news/2026/03/13/valve-otkazalas-ot-novyx-keisov-v-counter-strike-2-iz-za-suda-o-lutboksax-datamainer.html" target="_blank">iXBT Games</a> · <a href="https://daddyskins.com/blog/news/cs2-cases-banned/" target="_blank">DaddySkins</a></li>
+      <li>오버워치2 콜라보/시즌: <a href="https://overwatch.blizzard.com/ko-kr/news/" target="_blank">블리자드 공식</a> · <a href="https://news.nate.com/view/20260630n13668" target="_blank">오버워치×YOASOBI(네이트)</a></li>
+      <li>서든어택 21주년: <a href="https://www.inven.co.kr/webzine/news/?news=318556" target="_blank">인벤</a> · PUBG 로드맵: <a href="https://pubg.com/ko/news/9855" target="_blank">공식</a></li>
+      <li class="caveat">동접·시청·판매 등 수치는 서드파티 트래커 기반일 수 있어 대외 공유 전 <b>원본 재확인 권장</b>. 배틀필드6 안티치트 충돌 등 일부 이슈는 2025년 발생분으로 배경 참고용.</li>
+      <li>커뮤니티 관찰 채널: 레딧(각 서브레딧)·루리웹·인벤·디시·아카라이브·에펨코리아 / 전문지: 디스이즈게임·게임메카·Dexerto·PC Gamer·IGN 등.</li>
+    </ul>
+  </footer>
+
+</div>
+</body>
+</html>

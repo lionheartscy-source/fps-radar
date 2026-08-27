@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 — 2026-08-15 (토, 주말·광복절 포함)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Segoe UI', sans-serif;
+    background: #F4F6FA;
+    color: #1F2A44;
+    line-height: 1.6;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 30px;
+    box-shadow: 0 6px 20px rgba(31,42,68,0.18);
+  }
+  header h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+  header .sub { margin-top: 8px; font-size: 14px; opacity: 0.92; }
+  header .badge {
+    display: inline-block; margin-top: 12px; background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
+    padding: 5px 14px; font-size: 12.5px; font-weight: 600;
+  }
+  h2 {
+    font-size: 18px; color: #1F2A44; margin: 34px 0 14px;
+    padding-left: 12px; border-left: 5px solid #2E5AAC;
+  }
+  .lead { font-size: 14px; color: #40506e; margin: 18px 2px 6px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 14px; margin-top: 22px; }
+  .kpi {
+    background: #fff; border: 1px solid #e2e7f0; border-radius: 12px;
+    padding: 16px 18px; box-shadow: 0 2px 8px rgba(31,42,68,0.05);
+    border-top: 4px solid #2E5AAC;
+  }
+  .kpi .tag { font-size: 11.5px; font-weight: 700; color: #2E5AAC; text-transform: uppercase; letter-spacing: 0.5px; }
+  .kpi .big { font-size: 15.5px; font-weight: 800; color: #1F2A44; margin: 6px 0 4px; }
+  .kpi .desc { font-size: 12.5px; color: #5a6784; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(31,42,68,0.06); font-size: 13px; }
+  th { background: #1F2A44; color: #fff; text-align: left; padding: 11px 12px; font-weight: 600; font-size: 12.5px; }
+  td { padding: 11px 12px; vertical-align: top; border-bottom: 1px solid #eef1f6; }
+  tbody tr:nth-child(even) { background: #F7F9FC; }
+  tbody tr:hover { background: #eef3fb; }
+  .g { font-weight: 700; color: #1F2A44; }
+  .type { display: inline-block; background: #e8eefb; color: #2E5AAC; border-radius: 6px; padding: 2px 8px; font-size: 11.5px; font-weight: 600; white-space: nowrap; }
+  a { color: #2E5AAC; text-decoration: none; border-bottom: 1px dotted #2E5AAC; }
+  a:hover { color: #1F2A44; }
+
+  .risk { background: #fff; border: 1px solid #f0d9d9; border-left: 5px solid #b5384a; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+  .risk h3 { font-size: 15px; color: #8f2635; margin-bottom: 6px; }
+  .risk p { font-size: 13px; color: #40506e; margin-bottom: 5px; }
+  .risk .lesson { font-size: 12.5px; color: #1F2A44; background: #fbeef0; border-radius: 6px; padding: 8px 10px; margin-top: 6px; }
+  .risk .lesson b { color: #b5384a; }
+
+  .action { background: linear-gradient(135deg, #eef3fb 0%, #f6f9ff 100%); border: 1px solid #cfdcf5; border-left: 5px solid #2E5AAC; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+  .action h3 { font-size: 15px; color: #2E5AAC; margin-bottom: 6px; }
+  .action p { font-size: 13px; color: #33415e; }
+
+  footer { margin-top: 36px; font-size: 12px; color: #6a7690; border-top: 1px solid #dde3ee; padding-top: 16px; }
+  footer h4 { color: #1F2A44; font-size: 13px; margin-bottom: 8px; }
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 4px; }
+  .note { background: #fff8e8; border: 1px solid #f0e2b8; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #7a6320; margin-top: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">FPS/슈터 게임사 CM 실무용 · 커뮤니티 반응 중심 · 국내+글로벌 병행</div>
+    <div class="badge">기준일 2026-08-15 (토) · 커버기간: 8/12(목)~8/15(토) 최근 24~72시간 · 주말·광복절 포함</div>
+  </header>
+
+  <p class="lead">토요일(광복절) 발행 — 이번 주 목~금 신규 소식과 주말 진입 이슈를 함께 정리했습니다. 예약 작업은 원래 월~금이며, 오늘은 주말 진입 시점 소식을 놓치지 않기 위한 보강 판입니다. 수치·동접·시청 지표는 모두 <b>재확인 권장</b> 표기.</p>
+
+  <!-- KPI -->
+  <div class="kpis">
+    <div class="kpi">
+      <div class="tag">국내 최대 화제</div>
+      <div class="big">오버워치 신규 '한국 영웅' 디몬(D.Mon)</div>
+      <div class="desc">8/12 시즌4 '부산의 영웅' 시작 · 메카 부대 리더 돌격군, 디바 세계관 연결로 루리웹·인벤 관심 폭발</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">글로벌 임박 이벤트</div>
+      <div class="big">COD BO7 시즌5 리로디드 8/20</div>
+      <div class="desc">좀비 스토리 피날레 'Rex Infernus' · Black Ops Royale 복귀 · 뉴크타운 핀볼맵</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">주말 대형 업데이트</div>
+      <div class="big">배틀필드6 'Top Gun' 이벤트 8/18</div>
+      <div class="desc">웨이크 아일랜드 부활 · 항모전(Carrier Strike) · 제트 도그파이트 콜라보</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">논란·리스크</div>
+      <div class="big">마블 라이벌즈 수영복 스킨 백래시</div>
+      <div class="desc">여름 스킨 성적 대상화 'gooner game' 비판 vs 매출 — 개발진 공식 해명</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">플랫폼 이슈</div>
+      <div class="big">에이펙스, 닌텐도 스위치 종료 8/4</div>
+      <div class="desc">2026년 치터·유저 이탈·배틀패스 신뢰 논의 지속</div>
+    </div>
+  </div>
+
+  <!-- 국내 -->
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">오버워치<br>(넥슨)</td>
+        <td><b>시즌4 '부산의 영웅' + 신규 한국 영웅 '디몬(D.Mon)'</b> — 메카 부대 리더, 검·방패·돌진기·원거리 융합연발총을 갖춘 돌격군. 배틀패스 개편(보상 선택·스킨 교환), 부산·파라이수·아이헨발데 전장 재단장, 신규 실력등급 '에메랄드' 신설, 겐지 신화 스킨.</td>
+        <td>8/12 시작</td>
+        <td><span class="type">신규영웅·시즌</span></td>
+        <td>디바에 이은 두 번째 '한국 영웅'이라 인벤·루리웹에서 관심 최고조. 로컬 정체성엔 호평, 성능·복합 기술셋엔 갑론을박.</td>
+      </tr>
+      <tr>
+        <td class="g">오버워치<br>(넥슨)</td>
+        <td><b>'슈팅 스타: 마이 MEKA 마니아'</b> 이벤트(3주) 및 9월 '월드컵 응원 대회', 실험 모드 '팀 드라이브' 예고.</td>
+        <td>8/12~9/1</td>
+        <td><span class="type">한정이벤트</span></td>
+        <td>D.Mon·디바 연계 테마로 국내 팬 기대. 이벤트 보상 볼륨 긍정적.</td>
+      </tr>
+      <tr>
+        <td class="g">배틀그라운드<br>(PUBG/카카오)</td>
+        <td>여름 2026 시즌 이벤트 및 특별 보급 진행, 41.2 패치 반영.</td>
+        <td>8월 진행중</td>
+        <td><span class="type">시즌운영</span></td>
+        <td>여름 로그인·보급 이벤트 무난한 반응, 밸런스·매치메이킹 상시 피드백.</td>
+      </tr>
+      <tr>
+        <td class="g">발로란트<br>(한국)</td>
+        <td>V26 Act 4 진행 중(Summit 신맵·3v3 리테이크), 8월 나이트마켓 및 Champions 2026 번들 기대감.</td>
+        <td>8월 진행중</td>
+        <td><span class="type">스킨·마켓</span></td>
+        <td>나이트마켓 주기·챔피언스 번들 리크에 국내 커뮤니티 반응 활발.</td>
+      </tr>
+      <tr>
+        <td class="g">마블 라이벌즈<br>(국내 유저)</td>
+        <td>시즌 9.5 업데이트 — 신규 뱅가드 '더 후드'. 여름 페스티벌 Vol.2 수영복 스킨.</td>
+        <td>8/7 시작</td>
+        <td><span class="type">시즌·스킨</span></td>
+        <td>신캐 성능 관심 vs 수영복 스킨 수위 논쟁(하단 리스크 참고).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 -->
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">Call of Duty<br>BO7 · Warzone</td>
+        <td><b>시즌5 리로디드</b> — 좀비 라운드맵 피날레 'Rex Infernus'(BO7 스토리 종결), 'Turbo Tilt'(뉴크타운 핀볼 6v6), 'Black Ops Royale'(로드아웃·굴라그 無 복귀), 신무기 Mace 근접·레거시 무기 미스터리박스, 'Last Call' 이벤트.</td>
+        <td>8/20 출시</td>
+        <td><span class="type">시즌 중반드롭</span></td>
+        <td>좀비 서사 마무리 기대 高. 잦은 레거시 무기 재판매엔 피로 목소리도.</td>
+      </tr>
+      <tr>
+        <td class="g">Marvel Rivals</td>
+        <td>시즌 9.5 — 신규 뱅가드 '더 후드'(원거리 트윈 피스톨, WWE 데미안 프리스트 성우). 여름 수영복 스킨 6종.</td>
+        <td>8/7</td>
+        <td><span class="type">신캐·시즌</span></td>
+        <td>근접 위주 탱커 대신 원거리 탱커 등장에 메타 관심. 스킨 수위엔 찬반.</td>
+      </tr>
+      <tr>
+        <td class="g">Battlefield 6<br>· REDSEC</td>
+        <td><b>시즌4 'Top Gun' 이벤트</b> — 웨이크 아일랜드 리메이크 부활, 항모전 'Carrier Strike', REDSEC 제트 도그파이트 'Fighter Sweep', 최장거리 저격총 Interdictor, Top Gun 콜라보 코스메틱.</td>
+        <td>8/18</td>
+        <td><span class="type">시즌·콜라보</span></td>
+        <td>클래식 맵 부활·항공전 강화에 팬 호응. 콜라보 IP 활용 긍정적.</td>
+      </tr>
+      <tr>
+        <td class="g">Apex Legends</td>
+        <td>닌텐도 스위치 서비스 종료. 2026년 내 유저 이탈·랭크 치터·배틀패스 신뢰 이슈 지속 논의.</td>
+        <td>8/4 종료</td>
+        <td><span class="type">플랫폼·운영</span></td>
+        <td>레딧 등에서 라이브 운영 방향·치터 대응 비판적. 개선 요구 목소리.</td>
+      </tr>
+      <tr>
+        <td class="g">CS2</td>
+        <td>7/29 업데이트 반영, 신규 클라이언트·미션 시스템 도입 루머 지속.</td>
+        <td>7월 말~8월</td>
+        <td><span class="type">진행 업데이트</span></td>
+        <td>미션/케이스 개편 기대 vs 루머 신중론 병존.</td>
+      </tr>
+      <tr>
+        <td class="g">Valorant<br>(글로벌)</td>
+        <td>V26 Act 4 진행(Summit 맵·Blackspyre 스킨·3v3 리테이크), Champions 2026 번들 예고.</td>
+        <td>8월 진행중</td>
+        <td><span class="type">시즌·스킨</span></td>
+        <td>챔피언스 번들 리크에 기대. e스포츠 EWC 시즌과 맞물려 관심.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2>⚠️ 논란·리스크 신호 (우리 운영 교훈 포함)</h2>
+
+  <div class="risk">
+    <h3>1. 마블 라이벌즈 — 여름 수영복 스킨 'gooner game' 성적 대상화 논란</h3>
+    <p>여름 페스티벌 수영복 스킨(스톰 등)을 두고 과도한 성적 대상화라는 비판과 "취향 존중·매출 효자"라는 옹호가 충돌. 개발진이 공식 코멘트로 진화에 나섰습니다.</p>
+    <div class="lesson"><b>운영 교훈:</b> 여름/수영복류 코스메틱은 발매 전 <u>수위·표현 사전 리뷰 체크리스트</u>와 지역별 정서 점검을 거치고, 논란 발생 시 개발/CM의 신속·일관된 톤 대응 라인을 미리 준비해 둘 것.</div>
+  </div>
+
+  <div class="risk">
+    <h3>2. 에이펙스 레전드 — 유저 이탈·치터·배틀패스 신뢰 이슈 누적</h3>
+    <p>스위치 서비스 종료와 맞물려 2026년 라이브 운영 방향에 대한 커뮤니티 피로가 누적. 과거 유료 재화(배틀패스) 변경 역풍 사례가 계속 회자됩니다.</p>
+    <div class="lesson"><b>운영 교훈:</b> 유료 재화·배틀패스 구조 변경은 <u>사전 커뮤니티 소통과 A/B 여론 테스트</u>가 필수. 역풍 시 '빠른 인정→롤백→보상' 3단 대응이 신뢰 회복의 정석.</div>
+  </div>
+
+  <div class="risk">
+    <h3>3. COD — 레거시 무기 재판매·시즌 중 콘텐츠 밀도의 FOMO 피로</h3>
+    <p>좀비 서사 종결은 호평이나, 미스터리박스 레거시 무기 반복 등장·잦은 유료 번들에 '지갑 압박' 목소리가 병존.</p>
+    <div class="lesson"><b>운영 교훈:</b> 한정·복각 상품은 <u>재등장 로테이션을 투명 공지</u>해 FOMO를 완화하고, 무과금 보상 트랙의 체감 가치를 함께 강조할 것.</div>
+  </div>
+
+  <!-- 액션 -->
+  <h2>💡 CM 액션 제안</h2>
+
+  <div class="action">
+    <h3>액션 1 — 오버워치 '부산의 영웅' 로컬라이즈 흥행을 벤치마킹</h3>
+    <p>한국을 배경으로 한 신규 '한국 영웅'과 지역(부산) 테마 시즌이 국내 커뮤니티 화력을 크게 끌어올렸습니다. 자사 IP에도 <b>로컬 정체성 콘텐츠(한국 배경 맵·캐릭터·명절/광복절 등 계기 연동 이벤트)</b> 기획 여지를 검토하고, 오늘 광복절 계기 소셜 콘텐츠(국내 유저 대상 응원·감성 카피)를 짧게 편성하는 것을 제안합니다.</p>
+  </div>
+
+  <div class="action">
+    <h3>액션 2 — 여름 코스메틱 '수위 리스크' 선제 점검 체크리스트 가동</h3>
+    <p>마블 라이벌즈 수영복 스킨 백래시는 남 일이 아닙니다. 자사 여름/시즌 코스메틱에 대해 <b>발매 전 표현 수위·문구·지역 정서 리뷰</b>를 1페이지 체크리스트로 표준화하고, 커뮤니티 사전 톤 테스트(소규모 프리뷰) 절차를 이번 시즌부터 도입할 것을 제안합니다.</p>
+  </div>
+
+  <div class="note">
+    ⚠️ <b>유의사항:</b> 동시접속·시청·판매 등 수치는 서드파티/추정치일 수 있어 <b>재확인 권장</b>. 일부 항목(발로란트 Act·델타포스 시즌 등)은 배경 맥락으로만 포함했으며, 출시일은 지역·시간대에 따라 달라질 수 있습니다. 커뮤니티 반응은 게시판 상위 흐름을 요약한 것으로 표본 편향이 있을 수 있습니다.
+  </div>
+
+  <footer>
+    <h4>📎 출처</h4>
+    <ul>
+      <li>오버워치 8/12 패치노트(넥슨): <a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11">overwatch.nexon.com</a> · 인벤 시즌4/디몬: <a href="https://www.inven.co.kr/webzine/news/?news=319177">inven.co.kr</a> · 루리웹: <a href="https://bbs.ruliweb.com/news/board/300001/read/2359765">ruliweb.com</a></li>
+      <li>COD BO7 시즌5 리로디드: <a href="https://www.callofduty.com/blog/2026/08/call-of-duty-black-ops-7-warzone-season-05-reloaded-announcement">callofduty.com</a></li>
+      <li>Marvel Rivals 시즌 9.5: <a href="https://www.gameshub.com/news/guides/marvel-rivals-season-9-5-release-date-2890577/">gameshub.com</a> · 공식: <a href="https://www.marvelrivals.com/news/">marvelrivals.com</a> · 스킨 논란: <a href="https://www.vice.com/en/article/marvel-rivals-storm-summer-skin-backlash/">vice.com</a></li>
+      <li>Battlefield 6/REDSEC 시즌4: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/season-4-roadmap-everything-you-need-to-know">ea.com</a></li>
+      <li>Apex 스위치 종료: <a href="https://www.nintendoreporters.com/en/news/nintendo-switch-2/apex-legends-is-leaving-nintendo-switch-on-august-4-2026-and-what-that-means-for-every-player/">nintendoreporters.com</a> · 유저 이탈 논의: <a href="https://www.elomania.com/en/blog/apex-legends/why-apex-legends-is-losing-players-in-2026--ranked-cheaters--community-backlash">elomania.com</a></li>
+      <li>Valorant V26 Act 4: <a href="https://www.strafe.com/news/read/valorant-introduces-new-battlepass-and-blackspyre-skin-collection-in-v26-act-4/">strafe.com</a> · CS2: <a href="https://cs2news.gg/">cs2news.gg</a> · PUBG: <a href="https://pubg.com/ko/news">pubg.com</a></li>
+    </ul>
+    <p style="margin-top:12px;">데일리 FPS·슈터 레이더 · 라이온하트 CM 실무 지원 · 생성 시각 기준 2026-08-15 (KST) · 커뮤니티 출처: 레딧/루리웹/인벤/디시/에펨/아카라이브 + 전문지</p>
+  </footer>
+
+</div>
+</body>
+</html>

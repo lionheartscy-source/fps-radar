@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS·슈터 데일리 레이더 · 2026-08-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   FPS·슈터 레이더 — 디자인 템플릿 v3
+   상단부(네이비 그라디언트 헤더 + 4-KPI): 확정본 유지
+   그 아래 섹션: v2 템플릿 구조(표·동향 카드·리스크·액션·출처) · 풀폭 단일 컬럼
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#EEF1F6; --card:#FFFFFF; --card-2:#F4F6FA;
+  --ink:#161C29; --ink-2:#3B4354; --muted:#6B7488; --faint:#8B93A5;
+  --line:#E1E6EF; --line-soft:#EDF0F6; --zebra:#F7F9FC;
+  --navy:#1B2A4A; --blue:#2E5AAC; --blue-2:#3E6FCB; --blue-soft:#E7EEFB; --blue-line:#CBD9F2;
+  --red:#B3352F; --red-soft:#FBECEA; --amber:#9A6A12; --amber-soft:#FBF2DD;
+  --green:#1F7A4D; --green-soft:#E7F5EC; --violet:#6D4AA6; --violet-soft:#F0EAFA;
+  --shadow:0 1px 2px rgba(22,28,41,.04), 0 6px 18px -12px rgba(22,28,41,.22);
+  --shadow-lift:0 2px 6px rgba(22,28,41,.07), 0 20px 40px -22px rgba(22,28,41,.34);
+  --ring:var(--blue);
+  --mh-grad:linear-gradient(118deg,#152039 0%,#1F2A44 44%,#2B4A7C 100%);
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:14px; --radius-sm:9px;
+}
+html[data-theme="dark"]{
+  --bg:#0E1016; --card:#171A22; --card-2:#1C2029;
+  --ink:#EAECF1; --ink-2:#C3C8D4; --muted:#8B93A5; --faint:#6E7689;
+  --line:#282D38; --line-soft:#20242D; --zebra:#1B1F27;
+  --navy:#CFE0FF; --blue:#7CA6EE; --blue-2:#8FB4F2; --blue-soft:#16202F; --blue-line:#25344C;
+  --red:#EE7469; --red-soft:#2A1715; --amber:#D9AC55; --amber-soft:#241C0E;
+  --green:#63C793; --green-soft:#0F2018; --violet:#B79BE6; --violet-soft:#1C1630;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -14px rgba(0,0,0,.7);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 44px -22px rgba(0,0,0,.85);
+  --mh-grad:linear-gradient(118deg,#0C1220 0%,#111A2E 46%,#1B3357 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.66;letter-spacing:-.003em;word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:4px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:0 0 6px 0;font-size:14px;font-weight:700}
+.skip:focus{left:0}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--blue),var(--blue-2));transition:width .12s linear}
+
+/* ═══ 상단부(확정본) — 네이비 그라디언트 헤더 + 4-KPI ═══ */
+.masthead{position:relative;background:var(--mh-grad);color:#fff;
+  padding:30px 0 34px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mh-inner{max-width:1400px;margin:0 auto;padding:0 40px}
+.masthead .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#AFC4EC;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.masthead .eyebrow .live{width:7px;height:7px;border-radius:50%;background:#FF6B5E;flex:none;
+  box-shadow:0 0 0 0 rgba(255,107,94,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(255,107,94,0)}100%{box-shadow:0 0 0 0 rgba(255,107,94,0)}}
+.masthead h1{margin:0;font-size:clamp(23px,3.1vw,30px);font-weight:800;line-height:1.24;letter-spacing:-.02em;color:#fff}
+.masthead .meta{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;
+  font-size:13px;color:#C7D2E6}
+.masthead .meta b{color:#fff;font-weight:700}
+.masthead .cover-pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  color:#EAF0FB;padding:3px 12px;border-radius:999px;font-size:12.5px;font-weight:700}
+.themebtn{position:absolute;top:22px;right:24px;min-height:36px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#EAF0FB;border-radius:9px;
+  padding:8px 12px;font-family:var(--sans);font-size:12px;font-weight:600;cursor:pointer;transition:background .15s}
+.themebtn:hover{background:rgba(255,255,255,.18)}
+.themebtn .val{font-family:var(--mono);font-size:11px;letter-spacing:.06em}
+
+.wrap{max-width:1400px;margin:0 auto;padding:22px 40px 80px}
+
+.lead{color:var(--ink-2);font-size:14.5px;line-height:1.8;margin:0 0 16px;max-width:80ch}
+.lead b{color:var(--ink);font-weight:600;box-shadow:inset 0 -8px 0 var(--blue-soft)}
+
+.notice{display:flex;gap:12px;align-items:flex-start;margin:0 0 22px;padding:12px 15px;background:var(--blue-soft);
+  border:1px solid var(--blue-line);border-radius:var(--radius-sm);font-size:13px;color:var(--ink-2);line-height:1.6}
+.notice .k{font-size:11.5px;font-weight:800;color:var(--blue);white-space:nowrap;padding-top:1px}
+.notice b{color:var(--ink)}
+
+/* 4-KPI 행 */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px 16px;
+  box-shadow:var(--shadow);border-top:4px solid var(--blue)}
+.kpi.good{border-top-color:var(--green)} .kpi.warn{border-top-color:var(--amber)} .kpi.risk{border-top-color:var(--red)}
+.kpi .lbl{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.kpi .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:6px;letter-spacing:-.02em}
+.kpi.risk .big{color:var(--red)}
+.kpi .sub{font-size:12.5px;color:var(--muted);line-height:1.55}
+.kpi .sub a{font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.kpi .sub a:hover{text-decoration:none;border-bottom-style:solid}
+.kpi .sep{opacity:.4;padding:0 3px}
+
+/* ═══ 이하 섹션: v2 구조 ═══ */
+.sec{display:flex;align-items:center;gap:12px;margin:44px 0 6px;scroll-margin-top:16px}
+.sec .idx{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--blue);flex:none}
+.sec h2{margin:0;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.sec .rule{flex:1;height:1px;background:var(--line)}
+.sub-lead{color:var(--muted);font-size:13.5px;margin:8px 0 16px;max-width:74ch;line-height:1.7}
+.sub-lead b{color:var(--ink-2);font-weight:600}
+
+/* 표 */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:920px;font-size:13.5px}
+thead th{position:sticky;top:0;z-index:2;background:var(--card-2);color:var(--navy);text-align:left;
+  padding:11px 14px;font-weight:800;font-size:12.5px;white-space:nowrap;border-bottom:2px solid var(--blue)}
+tbody td{padding:12px 14px;border-top:1px solid var(--line-soft);vertical-align:top}
+tbody tr:nth-child(even){background:var(--zebra)}
+tbody tr:hover{background:var(--blue-soft)}
+.g-cell{display:flex;gap:13px;align-items:flex-start;min-width:230px}
+.thumb{width:128px;height:60px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.noimg img{display:none}
+.thumb.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(255,255,255,.92);letter-spacing:.02em}
+.game{font-weight:800;color:var(--navy);line-height:1.3}
+.game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
+.date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.pt{margin:0;color:var(--ink-2);line-height:1.6}
+.pt b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;margin-bottom:2px}
+.t-new{background:var(--blue-soft);color:var(--blue)} .t-live{background:var(--card-2);color:var(--muted)}
+.t-risk{background:var(--red-soft);color:var(--red)} .t-good{background:var(--green-soft);color:var(--green)}
+.t-warn{background:var(--amber-soft);color:var(--amber)}
+.src-inline a{font-size:12px;font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.src-inline a:hover{text-decoration:none;border-bottom-style:solid}
+
+/* 신작 동향 카드 */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s;display:flex;flex-direction:column}
+.tcard .tbanner{position:relative;aspect-ratio:2.5/1;background:linear-gradient(135deg,var(--navy),#12203b);overflow:hidden}
+.tcard .tbanner img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.tcard .tbanner.noimg img{display:none}
+.tcard .tbanner.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:rgba(255,255,255,.9);letter-spacing:.02em}
+.tcard .tin{padding:16px 18px 17px;flex:1}
+.tcard:hover{border-color:var(--muted);box-shadow:var(--shadow-lift)}
+.tcard .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tcard .gm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tcard h3{margin:0 0 8px;font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.45;color:var(--ink)}
+.tcard p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.65}
+.tcard p b{color:var(--ink);font-weight:600}
+.tcard .obs{margin-top:9px;padding-left:12px;border-left:2px solid var(--line);font-size:12.5px}
+.tcard .obs .k{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:3px}
+.tcard .src{margin-top:11px;font-size:12px;color:var(--muted)}
+
+
+/* 오늘의 일정 (타임라인) */
+.timeline{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 10px;box-shadow:var(--shadow)}
+.timeline h3{margin:0 0 3px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.timeline .hint{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:78px 50px 1fr;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line-soft)}
+.tl li:first-child{border-top:none}
+.tl .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.tl .s{font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:5px;line-height:1.5}
+.tl .s.end{background:var(--red-soft);color:var(--red)} .tl .s.start{background:var(--blue-soft);color:var(--blue)}
+.tl .s.on{background:var(--green-soft);color:var(--green)} .tl .s.due{background:var(--card-2);color:var(--muted)}
+.tl .t{font-size:14px;color:var(--ink-2);line-height:1.55}
+.tl .t b{color:var(--ink);font-weight:600}
+.tl .t .win{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:6px}
+.tl li.today{background:linear-gradient(90deg,var(--red-soft),transparent 72%);margin:0 -22px;padding-left:22px;padding-right:22px}
+
+/* 오늘의 헤드라인 (히어로) */
+.heroes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hero{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s}
+.hero:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);text-decoration:none}
+.hero .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--navy),#12203b)}
+.hero .shot img{width:100%;height:100%;object-fit:cover}
+.hero .shot.noimg img{display:none}
+.hero .shot.noimg::before{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:34px;color:rgba(255,255,255,.13);letter-spacing:.06em}
+.hero .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,14,.94) 0%,rgba(8,10,14,.55) 40%,rgba(8,10,14,.05) 74%)}
+.hero .rank{position:absolute;top:11px;left:13px;z-index:2;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero .flag{position:absolute;top:12px;right:12px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--red);color:#fff}
+.hero .flag.n{background:rgba(255,255,255,.93);color:#14161A}
+.hero .over{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:14px 16px}
+.hero .over .gm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:5px}
+.hero .over h3{margin:0;color:#fff;font-size:16px;font-weight:700;line-height:1.42;letter-spacing:-.02em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero .under{padding:14px 16px 15px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.hero .under b{color:var(--ink);font-weight:600}
+@media(max-width:820px){ .heroes{grid-template-columns:1fr 1fr} }
+@media(max-width:600px){ .heroes{grid-template-columns:1fr} }
+
+/* 리스크 */
+.risk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:var(--radius);padding:17px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.risk.high{border-left-color:var(--red)}
+.risk .lvl{font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:7px}
+.risk.high .lvl{color:var(--red)}
+.risk h3{margin:0 0 11px;font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.4}
+.risk .row{display:grid;grid-template-columns:62px 1fr;gap:14px;margin-bottom:8px;font-size:13.5px;color:var(--ink-2);line-height:1.65}
+.risk .row .k{font-size:11.5px;font-weight:700;color:var(--muted);padding-top:4px}
+.risk .row b{color:var(--ink);font-weight:600}
+.risk .lesson{margin-top:12px;background:var(--amber-soft);border-radius:var(--radius-sm);padding:12px 15px;font-size:13px;color:var(--ink-2);line-height:1.7}
+.risk .lesson .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.risk .lesson b{color:var(--ink);font-weight:600}
+.risk .lesson ol{margin:0;padding-left:17px} .risk .lesson li{margin:4px 0}
+
+/* 액션 */
+.act{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.act .num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;flex:none;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.act h3{margin:0 0 6px;font-size:15.5px;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.act p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.7}
+.act p b{color:var(--ink);font-weight:600}
+
+.caveat{border:1px dashed var(--line);border-radius:var(--radius-sm);padding:14px 17px;margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.7}
+.caveat .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.caveat b{color:var(--ink-2)}
+
+/* 출처 */
+.sources{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+.sources summary{cursor:pointer;list-style:none;padding:15px 20px;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--ink);min-height:44px}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:17px;color:var(--muted);transition:transform .25s}
+.sources[open] summary::after{transform:rotate(45deg)}
+.sources .body{padding:0 20px 18px}
+.sources ul{margin:0;padding:0;list-style:none;columns:2;column-gap:34px}
+.sources li{font-size:12.5px;line-height:1.6;margin:0 0 11px;color:var(--muted);break-inside:avoid;padding-left:12px;border-left:1px solid var(--line-soft)}
+.sources li b{display:block;color:var(--ink-2);font-weight:700;margin-bottom:2px}
+.colophon{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7}
+.colophon b{color:var(--navy)}
+
+.tpl-note{display:flex;gap:9px;align-items:flex-start;margin:16px 0 0;padding:10px 14px;border:1px dashed var(--blue-line);
+  background:var(--blue-soft);border-radius:var(--radius-sm);font-size:12px;color:var(--ink-2);line-height:1.6}
+.tpl-note b{color:var(--navy)}
+
+/* 반응형 */
+@media(max-width:900px){ .mh-inner,.wrap{padding-left:18px;padding-right:18px} .themebtn{right:14px} }
+@media(max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  .masthead h1{font-size:21px} .risk .row{grid-template-columns:1fr;gap:2px} .sources ul{columns:1}
+  .act{grid-template-columns:1fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media print{#prog,.skip,.themebtn,.tpl-note{display:none}.masthead{background:#1F2A44!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{max-width:none}.sources ul{columns:1}body{background:#fff}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<div id="prog" aria-hidden="true"></div>
+
+<!-- ═══ 상단부(확정본) ═══ -->
+<header class="masthead">
+  <button class="themebtn" id="themebtn" type="button" aria-pressed="false" title="화면 테마">
+    <span class="lbltext">테마</span><span class="val" id="themelbl">LIGHT</span>
+  </button>
+  <div class="mh-inner">
+    <p class="eyebrow"><span class="live"></span>FPS · 슈터 데일리 커뮤니티/이벤트 레이더</p>
+    <h1>오늘의 FPS·슈터 동향 레이더</h1>
+    <div class="meta">
+      <span>기준일 <b>2026년 8월 27일 (목)</b></span>
+      <span class="cover-pill">커버기간: 최근 24–48시간 + 진행 업데이트</span>
+      <span>작성 09:0X KST</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+  <p class="lead"><b>MW4 오픈 베타가 내일(8/28) 전원 공개</b>되는데, 얼리 베타 여론이 지난 리포트의 "매우 호평"에서 <b>스팀 '대체로 부정적'(36%)</b>으로 돌아섰습니다. 그럼에도 <b>한국 배경 맵(실크웜·로터스)</b>은 국내에서 별도 화제입니다. 여기에 <b>Aliens: Fireteam Elite 2</b>가 8/25 혹평 속 출시됐고, <b>게임스컴 2026</b>에서 엔씨·크래프톤 슈터 신작이 쏟아졌습니다. 반복 이슈는 진행 업데이트로만 정리했습니다.</p>
+
+  <div class="notice">
+    <span class="k">커버리지</span>
+    <span><b>MW4 한시 트래킹</b> — Call of Duty: MW4는 8/31 리포트까지만 포함하고 9/1 리포트부터 제외합니다(다른 CoD 타이틀은 유지). 베타·화제성 집중 기간 한정.</span>
+  </div>
+
+  <div class="kpis" id="summary">
+    <div class="kpi">
+      <div class="lbl">진행 중 시즌·이벤트·베타</div>
+      <div class="big">5건+</div>
+      <div class="sub"><a href="https://www.callofduty.com/modernwarfare4/beta" target="_blank" rel="noopener">MW4 오픈베타</a><span class="sep">·</span><a href="https://overwatch.blizzard.com/ko-kr/news/patch-notes/" target="_blank" rel="noopener">OW2 부산</a><span class="sep">·</span><a href="https://www.ea.com/games/battlefield/battlefield-6" target="_blank" rel="noopener">BF6 탑건</a><span class="sep">·</span><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener">R6</a><span class="sep">·</span><a href="https://www.marvelrivals.com/" target="_blank" rel="noopener">마블 9.5</a></div>
+    </div>
+    <div class="kpi good">
+      <div class="lbl">국내 포커스</div>
+      <div class="big">MW4 한국맵 · OW2</div>
+      <div class="sub">MW4 실크웜·로터스(한국 배경) 주목 + OW2 '부산' 시즌·MEKA(8/31 마감)</div>
+    </div>
+    <div class="kpi risk">
+      <div class="lbl">논란·리스크 신호</div>
+      <div class="big">1건 핵심</div>
+      <div class="sub">MW4 얼리 베타 스팀 '대체로 부정적'(36%)으로 반전. <a href="#risk">상세 보기</a></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">오늘의 타임라인 (8/27)</div>
+      <div class="big">MW4 오픈베타 D-1</div>
+      <div class="sub">오픈 베타 사전 다운로드 진행 → 8/28 전원 공개(Switch 2 포함)</div>
+    </div>
+  </div>
+
+  <!-- 01 오늘의 일정 -->
+  <div class="sec" id="today"><span class="idx">01</span><h2>오늘의 일정</h2><span class="rule"></span></div>
+  <p class="sub-lead">오늘 기준으로 마감·시작·진행되는 일정만. 자사 이벤트 편성을 잡을 때 먼저 보는 칸입니다.</p>
+  <div class="timeline">
+    <h3>움직이는 일정 6건</h3>
+    <p class="hint">붉게 표시된 줄이 오늘(8/27) 진행 중입니다.</p>
+    <ol class="tl">
+      <li class="today"><span class="d">08.27 목</span><span class="s on">진행</span><span class="t"><b>MW4 오픈 베타 사전 다운로드</b> 진행<span class="win">preload 8/26~</span></span></li>
+      <li><span class="d">08.28 금</span><span class="s start">시작</span><span class="t"><b>MW4 오픈 베타</b> 전원 공개(Switch 2 포함)<span class="win">8/28–9/1</span></span></li>
+      <li><span class="d">08.28 금</span><span class="s start">시작</span><span class="t"><b>Inferno Protocol</b> 출시(협동 호러 FPS)<span class="win">신작</span></span></li>
+      <li><span class="d">08.31 일</span><span class="s end">종료</span><span class="t"><b>OW2 MEKA 이벤트</b> 마감(부산 시즌)<span class="win">8/11–8/31</span></span></li>
+      <li><span class="d">09.15 화</span><span class="s on">진행</span><span class="t"><b>BF6 탑건 콜라보</b> 종료 예정<span class="win">~9/15</span></span></li>
+      <li><span class="d">10.23 금</span><span class="s due">예정</span><span class="t"><b>MW4 정식 출시</b><span class="win">하반기 최대어</span></span></li>
+    </ol>
+  </div>
+
+  <!-- 02 오늘의 헤드라인 -->
+  <div class="sec" id="headline"><span class="idx">02</span><h2>오늘의 헤드라인</h2><span class="rule"></span></div>
+  <p class="sub-lead">지난 24–48시간 흐름이 바뀌었거나 오늘 움직이는 톱3.</p>
+  <section class="heroes">
+    <a class="hero" href="https://www.gamemeca.com/view.php?gid=1779500" target="_blank" rel="noopener">
+      <div class="shot" data-mono="MW4"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg?t=1787684232" alt="">
+        <span class="rank">01</span><span class="flag">여론 반전</span>
+        <div class="over"><div class="gm">Call of Duty: MW4</div><h3>얼리 베타 '대체로 부정적'(스팀 36%), 오픈 베타 D-1</h3></div>
+      </div>
+      <div class="under">지난 리포트의 "매우 호평"에서 뒤집혔습니다. <b>느린 조준·리스폰·에임 어시스트</b> 지적. 내일(8/28) 오픈 베타가 여론 반등의 분수령. <b>수치 재확인 권장.</b></div>
+    </a>
+    <a class="hero" href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank" rel="noopener">
+      <div class="shot" data-mono="OW">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg" alt="오버워치2">
+        <span class="rank">02</span><span class="flag n">국내 화제</span>
+        <div class="over"><div class="gm">Overwatch 2</div><h3>'부산의 영웅들' MEKA 이벤트, 8/31 마감 임박</h3></div>
+      </div>
+      <div class="under">부산 맵 리워크·D.Va MEKA 소재로 국내 화제 지속. <b>마감 임박</b> 참여 독려·복귀 유도 타이밍.</div>
+    </a>
+    <a class="hero" href="https://massivelyop.com/2026/08/25/aliens-fireteam-elite-2-has-officially-launched-under-the-daybreak-banner/" target="_blank" rel="noopener">
+      <div class="shot" data-mono="AFE2"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3448650/9b3d808b5a39c572dc13ced8024e8085bd306805/header.jpg?t=1787348030" alt="">
+        <span class="rank">03</span><span class="flag n">신작</span>
+        <div class="over"><div class="gm">Aliens: Fireteam Elite 2</div><h3>8/25 혹평 속 출시, 초기 평가 엇갈림</h3></div>
+      </div>
+      <div class="under">Daybreak 퍼블리싱. "<b>공포감이 옅다</b>" 등 rough reviews. 라이선스 IP 슈터의 완성도 관리 사례.</div>
+    </a>
+  </section>
+
+  <!-- 03 국내 -->
+  <div class="sec" id="kr"><span class="idx">03</span><h2>국내 포커스</h2><span class="rule"></span></div>
+  <p class="sub-lead">국내 서비스·국내 배경 IP·국내 커뮤니티(<b>인벤·루리웹·디시·아카라이브·에펨</b>) 반응 중심.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="MW4" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg?t=1787684232" alt=""></span><span><a href="https://zdnet.co.kr/view/?no=20260822132915" target="_blank" rel="noopener"><span class="game">콜오브듀티: MW4</span></a><span class="game-sub">한국 배경 맵</span></span></div></td>
+        <td class="pt"><b>실크웜</b>(한국 쇼핑 지구)·<b>로터스</b>(한국 어촌) 두 한국 배경 맵이 베타에 포함</td>
+        <td class="date-cell">체험기 8/22~</td>
+        <td><span class="tag t-new">한국 배경 맵</span> <span class="tag t-risk">평가 엇갈림</span></td>
+        <td class="pt">한국 배경 자체는 국내 관심을 크게 끌었지만 감상은 갈립니다. 루리웹 "<b>한국적 손맛</b>" 호평, 인벤 "옥에 티", 게임메카·스팀 "<b>전작 단점만 모아놨다</b>" 혹평이 공존. <span class="src-inline"><a href="https://zdnet.co.kr/view/?no=20260822132915" target="_blank" rel="noopener">ZDNet</a> · <a href="https://www.inven.co.kr/webzine/news/?news=319817" target="_blank" rel="noopener">인벤</a> · <a href="https://bbs.ruliweb.com/xbox/board/300003/read/2360414" target="_blank" rel="noopener">루리웹</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="OW" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg" alt=""></span><span><a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank" rel="noopener"><span class="game">오버워치2</span></a><span class="game-sub">부산의 영웅들</span></span></div></td>
+        <td class="pt">시즌 '부산의 영웅들' · <b>MEKA 이벤트 8/31 마감</b> · 부산 맵 리워크</td>
+        <td class="date-cell">8/11 시작</td>
+        <td><span class="tag t-warn">마감 임박</span></td>
+        <td class="pt">국내 지명(부산)·MEKA 소재로 화제 지속. 마감 임박 구간이라 참여 독려·복귀 유도 타이밍으로 활용 가능. <span class="src-inline"><a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank" rel="noopener">넥슨 패치노트</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="PUBG" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg" alt=""></span><span><a href="https://pubg.com/ko/news/10885" target="_blank" rel="noopener"><span class="game">배틀그라운드(PUBG)</span></a></span></div></td>
+        <td class="pt">업데이트 42.3 — 신규 LMG <b>RPD</b>, 4개월 <b>메타 로테이션</b>, 차량 사격 조정</td>
+        <td class="date-cell">PC 8/12</td>
+        <td><span class="tag t-live">진행 업데이트</span></td>
+        <td class="pt">메타 로테이션·차량 사격 너프 찬반은 이어지나 새 국면 소식은 없음. 8월 상점·PC방 이벤트 위주 안정 국면. <span class="src-inline"><a href="https://pubg.com/ko/news/10885" target="_blank" rel="noopener">PUBG 공식</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="서든" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3576070/a49df50ab2d45bac938ec8c6f01d9a362da6c034/header.jpg?t=1786682334" alt=""></span><span><a href="https://zdnet.co.kr/view/?no=20260702163031" target="_blank" rel="noopener"><span class="game">서든어택</span></a></span></div></td>
+        <td class="pt">시즌3 '패러독스' + 아이돌 콜라보(리센느·최예나)</td>
+        <td class="date-cell">7월~ 진행</td>
+        <td><span class="tag t-live">진행 업데이트</span></td>
+        <td class="pt">신규 소식보다 아이돌 IP 콜라보·운영 중심. 국내 PC방 지표 흐름을 배경으로 관찰. <span class="src-inline"><a href="https://zdnet.co.kr/view/?no=20260702163031" target="_blank" rel="noopener">ZDNet</a></span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 02 글로벌 -->
+  <div class="sec" id="global"><span class="idx">04</span><h2>글로벌 포커스</h2><span class="rule"></span></div>
+  <p class="sub-lead">레딧 각 서브레딧·<b>Dexerto·PC Gamer·IGN</b> 등 글로벌 커뮤니티/전문지 기준.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="MW4" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg?t=1787684232" alt=""></span><span><a href="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-weekend-two" target="_blank" rel="noopener"><span class="game">콜오브듀티: MW4</span></a><span class="game-sub">CoD 2026</span></span></div></td>
+        <td class="pt">오픈 베타 <b>8/28 전원 공개</b>(Switch 2 포함) · CoD 베타 <b>최초 캠페인 미션</b> 'Entrenched' · 신규 모드 Hijack·Inflation</td>
+        <td class="date-cell">오픈 8/28–9/1<br>정식 10/23</td>
+        <td><span class="tag t-new">오픈 베타</span> <span class="tag t-risk">여론 반전</span></td>
+        <td class="pt">얼리 베타 스팀 평가가 <b>'대체로 부정적'(36%, 약 6,900명)</b>으로 반전(느린 조준·리스폰·에임 어시스트). 오픈 베타로 표본이 커지며 여론 반등/고착의 분수령. <b>수치 재확인 권장.</b> <span class="src-inline"><a href="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-weekend-two" target="_blank" rel="noopener">CoD 공식</a> · <a href="https://www.gamemeca.com/view.php?gid=1779500" target="_blank" rel="noopener">게임메카</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="AFE2" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3448650/9b3d808b5a39c572dc13ced8024e8085bd306805/header.jpg?t=1787348030" alt=""></span><span><a href="https://store.steampowered.com/app/3448650/" target="_blank" rel="noopener"><span class="game">Aliens: Fireteam Elite 2</span></a></span></div></td>
+        <td class="pt">에이리언 3인 협동 슈터 속편, <b>Daybreak</b> 퍼블리싱으로 출시</td>
+        <td class="date-cell">8/25</td>
+        <td><span class="tag t-risk">초기 평가 부진</span></td>
+        <td class="pt">"비주얼은 인상적이나 <b>공포감이 옅다</b>"는 등 초기 리뷰 엇갈림(rough reviews). 라이선스 IP 슈터의 기대치·런칭 완성도 사례. <b>평점 재확인 권장.</b> <span class="src-inline"><a href="https://massivelyop.com/2026/08/25/aliens-fireteam-elite-2-has-officially-launched-under-the-daybreak-banner/" target="_blank" rel="noopener">Massively OP</a> · <a href="https://www.metacritic.com/game/aliens-fireteam-elite-2/" target="_blank" rel="noopener">Metacritic</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="BF6" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1784839791" alt=""></span><span><a href="https://vgtimes.com/games/battlefield-6/news/" target="_blank" rel="noopener"><span class="game">배틀필드6</span></a></span></div></td>
+        <td class="pt">시즌4 <b>탑건 콜라보</b>·웨이크 아일랜드 귀환, 무료 체험 주간은 종료</td>
+        <td class="date-cell">콜라보 ~9/15</td>
+        <td><span class="tag t-live">진행 업데이트</span></td>
+        <td class="pt">전투기·항공모함 호평, <b>매버릭 미등장</b> 아쉬움. 무료 유입 이후 이탈 방어가 관건이고 MW4 오픈 베타와 플레이타임 경쟁. <span class="src-inline"><a href="https://vgtimes.com/games/battlefield-6/news/" target="_blank" rel="noopener">VGTimes</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="R6" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg" alt=""></span><span><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener"><span class="game">레인보우 식스 시즈</span></a></span></div></td>
+        <td class="pt">Y11S3 '오퍼레이션 스플릿 파이어' · 신규 방어 오퍼 <b>Noor</b>·드론 레이싱</td>
+        <td class="date-cell">8/16</td>
+        <td><span class="tag t-live">진행 업데이트</span></td>
+        <td class="pt">'방패 메타 카운터' 오퍼의 밴율·승률 데이터가 쌓이는 구간. 새 국면보다 밸런스 관찰 위주. <span class="src-inline"><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener">Ubisoft</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="MR" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg" alt=""></span><span><a href="https://www.marvelrivals.com/gameupdate/" target="_blank" rel="noopener"><span class="game">마블 라이벌즈</span></a></span></div></td>
+        <td class="pt">시즌9.5 진행, <b>스톰 스킨 등급 논란</b>은 무상 레전더리 승격으로 봉합</td>
+        <td class="date-cell">시즌9.5 8/7~</td>
+        <td><span class="tag t-live">진행 업데이트</span></td>
+        <td class="pt">정기 밸런스가 이어지는 진행 국면. 스킨 형평성 대응 사례는 아래 <a href="#risk">리스크 신호</a>에서 운영 교훈으로 유지. <span class="src-inline"><a href="https://www.thegamer.com/marvel-rivals-storm-summer-skin-upgrade-legendary/" target="_blank" rel="noopener">TheGamer</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="APEX" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg" alt=""></span><span><a href="https://esports.gg/news/apex-legends/apex-legends-steam-player-numbers-drops-to-lowest-level-in-years/" target="_blank" rel="noopener"><span class="game">에이펙스 레전드</span></a></span></div></td>
+        <td class="pt">스팀 동시접속 하락 우려 지속</td>
+        <td class="date-cell">진행</td>
+        <td><span class="tag t-risk">지표 리스크</span></td>
+        <td class="pt"><b>수치·최신성 재확인 필요</b>(서드파티·단일 플랫폼 기준, 멀티플랫폼 미반영). 장수 라이브 서비스의 리텐션 난제. <span class="src-inline"><a href="https://esports.gg/news/apex-legends/apex-legends-steam-player-numbers-drops-to-lowest-level-in-years/" target="_blank" rel="noopener">esports.gg</a></span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 03 신작 레이더 -->
+  <div class="sec" id="launch"><span class="idx">05</span><h2>신작 레이더</h2><span class="rule"></span></div>
+  <p class="sub-lead">출시일 확정 신작 위주. <b>노출 규칙</b>: 출시일로부터 7일간(D0~D+6) 노출, 초과 시 특기 이슈 없으면 제외(출시 예정작·대형작은 예외).</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>출시일</th><th>플랫폼</th><th>장르 · 특징</th><th>비고 · 관전 포인트</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="AFE2" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3448650/9b3d808b5a39c572dc13ced8024e8085bd306805/header.jpg?t=1787348030" alt=""></span><a href="https://store.steampowered.com/app/3448650/" target="_blank" rel="noopener"><span class="game">Aliens: Fireteam Elite 2</span></a></div></td>
+        <td class="date-cell">2026-08-25<br><span style="color:var(--muted)">(D+2)</span></td>
+        <td class="pt">PC · PS5 · XSX</td>
+        <td class="pt">3인 협동 PvE 슈터(에이리언) — Daybreak</td>
+        <td class="pt"><span class="tag t-new">D+2 · 노출 유지</span> 초기 평가 엇갈림. 메타·유저 평점 재확인 권장.</td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="LoD" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559400/c1c80a35973c634c8b61b764706100c759b6099a/header.jpg?t=1787686235" alt=""></span><a href="https://store.steampowered.com/app/4559400/Like_or_Die/" target="_blank" rel="noopener"><span class="game">LIKE OR DIE</span></a></div></td>
+        <td class="date-cell">출시 미정(TBA)</td>
+        <td class="pt">PC (Steam)</td>
+        <td class="pt">팀 대전 FPS(한국 도심·스트리머) — NC(엔씨소프트)</td>
+        <td class="pt"><span class="tag t-warn">출시 예정 · 게임스컴 공개</span> 블록 건·넥서스 파괴 룰. 국내 개발사 신작 관찰.</td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="INF" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3908940/45fdacf873c8ca3ba7cca576fcf03ac24a413462/header.jpg?t=1787516786" alt=""></span><a href="https://store.steampowered.com/app/3908940/Inferno_Protocol/" target="_blank" rel="noopener"><span class="game">Inferno Protocol</span></a></div></td>
+        <td class="date-cell">2026-08-28<br><span style="color:var(--muted)">(예정)</span></td>
+        <td class="pt">PC (Steam)</td>
+        <td class="pt">생존 호러 FPS(솔로/6인 협동) — Tektonic</td>
+        <td class="pt"><span class="tag t-warn">D-1 · 8/28 출시</span> 협동 호러 인디. 출시 후 스트리밍 노출 관찰.</td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="MW4" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg?t=1787684232" alt=""></span><a href="https://store.steampowered.com/app/4783780/" target="_blank" rel="noopener"><span class="game">콜오브듀티: MW4</span></a></div></td>
+        <td class="date-cell">2026-10-23<br><span style="color:var(--muted)">(예정)</span></td>
+        <td class="pt">PC · 콘솔 · Switch 2</td>
+        <td class="pt">대형 신작 — 상단 글로벌 포커스 참조</td>
+        <td class="pt"><span class="tag t-new">출시 예정 · 7일 규칙 예외</span> 오픈 베타 8/28~9/1. MW4는 8/31 리포트까지 한시 트래킹.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 04 신작 동향 -->
+  <div class="sec" id="trend"><span class="idx">06</span><h2>신작 동향</h2><span class="rule"></span></div>
+  <p class="sub-lead">개별 신작 카드(03)와 달리 신작을 둘러싼 <b>흐름과 맥락</b>을 짚는 칸. 이번 주는 <b>게임스컴 2026</b>발 국내 게임사 슈터 신작 러시가 핵심.</p>
+  <div class="trend-grid">
+    <div class="tcard">
+      <div class="tbanner" data-mono="LoD"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559400/c1c80a35973c634c8b61b764706100c759b6099a/header.jpg?t=1787686235" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-new">게임스컴 2026</span><span class="tag t-live">ONL 8/25–26</span></div>
+        <div class="gm">Gamescom 2026 · K-게임</div>
+        <h3>"부진 털고 대반격"…엔씨·크래프톤, 게임스컴서 슈터 신작 봇물</h3>
+        <p>엔씨는 <b>라이크 오어 다이</b>(팀 서바이벌 FPS)·<b>신더시티</b>(디스토피아 서울 액션), 크래프톤은 <b>PUBG: 데드넷</b>(로그라이트 FPS)·<b>NO LAW</b>(오픈월드 FPS RPG) 등 신작 5종을 공개.</p>
+        <div class="obs"><span class="k">관전 포인트</span>K-게임이 슈터 장르로 글로벌 재도전하는 신호. 하반기 국내 경쟁 지형·마케팅·인재 경쟁이 달아오르는 구간.</div>
+        <div class="src"><a href="https://www.newsis.com/view/NISX20260826_0003763524" target="_blank" rel="noopener">뉴시스</a> · <a href="https://www.khgames.co.kr/news/articleView.html?idxno=307739" target="_blank" rel="noopener">경향게임스</a></div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tbanner" data-mono="DED"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2726580/bff134ef0c79e105abb59a65a04bc1bde7917064/header.jpg?t=1787683401" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-new">신작 공개</span><span class="tag t-good">CBT 신청</span></div>
+        <div class="gm">PUBG: DED.NET</div>
+        <h3>'배그' IP 확장, 로그라이트 FPS '데드넷' 공개 + 클로즈베타 신청</h3>
+        <p>1996년 가상의 카스카디아 배경, <b>캐릭터·건플레이 성장 요소</b>를 담은 로그라이트 FPS. 클로즈베타 신청이 열림.</p>
+        <div class="obs"><span class="k">관전 포인트</span><b>프리런칭·CBT 실무 벤치마크 가치</b>. 대형 IP의 서브장르 실험 + CBT 모집 방식·초기 커뮤니티 반응 참고.</div>
+        <div class="src"><a href="https://store.steampowered.com/app/2726580/PUBG_DEDNET/" target="_blank" rel="noopener">Steam</a> · <a href="https://www.sportsseoul.com/news/read/1631053" target="_blank" rel="noopener">스포츠서울</a></div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tbanner" data-mono="MW4"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg?t=1787684232" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-live">트렌드 관찰</span></div>
+        <div class="gm">로컬 배경 트렌드</div>
+        <h3>'한국 도심·서울'이 슈터 무대로 — 라이크오어다이·신더시티·MW4</h3>
+        <p>MW4의 한국 배경 맵(실크웜·로터스)에 이어 엔씨 <b>라이크 오어 다이</b>(한국 도심)·<b>신더시티</b>(디스토피아 서울)까지 한국 로케이션이 슈터 무대로 자주 등장.</p>
+        <div class="obs"><span class="k">관전 포인트</span>국내 이용자 소구점이자 우리 채널의 <b>화제성 흡수 기회</b>. '한국 배경 FPS 계보' 큐레이션으로 자연 유입.</div>
+        <div class="src"><a href="https://www.gametoc.co.kr/news/articleView.html?idxno=110936" target="_blank" rel="noopener">게임톡</a> · <a href="https://www.newsis.com/view/NISX20260826_0003763524" target="_blank" rel="noopener">뉴시스</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 리스크 -->
+  <div class="sec" id="risk"><span class="idx">07</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
+  <p class="sub-lead">남의 사고에서 먼저 배우는 칸.</p>
+  <article class="risk high">
+    <div class="lvl">HIGH · 베타 여론 반전</div>
+    <h3>MW4 얼리 베타 '대체로 부정적'(스팀 36%), '베타=본겜' 인식 속 여론 급랭</h3>
+    <div class="row"><span class="k">무엇이</span><span>얼리 베타 초기의 "시리즈 최고작" 반응이 며칠 만에 <b>스팀 '대체로 부정적'(36%, 약 6,900명)</b>으로 반전. 지적은 <b>느린 조준, 미흡한 맵 설계, 갑툭튀 리스폰, 과한 에임 어시스트, 타격감 부족</b>에 집중("전작 단점만 모아놨다", "베타 해보고 환불"). 수치 재확인 권장.</span></div>
+    <div class="row"><span class="k">맥락</span><span>"진지한 모던 워페어로의 복귀"라는 마케팅과 유저 체감의 간극, "<b>베타가 그대로 본 서버로 나온다</b>"는 학습된 불신이 여론을 키움. 오픈 베타(8/28)로 표본 확대 시 반등/고착 판가름.</span></div>
+    <div class="lesson"><span class="k">우리 운영 교훈</span>
+      <ol>
+        <li>이용자는 <b>베타를 사실상 완성 예고편</b>으로 받아들임 → CBT/OBT는 "테스트니까"가 안 통함. <b>알려진 이슈·개선 로드맵을 사전·즉시 공지.</b></li>
+        <li>핵심 감각(조준·타격감·리스폰)은 <b>1차 인상에서 결판</b> → 코어 피드백 항목을 미리 정의하고 <b>초기 며칠 여론 곡선을 실시간 모니터링.</b></li>
+        <li>"복귀·개선" 프레이밍은 <b>체감으로 증명되지 않으면 역풍</b> → 메시지-빌드 간극을 좁힐 것.</li>
+      </ol>
+    </div>
+  </article>
+  <article class="risk">
+    <div class="lvl">MID · 라이선스 IP 완성도</div>
+    <h3>Aliens: Fireteam Elite 2, 강한 IP·비주얼에도 초기 평가 부진</h3>
+    <div class="row"><span class="k">상황</span><span>강력한 에이리언 IP·비주얼에도 "공포감이 옅다"는 등 초기 리뷰 엇갈림. IP 인지도가 곧 완성도 만족으로 이어지지 않음을 보여줌. 평점 재확인 권장.</span></div>
+    <div class="lesson"><span class="k">우리 운영 교훈</span>라이선스·콜라보 타이틀은 <b>IP 팬 기대치가 기본값부터 높음</b>. 코어 게임플레이 완성도와 IP 고유 매력(여기선 '공포')을 놓치면 인지도가 오히려 실망을 키움. 출시 전 IP 팬 대상 기대치 관리·코어 루프 검증 필요.</div>
+  </article>
+  <article class="risk">
+    <div class="lvl">MID · 플레이타임 잠식</div>
+    <h3>하반기 슈터 플레이타임 쟁탈 본격화, MW4 오픈 베타 개막(8/28)</h3>
+    <div class="row"><span class="k">상황</span><span>내일(8/28) MW4 오픈 베타가 전 플랫폼·Switch 2까지 개방. 여론이 흔들려도 대형 신작 베타는 단기 플레이타임을 강하게 흡수. 8월 말~10월(정식 10/23)은 접속 이탈 리스크 구간(베타 반응 기반 추정).</span></div>
+    <div class="lesson"><span class="k">우리 운영 교훈</span>대형 신작 베타·런칭 캘린더에 우리 이벤트가 정면으로 겹치지 않게 회피, 불가피하면 복귀 보상·한정 콘텐츠로 방어. 다만 <b>경쟁작 여론이 흔들릴 때는 자사 안정 운영이 상대적 반사이익</b>이 될 수 있어, 무리한 맞불보다 완성도·안정성 소구가 유효.</div>
+  </article>
+
+  <!-- 06 액션 -->
+  <div class="sec" id="action"><span class="idx">08</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
+  <p class="sub-lead">오늘 바로 착수 가능한 두 가지.</p>
+  <article class="act">
+    <div class="num">1</div>
+    <div><h3>MW4 '한국 배경 맵' 화제 편승, 국내 반응 큐레이션</h3>
+      <p>실크웜·로터스 등 한국 배경 맵으로 국내 커뮤니티에서 "한국 나온다" 반응이 활발합니다. <b>한국 배경 등장 FPS 모음·실크웜/로터스 밈 리액션·우리 게임의 로컬 요소 하이라이트</b>를 오픈 베타 개막(8/28) 타이밍에 올려 자연 유입·호감을 확보하세요. 다만 <b>베타 여론이 엇갈리는 만큼</b> 특정 작품을 과하게 띄우기보다 "한국 배경 트렌드"를 소재로 삼는 편이 안전합니다.</p>
+    </div>
+  </article>
+  <article class="act">
+    <div class="num">2</div>
+    <div><h3>'베타=본겜' 리스크 반면교사, 우리 테스트 커뮤니케이션 체크리스트 점검</h3>
+      <p>MW4 베타 여론 급랭을 교훈 삼아 <b>(1)코어 감각 피드백 항목 사전 정의(조준·타격감·리스폰), (2)알려진 이슈·개선 로드맵 즉시 공지 템플릿, (3)초기 3일 여론 곡선 실시간 모니터링 체계</b>를 점검하세요. 마케팅의 "복귀/개선" 프레이밍이 실제 빌드로 증명되는지 <b>메시지-빌드 간극</b>을 사전 검수하면 런칭 백래시를 크게 줄일 수 있습니다.</p>
+    </div>
+  </article>
+
+  <div class="caveat">
+    <span class="k">유의사항</span>
+    동접·판매·스팀 평가 비율 등 수치는 서드파티 트래커/기사 기준으로 <b>재확인 권장</b>(MW4 스팀 36%·Aliens 평점·Apex 동접 등은 시점에 따라 변동). 커뮤니티 반응은 표본 여론으로 전체 정서와 다를 수 있음. MW4 베타 일정은 공식 블로그 PT 기준(얼리 8/21–8/25, 오픈 8/28–9/1)을 채택.
+  </div>
+
+  <!-- 07 출처 -->
+  <details class="sources" id="sources" open>
+    <summary>출처 링크 13건</summary>
+    <div class="body">
+      <ul>
+        <li><b>MW4 오픈 베타 상세</b><a href="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-weekend-two" target="_blank" rel="noopener">CoD 공식</a> · <a href="https://www.callofduty.com/modernwarfare4/beta" target="_blank" rel="noopener">베타 페이지</a></li>
+        <li><b>MW4 한국 배경 맵</b><a href="https://zdnet.co.kr/view/?no=20260822132915" target="_blank" rel="noopener">ZDNet</a></li>
+        <li><b>MW4 베타 '대체로 부정적'(36%)</b><a href="https://www.gamemeca.com/view.php?gid=1779500" target="_blank" rel="noopener">게임메카</a> · <a href="https://www.inven.co.kr/webzine/news/?news=319817" target="_blank" rel="noopener">인벤</a> · <a href="https://bbs.ruliweb.com/xbox/board/300003/read/2360414" target="_blank" rel="noopener">루리웹</a></li>
+        <li><b>Aliens: Fireteam Elite 2</b><a href="https://massivelyop.com/2026/08/25/aliens-fireteam-elite-2-has-officially-launched-under-the-daybreak-banner/" target="_blank" rel="noopener">Massively OP</a> · <a href="https://www.metacritic.com/game/aliens-fireteam-elite-2/" target="_blank" rel="noopener">Metacritic</a></li>
+        <li><b>Inferno Protocol(8/28)</b><a href="https://store.steampowered.com/app/3908940/Inferno_Protocol/" target="_blank" rel="noopener">Steam</a></li>
+        <li><b>NC 'LIKE OR DIE'</b><a href="https://store.steampowered.com/app/4559400/Like_or_Die/" target="_blank" rel="noopener">Steam</a> · <a href="https://www.gametoc.co.kr/news/articleView.html?idxno=110936" target="_blank" rel="noopener">게임톡</a></li>
+        <li><b>게임스컴 K-게임 러시</b><a href="https://www.newsis.com/view/NISX20260826_0003763524" target="_blank" rel="noopener">뉴시스</a> · <a href="https://www.khgames.co.kr/news/articleView.html?idxno=307739" target="_blank" rel="noopener">경향게임스</a></li>
+        <li><b>PUBG: 데드넷</b><a href="https://www.sportsseoul.com/news/read/1631053" target="_blank" rel="noopener">스포츠서울</a> · <a href="https://ded.net/en" target="_blank" rel="noopener">공식</a></li>
+        <li><b>오버워치2 부산·MEKA</b><a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank" rel="noopener">넥슨</a></li>
+        <li><b>PUBG 42.3</b><a href="https://pubg.com/ko/news/10885" target="_blank" rel="noopener">PUBG 공식</a></li>
+        <li><b>배틀필드6 / R6 / 마블</b><a href="https://vgtimes.com/games/battlefield-6/news/" target="_blank" rel="noopener">VGTimes</a> · <a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener">Ubisoft</a> · <a href="https://www.thegamer.com/marvel-rivals-storm-summer-skin-upgrade-legendary/" target="_blank" rel="noopener">TheGamer</a></li>
+        <li><b>에이펙스 동접</b><a href="https://esports.gg/news/apex-legends/apex-legends-steam-player-numbers-drops-to-lowest-level-in-years/" target="_blank" rel="noopener">esports.gg</a> (재확인 권장)</li>
+        <li><b>게임 이미지</b>Steam 스토어 공식 에셋(Valve 및 각 퍼블리셔). 비스팀·앱ID 미확인 타이틀은 약어 타일 대체.</li>
+      </ul>
+      <div class="colophon">
+        <b>FPS 이벤트 동향 레이더</b> · 라이온하트 · 자동 생성 리포트 · No.8<br>
+        모니터링: 레딧 · 루리웹 · 인벤 · 디시 · 아카라이브 · 에펨코리아 (국내+글로벌 병행)
+      </div>
+    </div>
+  </details>
+
+</div>
+</main>
+
+<script>
+(function(){
+  /* 이미지 로드 실패 → 약어 타일 대체 */
+  document.querySelectorAll('.thumb img, .tbanner img, .hero .shot img').forEach(function(img){
+    if(!img.getAttribute('src')){var p0=img.parentElement;if(p0)p0.classList.add('noimg');return;}
+    img.addEventListener('error',function(){var p=img.parentElement;if(p)p.classList.add('noimg');});
+  });
+  /* 읽기 진행바 */
+  var prog=document.getElementById('prog');
+  function tick(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',tick,{passive:true});window.addEventListener('resize',tick);tick();
+  /* 테마 토글 (리포트/뷰어와 동일 localStorage 키 공유) */
+  var root=document.documentElement,btn=document.getElementById('themebtn'),lbl=document.getElementById('themelbl');
+  function apply(t){root.setAttribute('data-theme',t);lbl.textContent=(t==='dark'?'DARK':'LIGHT');
+    btn.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('fpsradar-theme',t);}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('fpsradar-theme');}catch(e){}
+  if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)saved='dark';
+  apply(saved||'light');
+  btn.addEventListener('click',function(){apply(root.getAttribute('data-theme')==='dark'?'light':'dark');});
+})();
+</script>
+</body>
+</html>

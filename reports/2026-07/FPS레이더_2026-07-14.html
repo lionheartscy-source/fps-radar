@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 — 2026-07-14 (화)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo',sans-serif;
+    background:#F4F6FB; color:#1F2A44; line-height:1.6; padding:24px 14px 60px;
+  }
+  .wrap { max-width:1060px; margin:0 auto; }
+  header {
+    background:linear-gradient(135deg,#1F2A44 0%,#2E5AAC 100%);
+    color:#fff; border-radius:14px; padding:28px 30px; box-shadow:0 6px 20px rgba(31,42,68,.18);
+  }
+  header h1 { font-size:26px; letter-spacing:-.5px; margin-bottom:6px; }
+  header .sub { font-size:14px; opacity:.92; }
+  header .cover {
+    display:inline-block; margin-top:14px; background:rgba(255,255,255,.15);
+    padding:7px 14px; border-radius:20px; font-size:13px; font-weight:600;
+  }
+  .note-quiet {
+    margin-top:12px; font-size:13px; background:rgba(255,255,255,.1);
+    border-left:3px solid #8FB4FF; padding:8px 12px; border-radius:6px;
+  }
+  h2 {
+    font-size:19px; color:#1F2A44; margin:34px 0 14px; padding-bottom:8px;
+    border-bottom:2px solid #2E5AAC; display:flex; align-items:center; gap:8px;
+  }
+  h2 .dot { width:9px; height:9px; background:#2E5AAC; border-radius:50%; display:inline-block; }
+  .kpi-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px; margin-top:20px;
+  }
+  .kpi {
+    background:#fff; border-radius:12px; padding:18px; border-top:4px solid #2E5AAC;
+    box-shadow:0 2px 8px rgba(31,42,68,.07);
+  }
+  .kpi .tag { font-size:11px; font-weight:700; color:#2E5AAC; text-transform:uppercase; letter-spacing:.5px; }
+  .kpi .big { font-size:16px; font-weight:800; margin:6px 0 4px; color:#1F2A44; }
+  .kpi .desc { font-size:12.5px; color:#4a5568; }
+  .kpi.risk { border-top-color:#C0392B; }
+  .kpi.risk .tag { color:#C0392B; }
+  table {
+    width:100%; border-collapse:collapse; margin-top:8px; background:#fff;
+    border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(31,42,68,.07); font-size:13px;
+  }
+  th {
+    background:#1F2A44; color:#fff; text-align:left; padding:11px 12px; font-weight:600; font-size:12.5px;
+  }
+  td { padding:11px 12px; vertical-align:top; border-bottom:1px solid #e6eaf2; }
+  tbody tr:nth-child(even) { background:#F4F6FB; }
+  tbody tr:hover { background:#e8eefb; }
+  .badge {
+    display:inline-block; font-size:11px; padding:2px 8px; border-radius:10px; font-weight:600; white-space:nowrap;
+  }
+  .b-event{ background:#e3edff; color:#2E5AAC; }
+  .b-season{ background:#e6f7ee; color:#1e8a4c; }
+  .b-launch{ background:#fff3db; color:#b5730c; }
+  .b-risk{ background:#fde5e2; color:#C0392B; }
+  .b-esports{ background:#efe6ff; color:#6b3fc0; }
+  a { color:#2E5AAC; text-decoration:none; font-weight:600; }
+  a:hover { text-decoration:underline; }
+  .risk-box {
+    background:#fff; border-radius:12px; padding:18px 20px; margin-top:14px;
+    border-left:5px solid #C0392B; box-shadow:0 2px 8px rgba(31,42,68,.07);
+  }
+  .risk-box h3 { font-size:15px; color:#C0392B; margin-bottom:4px; }
+  .risk-box .lesson {
+    margin-top:8px; font-size:13px; background:#F4F6FB; padding:8px 12px; border-radius:6px; color:#1F2A44;
+  }
+  .risk-box + .risk-box { margin-top:12px; }
+  .action-box {
+    background:linear-gradient(135deg,#2E5AAC 0%,#1F2A44 100%); color:#fff;
+    border-radius:12px; padding:20px 22px; margin-top:14px;
+  }
+  .action-box h3 { font-size:15px; margin-bottom:6px; }
+  .action-box + .action-box { margin-top:12px; }
+  .action-box .k { font-size:12px; font-weight:700; opacity:.85; text-transform:uppercase; letter-spacing:.5px; }
+  .muted { color:#6a7488; font-size:12px; }
+  footer {
+    margin-top:36px; padding-top:18px; border-top:1px solid #d5dbe8; font-size:12.5px; color:#4a5568;
+  }
+  footer h3 { font-size:13px; color:#1F2A44; margin:14px 0 6px; }
+  footer ul { list-style:none; }
+  footer li { margin:4px 0; padding-left:14px; position:relative; }
+  footer li:before { content:"›"; position:absolute; left:0; color:#2E5AAC; font-weight:700; }
+  .disc {
+    margin-top:16px; background:#fff8e8; border:1px solid #f0dcaa; border-radius:8px;
+    padding:10px 14px; font-size:12px; color:#7a5c14;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🎯 데일리 FPS·슈터 레이더</h1>
+    <div class="sub">FPS/슈터 이벤트·커뮤니티 동향 리포트 · 라이온하트 CM/기획용</div>
+    <div class="cover">기준일 2026-07-14 (화) · 커버기간 7/12(토)~7/14(화) 최근 48시간 + 진행 이슈</div>
+    <div class="note-quiet">📌 <b>특기사항:</b> 오늘은 '오늘 새로 터진' 대형 이슈는 적은 편입니다. 최근 며칠(7/10 마블 라이벌즈 시즌9 개막, 7/13 PUBG 국내 e스포츠 공지)에서 이어지는 진행 이슈와, D-17로 다가온 배틀필드 6 정식 공개 모멘텀 중심으로 정리했습니다.</div>
+  </header>
+
+  <!-- KPI -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="tag">글로벌 · 신규 시즌</div>
+      <div class="big">마블 라이벌즈 시즌9 개막</div>
+      <div class="desc">7/10 '테베의 미스터리' — 신규 히어로 <b>주빌리</b>, 팀업 시스템 전면 개편, 블랙 위도우 리워크. 국내 커뮤니티 반응 활발.</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">글로벌 · 카운트다운</div>
+      <div class="big">배틀필드 6 정식 공개 D-17</div>
+      <div class="desc">7/31 EA 3일 대형 공개 이벤트 예고. 시즌3(7/1) 'Wet Work' 이벤트 진행 중. 경쟁작 마케팅 피크 임박.</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">국내 · e스포츠</div>
+      <div class="big">PUBG 한–핀란드 e스포츠 페스티벌</div>
+      <div class="desc">7/13 공식 공지. 국내 배그 팬덤·스트리머 겨냥 국제 교류 이벤트.</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">국내 · 시즌</div>
+      <div class="big">서든어택 2026 시즌3 '패러독스'</div>
+      <div class="desc">신규 캐릭터·저격소총·솔로 생존 모드 '로데오 솔로' 추가 진행. 국내 온라인 FPS 여전히 활발.</div>
+    </div>
+    <div class="kpi risk">
+      <div class="tag">리스크 신호</div>
+      <div class="big">Apex 랭크·버그 백래시</div>
+      <div class="desc">랭크 드랍존 제거 후 혼란 + Wildcard '맵 밖 리스폰' 버그로 커뮤니티 불만 누적. 운영 교훈 있음(하단 참고).</div>
+    </div>
+  </div>
+
+  <!-- 국내 -->
+  <h2><span class="dot"></span>국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:30%">이벤트/이슈</th><th style="width:11%">날짜</th><th style="width:13%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PUBG(배그)</td>
+        <td><a href="https://pubg.com/ko/news" target="_blank">한–핀란드 e스포츠 페스티벌 2026</a></td>
+        <td>7/13</td>
+        <td><span class="badge b-esports">공지/e스포츠</span></td>
+        <td>국제 교류 이벤트로 팬 관심. PNC 2026 응원 이벤트와 연계 흐름.</td>
+      </tr>
+      <tr>
+        <td>서든어택</td>
+        <td><a href="https://zdnet.co.kr/view/?no=20260702163031" target="_blank">2026 시즌3 '패러독스' — 신규 캐릭터·저격소총·'로데오 솔로'</a></td>
+        <td>7/2 쇼케이스~진행</td>
+        <td><span class="badge b-season">시즌 업데이트</span></td>
+        <td>21주년 200프레임·16:9 도입 등 개선 병행. 신규 캐릭터 콜라보에 호평/기대.</td>
+      </tr>
+      <tr>
+        <td>마블 라이벌즈</td>
+        <td><a href="https://bbs.ruliweb.com/news/board/300007/read/2350759" target="_blank">시즌9 '테베의 미스터리' 주빌리 국내 반응</a></td>
+        <td>7/10~</td>
+        <td><span class="badge b-launch">신규 히어로</span></td>
+        <td>루리웹·디시 마갤 반응 활발. 신규 히어로/스토리 호평 vs 밸런스·운영 방향 비판 혼재.</td>
+      </tr>
+      <tr>
+        <td>오버워치2</td>
+        <td><a href="https://www.inven.co.kr/board/overwatch/4538/5931876" target="_blank">2026 시즌3 패치 — 영웅밸런스·맵선택·영웅밴</a></td>
+        <td>진행</td>
+        <td><span class="badge b-season">시즌</span></td>
+        <td>맵선택·영웅밴 등 편의 기능에 긍정 반응. OWCS 코리아 스테이지2 병행.</td>
+      </tr>
+      <tr>
+        <td>발로란트 KR</td>
+        <td><a href="https://www.thespike.gg/valorant/news/valorant-esports-world-cup-2026-guide/8318" target="_blank">EWC 2026 발로란트 종목 진행</a></td>
+        <td>진행</td>
+        <td><span class="badge b-esports">e스포츠</span></td>
+        <td>Esports World Cup 시청 관심. 한국 팀 성적에 커뮤니티 주목.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 -->
+  <h2><span class="dot"></span>글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:30%">이벤트/이슈</th><th style="width:11%">날짜</th><th style="width:13%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Marvel Rivals</td>
+        <td><a href="https://www.marvelrivals.com/20260708/41525_1306959.html" target="_blank">Season 9 'The Mystery of Thebes' — 주빌리·팀업 개편·블랙위도우 리워크·트위치 드랍</a></td>
+        <td>7/10</td>
+        <td><span class="badge b-season">시즌/콜라보</span></td>
+        <td>신규 히어로·이벤트 호평. 단, '재미 vs 경쟁 밸런싱' 방향성 논쟁 지속(PC Gamer).</td>
+      </tr>
+      <tr>
+        <td>Battlefield 6</td>
+        <td><a href="https://insider-gaming.com/battlefield-6-reveal-event/" target="_blank">정식 공개 — EA 3일 대형 이벤트('COD Next' 스타일)</a></td>
+        <td>7/31 예정</td>
+        <td><span class="badge b-event">공개 이벤트</span></td>
+        <td>커뮤니티 기대 최고조. 멀티플레이 리빌 방식·시기 관심 집중.</td>
+      </tr>
+      <tr>
+        <td>Battlefield 6 / REDSEC</td>
+        <td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/season-3-roadmap-everything-you-need-to-know" target="_blank">Season 3 — 'Wet Work' 이벤트, Tactical Obliteration(8v8), 캐주얼 BR(봇 포함)</a></td>
+        <td>7/1~진행</td>
+        <td><span class="badge b-event">시즌/이벤트</span></td>
+        <td>봇 포함 캐주얼 BR·소규모 모드에 신규/복귀 유저 유입 기대.</td>
+      </tr>
+      <tr>
+        <td>Battlefield 6</td>
+        <td><a href="https://www.pcgamer.com/games/fps/battlefield-6-is-overhauling-its-gunplay-next-week-and-its-adding-one-thing-weve-all-asked-for-years-on-end/" target="_blank">'Battlefield Combat' 건플레이 대개편 — 사지 데미지 첫 도입, 탄퍼짐 조정</a></td>
+        <td>6/30 (배경)</td>
+        <td><span class="badge b-season">밸런스</span></td>
+        <td>정밀 사격 보상·예측 가능한 반동에 찬반. 시리즈 팬층 논의 활발.</td>
+      </tr>
+      <tr>
+        <td>Apex Legends</td>
+        <td><a href="https://www.gamespot.com/articles/apex-legends-unveils-year-long-plan-with-two-new-characters-as-fan-complaints-mount/1100-6538151/" target="_blank">연간 로드맵·신규 레전드 예고 (불만 누적 속)</a></td>
+        <td>진행</td>
+        <td><span class="badge b-risk">논란</span></td>
+        <td>발표에 '무덤덤' 반응. 랭크 드랍존·Wildcard 버그 불만이 뉴스 상쇄.</td>
+      </tr>
+      <tr>
+        <td>Overwatch 2</td>
+        <td><a href="https://overwatch.blizzard.com/ko-kr/news/" target="_blank">2026 시즌3 진행 — 연간 로드맵·신규 영웅 라인업</a></td>
+        <td>진행</td>
+        <td><span class="badge b-season">시즌</span></td>
+        <td>연간 로드맵+대량 신규 영웅 발표가 경쟁작 대비 호평(Apex 대조군으로 언급).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2><span class="dot"></span>논란 · 리스크 신호</h2>
+
+  <div class="risk-box">
+    <h3>⚠ Apex Legends — 코어 모드 급변경 + 신규 모드 버그</h3>
+    <p>랭크에서 지정 드랍존을 제거하고 캐주얼식 드랍십으로 바꾸며 '착지 혼란' 불만. 신규 Wildcard 모드에선 '맵 밖 리스폰으로 복귀 불가' 버그 보고. 연간 로드맵 발표조차 반응이 미지근.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 랭크/경쟁 코어 규칙 변경은 '전면 적용'보다 옵트인 테스트 큐 + 명확한 롤백 커뮤니케이션이 안전. 신규 모드는 '맵 이탈/리스폰' 엣지케이스를 런칭 전 QA 체크리스트에 명시.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>⚠ Marvel Rivals — '재미 vs 경쟁' 밸런싱 방향성 논쟁</h3>
+    <p>시즌마다 큰 리워크(이번 블랙위도우·팀업 개편)를 반복하며, "재미 위주로 갈지 진지한 경쟁 밸런스로 갈지 노선을 정하라"는 여론(PC Gamer). 잦은 대규모 변경은 숙련 유저 피로·메타 불신을 키울 수 있음.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 대규모 밸런스 패치 시 '변경 의도·목표 메타'를 사전 커뮤로 명문화하면 백래시 완화. 시즌 노트에 "왜 바꿨는가"를 1문장씩 붙이는 관행 검토.</div>
+  </div>
+
+  <!-- 액션 -->
+  <h2><span class="dot"></span>CM 액션 제안</h2>
+
+  <div class="action-box">
+    <div class="k">Action 1 · 타이밍</div>
+    <h3>배틀필드 6 7/31 공개 이벤트 전후 채널 캘린더 사전 조율</h3>
+    <p>7/31 EA 3일 대형 리빌은 전체 FPS 스트리밍/화제성을 흡수합니다. 그 주에 우리 대형 공지·콜라보를 겹치게 두면 노출 손실이 큽니다. 7/29~8/2 자체 마케팅·스트리머 일정을 재점검하고, 우리 채널은 '반응/밈 콘텐츠'로 화제 편승하는 편이 유리합니다.</p>
+  </div>
+
+  <div class="action-box">
+    <div class="k">Action 2 · 운영 리스크 예방</div>
+    <h3>시즌 코어 변경용 '옵트인 + 롤백' 체크리스트 점검</h3>
+    <p>Apex의 랭크 드랍존 혼란·Wildcard 버그 사례를 우리 시즌 업데이트 프로세스에 대입해, ①경쟁 코어 규칙 변경은 테스트 큐 선공개 ②신규 모드 맵이탈/리스폰 엣지케이스 QA ③롤백 시나리오·공지 템플릿 사전 준비 — 3항목을 이번 시즌 릴리스 체크리스트에 반영하시길 제안합니다.</p>
+  </div>
+
+  <!-- 출처 -->
+  <footer>
+    <h3>출처</h3>
+    <ul>
+      <li>Marvel Rivals 공식 — <a href="https://www.marvelrivals.com/20260708/41525_1306959.html" target="_blank">Season 9 패치노트(7/10)</a> / <a href="https://bbs.ruliweb.com/news/board/300007/read/2350759" target="_blank">루리웹 시즌9 주빌리</a> / <a href="https://www.pcgamer.com/games/third-person-shooter/marvel-rivals-needs-to-pick-a-lane-and-either-fully-embrace-balancing-for-fun-long-term-or-stick-to-some-serious-changes/" target="_blank">PC Gamer 밸런스 논쟁</a></li>
+      <li>Battlefield 6 — <a href="https://insider-gaming.com/battlefield-6-reveal-event/" target="_blank">Insider Gaming 7/31 공개 이벤트</a> / <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/season-3-roadmap-everything-you-need-to-know" target="_blank">EA 시즌3 로드맵</a> / <a href="https://www.pcgamer.com/games/fps/battlefield-6-is-overhauling-its-gunplay-next-week-and-its-adding-one-thing-weve-all-asked-for-years-on-end/" target="_blank">PC Gamer 건플레이 개편</a></li>
+      <li>Apex Legends — <a href="https://www.gamespot.com/articles/apex-legends-unveils-year-long-plan-with-two-new-characters-as-fan-complaints-mount/1100-6538151/" target="_blank">GameSpot 로드맵·불만 누적</a></li>
+      <li>PUBG — <a href="https://pubg.com/ko/news" target="_blank">공식 뉴스(한–핀란드 e스포츠 7/13)</a></li>
+      <li>서든어택 — <a href="https://zdnet.co.kr/view/?no=20260702163031" target="_blank">ZDNet 2026 시즌3 '패러독스'</a> / <a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a></li>
+      <li>오버워치2 — <a href="https://overwatch.blizzard.com/ko-kr/news/" target="_blank">공식 새소식</a> / <a href="https://www.inven.co.kr/board/overwatch/4538/5931876" target="_blank">인벤 시즌3 패치</a></li>
+      <li>발로란트 — <a href="https://www.thespike.gg/valorant/news/valorant-esports-world-cup-2026-guide/8318" target="_blank">THESPIKE EWC 2026 가이드</a></li>
+    </ul>
+    <div class="disc">
+      <b>유의사항:</b> 동접·판매·시청 수치 및 서드파티 트래커 기반 지표는 원 출처 기준 <b>재확인 권장</b>. 일부 항목(배틀필드 건플레이 6/30, 서든어택 쇼케이스 7/2 등)은 커버기간 직전 이슈로 '진행/배경' 표기했습니다. 커뮤니티 반응은 정성 요약이며 표본 편향 가능성 있음. 최종 의사결정 전 원문 확인 바랍니다.
+    </div>
+    <p class="muted" style="margin-top:12px;">데일리 FPS·슈터 레이더 · 자동 생성 리포트 · 2026-07-14 (화) KST</p>
+  </footer>
+
+</div>
+</body>
+</html>

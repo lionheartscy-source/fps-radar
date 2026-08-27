@@ -1,0 +1,320 @@
+<meta charset="utf-8">
+<title>FPS·슈터 데일리 레이더 — 2026-08-23 (주말 포함)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    background: #eef1f6;
+    color: #1F2A44;
+    line-height: 1.6;
+    padding: 24px 14px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 30px;
+    box-shadow: 0 6px 20px rgba(31,42,68,.25);
+  }
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.35);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  header h1 { font-size: 26px; line-height: 1.3; margin-bottom: 8px; }
+  header .meta { font-size: 14px; opacity: .92; }
+  header .meta b { color: #ffd76a; }
+
+  /* Section titles */
+  h2 {
+    font-size: 19px;
+    color: #1F2A44;
+    margin: 34px 0 14px;
+    padding-left: 12px;
+    border-left: 5px solid #2E5AAC;
+  }
+  h2 .sub { font-size: 13px; font-weight: 400; color: #5a6478; margin-left: 8px; }
+
+  /* KPI cards */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .kpi {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 2px 8px rgba(31,42,68,.08);
+    border-top: 4px solid #2E5AAC;
+  }
+  .kpi .k-label { font-size: 12px; color: #6b7488; font-weight: 700; letter-spacing: .3px; }
+  .kpi .k-value { font-size: 17px; color: #1F2A44; font-weight: 800; margin: 6px 0 4px; }
+  .kpi .k-desc { font-size: 12.5px; color: #55607a; }
+
+  /* Tables */
+  .tbl-scroll { overflow-x: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,42,68,.08); }
+  table { width: 100%; border-collapse: collapse; background: #fff; min-width: 720px; }
+  th {
+    background: #1F2A44;
+    color: #fff;
+    font-size: 12.5px;
+    text-align: left;
+    padding: 11px 12px;
+    font-weight: 700;
+  }
+  td { padding: 11px 12px; font-size: 13px; vertical-align: top; border-bottom: 1px solid #e3e7ef; }
+  tbody tr:nth-child(even) { background: #f4f6fa; }
+  td.game { font-weight: 800; color: #1F2A44; white-space: nowrap; }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 6px; white-space: nowrap;
+  }
+  .t-event { background: #e4edff; color: #2E5AAC; }
+  .t-season { background: #e6f5ea; color: #1f7a44; }
+  .t-launch { background: #fff0e0; color: #b5651d; }
+  .t-risk { background: #fde4e4; color: #b3261e; }
+  .react-pos { color: #1f7a44; font-weight: 700; }
+  .react-neg { color: #b3261e; font-weight: 700; }
+  .react-mix { color: #b5651d; font-weight: 700; }
+  a { color: #2E5AAC; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .src-link { font-size: 11.5px; }
+
+  /* Risk / action boxes */
+  .box {
+    background: #fff; border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(31,42,68,.08); margin-bottom: 14px;
+  }
+  .box.risk { border-left: 5px solid #b3261e; }
+  .box.action { border-left: 5px solid #2E5AAC; background: #f7faff; }
+  .box h3 { font-size: 15px; margin-bottom: 6px; color: #1F2A44; }
+  .box p { font-size: 13.5px; color: #37415c; margin-bottom: 6px; }
+  .box .lesson { font-size: 13px; color: #1F2A44; background: #fff6e6; border-radius: 8px; padding: 8px 12px; margin-top: 6px; }
+  .box .lesson b { color: #b5651d; }
+
+  .highlight-today {
+    background: #fff8e1; border: 1px solid #ffd76a; border-radius: 12px;
+    padding: 14px 18px; margin: 20px 0; font-size: 14px; color: #6b4e00;
+  }
+  .highlight-today b { color: #8a5a00; }
+
+  /* Footer */
+  footer { margin-top: 40px; padding-top: 18px; border-top: 2px solid #d5dbe6; font-size: 12px; color: #6b7488; }
+  footer h4 { color: #1F2A44; font-size: 13px; margin-bottom: 8px; }
+  footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 14px; }
+  footer li { font-size: 12px; }
+  .note { background: #eef1f6; border-radius: 8px; padding: 12px 14px; color: #55607a; line-height: 1.7; }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <span class="badge">데일리 커뮤니티 · 이벤트 레이더</span>
+    <h1>FPS·슈터 동향 레이더 — 주말 포함 브리핑</h1>
+    <div class="meta">
+      기준일 <b>2026년 8월 23일 (일)</b> · 커버 기간 <b>8/21(금)~8/23(일) 주말 + 최근 48시간</b><br>
+      대상: 발로란트 · 오버워치 · 에이펙스 · 콜오브듀티 · CS2 · R6 · 배틀필드 · 마블 라이벌즈 · 델타포스 · 배틀그라운드 · 서든어택 외
+    </div>
+  </header>
+
+  <div class="highlight-today">
+    ⭐ <b>오늘(8/23) 17:00 — 서든어택 21주년 온라인 쇼케이스</b> 진행. 이벤트 매치·생일 파티와 함께 <b>‘2026 시즌3’ 계획 공개</b> 예정. CM 실시간 모니터링 권장(하단 액션 참고).
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-label">신규 시즌·대형 업데이트</div>
+      <div class="k-value">6건 동시 진행</div>
+      <div class="k-desc">CoD S5 Reloaded · BF6 Top Gun · 발로 Act5 · 마블 S9.5 · PUBG 42.3 · 서든 21주년</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">주말 최대 화제</div>
+      <div class="k-value">BF6 ‘탑건’ 콜라보</div>
+      <div class="k-desc">웨이크 아일랜드 부활 + 무료 체험 주간(~8/25). Steam 순위 22→17위 상승</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">리스크 신호</div>
+      <div class="k-value">마블 라이벌즈</div>
+      <div class="k-desc">캐릭터 스포트라이트 ‘인종 표현’ 형평성 논란 — 넷이즈 대응</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">호평 운영 사례</div>
+      <div class="k-value">오버워치 리브랜딩</div>
+      <div class="k-desc">‘OW2→OW’ 명칭 복귀 + 무료 재화, 24h 피크 6.9만+ (재확인 권장)</div>
+    </div>
+    <div class="kpi">
+      <div class="k-label">국내 포커스</div>
+      <div class="k-value">서든어택 21주년</div>
+      <div class="k-desc">협동 점프 ‘UP투게더’(~8/27) + 오늘 쇼케이스</div>
+    </div>
+  </div>
+
+  <h2>국내 포커스 <span class="sub">배틀그라운드 · 서든어택 · 발로란트 한국</span></h2>
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th><th>출처</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="game">서든어택</td>
+          <td>21주년 기념 협동 점프 콘텐츠 <b>‘UP투게더’</b>(4인 협동, 곰돌킹 바이러스 테마) 업데이트. 콤보패스 8/20 활성화. <b>21주년 온라인 쇼케이스(8/23 17시)</b>에서 2026 시즌3 계획 공개.</td>
+          <td>8/6~8/27<br>쇼케이스 8/23</td>
+          <td><span class="tag t-event">주년·이벤트</span></td>
+          <td><span class="react-pos">긍정</span> — 협동 신모드 신선하다는 반응, 장수 서비스 이벤트 기대감</td>
+          <td class="src-link"><a href="https://www.gamemeca.com/view.php?gid=1778792">게임메카</a> · <a href="https://sa.nexon.com/news/events/list.aspx">넥슨 공식</a></td>
+        </tr>
+        <tr>
+          <td class="game">배틀그라운드<br>(PUBG)</td>
+          <td>업데이트 <b>42.3</b> — 신규 7.62mm LMG <b>RPD</b> 추가, LMG 리밸런스(재장전 -25%), <b>크로스헤어 커스터마이징</b>·환경설정 공유코드, 신규 서바이버 패스 ‘여름 휴가’.</td>
+          <td>PC 8/12<br>콘솔 8/20</td>
+          <td><span class="tag t-season">패치·콘텐츠</span></td>
+          <td><span class="react-mix">중립~긍정</span> — 크로스헤어 커스텀은 호평, LMG 메타 변화 주시</td>
+          <td class="src-link"><a href="https://pubg.com/ko/news/10885">PUBG 공식 42.3</a></td>
+        </tr>
+        <tr>
+          <td class="game">발로란트<br>(한국)</td>
+          <td>2026 시즌 <b>Act 5</b> 국내 동시 적용 — 경쟁전 맵 로테이션 <b>어비스 IN / 브리즈 OUT</b>, 신규 배틀패스·Aeris 스킨. 챔피언스(상하이) 맵풀 확정.</td>
+          <td>8/18</td>
+          <td><span class="tag t-season">시즌</span></td>
+          <td><span class="react-mix">혼재</span> — 브리즈 제외 환영 vs 어비스 밸런스 우려</td>
+          <td class="src-link"><a href="https://www.talkesport.com/news/valorant/valorant-season-2026-act-5-patch-notes/">패치노트</a> · <a href="https://valorant.inven.co.kr/">발로 인벤</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>글로벌 포커스 <span class="sub">해외 주요 FPS·슈터</span></h2>
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th><th>출처</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="game">배틀필드 6</td>
+          <td><b>시즌4 ‘탑건(Top Gun)’ 콜라보</b>(업데이트 1.4.2.0) Phase 2 — 명작 맵 <b>웨이크 아일랜드 부활</b>, 신규 모드 2종(Gauntlet: Fighter Sweep / Carrier Strike), 전투기 2종·저격총 Interdictor, 츠루 리프 확장. <b>무료 체험 주간 ~8/25</b>.</td>
+          <td>~8/19</td>
+          <td><span class="tag t-event">콜라보·시즌</span></td>
+          <td><span class="react-pos">긍정</span> — “가장 큰 시즌 이벤트”. 피크 6.2만 CCU, Steam 22→17위 <i>(재확인 권장)</i></td>
+          <td class="src-link"><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-2-0">EA 공식</a> · <a href="https://gamedropdaily.com/updates/battlefield-6/">GameDrop</a></td>
+        </tr>
+        <tr>
+          <td class="game">콜오브듀티<br>(BO7·워존)</td>
+          <td><b>시즌5 Reloaded</b> — 좀비 신맵 ‘Rex Infernus’(스토리 완결), MP ‘Turbo Tilt’(뉴크타운 핀볼)·Freerun: Descent·Cranked 복귀, 신무기 Mace, 워존 <b>Black Ops Royale</b> 부활·Loaded Resurgence LTM. Last Call 이벤트.</td>
+          <td>8/20</td>
+          <td><span class="tag t-season">시즌</span></td>
+          <td><span class="react-pos">긍정</span> — 좀비 스토리 완결·뉴크타운 변형맵 호응, MW4 티저 기대</td>
+          <td class="src-link"><a href="https://www.callofduty.com/blog/2026/08/call-of-duty-black-ops-7-warzone-season-05-reloaded-announcement">CoD 공식</a></td>
+        </tr>
+        <tr>
+          <td class="game">마블 라이벌즈</td>
+          <td>시즌 <b>9.5 ‘The Mystery of Thebes’</b> 진행 — 신규 뱅가드 <b>The Hood</b> 합류, 신규 번들 스톰 ‘Sacred Skies’(~9/11)·로키 ‘Lady Loki’(~8/28), 서머 페스티벌 Vol.2 수영복 스킨. S10 ~9/11 예정.</td>
+          <td>8/7~8/13</td>
+          <td><span class="tag t-risk">논란</span></td>
+          <td><span class="react-neg">부정 신호</span> — 캐릭터 스포트라이트 ‘인종 표현 형평성’ 비판, 넷이즈 해명</td>
+          <td class="src-link"><a href="https://www.marvelrivals.com/news/">마블 공식</a> · <a href="https://www.forbes.com/sites/brianmazique/2026/08/13/marvel-rivals-patch-notes/">Forbes</a></td>
+        </tr>
+        <tr>
+          <td class="game">오버워치<br>(OW2→OW)</td>
+          <td><b>‘OW2’→‘Overwatch’ 명칭 복귀</b> + ‘Reign of Talon’ 스토리 아크(2/10~) 진행 중, 2026년 6개 시즌 로드맵. 무료 재화(루트박스) 복귀로 여론 반전.</td>
+          <td>진행 중</td>
+          <td><span class="tag t-season">리브랜딩</span></td>
+          <td><span class="react-pos">긍정</span> — 24h 피크 6.9만+ (스팀 출시 이래 최고), 회의적 유저 유입 <i>(재확인 권장)</i></td>
+          <td class="src-link"><a href="https://overwatch.blizzard.com/en-us/news/24246206/overwatch-spotlight-the-reign-of-talon-begins/">블리자드 공식</a></td>
+        </tr>
+        <tr>
+          <td class="game">CS2</td>
+          <td>주말 업데이트 — 커뮤니티 맵 <b>Boulder·Poseidon</b> 워크샵 갱신, de_boulder 대규모 아트 패스, 벽 이동 속도 버그 수정. 대형 오퍼레이션/케이스는 없음.</td>
+          <td>8/19~8/20</td>
+          <td><span class="tag t-event">유지보수</span></td>
+          <td><span class="react-mix">중립</span> — 소규모 개선 위주, 큰 화제 없음</td>
+          <td class="src-link"><a href="https://cs2news.gg/cs2-update">CS2News</a></td>
+        </tr>
+        <tr>
+          <td class="game">에이펙스<br>레전드</td>
+          <td>프로 백래시 이후 <b>논란성 밸런스 변경 철회</b>, EGS 출시(8/6), 미드시즌 이후 성능 저하 이슈 지속 제기. <span class="sub">(배경 이슈·진행 업데이트)</span></td>
+          <td>8월 진행</td>
+          <td><span class="tag t-risk">리스크</span></td>
+          <td><span class="react-neg">부정</span> — 성능/최적화 불만, 다만 변경 철회는 소통 호평</td>
+          <td class="src-link"><a href="https://www.ea.com/games/apex-legends/apex-legends/news">EA 공식</a> · <a href="https://gamedevrelay.substack.com/p/apex-cancels-controversial-changes">Gamedev Relay</a></td>
+        </tr>
+        <tr>
+          <td class="game">델타포스</td>
+          <td>시즌 진행 — <b>R6 시즈 콜라보</b> 합류(발표), 앞선 Season Echo의 <b>툼레이더 콜라보</b>. IP 콜라보 공세 지속. <span class="sub">(진행 업데이트)</span></td>
+          <td>진행 중</td>
+          <td><span class="tag t-event">콜라보</span></td>
+          <td><span class="react-mix">긍정~혼재</span> — IP 콜라보 물량 호평, 신선도 피로 우려도</td>
+          <td class="src-link"><a href="https://playday.one/2026/06/17/delta-force-x-rainbow-six-siege-collab-joins-in-next-season/">DayOne</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>논란 · 리스크 신호 <span class="sub">우리 운영에 주는 교훈</span></h2>
+
+  <div class="box risk">
+    <h3>① 마블 라이벌즈 — 캐릭터 ‘표현 형평성’ 논란</h3>
+    <p>흑인 캐릭터와 백인 캐릭터의 프로모션 스포트라이트 비중을 두고 인종 표현 형평성 문제가 제기, 넷이즈가 공식 대응에 나섰다. 스킨·번들 물량은 순항 중이나 ‘대표성’ 이슈가 겹치면 화제가 빠르게 부정 여론으로 전환될 수 있는 국면.</p>
+    <div class="lesson"><b>교훈:</b> 프로모션·스포트라이트 로테이션은 캐릭터 다양성·형평성 관점에서 사전 점검 체크리스트를 두는 것이 안전. 국내 커뮤니티도 ‘특정 캐릭터 편애’ 프레임에 민감.</div>
+  </div>
+
+  <div class="box risk">
+    <h3>② 에이펙스 — 미드시즌 성능 저하 & 밸런스 백래시</h3>
+    <p>미드시즌 업데이트 이후 프레임/최적화 저하 불만이 이어졌고, 프로 반발이 커지자 예정된 밸런스 변경을 철회했다. 다만 ‘철회 결정’ 자체는 소통 사례로 일부 호평.</p>
+    <div class="lesson"><b>교훈:</b> 대형 패치 전 성능 QA를 별도 게이트로 두고, 반발 시 “빠른 철회+사유 공지”가 신뢰 회복에 유효. 침묵보다 번복이 낫다.</div>
+  </div>
+
+  <div class="box action">
+    <h3>③ (호평) 오버워치 리브랜딩 — 여론 반전 공식</h3>
+    <p>“진정한 후속작을 내놓지 못했다”는 <b>솔직한 인정</b> + 명칭 복귀 + <b>무료 재화(루트박스) 제공</b>의 조합으로 회의적 유저를 다시 끌어들여 24시간 피크 신기록을 기록 <i>(수치 재확인 권장)</i>.</p>
+    <div class="lesson"><b>교훈:</b> 부정 여론 국면에서는 ‘방어’보다 <b>솔직한 인정 + 즉각적 무료 혜택 + 장기 로드맵 공개</b>의 3종 세트가 반전 트리거로 작동.</div>
+  </div>
+
+  <h2>CM 액션 제안</h2>
+
+  <div class="box action">
+    <h3>액션 1 — 오늘 17시 서든어택 쇼케이스 실시간 트래킹</h3>
+    <p>서든어택 21주년 쇼케이스(8/23 17:00)에서 공개되는 <b>2026 시즌3 방향성·신규 콘텐츠·이벤트 구성</b>을 실시간 캡처. 국내 장수 FPS의 ‘주년 이벤트 설계(협동 모드·출석·교환소·PC방 연계)’를 자사 프리런칭/시즌 이벤트 벤치마킹 자료로 정리해 사내 공유.</p>
+  </div>
+
+  <div class="box action">
+    <h3>액션 2 — ‘여론 반전 3종 세트’ 커뮤니케이션 템플릿화</h3>
+    <p>오버워치 사례의 <b>①솔직한 인정 → ②즉각 무료 혜택 → ③장기 로드맵 공개</b> 흐름을, 프리런칭/CBT 백래시 대응 시나리오의 표준 커뮤니케이션 템플릿으로 등록. 동시에 마블·에이펙스 리스크(표현 형평성·성능 QA)를 프리런칭 리스크 체크리스트에 반영.</p>
+  </div>
+
+  <footer>
+    <h4>출처</h4>
+    <ul>
+      <li><a href="https://www.ea.com/games/battlefield/battlefield-6/news">Battlefield 6 (EA)</a></li>
+      <li><a href="https://www.callofduty.com/blog/2026/08/call-of-duty-black-ops-7-warzone-season-05-reloaded-announcement">Call of Duty (BO7/워존)</a></li>
+      <li><a href="https://www.marvelrivals.com/news/">Marvel Rivals</a></li>
+      <li><a href="https://overwatch.blizzard.com/en-us/news/24246206/overwatch-spotlight-the-reign-of-talon-begins/">Overwatch (Blizzard)</a></li>
+      <li><a href="https://www.talkesport.com/news/valorant/valorant-season-2026-act-5-patch-notes/">Valorant Act 5</a></li>
+      <li><a href="https://cs2news.gg/cs2-update">CS2News</a></li>
+      <li><a href="https://www.ea.com/games/apex-legends/apex-legends/news">Apex Legends (EA)</a></li>
+      <li><a href="https://playday.one/2026/06/17/delta-force-x-rainbow-six-siege-collab-joins-in-next-season/">Delta Force</a></li>
+      <li><a href="https://pubg.com/ko/news/10885">PUBG 42.3</a></li>
+      <li><a href="https://www.gamemeca.com/view.php?gid=1778792">서든어택 (게임메카)</a></li>
+      <li><a href="https://valorant.inven.co.kr/">발로란트 인벤</a></li>
+      <li><a href="https://bbs.ruliweb.com/news/read/226388">루리웹</a></li>
+    </ul>
+    <div class="note">
+      <b>유의사항</b> · 본 리포트는 2026-08-23(일) 09시 KST 기준 웹 검색 결과를 요약한 것으로, 일부 소식은 공식 발표·전문지 기사 기반입니다. <b>동시접속자·시청·판매 등 수치는 서드파티/집계 기반이므로 ‘재확인 권장’</b> 표기했습니다. 커뮤니티 반응은 레딧·루리웹·인벤·디시·아카라이브·에펨코리아 등 여론 흐름을 종합한 정성 판단으로, 확정 여론이 아닙니다. 발로란트 챔피언스는 8월 파리가 아닌 <b>상하이(9/24~10/18)</b>가 연말 세계대회임을 확인했습니다. PUBG 42.1(6월)·델타포스 콜라보 발표 등은 배경 정보로만 포함했습니다.
+    </div>
+  </footer>
+
+</div>

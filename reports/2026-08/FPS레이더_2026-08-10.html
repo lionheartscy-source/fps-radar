@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 · 2026-08-10 (주말 포함)</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#EAF0FA; --ink:#22262E;
+    --muted:#5B6472; --line:#D8DEE9; --bg:#F5F7FB; --card:#FFFFFF;
+    --zebra:#F2F5FB; --warn:#B23A2E; --warn-bg:#FBEBE9; --ok:#1E7A54; --ok-bg:#E7F5EE;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 60px;}
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);
+    color:#fff;padding:34px 30px;border-radius:0 0 18px 18px;box-shadow:0 4px 18px rgba(31,42,68,.18);}
+  header.hero .kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin:0 0 6px;}
+  header.hero h1{margin:0 0 10px;font-size:27px;line-height:1.25;}
+  header.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;opacity:.95;}
+  header.hero .badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:3px 11px;border-radius:999px;font-size:12.5px;font-weight:600;}
+  h2.sec{font-size:19px;color:var(--navy);margin:38px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--blue);}
+  h2.sec .em{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:22px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);
+    border-radius:12px;padding:15px 16px;box-shadow:0 1px 4px rgba(31,42,68,.05);}
+  .kpi .label{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.02em;}
+  .kpi .value{font-size:20px;font-weight:700;color:var(--navy);margin:5px 0 3px;line-height:1.25;}
+  .kpi .sub{font-size:12.5px;color:var(--muted);}
+  .kpi.warn{border-left-color:var(--warn);}
+  .kpi.ok{border-left-color:var(--ok);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;font-size:13.7px;box-shadow:0 1px 4px rgba(31,42,68,.05);}
+  thead th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:13px;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  td .game{font-weight:700;color:var(--navy);}
+  .tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11.5px;font-weight:600;white-space:nowrap;}
+  .t-new{background:var(--blue-soft);color:var(--blue);}
+  .t-season{background:#EDE7F8;color:#5B3F9E;}
+  .t-collab{background:#FCEFE0;color:#B5730F;}
+  .t-launch{background:var(--ok-bg);color:var(--ok);}
+  .t-risk{background:var(--warn-bg);color:var(--warn);}
+  .react{font-size:12.8px;color:var(--muted);}
+  .react .pos{color:var(--ok);font-weight:600;}
+  .react .neg{color:var(--warn);font-weight:600;}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(46,90,172,.3);}
+  a:hover{border-bottom-color:var(--blue);}
+  .risk-card,.action-card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;margin:12px 0;box-shadow:0 1px 4px rgba(31,42,68,.05);}
+  .risk-card{border-left:5px solid var(--warn);}
+  .risk-card h3{margin:0 0 6px;font-size:15.5px;color:var(--warn);}
+  .action-card{border-left:5px solid var(--ok);}
+  .action-card h3{margin:0 0 6px;font-size:15.5px;color:var(--ok);}
+  .risk-card .lesson,.action-card .why{font-size:13px;color:var(--muted);margin-top:6px;}
+  .lesson b,.why b{color:var(--navy);}
+  ul.src{list-style:none;padding:0;margin:8px 0 0;columns:2;column-gap:28px;font-size:12.7px;}
+  ul.src li{margin-bottom:6px;break-inside:avoid;}
+  .note{background:#FFF8E6;border:1px solid #F0DFA8;border-radius:10px;padding:12px 15px;
+    font-size:12.7px;color:#6b5a1e;margin-top:16px;}
+  footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.3px;color:var(--muted);}
+  .lead{font-size:14.5px;color:var(--muted);margin:18px 0 0;}
+  @media(max-width:640px){ul.src{columns:1;} header.hero h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">데일리 커뮤니티 · 이벤트 레이더</p>
+  <h1>FPS·슈터 동향 레이더 <span style="font-weight:400;font-size:18px;">— 주말 포함</span></h1>
+  <div class="meta">
+    <span class="badge">기준일 2026-08-10 (월)</span>
+    <span class="badge">커버기간 8/7(금 저녁)~8/9(일)</span>
+    <span>국내 + 글로벌 병행 · 커뮤니티 반응 중심</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="lead">주말 최대 화제는 <b>마블 라이벌즈 시즌 9.5(8/7, 신규 뱅가드 '후드')</b>와 국내 <b>서든어택 21주년 협동 콘텐츠 'UP투게더'</b>. 그 외 에이펙스 시즌30 '마크드' 정착기, 8월 중순 신작 슈터 러시(헬 렛 루즈 베트남 등)가 커뮤니티 대화를 주도했습니다. 대형 논란급 백래시는 관측되지 않았고, 라이브 밸런스·과금 관련 상시 불만이 배경으로 이어졌습니다.</p>
+
+  <!-- KPI -->
+  <div class="kpis">
+    <div class="kpi">
+      <div class="label">주말 핵심 이벤트</div>
+      <div class="value">글로벌 1 · 국내 1</div>
+      <div class="sub">마블 라이벌즈 S9.5 · 서든어택 UP투게더</div>
+    </div>
+    <div class="kpi ok">
+      <div class="label">신규 시즌·히어로</div>
+      <div class="value">후드(The Hood)</div>
+      <div class="sub">마블 라이벌즈 신규 뱅가드 · 8/7</div>
+    </div>
+    <div class="kpi">
+      <div class="label">8월 중순 신작 슈터</div>
+      <div class="value">3종 대기</div>
+      <div class="sub">헬 렛 루즈:베트남(8/14) 등</div>
+    </div>
+    <div class="kpi warn">
+      <div class="label">리스크 신호</div>
+      <div class="value">과금·케이스</div>
+      <div class="sub">CS2 '카지노화' 상시 불만 지속</div>
+    </div>
+    <div class="kpi ok">
+      <div class="label">우리 참고 운영 사례</div>
+      <div class="value">협동 콘텐츠</div>
+      <div class="sub">서든 21주년 PvE 이벤트 호응</div>
+    </div>
+  </div>
+
+  <!-- 국내 -->
+  <h2 class="sec">국내 포커스 <span class="em">배틀그라운드 · 서든어택 · 발로란트 KR · 국내 커뮤니티(루리웹·인벤·디시·아카라이브·에펨) 반응</span></h2>
+  <table>
+    <thead><tr><th style="width:14%">게임</th><th style="width:26%">이벤트·소식</th><th style="width:10%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="game">서든어택</td>
+        <td>21주년 기념 협동 점프 콘텐츠 <b>'UP투게더'</b> 업데이트 — 최대 4인이 '곰돌킹 바이러스'로 무너진 길을 올라 보스 격파. 단계 보상(TAS 곰돌킹 영구제, P90_v2). 21주년 스페셜 교환소·PC방 파티 병행.</td>
+        <td>8/6~<br>(주말 진행)</td>
+        <td><span class="tag t-new">신규 모드</span></td>
+        <td class="react">PvP 위주 IP의 <span class="pos">협동 PvE 시도에 신선하다는 반응</span>. 21주년 장수 타이틀 이벤트 물량에 호평. 일부는 점프맵 난이도·보상 페이스 지적.</td>
+      </tr>
+      <tr>
+        <td class="game">발로란트 KR</td>
+        <td>8월 PC방 혜택(7/29~8/31) 및 <b>'바로 발로 익스프레스 플레이' 이벤트</b>(8/5~9/3) 진행. 2026 Act 4 신규 요원 'Miks' 및 배틀패스 로테이션.</td>
+        <td>8/5~9/3</td>
+        <td><span class="tag t-season">시즌/상시</span></td>
+        <td class="react">국내 PC방 지표 견인 목적 상시 이벤트. 신규 요원 Miks 성능·픽률에 관심. 큰 논란 신호 없음.</td>
+      </tr>
+      <tr>
+        <td class="game">배틀그라운드(PUBG)</td>
+        <td>업데이트 41.x 사이클 라이브 운영 지속. 2026 로드맵 기반 시즌 콘텐츠·이벤트 진행 중(신규 대형 발표 부재).</td>
+        <td>진행 업데이트</td>
+        <td><span class="tag t-season">진행</span></td>
+        <td class="react">주말 특기사항 적음. 밸런스·매치메이킹 상시 피드백 위주. <span style="color:#8a94a3">(수치 재확인 권장)</span></td>
+      </tr>
+      <tr>
+        <td class="game">신작(국내 출시)</td>
+        <td>8월 중순 슈터 신작 릴레이 예고 — <b>헬 렛 루즈: 베트남</b>(8/14, 50v50 밀리터리 FPS, 한글 지원), <b>아이언샌드</b>(8/21, 협동 타이탄 헌팅 FPS 로그라이트), <b>에일리언: 파이어팀 엘리트 2</b>(8/26, 4인 협동).</td>
+        <td>8/14~8/26</td>
+        <td><span class="tag t-launch">출시 예정</span></td>
+        <td class="react">협동·밀리터리 슈터 라인업에 <span class="pos">기대감</span>. 콘솔·PC 동시 관심.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 -->
+  <h2 class="sec">글로벌 포커스 <span class="em">마블 라이벌즈 · 에이펙스 · 발로란트 · 오버워치2 · COD · CS2 · R6 등 · 레딧 서브레딧 반응</span></h2>
+  <table>
+    <thead><tr><th style="width:14%">게임</th><th style="width:26%">이벤트·소식</th><th style="width:10%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="game">마블 라이벌즈</td>
+        <td><b>시즌 9.5 '후드(The Hood)' 출시</b> — 신규 뱅가드(인간/악마 변신, 아군 보호 배리어, 궁극기 방어관통+아군 체력 부스트), 성우 데미언 프리스트. <b>8/13 여름 페스티벌 Vol.2</b>(수영복 코스메틱) 예고. PC 설치용량 약 40GB 절감.</td>
+        <td>8/7(금)</td>
+        <td><span class="tag t-season">신규 시즌</span></td>
+        <td class="react">신규 히어로·용량 최적화에 <span class="pos">전반적 호평</span>. 밸런스 패치(버프/너프) 관련 메타 논쟁 활발. 여름 코스메틱 기대.</td>
+      </tr>
+      <tr>
+        <td class="game">에이펙스 레전드</td>
+        <td>시즌 30 <b>'마크드(Marked)'</b> 운영 정착기 — 블러드하운드 대규모 리워크, 맵 변경 등(8/4 출시).</td>
+        <td>8/4~(진행)</td>
+        <td><span class="tag t-season">시즌 진행</span></td>
+        <td class="react">블러드하운드 리워크 <span class="neg">호불호 갈림</span> — 캐릭터 정체성 변화 논쟁. 시즌 초 매칭·안정성 피드백.</td>
+      </tr>
+      <tr>
+        <td class="game">발로란트</td>
+        <td>Season 2026 Act 4 진행 — 신규 요원 <b>Miks</b>, 배틀패스 스킨, 요원 밸런스(센티넬·이니시에이터 버프, 오멘 너프 등).</td>
+        <td>진행 업데이트</td>
+        <td><span class="tag t-season">시즌 진행</span></td>
+        <td class="react">밸런스 방향성 대체로 수용. 신규 요원 성능·스킨 가격 관련 상시 토론.</td>
+      </tr>
+      <tr>
+        <td class="game">콜 오브 듀티</td>
+        <td><b>블랙 옵스 7 오픈 베타</b> 일정·보상 정보 확산(게임패스 얼리 액세스 포함). 정식 출시 전 최대 프리런칭 이벤트.</td>
+        <td>베타 임박</td>
+        <td><span class="tag t-new">프리런칭</span></td>
+        <td class="react">베타 접근·프리로드에 관심 집중. 최적화·TTK 등 사전 논의 활발. <span style="color:#8a94a3">(일정 재확인 권장)</span></td>
+      </tr>
+      <tr>
+        <td class="game">CS2</td>
+        <td>정기 업데이트 지속. 케이스·스킨 경제 관련 이용자 불만 지속(신규 케이스 축소설·'밸브 카지노화' 비판).</td>
+        <td>진행 업데이트</td>
+        <td><span class="tag t-risk">리스크 신호</span></td>
+        <td class="react"><span class="neg">과금·확률형 아이템 피로도</span> 표출. 규제(루트박스 소송) 배경 논의 이어짐.</td>
+      </tr>
+      <tr>
+        <td class="game">R6 · 오버워치2</td>
+        <td>R6는 2026-27 e스포츠 시즌 로드맵 논의 단계. 오버워치2는 2026 시즌 운영 지속(르세라핌 콜라보 등 상반기 이슈는 배경).</td>
+        <td>진행</td>
+        <td><span class="tag t-season">진행</span></td>
+        <td class="react">주말 신규 대형 이슈 적음. 시즌 밸런스·로드맵 기대 위주.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2 class="sec">논란·리스크 신호 <span class="em">원인 + 우리 운영 교훈</span></h2>
+
+  <div class="risk-card">
+    <h3>① 과금·확률형 아이템 피로 (CS2 '카지노화' 담론)</h3>
+    <p>CS2 커뮤니티에서 케이스·스킨 경제를 두고 "게임이 아니라 밸브의 카지노"라는 비판이 상시화. 신규 케이스 축소설과 해외 루트박스 소송 이슈가 겹치며 불신이 누적되는 구조입니다.</p>
+    <p class="lesson"><b>우리 교훈:</b> 확률형 상품은 <b>확률 공개·천장(pity)·직접구매 옵션</b>을 초기에 명확히 하고, "돈 쓰는 재미"보다 "쓴 만큼 확실히 얻는" 설계 메시지를 공지 톤에 반영. 케이스성 상품 출시 시 커뮤니티 FAQ를 사전 배포해 방어.</p>
+  </div>
+
+  <div class="risk-card">
+    <h3>② 핵심 캐릭터 리워크의 정체성 논쟁 (에이펙스 블러드하운드)</h3>
+    <p>시즌30에서 인기 레전드 대규모 리워크가 호불호를 갈랐습니다. 성능보다 "캐릭터가 낯설어졌다"는 정체성 반발이 핵심으로, 리워크는 밸런스 이슈보다 감정선 관리 난이도가 큽니다.</p>
+    <p class="lesson"><b>우리 교훈:</b> 캐릭터·무기 리워크는 <b>변경 이유(왜)·유지되는 정체성(무엇은 그대로인가)</b>를 개발자 노트로 먼저 서사화. 출시 후 첫 48시간 핫픽스 여지를 공지에 열어두어 반발을 '대화'로 전환.</p>
+  </div>
+
+  <!-- CM 액션 -->
+  <h2 class="sec">CM 액션 제안 <span class="em">이번 주 바로 실행</span></h2>
+
+  <div class="action-card">
+    <h3>① '협동 PvE 이벤트' 벤치마킹 기획 노트 작성</h3>
+    <p>서든어택 21주년 UP투게더(PvP IP의 4인 협동 점프+보스)가 국내에서 신선함으로 호응. PvP 중심 타이틀의 <b>비경쟁 협동 이벤트</b>는 라이트/복귀 유저 재유입 카드로 유효.</p>
+    <p class="why"><b>왜 지금:</b> 여름 성수기 잔존율 방어 시점. 단계별 보상 구조·기간 한정 프레이밍을 그대로 참고해 1페이지 기획안으로 정리 → 다음 시즌 이벤트 후보에 편입.</p>
+  </div>
+
+  <div class="action-card">
+    <h3>② 신규 시즌·히어로 커뮤니케이션 체크리스트 점검</h3>
+    <p>마블 라이벌즈 S9.5가 '신규 히어로 + 용량 최적화(40GB 절감)'를 함께 강조해 호평. 콘텐츠뿐 아니라 <b>기술적 개선(용량·성능)을 눈에 띄게 커뮤니케이션</b>한 점이 반응 개선 포인트.</p>
+    <p class="why"><b>왜 지금:</b> 우리 차기 업데이트 공지 초안에 "다운로드 용량/성능 개선" 항목을 상단 배치하도록 카피 템플릿 보강. 유저가 체감하는 '무게'를 먼저 덜어주는 메시지 순서로 조정.</p>
+  </div>
+
+  <!-- 유의 -->
+  <div class="note">
+    <b>유의사항:</b> 본 리포트는 2026-08-10(월) 오전 기준 웹 검색으로 수집한 공개 정보를 커뮤니티 반응 중심으로 요약한 것입니다. 동시접속·시청·판매 등 <b>수치는 서드파티/추정치일 수 있어 '재확인 권장'</b>으로 표기했으며, 커뮤니티 반응은 여론 경향으로 대표성은 제한적입니다. 배틀필드6 등 일부 타이틀의 시즌 시점 정보는 출처 간 불일치가 있어 배경 참고로만 다뤘습니다. 의사결정 전 공식 공지 원문 확인을 권장합니다.
+  </div>
+
+  <!-- 출처 -->
+  <h2 class="sec">출처 링크</h2>
+  <ul class="src">
+    <li>마블 라이벌즈 S9.5(8/7): <a href="https://cogconnected.com/2026/08/marvel-rivals-season-9-5-launches-on-august-7-with-the-hood-as-new-playable-hero/">COGconnected</a> · <a href="https://www.marvelrivals.com/20260805/41525_1310120.html">공식 패치노트</a></li>
+    <li>마블 라이벌즈 밸런스: <a href="https://screenrant.com/marvel-rivals-season-9-5-all-buffs-nerfs-characters/">ScreenRant</a> · <a href="https://mp1st.com/title-updates-and-patches/marvel-rivals-season-9-5-update-unleashed-on-aug-7-patch-1-66-1-000-101">MP1st</a></li>
+    <li>서든어택 21주년 UP투게더: <a href="https://www.betanews.net/article/view/beta202608060030">베타뉴스</a> · <a href="https://www.gamemeca.com/view.php?gid=1778792">게임메카</a> · <a href="https://www.khgames.co.kr/news/articleView.html?idxno=307068">경향게임스</a></li>
+    <li>발로란트 KR 이벤트: <a href="https://playvalorant.com/ko-kr/news/announcements/2026-08-express-play-event/">익스프레스 플레이(공식)</a> · <a href="https://playvalorant.com/ko-kr/news/announcements/2026-08-pcb-event/">8월 PC방 혜택</a></li>
+    <li>발로란트 Act 4 요원/밸런스: <a href="https://www.talkesport.com/news/valorant/valorant-patch-13-0-agent-changes-season-2026-act-4/">TalkEsport</a> · <a href="https://tracker.gg/valorant/articles/valorant-new-agent-miks-preview-abilities-release-date-and-more">Valorant Tracker(Miks)</a></li>
+    <li>에이펙스 시즌30 '마크드'(8/4): <a href="https://gonintendo.com/contents/63231-apex-legends-marked-season-launches-aug-4th-2026">GoNintendo</a> · <a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-patch-notes">EA 패치노트</a></li>
+    <li>COD 블랙 옵스 7 베타: <a href="https://www.pcgamer.com/games/call-of-duty/black-ops-7-beta-dates-access/">PC Gamer</a> · <a href="https://www.callofduty.com/blackops7/beta">공식 베타</a></li>
+    <li>CS2 케이스·경제 논란: <a href="https://steamcommunity.com/app/730/discussions/0/758428924213684263/">Steam 커뮤니티</a> · <a href="https://ixbt.games/en/news/2026/03/13/valve-otkazalas-ot-novyx-keisov-v-counter-strike-2-iz-za-suda-o-lutboksax-datamainer.html">iXBT Games</a></li>
+    <li>R6 e스포츠 로드맵: <a href="https://gamingtrend.com/news/whats-next-for-the-2026-2027-rainbow-six-siege-esports-season/">GamingTrend</a></li>
+    <li>8월 신작 슈터 목록: <a href="https://bbs.ruliweb.com/news/read/227627">루리웹</a> · <a href="https://www.thisisgame.com/articles/425879">디스이즈게임(하반기 신작)</a></li>
+    <li>배틀필드6 시즌(배경 참고): <a href="https://www.gamesradar.com/games/battlefield/battlefield-6-season-2/">GamesRadar</a></li>
+  </ul>
+
+  <footer>
+    데일리 FPS·슈터 레이더 · 자동 생성 리포트 · 기준일 2026-08-10(월, 주말 포함) · 커뮤니티 출처(레딧·루리웹·인벤·디시·에펨·아카라이브) 및 게임 전문지 병행 · 수치는 재확인 권장.
+  </footer>
+
+</div>
+</body>
+</html>

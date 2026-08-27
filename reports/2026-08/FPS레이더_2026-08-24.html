@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS·슈터 데일리 레이더 · 2026-08-24 (주말 포함)</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#e8eef8; --blue-line:#c9d6ee;
+    --ink:#22283a; --muted:#5c6478; --bg:#f4f6fb; --card:#ffffff;
+    --zebra:#f2f5fb; --border:#dde3ef; --warn:#b3341f; --warn-bg:#fcefec; --good:#1d7a4d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;
+    line-height:1.55;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px;}
+  header.hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+    border-radius:0 0 16px 16px;padding:30px 26px 26px;margin-bottom:26px;
+    box-shadow:0 6px 22px rgba(31,42,68,.18);}
+  .wrap-hero{max-width:1080px;margin:0 auto;}
+  .hero h1{margin:0 0 6px;font-size:26px;letter-spacing:-.3px;}
+  .hero .sub{opacity:.92;font-size:14.5px;margin:2px 0;}
+  .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);
+    color:#fff;border-radius:999px;padding:3px 12px;font-size:12.5px;font-weight:600;margin-top:10px;}
+  h2{color:var(--navy);font-size:19px;margin:34px 0 12px;padding-bottom:7px;
+    border-bottom:2px solid var(--blue-line);}
+  h2 .em{color:var(--blue);}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:4px 0 6px;}
+  .kpi{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--blue);
+    border-radius:12px;padding:14px 14px 12px;box-shadow:0 2px 8px rgba(31,42,68,.05);}
+  .kpi .n{font-size:26px;font-weight:800;color:var(--navy);line-height:1.1;}
+  .kpi .l{font-size:12.5px;color:var(--muted);margin-top:4px;font-weight:600;}
+  .kpi.warn{border-top-color:var(--warn);}
+  .kpi.warn .n{color:var(--warn);}
+  .kpi.good{border-top-color:var(--good);}
+  .kpi.good .n{color:var(--good);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);
+    border-radius:10px;overflow:hidden;font-size:13.8px;margin-top:6px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 11px;font-weight:600;font-size:13px;}
+  td{padding:10px 11px;border-top:1px solid var(--border);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  td.g{font-weight:700;color:var(--navy);white-space:nowrap;}
+  .tag{display:inline-block;border-radius:6px;padding:1px 7px;font-size:11.5px;font-weight:700;}
+  .t-event{background:#e5efe9;color:#1d7a4d;}
+  .t-season{background:var(--blue-soft);color:var(--blue);}
+  .t-live{background:#efeafc;color:#6a3fc0;}
+  .t-risk{background:#fbe7e2;color:var(--warn);}
+  .t-update{background:#eef1f6;color:#4a5468;}
+  .reax{color:var(--muted);font-size:13px;}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue-line);}
+  a:hover{border-bottom-color:var(--blue);}
+  .risk{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--warn);
+    border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:0 2px 8px rgba(31,42,68,.05);}
+  .risk h3{margin:0 0 5px;color:var(--warn);font-size:15.5px;}
+  .risk .lesson{background:var(--blue-soft);border-radius:8px;padding:8px 11px;margin-top:9px;
+    font-size:13.5px;color:var(--navy);}
+  .risk .lesson b{color:var(--blue);}
+  .action{background:linear-gradient(135deg,#f7f9fd,#eef3fb);border:1px solid var(--blue-line);
+    border-radius:12px;padding:16px 18px;margin:12px 0;}
+  .action h3{margin:0 0 6px;color:var(--navy);font-size:16px;}
+  .action .num{display:inline-block;background:var(--blue);color:#fff;border-radius:50%;
+    width:22px;height:22px;text-align:center;line-height:22px;font-size:13px;font-weight:800;margin-right:7px;}
+  .note{font-size:12.5px;color:var(--muted);}
+  .rc{color:var(--warn);font-weight:700;font-size:11.5px;}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--border);font-size:12.5px;color:var(--muted);}
+  footer h4{color:var(--navy);font-size:13.5px;margin:14px 0 6px;}
+  footer a{word-break:break-all;}
+  .srcgrid{columns:2;column-gap:26px;}
+  @media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr);}.srcgrid{columns:1;}
+    table{font-size:13px;} .hero h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap-hero">
+    <h1>FPS·슈터 데일리 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">기준일 2026년 8월 24일 (월) · CM/기획 실무용 브리핑</div>
+    <div class="sub">커버 기간: 8월 21일(금) 저녁 ~ 8월 23일(일) · <b>주말 포함</b></div>
+    <span class="badge">주말 포함 · 국내+글로벌 병행</span>
+  </div>
+</header>
+<div class="wrap">
+
+  <h2>핵심 요약 <span class="em">/ 주말 스냅샷</span></h2>
+  <div class="kpis">
+    <div class="kpi good"><div class="n">2</div><div class="l">국내 대형 오프라인·라이브 이벤트<br>(오버워치 데이 · 서든어택 21주년)</div></div>
+    <div class="kpi"><div class="n">4+</div><div class="l">주말 신규 시즌·패치·번들<br>(마블 라이벌즈·CS2·PUBG 등)</div></div>
+    <div class="kpi warn"><div class="n">2</div><div class="l">주목할 리스크 신호<br>(BF6 리텐션 · OW 이관 여진)</div></div>
+    <div class="kpi"><div class="n">진행중</div><div class="l">발로란트 지역 Stage 2<br>(Champions 상하이 진출전)</div></div>
+  </div>
+  <p class="note" style="margin-top:12px">이번 주말의 결은 <b>“국내 오프라인 유저 접점”</b>과 <b>“글로벌 라이브서비스 리텐션 경고”</b>가 동시에 부각된 주말입니다. 넥슨이 부산에서 오버워치·서든어택 유저 행사를 나란히 돌린 반면, 글로벌에서는 배틀필드6 동접 하락이 다시 화두가 됐습니다.</p>
+
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트 / 소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">오버워치<br>(넥슨)</td>
+        <td><b>‘오버워치 데이’ 부산 벡스코 개최</b> — 넥슨 이관 후 두 번째 오프라인 유저 행사. 대형 D.Va(MEKA) 조형물·현장 이벤트, 2026 오버워치 월드컵 그룹 스테이지 부산 개최와 연계. <a href="https://www.inven.co.kr/webzine/news/?news=319797">인벤</a></td>
+        <td>8/22~23</td>
+        <td><span class="tag t-event">오프라인 이벤트</span></td>
+        <td class="reax">이관 잡음 뒤 “유저 접점은 확실히 늘었다”는 호평. 오프라인 참여 인증·현장 후기 활발.</td>
+      </tr>
+      <tr>
+        <td class="g">서든어택</td>
+        <td><b>서비스 21주년 업데이트</b> — 밀봉거래 ‘블랙마켓’(~9/3), 2vs2 파티 랭크전(~9/17), 콤보패스 ‘21st 둘이서 하나’(경험치 최대 300%·무기 영구제), 8/23 17시 기념방송·무기 스킨 공모전 당선작 발표. <a href="https://www.betanews.net/article/view/beta202608200027">베타뉴스</a></td>
+        <td>8/20~</td>
+        <td><span class="tag t-season">주년/시즌</span></td>
+        <td class="reax">PC방·친구 짝꿍 2배 보상에 긍정적. 장수 IP 특유의 “복귀각” 언급 다수(루리웹·인벤).</td>
+      </tr>
+      <tr>
+        <td class="g">오버워치<br>(넥슨)</td>
+        <td><b>넥슨 이관 여진(진행 업데이트)</b> — 8/12 한국 PC 넥슨 계정 연동 필수화. 한국 지역 매칭 분리(스팀·콘솔과 파티 불가), 배틀코인 폐지→넥슨캐시 전환. <a href="https://overwatch.blizzard.com/ko-kr/news/24289716/pc/">공식 안내</a></td>
+        <td>8/12(진행)</td>
+        <td><span class="tag t-risk">리스크</span></td>
+        <td class="reax">매칭 풀 분리·재화 정책에 불만 잔존. 다만 이벤트로 여론은 다소 완화 흐름.</td>
+      </tr>
+      <tr>
+        <td class="g">배틀그라운드<br>(PUBG)</td>
+        <td><b>Update 42.3 콘솔 반영</b> — ‘메타 로테이션’(4개월마다 무기군 집중, 첫 타자 LMG), 신규 LMG ‘RPD’, LMG 재장전·반동 개선, 차량 사격 페널티. (PC 8/12 / 콘솔 8/20) <a href="https://www.pubg.com/en/news/10885">패치노트</a></td>
+        <td>콘솔 8/20</td>
+        <td><span class="tag t-update">진행 업데이트</span></td>
+        <td class="reax">메타 로테이션은 “신선하다 vs 밸런스 개입 과하다” 의견 갈림.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트 / 소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">마블<br>라이벌즈</td>
+        <td><b>8/20 패치 + 주말 번들 개시</b> — 사이클롭스/피닉스/데어데블 번들(8/21~9/18), 로키·헬라 버그 수정, 무중단 패치. 시즌 10은 9/11 예고(신규 영웅·랭크 리셋). <a href="https://www.marvelrivals.com/gameupdate/20260819/41548_1311622.html">공식</a></td>
+        <td>8/20~21</td>
+        <td><span class="tag t-season">스킨/번들</span></td>
+        <td class="reax">코스메틱 위주라 “밸런스 손 안 댔다” 아쉬움도. 시즌10 기대감으로 전환.</td>
+      </tr>
+      <tr>
+        <td class="g">CS2</td>
+        <td><b>8/19 무빙 익스플로잇 수정</b> — 벽 밀착 시 이동속도 과다 계산(‘월서핑’) 버그 제거, 커뮤니티맵 Boulder·Poseidon 정비. EWC 2026 파리 개최 중 배포. <a href="https://esportport.com/cs2-update-patch-notes-august-2026-movement-fixes-map-changes/">패치 요약</a></td>
+        <td>8/19</td>
+        <td><span class="tag t-update">밸런스/무결성</span></td>
+        <td class="reax">경쟁 매칭 악용 버그 제거에 환영. EWC 흥행과 맞물려 관심 상승.</td>
+      </tr>
+      <tr>
+        <td class="g">배틀필드 6</td>
+        <td><b>동접 하락 재부각</b> — 런칭 피크 74.7만 대비 스팀 동접 크게 하락(약 3.7만 보도), 시즌4 ‘Naval’(웨이크 아일랜드 복귀·항모전) 반등 기대. <a href="https://tech-insider.org/battlefield-6-player-count-2026/">Tech-Insider</a> <span class="rc">※ 수치 재확인 권장</span></td>
+        <td>주말 화두</td>
+        <td><span class="tag t-risk">리스크</span></td>
+        <td class="reax">“콘텐츠 공백이 문제” vs “시즌4로 살아난다” 논쟁. 리텐션 담론 활발.</td>
+      </tr>
+      <tr>
+        <td class="g">발로란트</td>
+        <td><b>지역 Stage 2 플레이오프 진행</b> — Champions 상하이(9/24~10/18) 진출권 경쟁. 8/21 기준 확정 4팀(PRX·EDG·XLG·JDG), 잔여 12석 미정. 한국팀 진출 여부 주시. <a href="https://esportsinsider.com/2026/08/valorant-champions-shanghai-preview">Esports Insider</a> <span class="rc">※ 일정 재확인 권장</span></td>
+        <td>주말 진행</td>
+        <td><span class="tag t-live">e스포츠</span></td>
+        <td class="reax">국내 팬 관심은 한국 지역 진출 경쟁에 집중.</td>
+      </tr>
+      <tr>
+        <td class="g">콜 오브 듀티<br>Black Ops 7</td>
+        <td><b>더블 XP 위크엔드</b> — 주말 파밍 이벤트로 접속 유도. BF6와의 판매·동접 비교 서사 지속. <a href="https://dotesports.com/call-of-duty/news/next-double-xp-weekend-black-ops-7">Dot Esports</a></td>
+        <td>주말</td>
+        <td><span class="tag t-event">주말 이벤트</span></td>
+        <td class="reax">주말 부스트는 무난한 반응. 라이벌 구도(BF6) 언급 여전.</td>
+      </tr>
+      <tr>
+        <td class="g">에이펙스<br>레전드</td>
+        <td><b>시즌 30 ‘Marked’ 진행</b> — 시즌 콘텐츠·패치 라이브. 별도 대형 주말 이슈는 적음(진행 업데이트). <a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-patch-notes">EA</a></td>
+        <td>진행중</td>
+        <td><span class="tag t-update">진행 업데이트</span></td>
+        <td class="reax">특기할 주말 논란 없음. 안정적 시즌 운영.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>⚠ 논란·리스크 신호 <span class="em">/ 우리 운영 교훈</span></h2>
+
+  <div class="risk">
+    <h3>1. 배틀필드 6 — 라이브서비스 리텐션 절벽</h3>
+    <p>런칭 피크(약 74.7만) 대비 동접이 급락했다는 보도가 주말 커뮤니티에서 다시 확산. 강한 런칭이 곧 지속 성공은 아니며, <b>콘텐츠 공급 속도·시즌 간 공백</b>이 이탈의 핵심 원인으로 지목됩니다. <span class="rc">동접 수치는 서드파티/보도 기준 — 재확인 권장.</span></p>
+    <div class="lesson"><b>교훈:</b> 프리런칭·런칭 KPI를 ‘피크 동접’ 단일 지표로 자축하지 말 것. <b>런칭 후 30/60/90일 리텐션과 시즌1 콘텐츠 예고</b>를 런칭 시점에 함께 커뮤니케이션해야 이탈 서사를 차단할 수 있습니다.</div>
+  </div>
+
+  <div class="risk">
+    <h3>2. 오버워치 넥슨 이관 — 매칭 분리·재화 정책 여진</h3>
+    <p>한국 PC 매칭 풀 분리와 배틀코인 폐지가 여전히 불만 요소. 다만 넥슨이 사전 연동 보상(전설 스킨)과 오프라인 ‘오버워치 데이’를 빠르게 붙여 여론을 관리한 점은 <b>대응 사례</b>로 참고할 만합니다.</p>
+    <div class="lesson"><b>교훈:</b> 서비스/재화 정책을 바꿀 땐 <b>①사전 보상 ②투명한 변경 고지 ③오프라인·이벤트로 체감가치 보전</b>을 세트로. 정책 마찰은 ‘공지’가 아니라 ‘체험’으로 완화됩니다.</div>
+  </div>
+
+  <h2>🎯 CM 액션 제안</h2>
+
+  <div class="action">
+    <h3><span class="num">1</span>오프라인 유저 접점 벤치마킹</h3>
+    <p>넥슨이 같은 주말에 오버워치 데이(부산)와 서든어택 21주년 방송을 나란히 돌려 <b>온·오프 연계로 커뮤니티 열기를 재점화</b>했습니다. 우리 타이틀의 프리런칭/시즌 분기에도 <b>소규모라도 현장·라이브 방송 접점</b>(쇼케이스+시청보상+현장 인증 이벤트)을 1개 이상 설계해 “화면 밖 경험”을 확보할 것을 제안합니다. 저비용안: 디렉터 라이브 + 시청 동접 목표 달성 시 전체 보상.</p>
+  </div>
+
+  <div class="action">
+    <h3><span class="num">2</span>‘런칭 후 리텐션 스토리’ 사전 대본화</h3>
+    <p>BF6 사례를 반면교사로, 다음 런칭/대형 업데이트 시 <b>런칭 당일 공지에 시즌1 로드맵·복귀 유인 이벤트를 함께 노출</b>하는 대본을 미리 준비. 커뮤니티가 “다음이 있다”를 즉시 인지하도록 하여 초기 피크 후 이탈 서사를 선제 차단합니다.</p>
+  </div>
+
+  <footer>
+    <p class="note">본 리포트는 공개 웹·커뮤니티·전문지 보도를 종합한 CM 실무용 요약입니다. 동시접속·판매·시청 수치는 서드파티 트래커/언론 보도 기준으로, 공식 발표와 차이가 있을 수 있어 <span class="rc">‘재확인 권장’</span>으로 표기했습니다. 커버 기간(8/21 저녁~8/23) 밖 항목은 배경·진행 업데이트로만 포함했습니다.</p>
+    <h4>주요 출처</h4>
+    <div class="srcgrid note">
+      <div>· 인벤 — 오버워치 데이 현장: <a href="https://www.inven.co.kr/webzine/news/?news=319797">inven.co.kr/319797</a></div>
+      <div>· 다음/뉴스 — 오버워치 데이 프리뷰: <a href="https://v.daum.net/v/20260820165413800">v.daum.net</a></div>
+      <div>· 베타뉴스 — 서든어택 21주년: <a href="https://www.betanews.net/article/view/beta202608200027">betanews.net</a></div>
+      <div>· 블리자드 공식 — OW 한국 PC 서비스 변경: <a href="https://overwatch.blizzard.com/ko-kr/news/24289716/pc/">overwatch.blizzard.com</a></div>
+      <div>· PUBG 공식 — Update 42.3: <a href="https://www.pubg.com/en/news/10885">pubg.com/news/10885</a></div>
+      <div>· Marvel Rivals 공식 — 8/20 패치: <a href="https://www.marvelrivals.com/gameupdate/20260819/41548_1311622.html">marvelrivals.com</a></div>
+      <div>· CS2 8월 패치 요약: <a href="https://esportport.com/cs2-update-patch-notes-august-2026-movement-fixes-map-changes/">esportport.com</a></div>
+      <div>· Tech-Insider — BF6 동접: <a href="https://tech-insider.org/battlefield-6-player-count-2026/">tech-insider.org</a></div>
+      <div>· Esports Insider — 발로란트 Champions: <a href="https://esportsinsider.com/2026/08/valorant-champions-shanghai-preview">esportsinsider.com</a></div>
+      <div>· Dot Esports — BO7 더블 XP: <a href="https://dotesports.com/call-of-duty/news/next-double-xp-weekend-black-ops-7">dotesports.com</a></div>
+    </div>
+    <p class="note" style="margin-top:14px">FPS 이벤트 동향 레이더 · 자동 생성 리포트 · 커뮤니티 출처(레딧·루리웹·인벤·디시·아카라이브·에펨) 및 게임 전문지 병행 참조.</p>
+  </footer>
+</div>
+</body>
+</html>

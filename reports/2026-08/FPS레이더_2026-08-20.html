@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 · 2026-08-20</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+    background:#F4F6FB; color:#1F2A44; line-height:1.6; padding:0 0 60px;
+  }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  header {
+    background:linear-gradient(135deg,#1F2A44 0%,#2E5AAC 100%);
+    color:#fff; padding:34px 0 30px; margin-bottom:26px;
+  }
+  header .wrap { padding-top:0; }
+  header h1 { font-size:26px; font-weight:800; letter-spacing:-0.5px; }
+  header .sub { margin-top:8px; font-size:14px; opacity:.92; }
+  header .cover {
+    display:inline-block; margin-top:14px; background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.28); padding:6px 14px; border-radius:20px;
+    font-size:13px; font-weight:600;
+  }
+  h2 {
+    font-size:19px; font-weight:800; color:#1F2A44; margin:34px 0 14px;
+    padding-bottom:8px; border-bottom:2px solid #2E5AAC;
+  }
+  h2 .tag { font-size:12px; font-weight:600; color:#2E5AAC; margin-left:8px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+  .kpi {
+    background:#fff; border:1px solid #E1E7F2; border-left:4px solid #2E5AAC;
+    border-radius:10px; padding:16px 18px; box-shadow:0 1px 3px rgba(31,42,68,.06);
+  }
+  .kpi .label { font-size:12px; color:#5A6785; font-weight:600; text-transform:uppercase; letter-spacing:.3px; }
+  .kpi .val { font-size:17px; font-weight:800; color:#1F2A44; margin:6px 0 4px; }
+  .kpi .note { font-size:12.5px; color:#5A6785; }
+  table {
+    width:100%; border-collapse:collapse; background:#fff; margin-top:4px;
+    border:1px solid #E1E7F2; border-radius:10px; overflow:hidden; font-size:13.5px;
+  }
+  th {
+    background:#1F2A44; color:#fff; text-align:left; padding:11px 12px; font-weight:600; font-size:13px;
+  }
+  td { padding:11px 12px; vertical-align:top; border-top:1px solid #EEF1F8; }
+  tbody tr:nth-child(even) { background:#F7F9FD; }
+  .badge {
+    display:inline-block; padding:2px 8px; border-radius:12px; font-size:11.5px; font-weight:700; white-space:nowrap;
+  }
+  .b-event { background:#E3ECFB; color:#2E5AAC; }
+  .b-launch { background:#E2F5EA; color:#1E8A54; }
+  .b-issue { background:#FBE6E6; color:#C0392B; }
+  .b-prog { background:#EFE9FB; color:#7A4FCB; }
+  .b-metric { background:#FDF1DD; color:#B8791B; }
+  a { color:#2E5AAC; text-decoration:none; font-weight:600; }
+  a:hover { text-decoration:underline; }
+  .risk {
+    background:#fff; border:1px solid #E1E7F2; border-radius:10px; padding:6px 4px;
+  }
+  .risk .item { padding:14px 16px; border-top:1px solid #EEF1F8; }
+  .risk .item:first-child { border-top:none; }
+  .risk .item h3 { font-size:15px; color:#C0392B; margin-bottom:5px; }
+  .risk .item .lesson {
+    margin-top:8px; font-size:13px; background:#F7F9FD; border-left:3px solid #2E5AAC;
+    padding:8px 12px; border-radius:0 6px 6px 0; color:#2c3a5a;
+  }
+  .action {
+    background:linear-gradient(135deg,#2E5AAC 0%,#1F2A44 100%); color:#fff;
+    border-radius:12px; padding:20px 22px; margin-top:4px;
+  }
+  .action h3 { font-size:15px; margin-bottom:6px; }
+  .action .a-box { margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,.2); }
+  .action .a-box:first-of-type { margin-top:0; padding-top:0; border-top:none; }
+  .action p { font-size:13.5px; opacity:.95; }
+  .quiet {
+    background:#FDF6E3; border:1px solid #F0E2B8; border-radius:10px;
+    padding:14px 18px; font-size:14px; color:#7a611a; margin-bottom:8px;
+  }
+  footer { margin-top:36px; font-size:12.5px; color:#5A6785; }
+  footer h2 { font-size:15px; }
+  footer ul { list-style:none; margin-top:10px; }
+  footer li { padding:5px 0; border-top:1px solid #E8ECF4; }
+  .disclaimer {
+    margin-top:18px; background:#fff; border:1px dashed #C9D3E8; border-radius:8px;
+    padding:14px 16px; font-size:12.5px; color:#5A6785;
+  }
+  .src-com { color:#7A4FCB; font-weight:600; font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">FPS/슈터 게임사 CM 실무용 · 국내+글로벌 병행 · 커뮤니티 반응 중심</div>
+    <div class="cover">기준일 2026-08-20 (목) · 커버기간: 최근 24~48h (8/18~8/20)</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="quiet">
+    <strong>오늘의 총평 —</strong> 대형 신작 런칭은 없는 <strong>비교적 조용한 주중</strong>입니다(가을 성수기 직전 '폭풍전야'). 핵심 신호는
+    ① 마블 라이벌즈 <strong>일부 지역 결제통화 변경으로 인게임 구매 일시중단(8/18~21)</strong>,
+    ② 협동 FPS 신작 2종(Iron Sand 8/21 · Aliens: Fireteam Elite 2 8/25) 연속 출시 임박,
+    ③ 오버워치2 시즌4 'D.Mon'·PUBG 여름 이벤트 등 진행 이슈의 마무리 단계입니다.
+  </div>
+
+  <h2>핵심 요약 <span class="tag">KPI 타일</span></h2>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="label">신작 협동 FPS 출시</div>
+      <div class="val">2종 임박</div>
+      <div class="note">Iron Sand(8/21)·Aliens: Fireteam Elite 2(8/25)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">주목 라이브 이슈</div>
+      <div class="val">지역 결제 중단</div>
+      <div class="note">마블 라이벌즈, 멕시코·온두라스·니카라과 (8/18~21)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">국내 진행 이벤트</div>
+      <div class="val">여름 시즌 마감</div>
+      <div class="note">PUBG 쿨썸머 페스타 8/18 종료 · 웰치스 콜라보 진행</div>
+    </div>
+    <div class="kpi">
+      <div class="label">사전예약/로드맵</div>
+      <div class="val">BO7 베타 D-43</div>
+      <div class="note">Black Ops 7 베타 10/2~9, 정식 11/14</div>
+    </div>
+    <div class="kpi">
+      <div class="label">라이브 시즌 갱신</div>
+      <div class="val">OW2 S4 · MR S9.5</div>
+      <div class="note">신규 영웅 D.Mon / The Hood(재확인)</div>
+    </div>
+  </div>
+
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>PUBG (카카오)</strong></td>
+        <td>여름 통합 이벤트 '쿨썸머 페스타'(1억 규모 경품·랜덤사격), 2026 통합 클랜컵(상금 2천만)</td>
+        <td>~8/18 종료</td>
+        <td><span class="badge b-prog">진행 업데이트</span></td>
+        <td>여름 리텐션 캠페인 마무리. PC방(피카·게토) 연계 오프라인 훅. 신규·복귀 포인트 가산으로 컴백 유도.</td>
+      </tr>
+      <tr>
+        <td><strong>PUBG (크래프톤)</strong></td>
+        <td>웰치스 여름 시즌 한정 콜라보(음료 구매 쿠폰)</td>
+        <td>진행중</td>
+        <td><span class="badge b-event">콜라보</span></td>
+        <td>FMCG 제휴형 여름 프로모션. 오프라인 접점→인게임 전환 사례로 참고.</td>
+      </tr>
+      <tr>
+        <td><strong>오버워치2 (넥슨)</strong></td>
+        <td>시즌4 'Reign of Talon'—신규 영웅 <strong>D.Mon</strong> 합류, 블리즈컨/월드컵 연계 예고</td>
+        <td>8/11 시즌 개시</td>
+        <td><span class="badge b-prog">진행 업데이트</span></td>
+        <td>8/12 밸런스 패치 반영. 신영웅 초기 밸런스·픽률에 대한 국내 갤·인벤 반응 관찰 구간.</td>
+      </tr>
+      <tr>
+        <td><strong>서든어택 (넥슨)</strong></td>
+        <td>게임 프레임 최대 200 FPS 확장 적용</td>
+        <td>7월 적용 (진행)</td>
+        <td><span class="badge b-prog">운영 개선</span></td>
+        <td>체감 반응성 개선 요구에 대응한 '호평 운영' 사례. 고주사율 유저층 만족도 긍정적.</td>
+      </tr>
+      <tr>
+        <td><strong>신작 (국내 유통)</strong></td>
+        <td>Aliens: Fireteam Elite 2(최대 4인 협동 슈팅) 스팀 출시 임박</td>
+        <td>8/25~26</td>
+        <td><span class="badge b-launch">런칭 임박</span></td>
+        <td>협동 PvE 슈터 수요 확인 지표. 커뮤니티 초기 반응이 자사 PvE/이벤트 모드 기획에 참고.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Marvel Rivals</strong></td>
+        <td>일부 지역 PS스토어 결제통화(USD→현지) 변경으로 인게임 구매 일시중단</td>
+        <td>8/18~21</td>
+        <td><span class="badge b-issue">리스크 신호</span></td>
+        <td>멕시코·온두라스·니카라과 대상. 결제/과금 관련 지역 유저 문의 급증 가능—공지 관리가 관건.</td>
+      </tr>
+      <tr>
+        <td><strong>Marvel Rivals</strong></td>
+        <td>시즌 9.5 패치—신영웅 'The Hood'·이벤트 'Creed of Akabba'(재확인 권장)</td>
+        <td>8/13 패치</td>
+        <td><span class="badge b-prog">진행 업데이트</span></td>
+        <td>밸런스(울버린·문나이트·페니 등) 조정 후 메타 논쟁 관찰 구간. 팀슈터 밸런스 여론 벤치마크.</td>
+      </tr>
+      <tr>
+        <td><strong>Call of Duty: Black Ops 7</strong></td>
+        <td>베타 얼리액세스 10/2·오픈베타 10/5~9, 정식 11/14 / 사전예약·게임패스 얼리액세스 훅</td>
+        <td>정보 공개(진행)</td>
+        <td><span class="badge b-event">사전예약/로드맵</span></td>
+        <td>베타 보상(레벨30 M15 블프)·프리로드 10/1. 프리런칭 사전예약 설계 레퍼런스.</td>
+      </tr>
+      <tr>
+        <td><strong>Iron Sand</strong></td>
+        <td>사막 배경 협동 '타이탄 사냥' FPS 로그라이트 스팀 출시</td>
+        <td>8/21</td>
+        <td><span class="badge b-launch">런칭 임박</span></td>
+        <td>PvE 로그라이트+협동 조합. 인디/미드코어 슈터 트렌드 관찰 대상.</td>
+      </tr>
+      <tr>
+        <td><strong>Helldivers 2</strong></td>
+        <td>Warhammer 40,000 'Legendary Warbond' 크로스오버</td>
+        <td>8/12 (진행)</td>
+        <td><span class="badge b-event">콜라보</span></td>
+        <td>대형 IP 콜라보 워본드형 과금·수집 이벤트. 협동 슈터 콜라보 반응 사례.</td>
+      </tr>
+      <tr>
+        <td><strong>Delta Force</strong></td>
+        <td>신시즌 'Season Meltdown' + Rainbow Six Siege 콜라보(오퍼레이터·스킨) 공개 <span class="src-com">※시점 재확인 권장</span></td>
+        <td>공개(재확인)</td>
+        <td><span class="badge b-event">콜라보</span></td>
+        <td>추출·전장 하이브리드 슈터의 IP 콜라보 확대. 정확한 적용일/구성은 공식 채널 재확인 필요.</td>
+      </tr>
+      <tr>
+        <td><strong>Battlefield 6</strong></td>
+        <td>라이브 서비스 지속(동접·리텐션 상위권 유지 보도)</td>
+        <td>배경</td>
+        <td><span class="badge b-metric">지표</span></td>
+        <td>동접 수치 보도는 <strong>재확인 권장</strong>. 대형 밀리터리 FPS 라이브 운영 벤치마크.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>⚠️ 논란·리스크 신호 <span class="tag">우리 운영 교훈 포함</span></h2>
+  <div class="risk">
+    <div class="item">
+      <h3>지역 결제통화 변경 → 인게임 구매 일시중단 (Marvel Rivals)</h3>
+      <p>멕시코·온두라스·니카라과 대상 PS스토어 결제통화가 USD에서 현지통화로 전환되며 8/18~21 해당 지역 구매가 막혔습니다. 결제 장애는 짧아도 "돈 못 쓰는 상황"이라 체감 불만이 크고, 지역 커뮤니티에 빠르게 확산됩니다.</p>
+      <div class="lesson"><strong>운영 교훈:</strong> 결제/통화/스토어 정책 변경은 <em>사전 개별 공지 + 진행 상태 실시간 갱신 + 보상/유예 안내</em>를 세트로. CS 매크로와 공지 문구를 변경 전에 미리 준비해 두면 문의 폭증을 흡수할 수 있습니다.</div>
+    </div>
+    <div class="item">
+      <h3>미드시즌 밸런스 패치 후 메타 여론 (Marvel Rivals S9.5 · OW2 S4)</h3>
+      <p>팀 기반 슈터는 밸런스 패치 직후 특정 영웅 상향/하향에 대한 백래시가 반복됩니다. 아직 대형 논란으로 번진 정황은 없으나, 신영웅(D.Mon/The Hood) 초기 밸런스는 갈등 유발 포인트입니다.</p>
+      <div class="lesson"><strong>운영 교훈:</strong> 패치 노트에 <em>변경 의도(why)</em>를 함께 제시하고, "핫픽스 여지 있음"을 명시하면 반발 온도를 낮출 수 있습니다. 초기 픽률/승률 데이터를 커뮤니티에 투명 공유하는 것도 효과적.</div>
+    </div>
+  </div>
+
+  <h2>✅ CM 액션 제안</h2>
+  <div class="action">
+    <div class="a-box">
+      <h3>① 결제·스토어 변경 SOP 점검 (즉시)</h3>
+      <p>마블 라이벌즈 사례를 계기로 자사 지역별 결제/통화/스토어 정책 변경 대응 절차를 재점검하세요. '변경 D-7 사전공지 → D-day 상단 고정 배너 → 실시간 상태 갱신 → 종료 후 보상/사과' 템플릿을 준비해 두면 유사 상황에서 즉시 가동 가능합니다.</p>
+    </div>
+    <div class="a-box">
+      <h3>② 협동 FPS 신작 출시 반응 모니터링 (8/21~8/26)</h3>
+      <p>Iron Sand(8/21)·Aliens: Fireteam Elite 2(8/25) 출시 직후 레딧/스팀 리뷰의 "재미 포인트 vs 불만 포인트"를 태그해 정리하세요. 협동 PvE·로그라이트 수요 신호는 자사 이벤트/한정 모드 기획의 근거 자료가 됩니다.</p>
+    </div>
+  </div>
+
+  <footer>
+    <h2>출처 링크</h2>
+    <ul>
+      <li>PC Gamer — <a href="https://www.pcgamer.com/games/pc-game-release-dates-august-2026/">PC game release dates August 2026</a></li>
+      <li>루리웹 — <a href="https://bbs.ruliweb.com/news/read/227627">8월 출시 PC·모바일 게임 목록</a></li>
+      <li>인벤 — <a href="https://www.inven.co.kr/webzine/news/?news=318760">카카오 배그 '쿨썸머 페스타' 여름 통합 이벤트</a> / <a href="https://www.inven.co.kr/webzine/news/?news=318795">서든어택 200 FPS 확장</a></li>
+      <li>Dexerto — <a href="https://www.dexerto.com/wikis/overwatch/overwatch-calendar-season-start-dates-times/">Overwatch 시즌 일정(S4 D.Mon)</a></li>
+      <li>Marvel Rivals 공식 — <a href="https://www.marvelrivals.com/news/">뉴스/패치노트(지역 결제 변경, S9.5)</a> · Beebom — <a href="https://beebom.com/marvel-rivals-season-9-5-patch-notes/">S9.5 패치 정리</a></li>
+      <li>Pure Xbox — <a href="https://www.purexbox.com/guides/call-of-duty-black-ops-7-beta-release-date-launch-times-and-game-pass-early-access-details">Black Ops 7 베타 일정</a></li>
+      <li>Bleeding Cool — <a href="https://bleedingcool.com/games/delta-force-reveals-season-meltdown-with-rainbow-six-siege-collab/">Delta Force x R6 콜라보</a></li>
+      <li>Tom's Hardware — <a href="https://www.tomshardware.com/video-games/pc-gaming/battlefield-6-peaks-at-747-000-concurrent-players-newly-launched-game-ranks-among-the-top-three-most-played-on-steam-today">Battlefield 6 동접 보도</a></li>
+    </ul>
+    <div class="disclaimer">
+      <strong>유의사항</strong> — 동접·판매·시청 등 서드파티/트래커 기반 수치는 모두 <strong>'재확인 권장'</strong>입니다.
+      'Season Meltdown(Delta Force)' 등 일부 콜라보의 정확한 적용일은 공식 채널에서 재확인이 필요합니다.
+      커버기간(2026-08-18~20) 밖의 항목은 배경·진행 업데이트로만 표기했습니다.
+      커뮤니티 출처: 레딧 각 서브레딧·루리웹·인벤·디시·아카라이브·에펨코리아 (본 리포트는 웹 검색 시점 기준 요약이며, 세부는 원문 확인 권장).
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

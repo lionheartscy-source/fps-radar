@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 2026-08-07</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: #F4F6FA; color: #1F2A44; line-height: 1.6; padding: 0 0 60px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; padding: 34px 0 30px; margin-bottom: 26px;
+  }
+  header .wrap { display: flex; flex-direction: column; gap: 6px; }
+  header h1 { font-size: 26px; letter-spacing: -0.5px; }
+  header .meta { font-size: 14px; opacity: 0.92; }
+  header .cover {
+    display: inline-block; margin-top: 8px; background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3); padding: 5px 12px; border-radius: 20px;
+    font-size: 13px; width: fit-content;
+  }
+  h2 {
+    font-size: 19px; color: #1F2A44; margin: 34px 0 14px;
+    padding-left: 11px; border-left: 5px solid #2E5AAC;
+  }
+  .lead { font-size: 14.5px; color: #40506e; margin-bottom: 8px; }
+  /* KPI cards */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 14px; }
+  .kpi {
+    background: #fff; border: 1px solid #e2e7f0; border-top: 4px solid #2E5AAC;
+    border-radius: 10px; padding: 16px 16px 14px; box-shadow: 0 1px 3px rgba(31,42,68,0.06);
+  }
+  .kpi .tag { font-size: 11px; font-weight: 700; color: #2E5AAC; letter-spacing: 0.5px; text-transform: uppercase; }
+  .kpi .big { font-size: 21px; font-weight: 800; color: #1F2A44; margin: 6px 0 4px; letter-spacing: -0.5px; }
+  .kpi .sub { font-size: 12.5px; color: #55627a; }
+  .kpi.alert { border-top-color: #C0392B; }
+  .kpi.alert .tag { color: #C0392B; }
+  /* tables */
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
+          box-shadow: 0 1px 3px rgba(31,42,68,0.06); font-size: 13.5px; }
+  th { background: #1F2A44; color: #fff; text-align: left; padding: 11px 12px; font-weight: 600; font-size: 12.5px; }
+  td { padding: 10px 12px; border-bottom: 1px solid #eef1f6; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f7f9fc; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.game { font-weight: 700; color: #1F2A44; white-space: nowrap; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600; white-space: nowrap; }
+  .p-new { background: #E3F0E6; color: #1E7B3A; }
+  .p-event { background: #E4ECFB; color: #2E5AAC; }
+  .p-esport { background: #EFE6FA; color: #6B3FA0; }
+  .p-risk { background: #FBE6E4; color: #C0392B; }
+  .p-live { background: #FDF1DA; color: #B4780E; }
+  a { color: #2E5AAC; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .risk-box { background: #fff; border: 1px solid #f0d9d6; border-left: 5px solid #C0392B;
+    border-radius: 8px; padding: 15px 17px; margin-bottom: 13px; }
+  .risk-box h3 { font-size: 15px; color: #C0392B; margin-bottom: 5px; }
+  .risk-box p { font-size: 13.5px; color: #3d4a63; }
+  .risk-box .lesson { margin-top: 7px; font-size: 13px; color: #1F2A44; background: #f7f9fc;
+    border-radius: 6px; padding: 8px 11px; }
+  .risk-box .lesson b { color: #2E5AAC; }
+  .action {
+    background: linear-gradient(135deg, #eef3fc 0%, #f7f9fc 100%);
+    border: 1px solid #d4ddf0; border-radius: 10px; padding: 17px 19px; margin-bottom: 13px;
+  }
+  .action h3 { font-size: 15.5px; color: #1F2A44; margin-bottom: 5px; }
+  .action .num { color: #2E5AAC; font-weight: 800; }
+  .action p { font-size: 13.5px; color: #3d4a63; }
+  .sources { font-size: 12.5px; color: #55627a; }
+  .sources li { margin-bottom: 4px; list-style: none; }
+  .sources ul { padding-left: 0; margin-top: 8px; }
+  .note { margin-top: 18px; font-size: 12px; color: #7a86a0; background: #fff;
+    border: 1px dashed #cfd7e6; border-radius: 8px; padding: 12px 15px; }
+  footer { text-align: center; font-size: 11.5px; color: #9aa4ba; margin-top: 30px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>🎯 FPS·슈터 데일리 커뮤니티/이벤트 레이더</h1>
+    <div class="meta">기준일: 2026년 8월 7일 (금) · 작성 09:00 KST</div>
+    <div class="cover">커버 기간: 2026-08-05 ~ 08-07 (최근 48시간 신규 + 진행 이슈 업데이트)</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="lead">오늘의 결론: <b>브랜드 신규 이슈는 다소 조용한 날</b>입니다. 최대 라이브 이벤트는 파리에서 진행 중인 <b>e스포츠 월드컵 2026 콜오브듀티(BO7) 종목</b>(오늘이 그룹스테이지 최종일)이고, 국내외 관심은 <b>배틀필드6 'Top Gun' 대형 업데이트(8/18)</b> 기대감으로 모입니다. 나머지는 진행 중 시즌·콜라보의 짧은 업데이트로 정리합니다.</p>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="tag">라이브 e스포츠</div>
+      <div class="big">EWC CoD BO7</div>
+      <div class="sub">그룹스테이지 8/5~7(오늘 최종) · 플레이오프 8/8~9 · 총상금 $1.8M</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">배틀필드6</div>
+      <div class="big">D-11 · Top Gun</div>
+      <div class="sub">8/18 대형 업데이트 · 웨이크 아일랜드 복귀 + 항공전 모드</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">국내 진행</div>
+      <div class="big">서든어택 S3</div>
+      <div class="sub">'패러독스' 시즌3 · 신규 캐릭터·저격소총 운영 중</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">발로란트 KR</div>
+      <div class="big">VAL조각</div>
+      <div class="sub">PC방 이벤트 ~8/18 · 국내 리텐션 캠페인 지속</div>
+    </div>
+    <div class="kpi alert">
+      <div class="tag">리스크 신호</div>
+      <div class="big">콜라보 백래시</div>
+      <div class="sub">OW2 크로스오버·가격 논쟁 등 라이브서비스 피로 조짐</div>
+    </div>
+  </div>
+
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트/소식</th><th>시점</th><th>유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="game">서든어택</td>
+        <td>2026 <a href="https://www.inven.co.kr/webzine/news/?news=318057">시즌3 '패러독스'</a> — 신규 캐릭터·신규 저격소총 업데이트</td>
+        <td>7월 시작<br>운영 중</td>
+        <td><span class="pill p-new">신규 시즌</span></td>
+        <td>실사 캐릭터·아이돌 콜라보 노선에 국내 유저 호불호. 신규 저격총 밸런스 주시</td>
+      </tr>
+      <tr>
+        <td class="game">서든어택</td>
+        <td>인기 그룹 '<a href="https://www.khgames.co.kr/news/articleView.html?idxno=306830">리센느</a>' 신규 캐릭터 콜라보</td>
+        <td>진행</td>
+        <td><span class="pill p-event">아이돌 콜라보</span></td>
+        <td>아이돌 IP 지속 채용 — 신규/복귀 유입엔 긍정, 코어 밀덕층은 피로감 언급</td>
+      </tr>
+      <tr>
+        <td class="game">발로란트 KR</td>
+        <td><a href="https://playvalorant.com/ko-kr/news/announcements/act5-pcb-val-event/">ACT PC방 'VAL조각'</a> 이벤트 진행 (~8/18)</td>
+        <td>~8/18</td>
+        <td><span class="pill p-event">PC방/리텐션</span></td>
+        <td>보상형 PC방 캠페인 정착 — 방학 시즌 접속 유도로 안정적 평가</td>
+      </tr>
+      <tr>
+        <td class="game">오버워치2</td>
+        <td>국내 브랜드 <a href="https://www.sportskeeda.com/esports/gentle-monster-x-overwatch-2-skins-release-date">Gentle Monster 콜라보</a> 및 LE SSERAFIM 스킨 재판매 이슈</td>
+        <td>진행</td>
+        <td><span class="pill p-event">패션 콜라보</span></td>
+        <td>K-브랜드/K-팝 IP 결합 화제. 한정 스킨 재판매·가격엔 갑론을박</td>
+      </tr>
+      <tr>
+        <td class="game">PUBG</td>
+        <td>크래프톤 '<a href="https://pubg.com/ko/news/9855">2026 로드맵</a>' 및 이용자 흐름 공개 — 하반기 콘텐츠 예고</td>
+        <td>진행 업데이트</td>
+        <td><span class="pill p-live">로드맵</span></td>
+        <td>장기 로드맵 투명 공개엔 우호적. 실제 이행 여부가 신뢰 관건</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트/소식</th><th>시점</th><th>유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="game">콜오브듀티<br>(BO7)</td>
+        <td><a href="https://dotesports.com/call-of-duty/news/bo7-ewc-2026-schedule-results-bracket">EWC 2026 Black Ops 7</a> — 파리, 16팀, 총상금 $1.8M (우승 $600K). OpTic·FaZe·Team Falcons 우승후보</td>
+        <td>8/5~9<br>(오늘 그룹 최종)</td>
+        <td><span class="pill p-esport">라이브 e스포츠</span></td>
+        <td>디펜딩 챔프 OpTic vs FaZe 구도에 관심 집중. 트위치/유튜브 동시 송출</td>
+      </tr>
+      <tr>
+        <td class="game">발로란트</td>
+        <td>EWC 2026 발로란트 — <a href="https://www.inven.co.kr/webzine/news/?news=318423">100 Thieves 우승</a>(vs NRG 3:1), <b>농심 레드포스 3위</b></td>
+        <td>7/13 종료<br>(진행 정리)</td>
+        <td><span class="pill p-esport">e스포츠</span></td>
+        <td>Cryocells MVP 화제. 국내 팬은 농심 4강·3위 선전에 호평</td>
+      </tr>
+      <tr>
+        <td class="game">배틀필드6</td>
+        <td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming">'Top Gun' 시즌4 업데이트</a> — 웨이크 아일랜드 복귀, 캐리어 스트라이크/파이터 스윕 항공전 모드, 신규 제트기·저격총</td>
+        <td>8/18 출시<br>(D-11)</td>
+        <td><span class="pill p-new">신규 시즌</span></td>
+        <td>클래식 맵 복귀에 기대감 최고조. 항공전 밸런스·서버 안정성 관망세</td>
+      </tr>
+      <tr>
+        <td class="game">마블 라이벌즈</td>
+        <td><a href="https://www.marvelrivals.com/news/">시즌4 'Heart of the Dragon'</a> 진행 — 신규 히어로·맵 및 정규 잦은 패치 사이클 유지</td>
+        <td>진행 업데이트</td>
+        <td><span class="pill p-live">시즌 운영</span></td>
+        <td>2주 단위 밸런스 패치 속도에 코어층 만족. '6v6 탈피' 실험 언급도</td>
+      </tr>
+      <tr>
+        <td class="game">델타포스</td>
+        <td><a href="https://store.steampowered.com/news/app/2507950/view/533251118084391253">시즌5</a> 및 엔진/스터터 최적화 업데이트 진행</td>
+        <td>진행 업데이트</td>
+        <td><span class="pill p-live">시즌 운영</span></td>
+        <td>무료 F2P 전술슈터로 꾸준한 유입. PC 최적화 개선 요구 지속</td>
+      </tr>
+      <tr>
+        <td class="game">에이펙스</td>
+        <td>라이브서비스 피로 조짐 — 시즌 런칭 동접 반등 둔화 지적 <span class="pill p-risk">재확인 권장</span></td>
+        <td>배경 이슈</td>
+        <td><span class="pill p-risk">리텐션</span></td>
+        <td>"시즌 스파이크가 예전 같지 않다"는 커뮤니티 피로감. 수치는 트래커별 편차</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>⚠️ 논란·리스크 신호 (우리 운영 교훈)</h2>
+
+  <div class="risk-box">
+    <h3>1. 크로스오버·콜라보 스킨 백래시 (OW2 사례)</h3>
+    <p>오버워치2의 잇단 외부 IP 콜라보(스트리트 파이터 등)와 한정 스킨 가격·재판매 정책을 두고 커뮤니티 갑론을박이 반복되고 있습니다. 국내에서도 서든어택 아이돌 콜라보에 코어층 피로감이 관측됩니다.</p>
+    <div class="lesson"><b>운영 교훈:</b> 콜라보는 신규 유입엔 강력하지만, <b>코어 정체성 훼손 우려</b>를 사전 공지·한정성 관리로 완충해야 함. 한정 스킨 재판매 시 최초 구매자 형평성 메시지 준비.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>2. 대형 업데이트 직전 '기대 관리' 리스크 (배틀필드6 Top Gun)</h3>
+    <p>8/18 대형 업데이트를 앞두고 기대감이 최고조입니다. 신규 항공전 모드·클래식 맵 복귀는 강력한 훅이지만, 과거 시리즈처럼 <b>런칭일 서버 대기열·항공기 밸런스</b>가 초반 여론을 가릅니다.</p>
+    <div class="lesson"><b>운영 교훈:</b> 대형 패치는 <b>출시 직후 24~48시간이 여론의 전부</b>. 서버 증설·핫픽스 대기 채널·공식 이슈 트래커를 사전 세팅하고, 예상 이슈를 선제 공지하면 백래시를 크게 줄일 수 있음.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>3. 라이브서비스 리텐션 피로 (에이펙스 등) <span class="pill p-risk">재확인 권장</span></h3>
+    <p>장수 슈터에서 '시즌 런칭 = 동접 반등' 공식이 약해지는 조짐이 커뮤니티에서 반복 언급됩니다(수치는 트래커·플랫폼별 편차 큼, 재확인 필요).</p>
+    <div class="lesson"><b>운영 교훈:</b> 시즌 스파이크에만 기대지 말고 <b>시즌 중반 소규모 이벤트·복귀 보상·PC방 캠페인</b>(발로란트 VAL조각 모델)으로 저점 리텐션을 방어하는 설계가 유효.</div>
+  </div>
+
+  <h2>✅ CM 액션 제안</h2>
+
+  <div class="action">
+    <h3><span class="num">액션 1.</span> EWC CoD 결승 주말(8/8~9) '워치파티 훅' 준비</h3>
+    <p>파리 EWC BO7 플레이오프가 이번 주말입니다. 슈터 커뮤니티 시선이 몰리는 타이밍에 맞춰 <b>자사 채널 예측 이벤트·클립 챌린지·간단 응원 보상</b>을 얹으면 낮은 비용으로 도달을 끌어올릴 수 있습니다. 결승 하이라이트 리액션 카피를 미리 초안화 권장.</p>
+  </div>
+
+  <div class="action">
+    <h3><span class="num">액션 2.</span> 배틀필드6 8/18 업데이트를 '경쟁 벤치마크'로 활용</h3>
+    <p>웨이크 아일랜드 복귀 = <b>'추억의 맵/모드 복각'이 여전히 강한 유입 훅</b>임을 재확인해 줍니다. 자사 라이브 게임에도 레거시 맵·시즌 리마스터 아이디어를 기획 백로그에 반영하고, 8/18 커뮤니티 반응을 실시간 트래킹해 '무엇이 먹혔는지'를 다음 시즌 기획에 반영하세요.</p>
+  </div>
+
+  <h2>🔗 출처 &amp; 유의사항</h2>
+  <div class="sources">
+    <ul>
+      <li>• EWC 2026 CoD BO7 일정·상금 — <a href="https://dotesports.com/call-of-duty/news/bo7-ewc-2026-schedule-results-bracket">dotesports</a>, <a href="https://esportsworldcup.com/en/competitions/2026/cod-warzone">Esports World Cup 공식</a></li>
+      <li>• EWC 2026 발로란트 100T 우승·농심 3위 — <a href="https://www.inven.co.kr/webzine/news/?news=318423">인벤</a>, <a href="https://namu.wiki/w/Esports%20World%20Cup%202026/%EB%B0%9C%EB%A1%9C%EB%9E%80%ED%8A%B8">나무위키</a></li>
+      <li>• 배틀필드6 Top Gun 업데이트(8/18) — <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming">EA 공식 커뮤니티 업데이트</a></li>
+      <li>• 서든어택 시즌3 '패러독스' — <a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤</a>, <a href="https://zdnet.co.kr/view/?no=20260702163031">ZDNet Korea</a>; 리센느 콜라보 — <a href="https://www.khgames.co.kr/news/articleView.html?idxno=306830">경향게임스</a></li>
+      <li>• 발로란트 KR VAL조각 PC방 이벤트 — <a href="https://playvalorant.com/ko-kr/news/announcements/act5-pcb-val-event/">발로란트 공식</a></li>
+      <li>• 오버워치2 콜라보(Gentle Monster/LE SSERAFIM) — <a href="https://www.sportskeeda.com/esports/gentle-monster-x-overwatch-2-skins-release-date">Sportskeeda</a>, <a href="https://esports.gg/news/overwatch/all-overwatch-2-collaborations-and-crossover-skins/">esports.gg</a></li>
+      <li>• 마블 라이벌즈 시즌 운영 — <a href="https://www.marvelrivals.com/news/">공식 뉴스</a>; PUBG 2026 로드맵 — <a href="https://pubg.com/ko/news/9855">PUBG 공식</a>; 델타포스 — <a href="https://store.steampowered.com/news/app/2507950/view/533251118084391253">Steam</a></li>
+    </ul>
+    <div class="note">
+      ⚠️ <b>유의사항:</b> 동접·시청·판매 수치는 서드파티 트래커 기반으로 플랫폼(스팀 전용/콘솔 제외 등)·시점에 따라 편차가 큽니다 — <b>모든 수치는 '재확인 권장'</b>. 에이펙스 동접 하락 관련 상세 수치는 오래된 자료가 혼재하므로 최신 트래커로 별도 확인 필요. 발로란트 EWC(7/13 종료)는 최근 48시간 신규가 아니라 진행 정리 항목입니다. 본 리포트는 커뮤니티/전문지 공개 정보를 CM 관점에서 요약한 것으로, 확정 발표는 각 게임사 공식 채널을 우선하세요.
+    </div>
+  </div>
+
+  <footer>FPS 이벤트 동향 레이더 · 자동 생성 리포트 · 2026-08-07 (금) · 라이온하트 CM 지원용</footer>
+
+</div>
+</body>
+</html>

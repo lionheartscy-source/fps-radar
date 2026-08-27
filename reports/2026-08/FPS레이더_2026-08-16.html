@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 · 2026-08-16 (주말 포함)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    background: #F4F6FA; color: #1F2A44; line-height: 1.6;
+    padding: 24px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header.top {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; border-radius: 14px; padding: 28px 30px; margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(31,42,68,0.18);
+  }
+  header.top .kicker { font-size: 13px; letter-spacing: 2px; opacity: .85; text-transform: uppercase; }
+  header.top h1 { font-size: 27px; margin: 6px 0 10px; font-weight: 800; }
+  header.top .meta { font-size: 14px; opacity: .95; }
+  header.top .meta span { display: inline-block; margin-right: 18px; }
+  header.top .badge {
+    display: inline-block; background: #FFCC4D; color: #1F2A44; font-weight: 700;
+    font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-left: 4px;
+  }
+  h2.section {
+    font-size: 19px; color: #1F2A44; margin: 30px 0 14px;
+    padding-bottom: 8px; border-bottom: 3px solid #2E5AAC; font-weight: 800;
+  }
+  h2.section .em { color: #2E5AAC; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 14px; margin-bottom: 8px; }
+  .kpi {
+    background: #fff; border: 1px solid #E1E7F2; border-left: 5px solid #2E5AAC;
+    border-radius: 10px; padding: 16px 18px; box-shadow: 0 2px 6px rgba(31,42,68,0.05);
+  }
+  .kpi .label { font-size: 12px; color: #5A6785; font-weight: 600; margin-bottom: 6px; }
+  .kpi .value { font-size: 22px; font-weight: 800; color: #1F2A44; line-height: 1.25; }
+  .kpi .sub { font-size: 12px; color: #8590A6; margin-top: 5px; }
+  .kpi.alert { border-left-color: #D9534F; }
+  .kpi.alert .value { color: #C0392B; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(31,42,68,0.06); font-size: 13.5px; }
+  thead th { background: #1F2A44; color: #fff; text-align: left; padding: 11px 12px; font-weight: 700; font-size: 13px; }
+  tbody td { padding: 11px 12px; border-bottom: 1px solid #EAEEF6; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #F7F9FC; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px; white-space: nowrap; }
+  .t-launch { background: #E3F0FF; color: #2E5AAC; }
+  .t-event  { background: #E7F7ED; color: #1E8E52; }
+  .t-season { background: #FFF3DE; color: #B9791C; }
+  .t-risk   { background: #FDE7E7; color: #C0392B; }
+  .t-update { background: #EEE9FA; color: #6C4BB5; }
+  .reaction { color: #42506E; }
+  .pos { color: #1E8E52; font-weight: 600; }
+  .neg { color: #C0392B; font-weight: 600; }
+  a { color: #2E5AAC; text-decoration: none; border-bottom: 1px dotted #9DB4DD; }
+  a:hover { border-bottom-style: solid; }
+  .risk-card, .action-card {
+    background: #fff; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(31,42,68,0.05);
+  }
+  .risk-card { border-left: 5px solid #D9534F; }
+  .action-card { border-left: 5px solid #1E8E52; }
+  .risk-card h3, .action-card h3 { font-size: 15px; margin-bottom: 6px; }
+  .risk-card h3 { color: #C0392B; }
+  .action-card h3 { color: #1E8E52; }
+  .risk-card .lesson { margin-top: 8px; font-size: 13px; background: #FBF3F3; padding: 9px 12px; border-radius: 7px; }
+  .risk-card .lesson b { color: #C0392B; }
+  .action-card .why { font-size: 13px; color: #5A6785; margin-top: 6px; }
+  ul.clean { list-style: none; }
+  ul.clean li { padding: 4px 0 4px 18px; position: relative; font-size: 13.5px; }
+  ul.clean li::before { content: "▸"; color: #2E5AAC; position: absolute; left: 0; }
+  footer.bottom { margin-top: 30px; padding: 20px; background: #fff; border-radius: 10px; border: 1px solid #E1E7F2; }
+  footer.bottom h3 { font-size: 15px; margin-bottom: 10px; color: #1F2A44; }
+  footer.bottom .srcgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 4px 20px; font-size: 12.5px; }
+  footer.bottom .srcgrid a { display: block; padding: 3px 0; }
+  .note { margin-top: 16px; font-size: 12px; color: #7A879F; background: #F4F6FA; padding: 12px 14px; border-radius: 8px; line-height: 1.7; }
+  .note b { color: #C0392B; }
+  .credit { text-align: center; font-size: 11.5px; color: #9AA5BC; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="kicker">FPS · 슈터 데일리 커뮤니티 레이더</div>
+    <h1>주말 종합 레이더 — 배틀필드6 오픈베타가 판을 흔들다</h1>
+    <div class="meta">
+      <span>📅 기준일: 2026년 8월 16일 (일)</span>
+      <span>🕘 커버기간: 8/14(목)~8/16(일) 주말 <span class="badge">주말 포함</span></span>
+    </div>
+    <div class="meta" style="margin-top:8px; font-size:13px; opacity:.9;">
+      ※ 이 리포트는 정규 스케줄(월~금) 외 일요일에 실행되어 <b>주말 소식 위주</b>로 정리했습니다. 반복 이슈는 진행 업데이트로 축약.
+    </div>
+  </header>
+
+  <!-- KPI -->
+  <div class="kpis">
+    <div class="kpi alert">
+      <div class="label">🔥 주말 최대 화제</div>
+      <div class="value">배틀필드6 오픈베타</div>
+      <div class="sub">2주차 8/14~8/17 진행 중</div>
+    </div>
+    <div class="kpi">
+      <div class="label">📈 스팀 동접 신기록</div>
+      <div class="value">약 52만 명</div>
+      <div class="sub">역대 배필 최고·모든 CoD 상회 (재확인 권장)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">🌐 글로벌 신규 시즌</div>
+      <div class="value">3종 동시 진행</div>
+      <div class="sub">에이펙스 S30 · 마블라이벌즈 S9.5 · 델타포스 S8</div>
+    </div>
+    <div class="kpi">
+      <div class="label">🇰🇷 국내 라이브 이슈</div>
+      <div class="value">서든어택 21주년</div>
+      <div class="sub">협동 콘텐츠 'UP투게더' + 200FPS 확장</div>
+    </div>
+    <div class="kpi alert">
+      <div class="label">⚠️ 리스크 신호</div>
+      <div class="value">배필6 밸런스·기대관리</div>
+      <div class="sub">샷건 과밸 지적 · '2042 트라우마' 사전예약 신중론</div>
+    </div>
+  </div>
+
+  <!-- 국내 -->
+  <h2 class="section">🇰🇷 국내 <span class="em">포커스</span></h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:26%">이벤트/소식</th><th style="width:13%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>배틀필드6</b></td>
+        <td>오픈베타 2주차 — 신규 맵 'Empire State', Rush·분대 데스매치 추가</td>
+        <td>8/14~8/17</td>
+        <td><span class="tag t-launch">베타</span></td>
+        <td class="reaction">루리웹·인벤 후기 폭증. <span class="pos">"배필3·4 감성 복귀, 최적화 안정"</span> 호평 다수. 다만 <span class="neg">샷건 과밸·무기 개성 부족</span> 지적. 정식출시(10월) 전 <b>사전예약 신중론</b> 우세. <a href="https://m.ruliweb.com/game/87007/read/9424094" target="_blank">루리웹 후기</a></td>
+      </tr>
+      <tr>
+        <td><b>서든어택</b></td>
+        <td>21주년 협동 콘텐츠 'UP투게더' + 협동 점프맵 업데이트</td>
+        <td>8월 진행</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td class="reaction">21주년 기념 대규모 업데이트에 장수 유저 반응 활발. 협동 콘텐츠·이벤트 대거 공개. <a href="https://www.gametoc.co.kr/news/articleView.html?idxno=110481" target="_blank">게임톡</a></td>
+      </tr>
+      <tr>
+        <td><b>서든어택</b></td>
+        <td>게임 프레임 최대 200 FPS 확장 적용 (하드코어 유저 편의 개선)</td>
+        <td>7/23 적용</td>
+        <td><span class="tag t-update">운영</span></td>
+        <td class="reaction"><span class="pos">체감 반응성 개선 환영</span>. 경쟁 FPS 편의 기능 따라잡기로 평가. <a href="https://www.inven.co.kr/webzine/news/?news=318795" target="_blank">인벤</a></td>
+      </tr>
+      <tr>
+        <td><b>오버워치2</b></td>
+        <td>8월 밸런스 패치 (영웅 조정) 적용</td>
+        <td>8/12</td>
+        <td><span class="tag t-update">패치</span></td>
+        <td class="reaction">밸런스 조정 위주. 국내 커뮤니티는 메타 변화 체감 논의 중. <a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank">넥슨 패치노트</a></td>
+      </tr>
+      <tr>
+        <td><b>PUBG 배틀그라운드</b></td>
+        <td>업데이트 42.2 — 기본 훈련 개편(17챕터), 솔로 데스매치 아케이드 모드</td>
+        <td>콘솔 ~8/19</td>
+        <td><span class="tag t-update">진행</span></td>
+        <td class="reaction">신규 온보딩·아케이드 모드 진행 중(콘솔 솔로 데스매치 8/6~8/19). 태이고·론도 맵 구조 개편. <a href="https://pubg.com/ko/news/10459" target="_blank">패치노트 42.2</a></td>
+      </tr>
+      <tr>
+        <td><b>발로란트 KR</b></td>
+        <td>2026 챔피언스 스킨 세트 관련 정보 확산 (커뮤니티 기대)</td>
+        <td>진행</td>
+        <td><span class="tag t-season">스킨</span></td>
+        <td class="reaction">챔피언스 스킨 디자인·수익 배분 관련 유튜브·커뮤니티 관심 상승. 공식 공지는 <a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank">발로란트 공지</a> 확인 권장.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 -->
+  <h2 class="section">🌐 글로벌 <span class="em">포커스</span></h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:26%">이벤트/소식</th><th style="width:13%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Battlefield 6</b></td>
+        <td>오픈베타, 스팀 동접 <b>약 521,079명</b> 피크 — 역대 배필 최고이자 모든 CoD 상회</td>
+        <td>주말 갱신</td>
+        <td><span class="tag t-risk">지표</span></td>
+        <td class="reaction"><span class="pos">"BF3/4의 손맛" 호평</span> vs <span class="neg">"차량 붙은 CoD"</span> 냉소 공존. 대체로 '커뮤니티가 이 게임을 사랑한다'는 평. 정식출시 10월 초. <a href="https://www.tomshardware.com/video-games/pc-gaming/battlefield-6-reaches-all-time-record-half-a-million-concurrent-players-on-steam-520k-open-beta-surpasses-every-call-of-duty-ever-made-in-player-count" target="_blank">Tom's Hardware</a> · <a href="https://www.pcgamer.com/games/fps/battlefield-6-beta-weekend-2-date-time-content/" target="_blank">PC Gamer</a></td>
+      </tr>
+      <tr>
+        <td><b>Apex Legends</b></td>
+        <td>시즌 30 'Marked' — 블러드하운드 대규모 리워크 + 맵 업데이트</td>
+        <td>8/4 출시</td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td class="reaction">레전드 리워크 중심 시즌. 리워크 밸런스 실전 평가 진행 중. <a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-game-updates" target="_blank">EA 공식</a></td>
+      </tr>
+      <tr>
+        <td><b>Marvel Rivals</b></td>
+        <td>시즌 9.5 'The Mystery of Thebes' — 신규 영웅 The Hood, 신규 스킨 번들</td>
+        <td>8/7~ (8/13 패치)</td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td class="reaction"><span class="pos">"The Hood 유효하나 OP는 아님"</span> 평가. Storm 'Sacred Skies'(8/13~9/11), Lady Loki 한정 복각(8/13~8/28). 여름 페스티벌 수영복 스킨도 화제. <a href="https://www.forbes.com/sites/brianmazique/2026/08/13/marvel-rivals-patch-notes/" target="_blank">Forbes</a></td>
+      </tr>
+      <tr>
+        <td><b>Delta Force</b></td>
+        <td>시즌 8 'Morphosis' — 신규 오퍼레이터·무기·모드 추가</td>
+        <td>진행</td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td class="reaction">추출슈터·대규모전 하이브리드 지속 확장. 신규 시즌 콘텐츠 반응 수집 중. <a href="https://www.shacknews.com/article/147581/delta-force-season-morphosis-release-date" target="_blank">Shacknews</a></td>
+      </tr>
+      <tr>
+        <td><b>CoD: Black Ops 7</b></td>
+        <td>오픈베타 일정 공개 — 얼리액세스 10/2, 오픈 10/5~10/8</td>
+        <td>10월 예정</td>
+        <td><span class="tag t-launch">사전</span></td>
+        <td class="reaction">배필6 베타 흥행 직후라 <b>가을 대전 구도</b> 기대·긴장 병존. <a href="https://www.pcgamer.com/games/call-of-duty/black-ops-7-beta-dates-access/" target="_blank">PC Gamer</a></td>
+      </tr>
+      <tr>
+        <td><b>CS2 / R6 Siege X</b></td>
+        <td>정기 밸런스·시즌 운영 지속 (특기 신규 이벤트 적음)</td>
+        <td>진행</td>
+        <td><span class="tag t-update">진행</span></td>
+        <td class="reaction">주말 기준 대형 신규 이슈는 적음. CS2 정기 업데이트 및 R6 신규 시즌 로드맵 진행. <a href="https://www.counter-strike.net/news" target="_blank">CS2</a> · <a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates" target="_blank">R6</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2 class="section">⚠️ 논란·리스크 <span class="em">신호</span></h2>
+
+  <div class="risk-card">
+    <h3>① 배틀필드6 — 흥행 이면의 '밸런스·기대관리' 리스크</h3>
+    <p>동접 신기록으로 화제성은 최고조지만, 국내외 후기에서 <b>샷건 과밸(근·중거리 모두 안정적)</b>과 <b>무기 개성 부족(약한 반동·랜덤 스프레드)</b> 지적이 반복됨. 국내 기자·유저 사이에선 <b>배틀필드2042의 전례</b>를 들어 "사전예약 말리고 정식출시 후 구매" 신중론이 확산.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 프리런칭 흥행 지표(동접·시청)가 높을수록 <b>기대치 인플레이션</b> 리스크가 커진다. 베타 피드백(밸런스 이슈)에 대한 <b>공식 로드맵·수정 커뮤니케이션을 출시 전 선제적으로</b> 내보내야 '2042식 배신감' 프레임을 예방할 수 있음.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3>② 마블 라이벌즈 — 수영복/한정 스킨의 상시 화제성 관리</h3>
+    <p>여름 페스티벌 수영복 스킨과 한정 복각(Lady Loki 등)이 반복적으로 커뮤니티 화제. 매출엔 긍정적이나 <b>선정성·한정 판매 압박(FOMO)</b> 논의가 병행되는 카테고리로, 표현 수위와 복각 정책이 반복 쟁점이 될 수 있음.</p>
+    <div class="lesson"><b>우리 운영 교훈:</b> 한정 스킨은 <b>복각 정책을 사전 명문화</b>해두면 "다신 안 나온다"식 불신과 되팔이 논란을 줄일 수 있음. 시즌 스킨 캘린더 투명 공개 권장.</div>
+  </div>
+
+  <!-- 액션 -->
+  <h2 class="section">🎯 CM 액션 <span class="em">제안</span></h2>
+
+  <div class="action-card">
+    <h3>제안 1 · 배필6 베타 흥행을 '우리 채널 인게이지'로 전환</h3>
+    <ul class="clean">
+      <li>주말 최대 화제작인 배필6 베타를 활용해 <b>"당신의 인생 FPS 손맛" 밈/스레드 이벤트</b>를 자사 커뮤니티에 개설 → 자연 유입 트래픽을 자사 팬덤 대화로 흡수.</li>
+      <li>동접 신기록 콘텐츠는 <b>"수치 재확인 권장" 캡션</b>과 함께 인용, 우리 게임 프리런칭 기대치 벤치마크 자료로 내부 공유.</li>
+    </ul>
+    <p class="why">근거: BF6 베타가 커뮤니티 화력을 독점 중 → 편승형 대화 유도가 저비용 고효율.</p>
+  </div>
+
+  <div class="action-card">
+    <h3>제안 2 · '베타 피드백 → 공식 대응' 커뮤니케이션 템플릿 점검</h3>
+    <ul class="clean">
+      <li>배필6의 샷건 과밸 논란처럼, <b>프리런칭/CBT 단계 밸런스 지적에 대한 표준 응답 플로우</b>(수집→우선순위→수정 예고→반영 보고)를 우리 플레이북 기준으로 리허설.</li>
+      <li>기 산출물 <b>'프리런칭 CM/GM 실행 플레이북'</b>의 백래시 대응 시나리오에 'BF6/2042 기대관리' 케이스를 추가 업데이트 검토.</li>
+    </ul>
+    <p class="why">근거: 사전예약 신중론은 '소통 공백'에서 자란다 → 선제 커뮤니케이션이 최고의 방어.</p>
+  </div>
+
+  <!-- 출처 -->
+  <footer class="bottom">
+    <h3>🔗 출처 링크</h3>
+    <div class="srcgrid">
+      <a href="https://www.tomshardware.com/video-games/pc-gaming/battlefield-6-reaches-all-time-record-half-a-million-concurrent-players-on-steam-520k-open-beta-surpasses-every-call-of-duty-ever-made-in-player-count" target="_blank">Tom's Hardware — BF6 스팀 동접 기록</a>
+      <a href="https://www.pcgamer.com/games/fps/battlefield-6-beta-weekend-2-date-time-content/" target="_blank">PC Gamer — BF6 오픈베타 2주차</a>
+      <a href="https://www.gametoc.co.kr/news/articleView.html?idxno=100570" target="_blank">게임톡 — BF6 오픈베타 체험기</a>
+      <a href="https://m.ruliweb.com/game/87007/read/9424094" target="_blank">루리웹 — BF6 오픈베타 후기</a>
+      <a href="https://www.inven.co.kr/board/party/6411/36" target="_blank">인벤 — BF6 2주차 변경사항</a>
+      <a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-game-updates" target="_blank">EA — Apex S30 'Marked'</a>
+      <a href="https://www.forbes.com/sites/brianmazique/2026/08/13/marvel-rivals-patch-notes/" target="_blank">Forbes — 마블 라이벌즈 S9.5 패치</a>
+      <a href="https://www.shacknews.com/article/147581/delta-force-season-morphosis-release-date" target="_blank">Shacknews — 델타포스 S8 'Morphosis'</a>
+      <a href="https://www.pcgamer.com/games/call-of-duty/black-ops-7-beta-dates-access/" target="_blank">PC Gamer — CoD BO7 베타 일정</a>
+      <a href="https://pubg.com/ko/news/10459" target="_blank">PUBG — 업데이트 42.2 패치노트</a>
+      <a href="https://overwatch.nexon.com/news/patchnotes/709/patch-2026-08-11" target="_blank">넥슨 — 오버워치2 8/12 패치</a>
+      <a href="https://www.gametoc.co.kr/news/articleView.html?idxno=110481" target="_blank">게임톡 — 서든어택 협동 콘텐츠</a>
+      <a href="https://www.inven.co.kr/webzine/news/?news=318795" target="_blank">인벤 — 서든어택 200FPS 확장</a>
+      <a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank">발로란트 — 공식 공지</a>
+    </div>
+    <div class="note">
+      <b>유의사항:</b> 동접·시청·판매 등 수치는 서드파티 트래커/언론 보도 기반으로 <b>재확인 권장</b>(특히 BF6 '약 521,079명 피크'는 스팀 실시간 기준 변동 가능). 커뮤니티 반응은 스레드 표본에 기반한 정성 요약으로 전수 여론과 다를 수 있음. 본 리포트는 정규 스케줄(월~금 09:00 KST) 외 <b>일요일 자동 실행분</b>으로, 주말(8/14~8/16) 소식 위주로 정리했으며 오래된 기사는 배경으로만 활용함. 리서치 기준 시각: 2026-08-16 KST.
+    </div>
+    <div class="credit">FPS 이벤트 동향 레이더 · 데일리 커뮤니티/이벤트 레이더 · 자동 생성 리포트</div>
+  </footer>
+
+</div>
+</body>
+</html>

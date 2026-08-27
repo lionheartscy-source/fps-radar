@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 — 2026-07-30 (목)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #F4F6FA; color: #1F2A44; line-height: 1.6; padding: 24px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; border-radius: 14px; padding: 28px 32px; margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(31,42,68,0.18);
+  }
+  header h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.3px; }
+  header .sub { margin-top: 8px; font-size: 14px; opacity: 0.92; }
+  header .badge {
+    display: inline-block; margin-top: 12px; background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35); padding: 5px 12px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 600;
+  }
+  .kpi-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+  .kpi {
+    flex: 1 1 180px; background: #fff; border-radius: 12px; padding: 16px 18px;
+    border: 1px solid #E1E7F0; border-left: 5px solid #2E5AAC;
+    box-shadow: 0 2px 8px rgba(31,42,68,0.05);
+  }
+  .kpi .label { font-size: 12px; color: #5A6580; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+  .kpi .val { font-size: 21px; font-weight: 800; color: #1F2A44; margin: 4px 0 2px; }
+  .kpi .note { font-size: 12px; color: #78839A; }
+  .kpi.alert { border-left-color: #C0392B; }
+  .kpi.fresh { border-left-color: #1E8449; }
+  section { background: #fff; border-radius: 12px; padding: 22px 24px; margin-bottom: 20px; border: 1px solid #E1E7F0; }
+  h2 { font-size: 17px; color: #1F2A44; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #EDF1F8; display: flex; align-items: center; gap: 8px; }
+  h2 .dot { width: 9px; height: 9px; border-radius: 50%; background: #2E5AAC; display: inline-block; }
+  h2.risk .dot { background: #C0392B; }
+  h2.action .dot { background: #1E8449; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { background: #1F2A44; color: #fff; text-align: left; padding: 9px 11px; font-weight: 600; font-size: 12.5px; }
+  td { padding: 9px 11px; border-bottom: 1px solid #EDF1F8; vertical-align: top; }
+  tr:nth-child(even) td { background: #F7F9FC; }
+  td .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 5px; white-space: nowrap; }
+  .t-event { background: #E3ECFB; color: #2E5AAC; }
+  .t-live { background: #E6F4EA; color: #1E8449; }
+  .t-risk { background: #FBE6E3; color: #C0392B; }
+  .t-launch { background: #F3E8FB; color: #7D3C98; }
+  a { color: #2E5AAC; text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  .riskbox { background: #FDF3F2; border: 1px solid #F5D0CB; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .riskbox h3 { font-size: 14px; color: #C0392B; margin-bottom: 5px; }
+  .riskbox p { font-size: 13px; color: #4A3230; }
+  .riskbox .lesson { margin-top: 8px; font-size: 12.5px; color: #1F2A44; background: #fff; border-left: 3px solid #C0392B; padding: 7px 10px; border-radius: 4px; }
+  .actionbox { background: #F2FAF5; border: 1px solid #C8E6D4; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .actionbox h3 { font-size: 14px; color: #1E8449; margin-bottom: 5px; }
+  .actionbox p { font-size: 13px; color: #234634; }
+  .muted { color: #78839A; font-size: 12.5px; }
+  footer { font-size: 12px; color: #78839A; padding: 8px 4px 20px; line-height: 1.8; }
+  footer a { font-weight: 500; }
+  .reqcheck { color: #C0392B; font-weight: 700; font-size: 11px; }
+  .comm { font-size: 12px; color: #5A6580; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">기준일: 2026년 7월 30일 (목) · 커버 기간: 7/28~7/30 (최근 48시간 중심, 반복 이슈는 진행 업데이트로 요약)</div>
+    <div class="badge">📌 조용한 편의 한 주 — 신규 헤드라인 1건(마블 라이벌즈) + 진행 중 시즌·이벤트 다수</div>
+  </header>
+
+  <div class="kpi-row">
+    <div class="kpi fresh">
+      <div class="label">오늘의 신규</div>
+      <div class="val">마블 라이벌즈</div>
+      <div class="note">v20260730 · 얼트론 침공 LTM + 스파이더맨 데이</div>
+    </div>
+    <div class="kpi">
+      <div class="label">진행 중 대형 시즌</div>
+      <div class="val">BF6 시즌4</div>
+      <div class="note">'해상전(Naval Warfare)' · 7/21 시작 (D+9)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">국내 여름 이벤트</div>
+      <div class="val">PUBG·서든</div>
+      <div class="note">PUBG 여름선물(~8/12) / 서든 시즌3 진행</div>
+    </div>
+    <div class="kpi alert">
+      <div class="label">리스크 신호</div>
+      <div class="val">콜라보 정체성</div>
+      <div class="note">BF6 vs CoD '밀리터리 vs 크로스오버' 논쟁 지속</div>
+    </div>
+    <div class="kpi">
+      <div class="label">지표</div>
+      <div class="val">특기사항 적음</div>
+      <div class="note">이번 창엔 검증된 신규 동접·판매 급변 없음 <span class="reqcheck">재확인 권장</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="dot"></span>글로벌 포커스</h2>
+    <table>
+      <thead>
+        <tr><th style="width:14%">게임</th><th style="width:26%">이벤트·소식</th><th style="width:9%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>마블 라이벌즈</b></td>
+          <td>패치 v20260730 — 한정 모드 <b>'Path to Doomsday: 어벤져스 에이지 오브 울트론'</b>(어벤져스 타워 울트론 침공), 신규 번들 4종(스파이더맨·헐크·스칼렛위치·윈터솔저, 7/31), <b>스파이더맨 데이 이벤트</b>(7/31~8/13), 타임스퀘어 AoU 상영·포토존(7/30~8/27), IGNITE 미드시즌 결승(LA) 진행. <span class="muted">신규 영웅·대규모 밸런스 변경은 없음.</span> <a href="https://www.marvelrivals.com/20260729/41525_1309398.html" target="_blank">공식 패치노트</a></td>
+          <td>7/30<br><span class="muted">오늘</span></td>
+          <td><span class="tag t-event">이벤트/콜라보</span></td>
+          <td class="comm">영화 연계 실물 이벤트+인게임 동시 전개에 긍정적. 신규 영웅 부재엔 '콘텐츠 소강' 지적도. <a href="https://marvelrivals.gg/news/patch-notes/" target="_blank">패치 트래커</a></td>
+        </tr>
+        <tr>
+          <td><b>배틀필드 6</b></td>
+          <td>시즌4 <b>'해상전(Naval Warfare)'</b> 진행 중 — 대규모 해상 전투·함정 콘텐츠. <a href="https://vgtimes.com/games/battlefield-6/news/" target="_blank">뉴스 모음</a> · <a href="https://www.gamewatcher.com/battlefield-6-patch-notes-and-roadmap-of-updates" target="_blank">로드맵</a></td>
+          <td>7/21<br><span class="muted">진행</span></td>
+          <td><span class="tag t-live">진행 업데이트</span></td>
+          <td class="comm">'그라운디드(현실적) 정체성' 노선엔 호평. 다만 신맵·무기 수 대비 임시 이벤트 의존도 비판이 시즌 초부터 이어짐.</td>
+        </tr>
+        <tr>
+          <td><b>오버워치 2</b></td>
+          <td>시즌3 미드시즌 패치 — <b>서머 게임즈 2026</b>, Beachside 스킨, Mauga 신화 스킨, 탱커/딜러/힐러 밸런스 조정. LTM은 8/10까지. <a href="https://esports.gg/guides/overwatch/overwatch-season-3-mid-season-patch-notes-2026/" target="_blank">패치노트</a></td>
+          <td>7/14<br><span class="muted">진행</span></td>
+          <td><span class="tag t-live">진행 업데이트</span></td>
+          <td class="comm">서머 이벤트 스킨 반응 양호. Sigma·Kiriko 너프엔 찬반. <a href="https://overwatch.blizzard.com/en-us/news/patch-notes/" target="_blank">공식</a></td>
+        </tr>
+        <tr>
+          <td><b>CS2</b></td>
+          <td>7월 업데이트 — <b>Cache 맵 액티브듀티 복귀</b>(Overpass 제외), 프리미어 시즌5, C4 폭발 데미지 리워크, 신규 컬렉션. <a href="https://hellcase.com/blog/in-game-updates/cs2-july-2026-update/" target="_blank">요약</a> · <a href="https://cs2news.gg/" target="_blank">패치</a></td>
+          <td>7/9<br><span class="muted">진행</span></td>
+          <td><span class="tag t-live">진행 업데이트</span></td>
+          <td class="comm">Cache 복귀는 대체로 환영. Overpass 이탈·10GB 다운로드엔 불만 일부.</td>
+        </tr>
+        <tr>
+          <td><b>발로란트</b></td>
+          <td>2026 시즌 액트4 — 신규 맵 <b>서밋(Summit)</b>, 신규 모드 <b>탈환전</b>, 랭크 페널티 시스템. <a href="https://www.gamemeca.com/view.php?gid=1776913" target="_blank">게임메카</a> · <a href="https://playvalorant.com/en-us/news/game-updates/" target="_blank">공식</a></td>
+          <td>6/24<br><span class="muted">배경</span></td>
+          <td><span class="tag t-launch">시즌/맵</span></td>
+          <td class="comm">밤 시장(Night Market) 7월 개장 기대감. 서밋 맵 밸런스 피드백 수집 단계.</td>
+        </tr>
+        <tr>
+          <td><b>CoD / 블랙옵스7</b></td>
+          <td>Treyarch, '게임 정체성에 안 맞는' 대형 브랜드 콜라보 스킨 거절 언급 — "돈보다 톤 적합성" 기조. (배경 이슈, 지속 논쟁) <a href="https://www.gamespot.com/articles/black-ops-7-dev-rejected-some-big-brand-collab-skin-deals-apparently/1100-6534981/" target="_blank">GameSpot</a></td>
+          <td>배경<br><span class="muted">지속</span></td>
+          <td><span class="tag t-risk">정체성 논쟁</span></td>
+          <td class="comm">'괴상한 스킨' 피로감 vs 크로스오버 수익 사이 팬덤 양분. BF6와의 노선 대비가 계속 회자.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>국내 포커스</h2>
+    <table>
+      <thead>
+        <tr><th style="width:14%">게임</th><th style="width:28%">이벤트·소식</th><th style="width:9%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>배틀그라운드<br>(PUBG)</b></td>
+          <td>여름 시즌 이벤트 진행 — <b>여름 선물</b>(PC 7/15~8/12), <b>핫 썸머 드랍 웹이벤트</b>(PC ~7/29 종료 임박), 친구 초대(G-Coin), 8월 체크인. <a href="https://pubg.com/ko/events/notice/10406" target="_blank">특별 보급 안내</a> · <a href="https://pubg.com/ko/news" target="_blank">뉴스</a></td>
+          <td>7/15~<br><span class="muted">진행</span></td>
+          <td><span class="tag t-event">시즌 이벤트</span></td>
+          <td class="comm">여름 보상 무난 평가. 핫 썸머 웹이벤트 종료(7/29) 전 참여 리마인드 수요. 배그 갤러리 반응 대체로 잠잠.</td>
+        </tr>
+        <tr>
+          <td><b>서든어택</b></td>
+          <td>2026 시즌3 <b>'패러독스'</b> — 신규 캐릭터 <b>C.베라</b>, 볼트액션 저격총 <b>RSR Paradox</b>(피격 적 이동속도 감소), 통합/랭크/클랜/생존전 신시즌. PC방 마이건2 세트효과 ~7/30 종료. <a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a> · <a href="http://sa.nexon.com/news/update/view.aspx?n4ArticleSN=861" target="_blank">공식</a></td>
+          <td>7/2<br><span class="muted">진행</span></td>
+          <td><span class="tag t-live">진행 업데이트</span></td>
+          <td class="comm">RSR Paradox 특수효과(감속) 밸런스 논의. 생존전 4전장 로테이션 반응 관찰 중. PC방 혜택 종료일(7/30) 안내 필요.</td>
+        </tr>
+        <tr>
+          <td><b>발로란트 한국</b></td>
+          <td>액트4 서밋 맵·탈환전 국내 서버 적용. 7월 밤 시장 개장·신규 배틀패스 스킨 기대. <a href="https://www.khgames.co.kr/news/articleView.html?idxno=305678" target="_blank">경향게임스</a></td>
+          <td>진행</td>
+          <td><span class="tag t-live">진행 업데이트</span></td>
+          <td class="comm">국내 커뮤니티(인벤·아카라이브) 밤 시장 라인업 관심 집중.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="muted" style="margin-top:10px;">※ 이번 48시간 창에서 국내 신작·CBT/OBT·사전예약 신규 개시 건은 확인되지 않았습니다. 다음 회차에 재점검하겠습니다.</p>
+  </section>
+
+  <section>
+    <h2 class="risk"><span class="dot"></span>논란·리스크 신호 (운영 교훈 포함)</h2>
+
+    <div class="riskbox">
+      <h3>1. 콜라보/스킨 '정체성' 논쟁 — BF6(그라운디드) vs CoD(크로스오버)</h3>
+      <p>배틀필드6는 셀럽·괴상한 크로스오버를 배제한 '현실적 밀리터리' 노선으로 차별화 중이고, CoD/블랙옵스7 측은 톤에 안 맞는 대형 브랜드 콜라보를 일부 거절했다고 밝혔습니다. 팬덤은 '수익형 콜라보 피로감'과 '재미있는 크로스오버 선호'로 양분돼 있습니다.</p>
+      <div class="lesson">💡 <b>우리 운영 교훈:</b> 콜라보 IP를 계약하기 전에 '세계관·톤 적합성' 판정 기준을 사전에 정하고, 발표 시 톤을 미리 커뮤니케이션해 기대치를 관리하면 백래시를 줄일 수 있습니다. 정체성은 마케팅 자산이자 리스크임을 전제로.</div>
+    </div>
+
+    <div class="riskbox">
+      <h3>2. 시즌 콘텐츠 볼륨 대비 '임시 이벤트 의존' 피로 (BF6 사례)</h3>
+      <p>BF6는 시즌 진행 내내 신규 맵·무기 수가 적고 한정 이벤트·리스킨 의존이 크다는 비판을 받아 왔습니다. '버그가 유일하게 꾸준한 콘텐츠'라는 냉소가 대표적 밈으로 굳어졌습니다.</p>
+      <div class="lesson">💡 <b>우리 운영 교훈:</b> 시즌 커뮤니케이션에서 '영구 콘텐츠 : 한정 이벤트' 비중을 명시하고, 영구 추가물(맵·무기·모드)을 로드맵 상단에 배치해 '임시방편' 인식을 선제 차단하는 것이 유효합니다.</div>
+    </div>
+
+    <p class="muted">※ 이번 창에서는 새로 터진 대형 백래시 사건은 확인되지 않았습니다. 위 두 건은 지속형 리스크로, 신규 사건 발생 시 별도 심층 보고하겠습니다.</p>
+  </section>
+
+  <section>
+    <h2 class="action"><span class="dot"></span>CM 액션 제안</h2>
+
+    <div class="actionbox">
+      <h3>액션 1 — '실물 이벤트 × 인게임' 동시 전개 벤치마킹</h3>
+      <p>마블 라이벌즈는 오늘 인게임 LTM(얼트론 침공) + 실물 타임스퀘어 상영·포토존 + 이스포츠 결승을 <b>같은 창에 겹쳐</b> 화제성을 극대화했습니다. 우리도 다음 대형 이벤트 시 '인게임 한정 모드 + 오프라인/SNS 포토 미션 + 방송 드롭스'를 한 주에 묶는 통합 캠페인 캘린더를 설계해볼 만합니다. (서든 SOOP 방송·드롭스 운영 경험과 접목 가능)</p>
+    </div>
+
+    <div class="actionbox">
+      <h3>액션 2 — 종료 임박 이벤트 리마인드 푸시 (즉시 실행 가능)</h3>
+      <p>오늘 기준 <b>PUBG 핫 썸머 드랍 웹이벤트(PC ~7/29 종료)</b>와 <b>서든어택 PC방 마이건2 세트효과(~7/30 종료)</b>가 마감 국면입니다. 종료 24시간 전 커뮤니티·SNS 리마인드 카피를 발송하면 막판 참여·리텐션을 끌어올릴 수 있습니다. (기 제작 '공지·SNS 카피 생성기' 콘솔 활용 권장)</p>
+    </div>
+  </section>
+
+  <footer>
+    <b>출처</b> —
+    <a href="https://www.marvelrivals.com/20260729/41525_1309398.html" target="_blank">Marvel Rivals 공식 패치노트</a> ·
+    <a href="https://vgtimes.com/games/battlefield-6/news/" target="_blank">BF6 뉴스</a> ·
+    <a href="https://esports.gg/guides/overwatch/overwatch-season-3-mid-season-patch-notes-2026/" target="_blank">OW2 패치노트</a> ·
+    <a href="https://hellcase.com/blog/in-game-updates/cs2-july-2026-update/" target="_blank">CS2 업데이트</a> ·
+    <a href="https://www.gamemeca.com/view.php?gid=1776913" target="_blank">발로란트 액트4(게임메카)</a> ·
+    <a href="https://www.gamespot.com/articles/black-ops-7-dev-rejected-some-big-brand-collab-skin-deals-apparently/1100-6534981/" target="_blank">BO7 콜라보(GameSpot)</a> ·
+    <a href="https://pubg.com/ko/events/notice/10406" target="_blank">PUBG 특별보급</a> ·
+    <a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">서든어택 시즌3(인벤)</a>
+    <br>
+    <b>유의사항</b> — 동접·판매·시청 수치는 서드파티 트래커 기준으로 변동이 크므로 인용 시 <span class="reqcheck">재확인 권장</span>합니다. 커뮤니티 반응은 발행 시점 표본이며 시간에 따라 달라질 수 있습니다. 일부 항목(오버워치·CS2·발로란트·서든어택)은 최근 48시간 밖의 진행형 시즌으로, '진행 업데이트' 배경으로만 포함했습니다. 자동 생성 리포트 — 편집·배포 전 핵심 수치·날짜 재확인 바랍니다.
+    <br>
+    <span class="muted">생성: 데일리 FPS·슈터 레이더 (자동 예약 작업) · 2026-07-30 KST</span>
+  </footer>
+
+</div>
+</body>
+</html>

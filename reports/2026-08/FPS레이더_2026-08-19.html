@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 2026-08-19</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#EAF0FA;
+    --ink:#25303F; --muted:#5E6B7E; --line:#DCE3EE; --bg:#F5F7FB;
+    --warn:#B23B3B; --warn-bg:#FBECEC; --good:#1E7A54; --good-bg:#E7F5EE;
+    --kr:#2E5AAC; --gl:#7A5AA8;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px;}
+  header.hero{background:linear-gradient(135deg,var(--navy),var(--blue));
+    color:#fff;padding:30px 26px;border-radius:0 0 16px 16px;margin-bottom:22px;}
+  header.hero .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    opacity:.82;margin:0 0 8px;}
+  header.hero h1{margin:0 0 10px;font-size:27px;line-height:1.25;}
+  header.hero .meta{font-size:13.5px;opacity:.95;}
+  header.hero .badge{display:inline-block;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.35);padding:3px 11px;border-radius:20px;
+    font-size:12.5px;margin-top:12px;}
+  h2.sec{font-size:19px;color:var(--navy);border-left:5px solid var(--blue);
+    padding-left:11px;margin:34px 0 14px;}
+  .lede{color:var(--muted);font-size:14px;margin:-4px 0 18px;}
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:13px;}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 16px;
+    box-shadow:0 1px 3px rgba(31,42,68,.05);}
+  .kpi .k-label{font-size:12px;color:var(--muted);margin:0 0 6px;font-weight:600;}
+  .kpi .k-val{font-size:16.5px;font-weight:700;color:var(--navy);line-height:1.35;}
+  .kpi .k-sub{font-size:12px;color:var(--muted);margin-top:5px;}
+  .kpi.accent{border-top:3px solid var(--blue);}
+  .kpi.warn{border-top:3px solid var(--warn);}
+  .kpi.good{border-top:3px solid var(--good);}
+  /* tables */
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;font-size:13.5px;margin-bottom:8px;}
+  thead th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;
+    font-size:12.5px;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--blue-soft);}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;
+    white-space:nowrap;}
+  .t-kr{background:#E4ECFA;color:var(--kr);}
+  .t-gl{background:#EFE8F7;color:var(--gl);}
+  .t-new{background:#E7F0FF;color:#2454A8;}
+  .t-live{background:var(--good-bg);color:var(--good);}
+  .t-risk{background:var(--warn-bg);color:var(--warn);}
+  .reac{font-size:12.5px;color:var(--muted);}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .src-inline{font-size:11.5px;}
+  /* risk cards */
+  .risk{background:var(--warn-bg);border:1px solid #F0CFCF;border-left:5px solid var(--warn);
+    border-radius:10px;padding:14px 16px;margin-bottom:13px;}
+  .risk h3{margin:0 0 6px;font-size:15px;color:var(--warn);}
+  .risk .lesson{background:#fff;border-radius:8px;padding:9px 12px;margin-top:9px;font-size:13px;}
+  .risk .lesson b{color:var(--navy);}
+  .action{background:var(--good-bg);border:1px solid #C9E7D7;border-left:5px solid var(--good);
+    border-radius:10px;padding:15px 17px;margin-bottom:13px;}
+  .action h3{margin:0 0 6px;font-size:15.5px;color:var(--good);}
+  .action .why{font-size:12.5px;color:var(--muted);margin-top:6px;}
+  .note{background:#FFF9EC;border:1px solid #F0E2BE;border-radius:10px;padding:12px 15px;
+    font-size:12.5px;color:#7A6320;margin-top:14px;}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;
+    color:var(--muted);}
+  footer .srcgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px;
+    margin:8px 0 14px;}
+  .disc{font-size:11.5px;color:#8A96A6;line-height:1.5;}
+  small.rc{color:var(--warn);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">FPS · 슈터 커뮤니티/이벤트 데일리 레이더</p>
+  <h1>FPS·슈터 동향 레이더 — 2026년 8월 19일(수)</h1>
+  <div class="meta">기준일: 2026-08-19 09:00 KST &nbsp;·&nbsp; 커버 기간: 8/17(월)~8/19(수) 최근 24~48시간 신규 소식 + 8월 진행 이슈</div>
+  <span class="badge">화~금 모드 · 신규 소식 위주, 반복 이슈는 진행 업데이트로 요약</span>
+</header>
+
+<h2 class="sec">핵심 요약</h2>
+<p class="lede">이번 주 중반은 <b>발로란트 액트 5 전환</b>과 <b>대형 라이브서비스 3종의 시즌 중반 콘텐츠</b>가 몰린 구간입니다. 국내 관점에선 오버워치2 '부산' 시즌이 여전히 화제입니다.</p>
+<div class="kpis">
+  <div class="kpi accent">
+    <p class="k-label">🎯 오늘의 최대 이벤트</p>
+    <p class="k-val">발로란트 2026 액트 5 개막</p>
+    <p class="k-sub">8/18 점검(Patch 13.03) → 8/19 라이브 · 챔피언스 2026 직전 맵풀 개편</p>
+  </div>
+  <div class="kpi accent">
+    <p class="k-label">🛒 인게임 상점 이슈</p>
+    <p class="k-val">발로란트 나이트 마켓 오픈</p>
+    <p class="k-sub">8/20(KST)~9/1 · 최대 50% 할인, 6장 카드</p>
+  </div>
+  <div class="kpi good">
+    <p class="k-label">🇰🇷 국내 포커스</p>
+    <p class="k-val">오버워치2 S4 '부산 영웅들'</p>
+    <p class="k-sub">신규 한국 탱커 D.Mon(이유나)·메카 스쿼드, 이벤트 8/31까지</p>
+  </div>
+  <div class="kpi accent">
+    <p class="k-label">🔫 글로벌 라이브</p>
+    <p class="k-val">COD BO7 S05 리로디드</p>
+    <p class="k-sub">8/20(PT) 시즌 중반 · 좀비 피날레 + 블랙옵스 로얄 복귀</p>
+  </div>
+  <div class="kpi warn">
+    <p class="k-label">⚠️ 리스크 신호</p>
+    <p class="k-val">'콘텐츠 볼륨' 백래시 재점화</p>
+    <p class="k-sub">배필6·COD 사례 = 시즌 물량/과금 UX가 여론 좌우</p>
+  </div>
+</div>
+
+<h2 class="sec">🇰🇷 국내 포커스</h2>
+<p class="lede">국내 이용자 비중이 큰 타이틀 위주. 신규 소식이 적은 항목은 이번 달 진행 업데이트로 요약했습니다.</p>
+<table>
+  <thead><tr><th style="width:15%">게임</th><th style="width:24%">이벤트/업데이트</th><th style="width:12%">시점</th><th style="width:11%">유형</th><th>커뮤니티 반응 포인트</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>발로란트 (KR)</b></td>
+      <td>2026 액트 5 전환 · Patch 13.03. 맵풀 개편(어비스 복귀 / 스플릿·브리즈 제외), 소프트 랭크 리셋, 신규 배틀패스</td>
+      <td>8/18 점검<br>8/19 라이브</td>
+      <td><span class="tag t-new">신규 시즌</span></td>
+      <td class="reac">랭크 배치 재진행·맵풀 변화로 복귀/스트리머 활동↑ 예상. 챔피언스 2026 직전이라 경쟁전 메타 관심 집중. <a class="src-inline" href="https://esportnow.gg/valorant/news/is-valorant-down-planned-server-maintenance-august-18">[esportnow]</a></td>
+    </tr>
+    <tr>
+      <td><b>발로란트 (KR)</b></td>
+      <td>나이트 마켓 오픈 — 6장 카드, 최대 50% 할인(1,775VP 초과 스킨·고가 근접무기 제외)</td>
+      <td>8/20 09:00 KST ~ 9/1</td>
+      <td><span class="tag t-new">상점</span></td>
+      <td class="reac">'뭐 떴냐' 인증글이 커뮤니티 트래픽을 만드는 정기 이벤트. 리브텍/리버 계열 재출현 기대감. <a class="src-inline" href="https://beebom.com/valorant-night-market/">[beebom]</a></td>
+    </tr>
+    <tr>
+      <td><b>오버워치2 (KR)</b></td>
+      <td>시즌4 '부산 영웅들' — 신규 한국 탱커 <b>D.Mon(파일럿 이유나)</b>, 메카 스쿼드 서사, 부산 맵 리워크, 'My MEKA Mania' 투표 이벤트</td>
+      <td>8/11 시작<br>이벤트 ~8/31</td>
+      <td><span class="tag t-live">진행 업데이트</span></td>
+      <td class="reac">한국 소재·한국 신영웅으로 국내 여론 우호적. 부산/메카 감성 팬아트·밈 확산. 배틀패스 비선형 보상·스킨 교체 옵션도 호평 신호. <a class="src-inline" href="https://mp1st.com/title-updates-and-patches/overwatch-2-season-4-heroes-of-busan-update-live-aug-11-via-patch-4-34-1-000-098">[mp1st]</a></td>
+    </tr>
+    <tr>
+      <td><b>서든어택</b></td>
+      <td>2026 시즌3 '패러독스' — 신규 캐릭터·저격소총, 21주년 협동 모드 'UP투게더', 최대 200 FPS 확장</td>
+      <td>7월 업데이트<br>(진행 중)</td>
+      <td><span class="tag t-live">진행 업데이트</span></td>
+      <td class="reac">장수 타이틀의 협동 콘텐츠·프레임 개선은 라이트 유저 리텐션에 긍정적. 신규 저격총 밸런스는 관전 포인트. <a class="src-inline" href="https://zdnet.co.kr/view/?no=20260702163031">[ZDNet]</a></td>
+    </tr>
+    <tr>
+      <td><b>PUBG (배틀그라운드)</b></td>
+      <td>2026 로드맵 기조 유지 — 시즌 패치 사이클 진행. 신규 대형 이벤트성 소식은 이번 48시간 내 특기사항 적음</td>
+      <td>진행 중</td>
+      <td><span class="tag t-live">진행 업데이트</span></td>
+      <td class="reac">로드맵·이용자 흐름 공개 이후 큰 논란 없이 안정 운영. 다음 시즌 패치 예고 모니터링 권장. <a class="src-inline" href="https://pubg.com/ko/news/9855">[PUBG]</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="sec">🌐 글로벌 포커스</h2>
+<table>
+  <thead><tr><th style="width:15%">게임</th><th style="width:26%">이벤트/업데이트</th><th style="width:12%">시점</th><th style="width:11%">유형</th><th>커뮤니티 반응 포인트</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><b>Call of Duty: BO7 / Warzone</b></td>
+      <td>시즌 05 리로디드(중반) — 좀비 스토리 피날레 맵 'Rex Infernus', 워존 '블랙옵스 로얄' 복귀, 신규 모드 Turbo Tilt·Cranked</td>
+      <td>8/20 09:00 PT<br>(8/21 새벽 KST)</td>
+      <td><span class="tag t-new">시즌 중반</span></td>
+      <td class="reac">좀비 서사 완결로 코어 팬 관심↑. 물량 많은 시즌 중반 드롭이라 여론은 대체로 긍정 기대. <a class="src-inline" href="https://www.callofduty.com/blog/2026/08/call-of-duty-black-ops-7-warzone-season-05-reloaded-announcement">[CoD Blog]</a></td>
+    </tr>
+    <tr>
+      <td><b>Marvel Rivals</b></td>
+      <td>시즌 9.5 + 서머 페스티벌 Vol.2 — 수영복 스킨 6종(스톰·스타로드·스칼렛위치·블랙캣·윈터솔저·매직)</td>
+      <td>8/13 시작<br>(진행 중)</td>
+      <td><span class="tag t-live">스킨/시즌</span></td>
+      <td class="reac">수영복 코스메틱은 매출·화제성 견인. 다만 캐릭터 표현·과금 정도에 대한 갑론을박 소지 있어 반응 모니터링 권장. <a class="src-inline" href="https://www.marvelrivals.com/20260805/41525_1310107.html">[Marvel Rivals]</a></td>
+    </tr>
+    <tr>
+      <td><b>Apex Legends</b></td>
+      <td>시즌 30 'Marked' — 블러드하운드 대규모 리워크, 맵 업데이트</td>
+      <td>8/4 시작<br>(진행 중)</td>
+      <td><span class="tag t-live">진행 업데이트</span></td>
+      <td class="reac">레전드 리워크는 메타 재편 이슈로 픽률·밸런스 피드백 활발. 리워크 방향성에 대한 호불호 관찰 필요. <a class="src-inline" href="https://saiganak.com/news/apex-legends-marked-game-updates-announcement/">[saiganak]</a></td>
+    </tr>
+    <tr>
+      <td><b>발로란트 (Global)</b></td>
+      <td>액트 5 맵풀: 어비스 복귀 / 브리즈·스플릿 로테이션 아웃 — 챔피언스 2026 대비</td>
+      <td>8/19 라이브</td>
+      <td><span class="tag t-new">경쟁전</span></td>
+      <td class="reac">프로/경쟁전 유저 중심으로 맵풀 호불호 논의. 브리즈 제외에 대한 반응 엇갈릴 여지. <a class="src-inline" href="https://bo3.gg/valorant/news/abyss-returns-to-valorant-map-pool-ahead-of-champions-2026-as-breeze-leaves-rotation">[bo3.gg]</a></td>
+    </tr>
+    <tr>
+      <td><b>Battlefield 6</b></td>
+      <td>(배경) 시즌2 이후 콘텐츠 볼륨 논쟁 지속 — 런칭 대비 동접 하락 흐름. 다음 콘텐츠 물량이 여론 분기점</td>
+      <td>배경/모니터링</td>
+      <td><span class="tag t-risk">리스크</span></td>
+      <td class="reac">"딜레이 대비 콘텐츠가 부족" 백래시가 학습 포인트. 상세는 아래 리스크 섹션. <a class="src-inline" href="https://gamerant.com/battlefield-6-season-2-player-count/">[Game Rant]</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="sec">⚠️ 논란·리스크 신호 & 운영 교훈</h2>
+
+<div class="risk">
+  <h3>1. 시즌 콘텐츠 '물량'이 여론을 가른다 — 배틀필드6 사례</h3>
+  <p>배틀필드6는 딜레이 후 내놓은 시즌 콘텐츠가 "맵 1개 + 무기 소량" 수준이라는 평가로 로드맵 백래시를 겪었고, 런칭 피크(약 74.7만 동접) 대비 큰 폭의 동접 하락 흐름을 되돌리지 못했습니다. 동시기 COD의 물량 많은 시즌과 비교되며 실망감이 증폭됐습니다. <small class="rc">(동접 수치는 서드파티/기사 기준, 재확인 권장)</small></p>
+  <div class="lesson"><b>운영 교훈:</b> 프리런칭/시즌 로드맵은 '기대치 관리'가 핵심. 딜레이가 있었다면 그만큼 체감 물량을 명확히 커뮤니케이션하고, 로드맵 공개 시 "무엇이/언제/얼마나"를 구체화해 과대 기대 → 실망 낙차를 줄여야 함.</div>
+</div>
+
+<div class="risk">
+  <h3>2. 유료 타이틀의 과금 UX 민감도 — COD 인게임 광고 논란(배경)</h3>
+  <p>과거 COD가 로드아웃·이벤트 탭에 번들 '광고'성 UI를 넣었을 때 "풀프라이스 게임이 모바일게임처럼 됐다"는 강한 반발이 있었습니다. 마블 라이벌즈의 수영복 스킨처럼 코스메틱 푸시가 잦은 시즌엔 유사한 과금 피로 담론이 재발할 수 있습니다.</p>
+  <div class="lesson"><b>운영 교훈:</b> 상점/번들 노출은 '핵심 플레이 동선'과 분리. 할인·한정 이벤트는 '혜택' 프레이밍을 앞세우고, 상시 노출형 광고 UI는 지양. 우리 프리런칭 상점 설계 시 첫인상에서 과금 압박이 느껴지지 않도록 배치 검토.</div>
+</div>
+
+<div class="risk">
+  <h3>3. 맵풀·랭크 리셋 = 단기 트래픽 기회 & 불만 동시 발생</h3>
+  <p>발로란트 액트 5의 맵풀 개편(브리즈·스플릿 아웃)과 소프트 랭크 리셋은 복귀·콘텐츠 붐을 만들지만, 선호 맵이 빠진 유저층의 불만 글도 함께 늘어납니다.</p>
+  <div class="lesson"><b>운영 교훈:</b> 맵풀/시즌 리셋 변경은 '왜'를 함께 공지(경쟁 무결성·다양성 등)해야 불만 글이 왜곡·확산되지 않음. 변경 직후 24~48시간은 커뮤니티 감정선 집중 모니터링 구간.</div>
+</div>
+
+<h2 class="sec">✅ 오늘의 CM 액션 제안</h2>
+
+<div class="action">
+  <h3>액션 1 — 발로란트 액트5·나이트마켓 트래픽에 '반응형 소재' 편승</h3>
+  <p>오늘~내일은 발로란트 이용자 활동성이 급증하는 구간입니다. 우리 채널에서 "나이트 마켓 뭐 떴어?" 참여형(투표/댓글) 콘텐츠 또는 맵풀 개편 관련 밈/짤 리액션 소재를 준비해 자연 유입 대화에 올라타세요.</p>
+  <p class="why">근거: 나이트 마켓·시즌 전환은 커뮤니티 인증·토론 트래픽을 정기적으로 만드는 이벤트 → 자사 채널 노출 극대화 타이밍.</p>
+</div>
+
+<div class="action">
+  <h3>액션 2 — '부산 영웅들' 국내 정서 벤치마킹 메모 공유</h3>
+  <p>오버워치2가 한국 소재(부산·메카·한국 신영웅)로 국내 우호 여론을 얻는 흐름을 1페이지로 정리해 기획팀에 공유하세요. 우리 신작/시즌의 로컬라이즈·한국 소재 활용, 커뮤니티 팬아트 리워드 설계에 참고할 포인트를 뽑아두면 좋습니다.</p>
+  <p class="why">근거: 로컬 소재 시즌은 국내 커뮤니티 참여·창작(팬아트/밈)을 끌어올리는 검증된 레버 → 프리런칭 커뮤니티 빌딩 전략에 직접 이식 가능.</p>
+</div>
+
+<div class="note">
+  <b>유의사항 —</b> 동접·시청·판매 수치는 서드파티 트래커/기사 기준이라 <small class="rc">재확인 권장</small>이며, 시점·지역별 편차가 있습니다. 각 항목의 날짜는 커버 기간(8/17~8/19) 및 8월 진행 이슈를 기준으로 검증했고, 5월 이전 등 오래된 이슈는 '배경'으로만 표기했습니다. 오늘은 수요일이라 신규 소식 위주로, 반복 이슈는 '진행 업데이트'로 짧게 정리했습니다.
+</div>
+
+<footer>
+  <b>출처</b>
+  <div class="srcgrid">
+    <a href="https://esportnow.gg/valorant/news/is-valorant-down-planned-server-maintenance-august-18">발로란트 액트5/점검 — esportnow.gg</a>
+    <a href="https://beebom.com/valorant-night-market/">발로란트 나이트마켓 — Beebom</a>
+    <a href="https://bo3.gg/valorant/news/abyss-returns-to-valorant-map-pool-ahead-of-champions-2026-as-breeze-leaves-rotation">발로란트 맵풀 — bo3.gg</a>
+    <a href="https://mp1st.com/title-updates-and-patches/overwatch-2-season-4-heroes-of-busan-update-live-aug-11-via-patch-4-34-1-000-098">오버워치2 부산 시즌 — MP1st</a>
+    <a href="https://www.callofduty.com/blog/2026/08/call-of-duty-black-ops-7-warzone-season-05-reloaded-announcement">COD BO7 S05 리로디드 — CoD Blog</a>
+    <a href="https://www.marvelrivals.com/20260805/41525_1310107.html">마블 라이벌즈 서머 Vol.2 — 공식</a>
+    <a href="https://saiganak.com/news/apex-legends-marked-game-updates-announcement/">에이펙스 S30 Marked — saiganak</a>
+    <a href="https://gamerant.com/battlefield-6-season-2-player-count/">배틀필드6 시즌2 동접 — Game Rant</a>
+    <a href="https://zdnet.co.kr/view/?no=20260702163031">서든어택 시즌3 패러독스 — ZDNet Korea</a>
+    <a href="https://pubg.com/ko/news/9855">PUBG 2026 로드맵 — 공식</a>
+  </div>
+  <p class="disc">본 리포트는 라이온하트 CM/기획 실무 참고용 자동 생성물입니다. 커뮤니티 반응은 편집자 관찰·추정을 포함하며, 실제 여론은 레딧 각 서브레딧·루리웹·인벤·디시·아카라이브·에펨코리아 등에서 교차 확인을 권장합니다. 지표·수치는 원출처 재확인 후 인용하세요.</p>
+  <p class="disc">FPS·슈터 데일리 레이더 · 생성 2026-08-19 09:00 KST</p>
+</footer>
+
+</div>
+</body>
+</html>

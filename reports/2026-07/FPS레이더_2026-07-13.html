@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 · 2026-07-13 (주말 포함)</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#4A73C4;
+    --bg:#F4F6FB; --card:#FFFFFF; --ink:#22293A; --muted:#5B6577;
+    --line:#E1E7F2; --zebra:#F5F8FE; --warn:#B4432E; --good:#1E7A54;
+    --chip:#EAF0FB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 60px;}
+  header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+    padding:30px 20px 26px;margin-bottom:24px;}
+  header .inner{max-width:1080px;margin:0 auto;}
+  .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    opacity:.82;margin-bottom:8px;font-weight:600;}
+  h1{margin:0 0 10px;font-size:26px;line-height:1.3;font-weight:800;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);
+    padding:5px 12px;border-radius:999px;font-size:13px;font-weight:600;}
+  .pill.hot{background:#F2C744;color:#3A2E00;border-color:#F2C744;}
+  h2{font-size:19px;color:var(--navy);margin:34px 0 14px;
+    padding-bottom:8px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:9px;}
+  h2 .bar{width:5px;height:20px;background:var(--blue);border-radius:3px;display:inline-block;}
+  .lead{color:var(--muted);margin:-4px 0 4px;font-size:14.5px;}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:6px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:16px 16px 15px;box-shadow:0 1px 3px rgba(31,42,68,.05);position:relative;overflow:hidden;}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue);}
+  .kpi .label{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.02em;text-transform:uppercase;}
+  .kpi .big{font-size:17px;font-weight:800;color:var(--navy);margin:7px 0 5px;line-height:1.35;}
+  .kpi .sub{font-size:13px;color:var(--muted);}
+  .kpi.alert::before{background:var(--warn);}
+  .kpi.alert .big{color:var(--warn);}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.6px;margin-top:4px;}
+  thead th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:12.8px;
+    letter-spacing:.02em;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  .g{font-weight:700;color:var(--navy);white-space:nowrap;}
+  .tag{display:inline-block;background:var(--chip);color:var(--blue);
+    font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;}
+  .tag.c{background:#FBEAE6;color:var(--warn);}
+  .tag.p{background:#E6F4EC;color:var(--good);}
+  .dt{white-space:nowrap;color:var(--muted);font-size:12.6px;font-weight:600;}
+  a{color:var(--blue);text-decoration:none;font-weight:600;}
+  a:hover{text-decoration:underline;}
+  .src-a{font-size:12px;}
+
+  .risk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--warn);
+    border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+  .risk h3{margin:0 0 5px;font-size:15.5px;color:var(--navy);}
+  .risk .lesson{margin-top:7px;font-size:13.6px;background:#FBF3EC;border-radius:8px;padding:8px 11px;color:#6a4a1e;}
+  .risk .lesson b{color:var(--warn);}
+
+  .action{background:linear-gradient(135deg,#EAF0FB,#F4F8FF);border:1px solid #D5E0F4;
+    border-radius:12px;padding:16px 18px;margin-bottom:12px;}
+  .action h3{margin:0 0 6px;font-size:15.5px;color:var(--blue);display:flex;align-items:center;gap:8px;}
+  .action .num{background:var(--blue);color:#fff;width:22px;height:22px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:none;}
+  .action p{margin:5px 0 0;font-size:13.8px;}
+
+  .note{background:#FFFDF3;border:1px solid #EFE4B8;border-radius:10px;
+    padding:13px 16px;font-size:12.8px;color:#6b5d2a;margin-top:14px;}
+  .note b{color:#8a6d15;}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:12.4px;}
+  .srcgrid{columns:2;column-gap:26px;font-size:12.4px;margin-top:8px;}
+  .srcgrid a{display:block;margin-bottom:5px;break-inside:avoid;}
+  @media(max-width:640px){.srcgrid{columns:1;}h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <div class="eyebrow">FPS · 슈터 커뮤니티/이벤트 데일리 레이더</div>
+    <h1>주말 종합 레이더 — 마블 라이벌즈 S9·서든 제로포인트 CBT·콜라보 온도차</h1>
+    <div class="meta-row">
+      <span class="pill hot">🗓 주말 포함</span>
+      <span class="pill">기준일 2026-07-13 (월) KST</span>
+      <span class="pill">커버기간 7/10(금) 저녁 ~ 7/12(일) + 7/13 아침</span>
+      <span class="pill">국내 + 글로벌 병행</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2><span class="bar"></span>핵심 요약 (KPI)</h2>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="label">주말 최대 화력 · 글로벌</div>
+      <div class="big">마블 라이벌즈 시즌9 시작</div>
+      <div class="sub">7/10 · 신영웅 주빌리 + 팀업 전면 개편. 콘텐츠 볼륨은 호평, 메타 파괴 우려 혼재</div>
+    </div>
+    <div class="kpi alert">
+      <div class="label">국내 최대 관심 · 리스크</div>
+      <div class="big">서든 제로포인트 파이널 CBT</div>
+      <div class="sub">오늘(7/13) 종료 · "한국 지역 제한 → 종주국 유저 참여 불가" 역차별 백래시</div>
+    </div>
+    <div class="kpi alert">
+      <div class="label">콜라보 여론 신호</div>
+      <div class="big">에이펙스 × 사이버펑크 스킨 조롱</div>
+      <div class="sub">"원작 재현 충실도" 논란. 동양 스튜디오 콜라보 대비 비교당함 (이벤트 7/14 시작)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">라이브옵스 온도차</div>
+      <div class="big">관대함이 호감도 지렛대</div>
+      <div class="sub">후한 무료 지급(델타포스×R6) vs 한정 재판매(BF6) vs 잘뽑았지만 비쌈(OW2×YOASOBI)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">조용한 종목</div>
+      <div class="big">CoD · R6 · 에이펙스 국내</div>
+      <div class="sub">주말 신규 발표 없음. 진행 중 시즌 운영 구간 (아래 '진행 업데이트' 참고)</div>
+    </div>
+  </div>
+
+  <h2><span class="bar"></span>국내 포커스</h2>
+  <p class="lead">주말 국내 화력은 넥슨 신작 테스트와 콜라보 여론에 집중. 대형 신규 발표보다 진행 이슈의 라이브 운영 구간이었습니다.</p>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">서든어택:<br>제로 포인트<br>(넥슨게임즈)</td>
+        <td>스팀 <b>파이널 CBT</b> 진행 → 오늘(7/13) 종료. 원작 리마스터, 신규 맵·무기·블랙마켓 추가
+          <div class="src-a"><a href="https://www.inven.co.kr/webzine/news/?news=318161">인벤</a> · <a href="https://www.ipnn.co.kr/news/articleView.html?idxno=416631">PNN</a> · <a href="https://www.gamevu.co.kr/news/articleView.html?idxno=59181">게임뷰 리뷰</a></div></td>
+        <td class="dt">7/9~7/13</td>
+        <td><span class="tag">파이널 CBT</span></td>
+        <td>"리마스터 원작 감성 반갑다" 호평 + <b style="color:var(--warn)">한국 지역 제한으로 종주국 유저 참여 불가</b> → "역차별" 반복 지적</td>
+      </tr>
+      <tr>
+        <td class="g">델타포스<br>(한국)</td>
+        <td>7/9 신규 <b>시즌 업데이트</b> 후 첫 주말. 신규 콘텐츠·패스
+          <div class="src-a"><a href="https://www.fmkorea.com/8622442274">에펨코리아</a> · <a href="https://gall.dcinside.com/mgallery/board/view/?id=deltaforce&no=120362">DC 마이너갤</a></div></td>
+        <td class="dt">7/9~</td>
+        <td><span class="tag">시즌 업데이트</span></td>
+        <td>신규 콘텐츠 유입엔 긍정적, 밸런스·과금 상시 불만 병존(마이너갤 기조). 지표 재확인 권장</td>
+      </tr>
+      <tr>
+        <td class="g">오버워치2<br>(한국)</td>
+        <td>× <b>YOASOBI 콜라보 스킨 6종</b>(키리코·한조·겐지·미즈키·안란·주노) 가격 논란 지속
+          <div class="src-a"><a href="https://bbs.ruliweb.com/family/1476/board/300007/read/2350390">루리웹</a> · <a href="https://www.gamemeca.com/view.php?gid=1777171">게임메카</a></div></td>
+        <td class="dt">7/1~ (주말 지속)</td>
+        <td><span class="tag c">콜라보·가격논란</span></td>
+        <td>"이펙트·효과음·디자인 역대급" 호평 + "너무 비싸다" 백래시가 정확히 공존</td>
+      </tr>
+      <tr>
+        <td class="g">배틀그라운드<br>(PUBG)</td>
+        <td>× <b>페이데이(PAYDAY)</b> 4인 협동 PvE '하이스트' 모드 운영 중. 스타브리즈 협업
+          <div class="src-a"><a href="https://www.krafton.com/news/press/">크래프톤</a> · <a href="https://www.gamevu.co.kr/news/articleView.html?idxno=58251">게임뷰</a></div></td>
+        <td class="dt">6월 중순~ (주말 활발)</td>
+        <td><span class="tag p">IP콜라보·신모드</span></td>
+        <td>"BR 넘어 장르 확장" 호평. 신모드 유입 효과는 서드파티 동접 기준 재확인 권장</td>
+      </tr>
+      <tr>
+        <td class="g">배틀그라운드<br>(PUBG)</td>
+        <td>42.1 업데이트 + '특별 보급 6월' 이벤트(~7/23) 진행 중. 경쟁전 RP 산정 개편
+          <div class="src-a"><a href="https://www.pubg.com/ko/news/10179">PUBG 공지</a> · <a href="https://pubg.com/ko/events/notice">이벤트</a></div></td>
+        <td class="dt">6/18~ (진행)</td>
+        <td><span class="tag">업데이트·이벤트</span></td>
+        <td>경쟁전 유저층에서 RP 개편 갑론을박(생존 중심 가중치 논쟁)</td>
+      </tr>
+      <tr>
+        <td class="g">서든어택<br>(본편)</td>
+        <td>2026 시즌3 '패러독스' 업데이트 후 운영 안정. 신규 캐릭터 '최예나' + PC방 이벤트
+          <div class="src-a"><a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤(시즌3)</a> · <a href="https://www.inven.co.kr/webzine/news/?news=317090">인벤(캐릭터)</a></div></td>
+        <td class="dt">7/2~ (배경)</td>
+        <td><span class="tag">시즌·프로모션</span></td>
+        <td>정기 시즌 안정 운영, 반응 무난. 굿즈·PC방 연계 호응</td>
+      </tr>
+      <tr>
+        <td class="g">발로란트<br>(한국)</td>
+        <td>마스터스 런던 국제전 주말 경기 진행 중
+          <div class="src-a"><a href="https://www.gamemeca.com/en/view.php?gid=1775889">게임메카</a></div></td>
+        <td class="dt">진행 중 (배경)</td>
+        <td><span class="tag">e스포츠</span></td>
+        <td>사상 첫 한국 팀 없는 마스터스 → 국내 시청 화력·관심 저하 지적, 여론 다소 침체</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2><span class="bar"></span>글로벌 포커스</h2>
+  <p class="lead">주말 서구권은 시즌 전환과 콜라보 이슈가 화력을 주도. 마블 라이벌즈 S9와 에이펙스 콜라보 백래시가 양대 축이었습니다.</p>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">Marvel<br>Rivals</td>
+        <td><b>시즌9 "Death of Wolverine"</b> 시작. 신영웅 주빌리, 팀업 시스템 전면 리워크, 블랙위도우 리워크, 추리 미니게임
+          <div class="src-a"><a href="https://marvelrivals.gg/marvel-rivals-version-20260710-patch-notes-season-9-arrives/">패치노트</a> · <a href="https://www.destructoid.com/marvel-rivals-season-9-patch-notes/">Destructoid</a></div></td>
+        <td class="dt">7/10</td>
+        <td><span class="tag">시즌·신영웅</span></td>
+        <td>"콘텐츠 볼륨 만족" 기류. 주빌리·팀업 개편이 최대 변수, 메타 파괴 가능성에 기대·우려 혼재</td>
+      </tr>
+      <tr>
+        <td class="g">Apex<br>Legends</td>
+        <td>× <b>Cyberpunk: Edgerunners</b> 콜라보 스킨 8종 공개(이벤트 7/14~8/4)
+          <div class="src-a"><a href="https://www.vice.com/en/article/apex-legends-cyberpunk-skins-roasted/">Vice</a> · <a href="https://playday.one/2026/07/08/the-apex-legends-x-cyberpunk-edgerunners-event-lands-this-month/">Playday</a></div></td>
+        <td class="dt">7/9~ (주말 확산)</td>
+        <td><span class="tag c">콜라보·백래시</span></td>
+        <td>"원작 모델과 다르게 어색" 강한 비판. Wuthering Waves의 동일 IP 콜라보와 비교당하며 "서구 재현력 부족" 조롱</td>
+      </tr>
+      <tr>
+        <td class="g">Delta<br>Force</td>
+        <td>× <b>Rainbow Six Siege</b> 크로스오버 라이브. 오퍼레이터 번들 일부·Black Ice 무기 <b>무료 지급</b>
+          <div class="src-a"><a href="https://gamingtrend.com/news/delta-force-x-rainbow-six-siege-crossover-goes-live/">Gaming Trend</a></div></td>
+        <td class="dt">7/10</td>
+        <td><span class="tag p">콜라보</span></td>
+        <td>후한 무료 지급이 사전 공개 시 호평 포인트. 여론 반응은 재확인 권장</td>
+      </tr>
+      <tr>
+        <td class="g">Battlefield 6</td>
+        <td>구 배틀패스 보상 <b>일부만</b> 인게임 스토어 재판매 정책 발표(1차 시즌4·7/21)
+          <div class="src-a"><a href="https://vgtimes.com/games/battlefield-6/news/">VG Times</a></div></td>
+        <td class="dt">7/10</td>
+        <td><span class="tag c">정책·경미논란</span></td>
+        <td>"전량 복귀 아님"에 아쉬움 기류. 주말엔 큰 이벤트 없이 조용</td>
+      </tr>
+      <tr>
+        <td class="g">Valorant</td>
+        <td><b>Night Market</b>(할인 상점) 복귀 발표(7/16~29)
+          <div class="src-a"><a href="https://www.strafe.com/news/read/valorant-night-market-returns-july-16-complete-list-of-skins/">Strafe</a> · <a href="https://x.com/VALORANT/status/2075369409237971134">공식 X</a></div></td>
+        <td class="dt">주말 발표</td>
+        <td><span class="tag">이벤트</span></td>
+        <td>Night Market은 통상 호응 높은 라이브옵스. 이번에도 기대 기류</td>
+      </tr>
+      <tr>
+        <td class="g">CS2</td>
+        <td>Premier 시즌5 시작, 액티브 듀티 맵풀에서 <b>Cache가 Overpass 대체</b>
+          <div class="src-a"><a href="https://www.hltv.org/news/44984/cache-replaces-overpass-in-active-duty-pool">HLTV</a></div></td>
+        <td class="dt">7/9 (경계)</td>
+        <td><span class="tag">시즌·맵풀</span></td>
+        <td>Cache 복귀 대체로 환영("라이플전 유도"), Overpass 이탈엔 아쉬움. 프로·HLTV 중심 활발</td>
+      </tr>
+      <tr>
+        <td class="g">THE<br>FINALS</td>
+        <td>시즌11 "Galaxy Masters" 출시. 신규 아레나·배틀패스, 근접 전투 정밀·스태미나 시스템
+          <div class="src-a"><a href="https://www.psu.com/news/the-finals-season-11-update-rolls-out-with-galaxy-estates-arena-new-battle-pass-revamped-tutorial-more-full-patch-notes/">PSU</a></div></td>
+        <td class="dt">7/9 (경계)</td>
+        <td><span class="tag">시즌</span></td>
+        <td>근접 시스템 개편에 관심 집중. 시즌 볼륨 긍정적</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="lead" style="margin-top:12px">진행 업데이트(짧게): <b>CoD BO7/워존</b>은 시즌4 리로디드 운영 중, 주말 신규 발표 없음 · <b>R6 Siege X</b>는 위 델타포스 콜라보 중심 · <b>Destiny 2</b>는 7/7 사실상 마지막 정기 핫픽스로 라이브옵스 종막 국면 · <b>Overwatch 2</b>는 7/8 Stadium 밸런스 패치 후 시즌 사이 조용.</p>
+
+  <h2><span class="bar"></span>논란·리스크 신호 (운영 교훈)</h2>
+
+  <div class="risk">
+    <h3>① IP 콜라보 "원작 재현 충실도"가 여론의 핵심 변수 — 에이펙스 × 사이버펑크</h3>
+    <div>서구 스튜디오 콜라보 스킨이 원작 모델과 다르다는 이유로 조롱받고, 동양 스튜디오(Wuthering Waves)의 동일 IP 콜라보와 직접 비교당함. 국내 유저도 동일 프레임(원작 충실도)으로 콜라보를 평가하는 경향.</div>
+    <div class="lesson"><b>우리 교훈:</b> IP 콜라보 기획 시 '얼마나 붙였나'보다 '얼마나 원작처럼 뽑았나'가 여론을 가른다. 원작사·팬 검수 루프를 사전에 확보하고, 공개 전 커뮤니티 티저로 재현도 온도 체크 권장.</div>
+  </div>
+
+  <div class="risk">
+    <h3>② 지역 제한 = 종주국 역차별 정서 — 서든어택 제로 포인트 CBT</h3>
+    <div>글로벌 타깃 파이널 CBT가 한국 지역 제한으로 진행되며 "정작 종주국이 못 한다"는 아쉬움·역차별 지적이 반복. 완성도 기대감이 큰 만큼 참여 배제의 실망도 증폭.</div>
+    <div class="lesson"><b>우리 교훈:</b> 글로벌 우선 테스트라도 국내 팬층 소외 메시지 관리가 관건. "국내 일정 별도 안내" 등 명확한 후속 커뮤니케이션을 CBT 공지에 동봉해야 백래시를 선제 완화.</div>
+  </div>
+
+  <div class="risk">
+    <h3>③ 잘 만든 콜라보를 가격이 깎아먹는 전형 — 오버워치2 × YOASOBI</h3>
+    <div>이펙트·디자인·효과음은 "역대급" 호평인데 가격 백래시가 정확히 공존. 품질과 무관하게 가격 정책이 구매 전환과 호감도를 스스로 잠식하는 사례.</div>
+    <div class="lesson"><b>우리 교훈:</b> 고품질 콜라보일수록 번들·단품·할인 티어를 세분화해 "사고 싶은데 비싸서 못 산다"는 이탈 여론을 흡수. 후한 무료 지급(델타포스×R6)이 호감도 지렛대로 작동한 대조 사례와 병행 검토.</div>
+  </div>
+
+  <h2><span class="bar"></span>CM 액션 제안</h2>
+
+  <div class="action">
+    <h3><span class="num">1</span> 콜라보 파이프라인에 '원작 재현 QA 게이트' 신설</h3>
+    <p>에이펙스 사례를 근거로, 자사 IP 콜라보 개발 스케줄에 원작사/팬 커뮤니티 사전 검수 마일스톤을 명시. 공개 전 소규모 티저로 재현도 반응을 계측하고, 리스크 감지 시 노출 전략(선공개 vs 깜짝공개)을 조정. 이번 주 팀 공유용 1페이지 벤치마크 노트로 정리 가능.</p>
+  </div>
+
+  <div class="action">
+    <h3><span class="num">2</span> 테스트/글로벌 우선 출시 공지 템플릿에 '국내 팬 배려 문구' 표준화</h3>
+    <p>서든 제로포인트 역차별 정서를 반면교사로, 향후 CBT/글로벌 선행 이벤트 공지에 "국내 일정·참여 경로 별도 안내 예정" 문구와 후속 로드맵을 기본 포함. 지역 제한이 불가피할 때의 톤&매너 가이드를 미리 확보해 두면 백래시 대응 속도가 빨라짐.</p>
+  </div>
+
+  <div class="note">
+    <b>유의사항:</b> 동접·판매·시청 등 서드파티 트래커/추정 수치는 모두 <b>재확인 권장</b>입니다(예: 배그 동접, 델타포스·퍼스트디센던트 지표, BF6 52.1만 동접은 과거 베타 기록이라 주말 지표로 인용 금지). 일부 항목(밸런스 세부·콜라보 가격)은 지역·플랫폼별로 다를 수 있어 원문 확인을 권합니다. 본 리포트는 커뮤니티 여론 흐름 파악용 요약이며, 최종 의사결정 시 출처 원문을 함께 검토하세요.
+  </div>
+
+  <h2><span class="bar"></span>출처 링크</h2>
+  <div class="srcgrid">
+    <a href="https://marvelrivals.gg/marvel-rivals-version-20260710-patch-notes-season-9-arrives/">Marvel Rivals S9 패치노트 (7/10)</a>
+    <a href="https://www.destructoid.com/marvel-rivals-season-9-patch-notes/">Destructoid — Marvel Rivals S9</a>
+    <a href="https://www.vice.com/en/article/apex-legends-cyberpunk-skins-roasted/">Vice — Apex × Cyberpunk 백래시</a>
+    <a href="https://playday.one/2026/07/08/the-apex-legends-x-cyberpunk-edgerunners-event-lands-this-month/">Playday — Apex × Cyberpunk 이벤트</a>
+    <a href="https://gamingtrend.com/news/delta-force-x-rainbow-six-siege-crossover-goes-live/">Gaming Trend — Delta Force × R6</a>
+    <a href="https://vgtimes.com/games/battlefield-6/news/">VG Times — BF6 재판매 정책</a>
+    <a href="https://www.strafe.com/news/read/valorant-night-market-returns-july-16-complete-list-of-skins/">Strafe — Valorant Night Market</a>
+    <a href="https://www.hltv.org/news/44984/cache-replaces-overpass-in-active-duty-pool">HLTV — CS2 Cache/Overpass</a>
+    <a href="https://www.psu.com/news/the-finals-season-11-update-rolls-out-with-galaxy-estates-arena-new-battle-pass-revamped-tutorial-more-full-patch-notes/">PSU — THE FINALS S11</a>
+    <a href="https://www.inven.co.kr/webzine/news/?news=318161">인벤 — 서든 제로포인트 파이널 CBT</a>
+    <a href="https://www.ipnn.co.kr/news/articleView.html?idxno=416631">PNN — 서든 제로포인트 한국 참여 불가</a>
+    <a href="https://www.gamevu.co.kr/news/articleView.html?idxno=59181">게임뷰 — 서든 제로포인트 리뷰</a>
+    <a href="https://www.fmkorea.com/8622442274">에펨코리아 — 델타포스 7/9 시즌</a>
+    <a href="https://bbs.ruliweb.com/family/1476/board/300007/read/2350390">루리웹 — OW2 × YOASOBI</a>
+    <a href="https://www.gamemeca.com/view.php?gid=1777171">게임메카 — OW2 × YOASOBI</a>
+    <a href="https://www.krafton.com/news/press/">크래프톤 — 배그 × 페이데이</a>
+    <a href="https://www.pubg.com/ko/news/10179">PUBG — 42.1 업데이트</a>
+    <a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤 — 서든어택 시즌3 패러독스</a>
+    <a href="https://www.gamemeca.com/en/view.php?gid=1775889">게임메카 — 발로란트 마스터스 런던</a>
+  </div>
+
+  <footer>
+    FPS·슈터 데일리 커뮤니티/이벤트 레이더 · 기준일 2026-07-13(월) KST · 커버 7/10(금) 저녁~7/12(일) 주말 포함 + 7/13 아침<br>
+    출처: 레딧 각 서브레딧·루리웹·인벤·디시·아카라이브·에펨코리아 및 디스이즈게임·게임메카·Dexerto·PC Gamer·IGN·HLTV 등. 커뮤니티 여론 흐름 파악용 요약본.
+  </footer>
+
+</div>
+</body>
+</html>

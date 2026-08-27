@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 2026-07-21</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --bg:#F5F7FB; --card:#FFFFFF;
+    --line:#E2E7F0; --zebra:#F0F4FA; --ink:#1F2A44; --muted:#5B6478;
+    --risk:#B23B3B; --good:#2E8B57; --warn:#C9821A;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Malgun Gothic","Apple SD Gothic Neo","Segoe UI",sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 18px 60px;}
+  header.top{background:linear-gradient(135deg,var(--navy),var(--blue));
+    color:#fff;padding:30px 26px;border-radius:0 0 14px 14px;
+    box-shadow:0 4px 14px rgba(31,42,68,.18);}
+  header.top h1{margin:0 0 6px;font-size:25px;letter-spacing:-.3px;}
+  header.top .sub{font-size:14px;opacity:.92;}
+  header.top .cover{display:inline-block;margin-top:12px;background:rgba(255,255,255,.16);
+    padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;}
+  h2{color:var(--navy);font-size:19px;margin:34px 0 12px;
+    padding-bottom:7px;border-bottom:2px solid var(--blue);}
+  h2 .em{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;margin-top:18px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 16px 14px;box-shadow:0 2px 6px rgba(31,42,68,.05);}
+  .kpi .lab{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+  .kpi .big{font-size:22px;font-weight:800;color:var(--navy);margin:6px 0 3px;line-height:1.25;}
+  .kpi .note{font-size:12px;color:var(--muted);}
+  .kpi.hot{border-top:3px solid var(--blue);}
+  .kpi.risk{border-top:3px solid var(--risk);}
+  .kpi.good{border-top:3px solid var(--good);}
+  table{width:100%;border-collapse:collapse;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    font-size:14px;margin-top:6px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-size:13px;font-weight:700;}
+  td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  td.g{font-weight:700;color:var(--navy);white-space:nowrap;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;white-space:nowrap;}
+  .t-event{background:#E4ECFB;color:var(--blue);}
+  .t-cbt{background:#E7F5EC;color:var(--good);}
+  .t-metric{background:#FBF0DE;color:var(--warn);}
+  .t-risk{background:#FBE4E4;color:var(--risk);}
+  .t-season{background:#EAE6FA;color:#5B4BB0;}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue);}
+  a:hover{border-bottom-style:solid;}
+  .risk-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--risk);
+    border-radius:10px;padding:14px 16px;margin-top:12px;}
+  .risk-card h3{margin:0 0 6px;font-size:15px;color:var(--risk);}
+  .risk-card .lesson{background:var(--zebra);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:13.5px;}
+  .risk-card .lesson b{color:var(--navy);}
+  .action{background:linear-gradient(135deg,#EAF0FB,#F5F8FE);border:1px solid #CFDCF4;
+    border-radius:12px;padding:16px 18px;margin-top:12px;}
+  .action h3{margin:0 0 6px;color:var(--blue);font-size:16px;}
+  .action ol{margin:6px 0 0;padding-left:20px;}
+  .action li{margin-bottom:6px;}
+  .quiet{background:#FFF8E8;border:1px solid #F0E0B8;border-radius:10px;
+    padding:12px 16px;margin-top:16px;font-size:14px;color:#7A5C12;}
+  footer{margin-top:38px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--muted);}
+  footer h3{color:var(--navy);font-size:14px;margin:0 0 8px;}
+  footer ul{margin:0;padding-left:18px;columns:2;column-gap:26px;}
+  footer li{margin-bottom:4px;break-inside:avoid;}
+  .disc{margin-top:14px;font-size:12px;color:var(--muted);background:var(--card);
+    border:1px dashed var(--line);border-radius:8px;padding:10px 14px;}
+  @media(max-width:640px){footer ul{columns:1;}header.top h1{font-size:21px;}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="padding-bottom:0;">
+    <h1>🎯 FPS·슈터 데일리 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">라이온하트 CM/기획용 여론·이벤트 동향 브리핑 · 기준일 <b>2026년 7월 21일(화)</b></div>
+    <div class="cover">📅 커버 기간: 7/19(일)~7/21(화) 최근 24~48h · 반복 이슈는 진행 업데이트</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="quiet">
+    <b>오늘의 한 줄:</b> 최근 24~48시간(7/19~21)은 대형 신규 발표가 적은 <b>비교적 조용한 구간</b>입니다. 다만 <b>내일(7/23) 콜오브듀티 BO7·워존 시즌5</b> 대형 업데이트가 임박(프리로드 오늘부터)했고, EWC 2026 발로란트 시청자 급감이 여론 이슈로 남아 있어 이 두 건을 중심으로 정리했습니다. 그 외는 지난주 이슈의 진행 업데이트입니다.
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="kpis">
+    <div class="kpi hot">
+      <div class="lab">임박 대형 업데이트</div>
+      <div class="big">CoD 시즌5<br>D-2 (7/23)</div>
+      <div class="note">프리로드 7/21~ · BO7 최종 대형 시즌 유력</div>
+    </div>
+    <div class="kpi risk">
+      <div class="lab">여론 리스크 신호</div>
+      <div class="big">발로란트 EWC<br>시청 −45.8%</div>
+      <div class="note">피크 24.8만명(재확인 권장) · 인기팀 조기 탈락</div>
+    </div>
+    <div class="kpi good">
+      <div class="lab">국내 진행 이벤트</div>
+      <div class="big">서든어택 S3<br>패러독스</div>
+      <div class="note">모래파기 ~7/23 · PC방 ~7/30 진행 중</div>
+    </div>
+    <div class="kpi hot">
+      <div class="lab">글로벌 운영 사례</div>
+      <div class="big">마블 라이벌즈<br>S9 이벤트軸</div>
+      <div class="note">Van Dyne Couture·무료 스킨 배포(7/16~)</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">콜라보 진행</div>
+      <div class="big">델타포스 ×<br>레인보우식스</div>
+      <div class="note">시즌 Meltdown(6/30~) 콜라보 스킨 전개</div>
+    </div>
+  </div>
+
+  <!-- 국내 포커스 -->
+  <h2>🇰🇷 국내 포커스 <span class="em">최근 소식 + 진행 업데이트</span></h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응·메모</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">서든어택</td>
+        <td>2026 시즌3 <b>패러독스</b> — 신규 캐릭터 C.베라, 볼트액션 저격총 'RSR Paradox'. 모래파기(~7/23)·PC방(~7/30) 이벤트 진행 중 (<a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a>)</td>
+        <td>7/2 시작<br>~7/30 진행</td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td>서든패스 보상 저격총에 관심. 반복 이슈이므로 진행 업데이트로만 추적.</td>
+      </tr>
+      <tr>
+        <td class="g">서든어택<br>제로 포인트</td>
+        <td>리마스터 신작 '서든어택 제로 포인트' 스팀 <b>파이널 CBT</b> 진행 (<a href="https://www.inven.co.kr/webzine/news/?news=318161" target="_blank">인벤</a>)</td>
+        <td>7/9~</td>
+        <td><span class="tag t-cbt">CBT</span></td>
+        <td>원작 IP 리마스터에 관심/우려 병존. 프리런칭 커뮤니케이션 벤치마크로 관찰 권장.</td>
+      </tr>
+      <tr>
+        <td class="g">PUBG<br>배틀그라운드</td>
+        <td>업데이트 42.2 + 2026년 7월 상점 안내, KOREA–FINLAND ESPORTS FESTIVAL 2026 (<a href="https://pubg.com/ko/news" target="_blank">PUBG 뉴스</a>)</td>
+        <td>7/13~14</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td>9주년 페스티벌 예매 진행. 지난주 소식의 잔여 진행분.</td>
+      </tr>
+      <tr>
+        <td class="g">발로란트<br>(한국)</td>
+        <td>신규 요원·챔피언스 2026 스킨 라인업 관련 국내 커뮤니티 화제 (요원 티어표 갱신 7/12) (<a href="https://tr.inven.co.kr/view/19729" target="_blank">인벤 티어표</a>)</td>
+        <td>진행 중</td>
+        <td><span class="tag t-event">스킨/메타</span></td>
+        <td>EWC 성적·시청 이슈가 국내 팬 화제와 맞물림(아래 글로벌·리스크 참고).</td>
+      </tr>
+      <tr>
+        <td class="g">오버워치2<br>(한국)</td>
+        <td>2026 시즌3 신규 영웅·밸런스 패치, 맵 선택·영웅밴 등 커뮤니티 화제 (<a href="https://bbs.ruliweb.com/pc/board/300007/read/2348686" target="_blank">루리웹</a>)</td>
+        <td>진행 중</td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td>신규 영웅·시스템 변경에 대체로 관심 우위. 밸런스 반응은 갈림.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 포커스 -->
+  <h2>🌐 글로벌 포커스 <span class="em">신규 발표 + 임박 런칭</span></h2>
+  <table>
+    <thead><tr><th>게임</th><th>이벤트/소식</th><th>날짜</th><th>유형</th><th>커뮤니티 반응·메모</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">Call of Duty<br>BO7·워존</td>
+        <td><b>시즌5</b> 출시 임박 — 신규/리마스터 맵(Frequency·Arsenal), 좀비 피날레(워든), 워존 Fortune's Keep. 프리로드 7/21 (<a href="https://dotesports.com/call-of-duty/guides/black-ops-7-warzone-season-5-release-date-time" target="_blank">Dot Esports</a>, <a href="https://www.callofduty.com/blog/2026/07/call-of-duty-black-ops-7-warzone-season-05-announcement" target="_blank">공식</a>)</td>
+        <td><b>7/23 출시</b></td>
+        <td><span class="tag t-season">시즌</span></td>
+        <td>BO7 '최종 대형 시즌'이자 MW4 전환 신호로 해석 → 시즌 말 이탈/기대 병존. <b>내일 트래픽 주목.</b></td>
+      </tr>
+      <tr>
+        <td class="g">Marvel Rivals</td>
+        <td>20260716 패치 — <b>Van Dyne Couture</b> 이벤트(Magneto 코스튬 무료, ~8/13), POP&amp;WIN(디아블로 디노), S3 배틀패스 재진행 (<a href="https://www.marvelrivals.com/20260715/41525_1307701.html" target="_blank">공식 패치노트</a>)</td>
+        <td>7/16~</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td><b>호평 운영 사례:</b> 무료 스킨 배포+주말 모드 재오픈으로 리텐션 자극. 국내 참고할 만함.</td>
+      </tr>
+      <tr>
+        <td class="g">Delta Force</td>
+        <td>시즌 <b>Meltdown</b> — 레인보우식스 시즈 콜라보 스킨/신규 맵 전개 중 (<a href="https://dotesports.com/delta-force/guides/delta-force-season-meltdown" target="_blank">Dot Esports</a>)</td>
+        <td>6/30 시작<br>콜라보 7월 전개</td>
+        <td><span class="tag t-event">콜라보</span></td>
+        <td>타 FPS IP 콜라보로 신규 유입 시도. 국내 델타포스 서비스 관점 벤치마크.</td>
+      </tr>
+      <tr>
+        <td class="g">Valorant<br>(글로벌)</td>
+        <td>EWC 2026 종료 — <b>100 Thieves 우승</b>(vs NRG 3:1). 이후 챔피언스 시즌으로 전환 (<a href="https://escharts.com/news/valorant-esports-world-cup-2026-recap" target="_blank">Esports Charts</a>)</td>
+        <td>7/12 종료</td>
+        <td><span class="tag t-metric">e스포츠</span></td>
+        <td>시청 지표 급감이 화두(리스크 섹션 참고).</td>
+      </tr>
+      <tr>
+        <td class="g">Counter-Strike 2</td>
+        <td>정기 업데이트·Premier 시즌5 진행. 2026 상반기 시청량에서 발로란트 대비 우위 유지 (<a href="https://cs2news.gg/cs2-update" target="_blank">CS2News</a>)</td>
+        <td>진행 중</td>
+        <td><span class="tag t-metric">지표</span></td>
+        <td>총 시청 2.05억h vs 발로 1.3억h(상반기, 재확인 권장). 국제 대회 구조가 시청 밀도 우위.</td>
+      </tr>
+      <tr>
+        <td class="g">Apex Legends</td>
+        <td>2026 들어 동접·시청 하락과 핵·랭크 불만 등 <b>백래시 지속</b> (<a href="https://www.elomania.com/en/blog/apex-legends/why-apex-legends-is-losing-players-in-2026--ranked-cheaters--community-backlash" target="_blank">Elomania</a>)</td>
+        <td>진행 중</td>
+        <td><span class="tag t-risk">리스크</span></td>
+        <td>치터·안티치트·라이브옵스 피로가 공통 원인. 운영 리스크 사례로 관찰.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2>⚠️ 논란·리스크 신호 <span class="em">우리 운영 교훈 포함</span></h2>
+
+  <div class="risk-card">
+    <h3>1. 발로란트 EWC 2026 시청자 −45.8% 급감</h3>
+    <div>그랜드파이널 피크 <b>약 24.8만명</b>(2025년 약 45.3만명 대비)으로 크게 하락. 원인으로 <b>Fnatic·Sentinels·Gen.G 등 인기팀 부재</b>와 Karmine Corp·Paper Rex 등 팬덤 강한 팀의 조기 탈락이 지목됨. <span style="color:var(--muted)">(수치는 서드파티 트래커 기반 — 재확인 권장, <a href="https://escharts.com/news/valorant-esports-world-cup-2026-recap" target="_blank">Esports Charts</a>)</span></div>
+    <div class="lesson"><b>운영 교훈:</b> 대회/이벤트 흥행은 '무엇을 하느냐'보다 <b>누가(스타팀·인기 IP) 등장하느냐</b>에 크게 좌우됨. 자사 e스포츠·인플루언서 이벤트 편성 시 <b>팬덤 큰 참가자 확보</b>와 조기 탈락 대비 콘텐츠(패자조 스토리라인 등)를 사전 설계할 것.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3>2. Apex Legends 이탈·백래시 장기화</h3>
+    <div>치터/안티치트, 랭크 시스템 불만, 라이브옵스 피로가 누적되며 2026년 내내 커뮤니티 불만이 이어짐.</div>
+    <div class="lesson"><b>운영 교훈:</b> <b>안티치트 신뢰</b>와 <b>과도한 수익화 체감</b>은 장수 FPS의 핵심 이탈 변수. 프리런칭/초기 라이브옵스 단계에서 치트 대응 로드맵과 BM 투명성 메시지를 CM 커뮤니케이션에 선제 포함할 것.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3>3. CoD 시즌5 = 'BO7 최종 대형 시즌' 프레이밍</h3>
+    <div>내일(7/23) 출시되는 시즌5가 차기작(MW4) 전환 신호로 읽히며, 좀비 피날레 등 '마무리' 성격. 신작 전환기 특유의 <b>유저 피로/이탈</b> 리스크 구간.</div>
+    <div class="lesson"><b>운영 교훈:</b> 시즌/시리즈 전환기에는 '떠나는 유저'를 붙잡는 <b>회고형 이벤트·감사 리워드</b>가 여론 방어에 효과적. 대형 업데이트 직후 24~48h 커뮤니티 반응 모니터링 필수.</div>
+  </div>
+
+  <!-- CM 액션 -->
+  <h2>✅ CM 액션 제안</h2>
+
+  <div class="action">
+    <h3>제안 1 — 7/23 CoD 시즌5 반응 실시간 스냅샷</h3>
+    <ol>
+      <li>7/23 출시 직후 <b>레딧 r/CODWarzone·r/blackops7, 디시 콜옵갤</b>에서 초기 반응(맵·좀비 피날레·BM) 3시간 단위 캡처.</li>
+      <li>대형 시즌 런칭의 <b>온보딩 공지·패치노트 구성</b>을 자사 시즌 공지 템플릿과 비교 → 잘된 점 1~2개 사내 공유.</li>
+    </ol>
+  </div>
+
+  <div class="action">
+    <h3>제안 2 — '무료 스킨 배포' 리텐션 훅 벤치마크</h3>
+    <ol>
+      <li>마블 라이벌즈 <b>Van Dyne Couture</b>(무료 코스튬 획득 + 주말 모드 재오픈) 구조를 분해 → 자사 주말 리텐션 이벤트 아이디어로 각색.</li>
+      <li>서든어택 시즌3·델타포스 콜라보 등 <b>진행 중 국내외 이벤트</b>의 참여 조건(일일미션·PC방·콜라보 스킨)을 한 장으로 정리해 기획팀에 공유.</li>
+    </ol>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>출처 링크</h3>
+    <ul>
+      <li>서든어택 시즌3 패러독스 — <a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a></li>
+      <li>서든어택 제로 포인트 파이널 CBT — <a href="https://www.inven.co.kr/webzine/news/?news=318161" target="_blank">인벤</a></li>
+      <li>PUBG 뉴스(42.2·7월 상점·페스티벌) — <a href="https://pubg.com/ko/news" target="_blank">PUBG 공식</a></li>
+      <li>발로란트 요원 티어표 — <a href="https://tr.inven.co.kr/view/19729" target="_blank">인벤</a></li>
+      <li>오버워치 시즌3 정보 — <a href="https://bbs.ruliweb.com/pc/board/300007/read/2348686" target="_blank">루리웹</a></li>
+      <li>CoD BO7·워존 시즌5 — <a href="https://dotesports.com/call-of-duty/guides/black-ops-7-warzone-season-5-release-date-time" target="_blank">Dot Esports</a> / <a href="https://www.callofduty.com/blog/2026/07/call-of-duty-black-ops-7-warzone-season-05-announcement" target="_blank">공식</a></li>
+      <li>Marvel Rivals 20260716 패치노트 — <a href="https://www.marvelrivals.com/20260715/41525_1307701.html" target="_blank">공식</a></li>
+      <li>Delta Force 시즌 Meltdown — <a href="https://dotesports.com/delta-force/guides/delta-force-season-meltdown" target="_blank">Dot Esports</a></li>
+      <li>발로란트 EWC 2026 시청 하락 — <a href="https://escharts.com/news/valorant-esports-world-cup-2026-recap" target="_blank">Esports Charts</a></li>
+      <li>CS2 vs 발로란트 시청 비교 — <a href="https://escharts.com/news/counter-strike-vs-valorant-viewership-cs-leads-early-2026-tactical-fps-esports-metrics" target="_blank">Esports Charts</a></li>
+      <li>Apex 이탈·백래시 — <a href="https://www.elomania.com/en/blog/apex-legends/why-apex-legends-is-losing-players-in-2026--ranked-cheaters--community-backlash" target="_blank">Elomania</a></li>
+      <li>CS2 업데이트 — <a href="https://cs2news.gg/cs2-update" target="_blank">CS2News</a></li>
+    </ul>
+    <div class="disc">
+      <b>유의사항:</b> 동접·시청·판매 등 수치는 서드파티 트래커(Esports Charts 등) 기반이므로 <b>공식 발표와 재확인 권장</b>합니다. 본 리포트는 커뮤니티 여론·이벤트 동향 파악용이며, 커버 기간(7/19~21) 밖의 항목은 배경/진행 업데이트로 표기했습니다. 오늘은 24~48h 신규 대형 발표가 적은 조용한 구간으로, 지난주 이슈의 진행분과 임박 런칭(7/23 CoD)을 중심으로 구성했습니다. 자동 생성: 데일리 FPS·슈터 레이더 · 2026-07-21 09:xx KST.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

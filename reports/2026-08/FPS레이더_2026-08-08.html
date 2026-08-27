@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 · 2026-08-08 (주말 포함)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #F4F6FA; color: #1F2A44; line-height: 1.6; padding: 0 0 48px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  header.top {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; padding: 34px 0 30px; margin-bottom: 26px;
+  }
+  header.top .wrap { display: flex; flex-direction: column; gap: 6px; }
+  header.top h1 { font-size: 26px; letter-spacing: -0.5px; }
+  header.top .sub { font-size: 14px; opacity: 0.92; }
+  header.top .badge {
+    display: inline-block; background: #F5C451; color: #1F2A44; font-weight: 700;
+    font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-top: 8px; width: fit-content;
+  }
+  h2 {
+    font-size: 19px; color: #1F2A44; margin: 30px 0 14px; padding-bottom: 8px;
+    border-bottom: 2px solid #2E5AAC;
+  }
+  h2 .em { color: #2E5AAC; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  .kpi {
+    background: #fff; border: 1px solid #E1E7F2; border-left: 4px solid #2E5AAC;
+    border-radius: 10px; padding: 16px 18px; box-shadow: 0 1px 3px rgba(31,42,68,0.06);
+  }
+  .kpi .label { font-size: 12px; color: #5B6b8a; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+  .kpi .value { font-size: 21px; font-weight: 700; color: #1F2A44; margin: 6px 0 4px; }
+  .kpi .note { font-size: 12.5px; color: #56617d; }
+  table {
+    width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
+    overflow: hidden; box-shadow: 0 1px 3px rgba(31,42,68,0.06); font-size: 13.5px;
+  }
+  th {
+    background: #1F2A44; color: #fff; text-align: left; padding: 11px 12px; font-weight: 600; font-size: 12.5px;
+  }
+  td { padding: 11px 12px; vertical-align: top; border-top: 1px solid #EDF1F8; }
+  tbody tr:nth-child(even) { background: #F7F9FD; }
+  td .game { font-weight: 700; color: #2E5AAC; }
+  a { color: #2E5AAC; text-decoration: none; border-bottom: 1px dotted #9db4dd; }
+  a:hover { border-bottom-style: solid; }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 5px;
+    color: #fff; white-space: nowrap;
+  }
+  .t-event { background: #2E5AAC; } .t-launch { background: #2f9e6f; }
+  .t-risk { background: #c0453b; } .t-esports { background: #7a5bbd; } .t-live { background: #b8791f; }
+  .risk-card {
+    background: #fff; border: 1px solid #EAD3D1; border-left: 4px solid #c0453b;
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .risk-card h3 { font-size: 15px; color: #c0453b; margin-bottom: 4px; }
+  .risk-card .lesson {
+    background: #FBF3F2; border-radius: 6px; padding: 8px 12px; margin-top: 8px; font-size: 13px;
+  }
+  .risk-card .lesson b { color: #1F2A44; }
+  .action-card {
+    background: #fff; border: 1px solid #D6E0F0; border-left: 4px solid #2f9e6f;
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .action-card h3 { font-size: 15px; color: #2f9e6f; margin-bottom: 4px; }
+  .action-card .why { font-size: 12.5px; color: #56617d; margin-top: 6px; }
+  .muted { color: #56617d; font-size: 13px; }
+  ul.sources { list-style: none; font-size: 12.5px; columns: 2; column-gap: 30px; }
+  ul.sources li { margin-bottom: 5px; break-inside: avoid; }
+  footer.note {
+    margin-top: 30px; padding: 16px 18px; background: #EDF1F8; border-radius: 10px;
+    font-size: 12px; color: #56617d;
+  }
+  .light-day {
+    background: #FFF8E8; border: 1px solid #F0DCA8; border-radius: 10px; padding: 14px 18px;
+    font-size: 13.5px; color: #7a5f1a; margin-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">기준일 2026-08-08 (토) · 커버 기간: 2026-08-06(목) ~ 08-08(토) · 최근 48시간</div>
+    <span class="badge">주말 포함 · 라이온하트 CM/기획용</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="light-day">
+    ⚖️ <b>오늘은 비교적 조용한 편(토요일)</b> — 마블 라이벌즈 시즌 9.5(8/7)와 서든어택 21주년 협동 콘텐츠(8/6)가 이번 48시간의 두 축입니다. 나머지는 진행 중 이벤트의 짧은 업데이트로 정리했습니다. 신규 대형 런칭·CBT/OBT 공지는 이 기간 확인되지 않았습니다.
+  </div>
+
+  <h2>핵심 요약 <span class="em">KPI</span></h2>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="label">이번 48h 최대 이슈</div>
+      <div class="value">마블 라이벌즈 S9.5</div>
+      <div class="note">신규 빌런 'The Hood' + 서머 페스티벌 Vol.2 예고 (8/7)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">국내 포커스</div>
+      <div class="value">서든어택 21주년</div>
+      <div class="note">4인 협동 'UP투게더' 신규 모드, ~8/27 (8/6 발표)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">글로벌 e스포츠</div>
+      <div class="value">BO7 @ EWC 2026</div>
+      <div class="note">콜옵 블랙옵스7 진행 중 · 상금 $1.8M</div>
+    </div>
+    <div class="kpi">
+      <div class="label">모니터링 리스크</div>
+      <div class="value">과금 설계 2건</div>
+      <div class="note">라이벌즈 'PYO 어댑티브 프라이싱' + 수영복 스킨</div>
+    </div>
+  </div>
+
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:15%">게임</th><th style="width:14%">이벤트</th><th style="width:10%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응 / 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="game">서든어택</span><br><span class="muted">넥슨</span></td>
+        <td>21주년 협동 모드 <b>'UP투게더'</b></td>
+        <td>8/6 발표<br>~8/27 운영</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td>최대 4인이 무중력·포탈 기믹을 돌파해 보스 '곰돌킹'을 잡는 협동 콘텐츠. 코스 도달·시간완주 보상(TAS 곰돌킹 영구제, P90_v2 21주년 영구제 등), 21일 출석·합체·채팅 이벤트 병행. 8/6 20시 SOOP 라이브, <b>8/23 17시 온라인 쇼케이스</b> 예정. 21주년 장수 FPS의 협동·비대칭 콘텐츠 실험 → 국내 운영 관전 포인트.</td>
+      </tr>
+      <tr>
+        <td><span class="game">발로란트 KR</span><br><span class="muted">라이엇</span></td>
+        <td>V26 Act 4 · Blackspyre 배틀패스</td>
+        <td>진행 중<br>~8/19</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td><span class="muted">진행 업데이트</span> — Act 4 배틀패스/Blackspyre 스킨 컬렉션 판매 중, <b>Act 4 종료 8/19</b>로 랭크 리셋 전 막판 구간. 신규 이슈보다 '패스 마감 임박' 리마인드 성격.</td>
+      </tr>
+      <tr>
+        <td><span class="game">PUBG</span><br><span class="muted">크래프톤</span></td>
+        <td>2026 로드맵 · 정기 패치</td>
+        <td>진행 중</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td><span class="muted">진행 업데이트</span> — 2026 로드맵·이용자 흐름 공개 기조 유지, 42.x대 정기 패치 중. 이 기간 신규 대형 콜라보 공지는 미확인(재확인 권장).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:15%">게임</th><th style="width:16%">이벤트</th><th style="width:9%">날짜</th><th style="width:12%">유형</th><th>커뮤니티 반응 / 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="game">마블 라이벌즈</span><br><span class="muted">NetEase</span></td>
+        <td>시즌 9.5 (v20260807)</td>
+        <td>8/7</td>
+        <td><span class="tag t-event">시즌</span></td>
+        <td>신규 빌런 <b>'The Hood'</b> 합류('다크 매직 × 스트리트 허슬'), 문나이트/후드 스토리 추가. <b>'Creed of Akabba'</b> 미션으로 퍼니셔 무료 코스튬, <b>Times Square Screening</b>(캡틴 아메리카 클립 감상 → 스프레이, 8/7~27), 트위치 드롭(~9/4). 텍스처 압축으로 <b>용량 대폭 절감(PC ~30%)</b> → 커뮤니티가 반길 QoL.</td>
+      </tr>
+      <tr>
+        <td><span class="game">마블 라이벌즈</span><br><span class="muted">NetEase</span></td>
+        <td>서머 페스티벌 Vol.2 (수영복 스킨)</td>
+        <td>8/13 예고</td>
+        <td><span class="tag t-event">스킨</span></td>
+        <td>스톰·스타로드·스칼렛위치·블랙캣·윈터솔져·매직 6종 비치웨어 예고(현재 컨셉아트만 공개). 작년 Vol.1의 선정성·과금 논쟁을 감안하면 <b>반응 양분 가능</b> — 출시 후 반응 모니터 필요.</td>
+      </tr>
+      <tr>
+        <td><span class="game">콜 오브 듀티 BO7</span><br><span class="muted">Activision</span></td>
+        <td>EWC 2026 블랙옵스7 종목</td>
+        <td>진행 중</td>
+        <td><span class="tag t-esports">e스포츠</span></td>
+        <td>Esports World Cup 2026에서 블랙옵스7 진행 중(상금 $1.8M, FaZe가 CDL 챔피언 자격 참가). 시청 지표는 <b>재확인 권장</b>. Warzone/BO7 시즌05 콘텐츠 드롭도 병행.</td>
+      </tr>
+      <tr>
+        <td><span class="game">오버워치 2</span><br><span class="muted">Blizzard</span></td>
+        <td>2026 '대형 개편' 티저 · 명칭 변경</td>
+        <td>진행 중</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td><span class="muted">진행 업데이트</span> — 2026 대형 계획·소폭 명칭 변경 예고 기조. 이 기간 신규 확정 발표는 없음. 시즌 전환 타이밍 주시.</td>
+      </tr>
+      <tr>
+        <td><span class="game">에이펙스 레전드</span><br><span class="muted">EA</span></td>
+        <td>Epic Games Store 정식 출시</td>
+        <td>8/6</td>
+        <td><span class="tag t-launch">배포 확장</span></td>
+        <td>에이펙스가 8/6 에픽게임즈 스토어에 정식 진입 — 유입 확대 시도. 다만 커뮤니티엔 '업데이트 방향' 불만 기류가 이어지는 중(재확인 권장).</td>
+      </tr>
+      <tr>
+        <td><span class="game">발로란트</span><br><span class="muted">Riot</span></td>
+        <td>V26 Act 4 · Blackspyre 번들</td>
+        <td>진행 중 ~8/19</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td><span class="muted">진행 업데이트</span> — 글로벌 동일하게 Act 4 마감(8/19) 임박, Blackspyre 스킨 판매 중.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>⚠️ 논란·리스크 신호 <span class="em">(우리 운영 교훈)</span></h2>
+
+  <div class="risk-card">
+    <h3>1. 마블 라이벌즈 'PYO 번들 + 어댑티브 프라이싱' 도입</h3>
+    <p>시즌 9.5에서 원하는 아이템을 골라 담는 <b>Pick-Your-Own 번들</b>에 '어댑티브 프라이싱(구성에 따라 가격 변동)'이 붙었습니다. 유연해 보이지만, '개인/구성별로 값이 달라지는' 과금은 <b>가격 불투명·차등 과금 논란</b>으로 번지기 쉬운 설계입니다.</p>
+    <div class="lesson"><b>우리 교훈:</b> 선택형 번들을 낼 때는 ①최종 가격을 구매 전 명확히 고정 표기, ②'구성별 할인'인지 '개인화 가격'인지 오해 없게 커뮤니케이션. 애매하면 커뮤니티가 '몰래 값 올린다'로 해석합니다.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3>2. 여름 수영복 스킨 = 반복되는 선정성·과금 논쟁 트리거</h3>
+    <p>라이벌즈 서머 페스티벌 Vol.2(8/13) 수영복 스킨은 작년 Vol.1에서 선정성·고가 프리미엄 논쟁을 이미 겪은 카테고리입니다. 매출은 강하지만 <b>일부 커뮤니티·외신 비판이 예약된 이벤트</b>입니다.</p>
+    <div class="lesson"><b>우리 교훈:</b> 시즌성 노출도 높은 스킨은 '무료 획득 경로 병행 + 가격 사전 공지 + 캐릭터 존중 톤'을 세트로 준비. 매출 이벤트일수록 획득 난이도·가격을 먼저 투명하게 열어야 백래시를 줄입니다.</div>
+  </div>
+
+  <h2>✅ CM 액션 제안</h2>
+
+  <div class="action-card">
+    <h3>액션 1 — '패스 마감 임박' 리마인드 카피 준비</h3>
+    <p>발로란트 Act 4가 8/19 종료됩니다. 우리 타이틀도 시즌/패스 전환기라면 <b>마감 D-7 / D-3 / D-1 리마인드</b>를 SNS·인게임 공지로 선제 세팅하세요. 마블 라이벌즈처럼 '무료 획득 이벤트(미션형)'를 마감 전에 붙이면 이탈 방지 + 호감 동시 확보.</p>
+    <div class="why">근거: 패스 종료 직전은 유입/과금 피크이자 '뒤늦게 알았다' 불만 피크. 리마인드가 곧 매출이자 CS 방어.</div>
+  </div>
+
+  <div class="action-card">
+    <h3>액션 2 — 협동/비대칭 콘텐츠 벤치마크 메모</h3>
+    <p>서든어택 'UP투게더'(4인 협동·보스전·시간완주 보상)는 <b>PvP 피로도를 낮추는 사이드 콘텐츠</b>로 장수 FPS가 커뮤니티를 붙잡는 전형입니다. 8/23 쇼케이스 반응을 캡처해 <b>'협동 이벤트 보상 설계(도달형+완주형 이중 보상)'</b> 사례로 내부 플레이북에 적립하세요.</p>
+    <div class="why">근거: 기존 프리런칭 CM/GM 플레이북의 '리텐션 이벤트' 항목 보강용. 국내 유저 정서에 맞는 협동 보상 레퍼런스.</div>
+  </div>
+
+  <h2>🔗 출처</h2>
+  <ul class="sources">
+    <li>마블 라이벌즈 S9.5 패치노트 — <a href="https://marvelrivals.gg/marvel-rivals-version-20260807-patch-notes/">marvelrivals.gg</a></li>
+    <li>마블 라이벌즈 Dev Vision Vol.20(S9.5) — <a href="https://www.marvelrivals.com/20260805/41525_1310107.html">marvelrivals.com</a></li>
+    <li>서머 페스티벌 Vol.2 수영복 스킨 — <a href="https://www.vice.com/en/article/marvel-rivals-summer-festival-vol-2-swimsuit-skins/">Vice</a> / <a href="https://www.gamespot.com/articles/all-swimsuit-skins-in-marvel-rivals-2026-summer-festival-event/">GameSpot</a></li>
+    <li>서든어택 21주년 UP투게더 — <a href="https://www.khgames.co.kr/news/articleView.html?idxno=307068">경향게임스</a> / <a href="https://www.gametoc.co.kr/news/articleView.html?idxno=110481">게임톡</a></li>
+    <li>서든어택 시즌3 '패러독스' — <a href="https://zdnet.co.kr/view/?no=20260702163031">ZDNet Korea</a></li>
+    <li>BO7 EWC 2026 — <a href="https://dotesports.com/call-of-duty/news/bo7-ewc-2026-schedule-results-bracket">Dot Esports</a> / <a href="https://tips.gg/article/black-ops-7-ewc-2026-schedule-teams-and-prize-pool-ewc2026-cod/">Tips.gg</a></li>
+    <li>발로란트 V26 Act 4 · Blackspyre — <a href="https://www.strafe.com/news/read/valorant-introduces-new-battlepass-and-blackspyre-skin-collection-in-v26-act-4/">Strafe</a> / <a href="https://seasontimer.live/valorant/">SeasonTimer</a></li>
+    <li>오버워치2 2026 계획 — <a href="https://gamerant.com/overwatch-2-updates-2026/">Game Rant</a></li>
+    <li>에이펙스 EGS 출시 — <a href="https://www.notebookcheck.net/Apex-Legends-is-officially-coming-to-the-Epic-Games-Store-on-August-6.869771.0.html">Notebookcheck</a></li>
+    <li>PUBG 2026 로드맵 — <a href="https://pubg.com/ko/news/9855">PUBG 공식</a></li>
+  </ul>
+
+  <footer class="note">
+    ⚠️ <b>유의사항</b> — 동접·판매·시청 등 수치는 서드파티/보도 기준이며 <b>'재확인 권장'</b>입니다. 일부 원문은 발표/예고 단계로 최종 사양이 바뀔 수 있습니다. '진행 업데이트' 항목은 이번 48시간 신규 이슈가 아닌 지속 이슈의 짧은 리마인드입니다. 커뮤니티 반응은 발표 직후 시점 요약으로, 여론은 유동적입니다.<br>
+    자동 생성: 데일리 FPS·슈터 레이더 · 기준일 2026-08-08(토, 주말 포함) · 라이온하트 CM/기획용.
+  </footer>
+
+</div>
+</body>
+</html>

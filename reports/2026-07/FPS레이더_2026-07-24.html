@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 · 2026-07-24 (금)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+    background: #F4F6FA; color: #1F2A44; line-height: 1.6;
+    padding: 24px 16px;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; border-radius: 14px; padding: 28px 30px; margin-bottom: 22px;
+    box-shadow: 0 4px 18px rgba(31,42,68,0.18);
+  }
+  header h1 { font-size: 25px; font-weight: 800; letter-spacing: -0.5px; }
+  header .meta { margin-top: 10px; font-size: 14px; opacity: 0.92; }
+  header .badge {
+    display: inline-block; background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35); border-radius: 20px;
+    padding: 3px 12px; font-size: 12.5px; margin-top: 12px; font-weight: 600;
+  }
+  h2 {
+    font-size: 18px; color: #1F2A44; margin: 30px 0 12px;
+    padding-left: 11px; border-left: 5px solid #2E5AAC;
+  }
+  .sub { font-size: 13px; color: #5a6478; margin: -6px 0 14px; }
+
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+    gap: 14px; margin-bottom: 6px;
+  }
+  .kpi {
+    background: #fff; border: 1px solid #e3e8f0; border-radius: 12px;
+    padding: 16px 18px; box-shadow: 0 2px 8px rgba(31,42,68,0.05);
+  }
+  .kpi .tag { font-size: 11.5px; font-weight: 700; color: #2E5AAC; text-transform: uppercase; letter-spacing: 0.5px; }
+  .kpi .big { font-size: 17px; font-weight: 800; margin: 6px 0 4px; color: #1F2A44; }
+  .kpi .desc { font-size: 12.5px; color: #5a6478; }
+
+  table {
+    width: 100%; border-collapse: collapse; background: #fff;
+    border-radius: 10px; overflow: hidden; font-size: 13px;
+    box-shadow: 0 2px 10px rgba(31,42,68,0.06); margin-bottom: 8px;
+  }
+  th {
+    background: #1F2A44; color: #fff; text-align: left;
+    padding: 10px 12px; font-weight: 700; font-size: 12.5px;
+  }
+  td { padding: 10px 12px; border-top: 1px solid #eef1f6; vertical-align: top; }
+  tbody tr:nth-child(even) { background: #f7f9fc; }
+  td .game { font-weight: 700; color: #1F2A44; }
+  .pill {
+    display: inline-block; font-size: 11px; font-weight: 700; border-radius: 12px;
+    padding: 2px 9px; white-space: nowrap;
+  }
+  .p-event { background: #e3edff; color: #2E5AAC; }
+  .p-launch { background: #e2f5ea; color: #1c8a54; }
+  .p-season { background: #fff0dc; color: #b9711a; }
+  .p-metric { background: #efe6ff; color: #6b3fc4; }
+  .p-risk { background: #ffe4e4; color: #c0392b; }
+
+  a { color: #2E5AAC; text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+
+  .risk-card, .action-card {
+    background: #fff; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px;
+    border-left: 5px solid #c0392b;
+  }
+  .action-card { border-left-color: #1c8a54; }
+  .risk-card h3, .action-card h3 { font-size: 15px; margin-bottom: 6px; }
+  .risk-card p, .action-card p { font-size: 13.5px; color: #37415a; }
+  .lesson { font-size: 12.5px; color: #7a3a3a; margin-top: 6px; font-style: italic; }
+
+  footer {
+    margin-top: 30px; padding: 20px; background: #fff; border-radius: 12px;
+    border: 1px solid #e3e8f0; font-size: 12.5px; color: #5a6478;
+  }
+  footer h3 { font-size: 13.5px; color: #1F2A44; margin-bottom: 8px; }
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 4px; }
+  .note { background: #fff8e6; border: 1px solid #f0dca0; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; color: #7a5c1a; margin-top: 14px; }
+  .quiet { background:#eef1f6; border-radius:8px; padding:8px 12px; font-size:12.5px; color:#5a6478; display:inline-block; margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="meta">기준일: 2026년 7월 24일 (금) · 커버 기간: 7월 22일(수)~24일(금), 최근 24~48시간 중심</div>
+    <div class="badge">평일 리포트 · 신규 소식 위주 · 반복 이슈는 '진행 업데이트'로 요약</div>
+  </header>
+
+  <h2>핵심 요약</h2>
+  <div class="sub">오늘의 관전 포인트 — 대형 시즌·패치 2건이 같은 날(7/23) 겹쳤습니다. 대형 신규 논란은 조용한 편.</div>
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="tag">오늘의 빅 이벤트</div>
+      <div class="big">신규 패치 2건 동시</div>
+      <div class="desc">마블 라이벌즈 신규 맵 '테베'(7/23) + CoD BO7·워존 시즌5(7/23)</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">국내 포커스</div>
+      <div class="big">서든어택 시즌3 '패러독스'</div>
+      <div class="desc">신규 캐릭터 C.베라·21주년 콘텐츠 진행 중 (7월 초 업데이트)</div>
+    </div>
+    <div class="kpi">
+      <div class="tag">주목 지표</div>
+      <div class="big">OW vs 마블 라이벌즈</div>
+      <div class="desc">스팀 동접 재역전 공방 지속 · <b>재확인 권장</b></div>
+    </div>
+    <div class="kpi">
+      <div class="tag">리스크 신호</div>
+      <div class="big">낮음~보통</div>
+      <div class="desc">대형 백래시 없음. 라이브서비스 상술·콘텐츠 경쟁 압박이 상시 관전 포인트</div>
+    </div>
+  </div>
+
+  <h2>🇰🇷 국내 포커스</h2>
+  <div class="sub">국내 서비스작 및 한국 커뮤니티(루리웹·인벤·디시·아카라이브·에펨) 반응 중심</div>
+  <table>
+    <thead>
+      <tr><th style="width:15%">게임</th><th style="width:27%">이벤트/이슈</th><th style="width:11%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="game">서든어택</td>
+        <td>2026 시즌3 <b>'패러독스'</b> — 신규 캐릭터 'C.베라', 신규 저격소총, 21주년 기념 콘텐츠 (<a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a>)</td>
+        <td>7/2~</td>
+        <td><span class="pill p-season">시즌</span></td>
+        <td>21주년 장수작 저력 유지. 신규 캐릭터·저격 밸런스 및 시즌 보상 체감이 국내 반응의 핵심 (<a href="https://bbs.ruliweb.com/news/board/300007/read/2350340" target="_blank">루리웹</a>). <span class="quiet">진행 업데이트</span></td>
+      </tr>
+      <tr>
+        <td class="game">배틀그라운드 (PUBG)</td>
+        <td>업데이트 42.2 — 기본훈련 개편(17챕터), <b>솔로 데스매치</b>(PC 7/29~), 핫드랍 모드 복귀, 태이고·론도 개선, 신규 컨텐더 '글라시아' (<a href="https://pubg.com/ko/news/10459" target="_blank">패치노트</a>)</td>
+        <td>7/14~</td>
+        <td><span class="pill p-event">이벤트/모드</span></td>
+        <td>솔로 데스매치·핫드랍 등 즉시전투 콘텐츠에 복귀 유저 기대. 신규 진입 개선(초심자 훈련소)도 병행. <span class="quiet">진행 업데이트</span></td>
+      </tr>
+      <tr>
+        <td class="game">발로란트 (KR)</td>
+        <td>2026 Act 4 — 신규 맵 '서밋(Summit)' + 3v3 '리테이크' 모드, 야시장(Night Market) 진행 (<a href="https://saiganak.com/news/valorant-season2026-act4/" target="_blank">Act4</a>)</td>
+        <td>6/23·7/16~</td>
+        <td><span class="pill p-event">이벤트/맵</span></td>
+        <td>야시장 스킨 할인은 국내서도 매번 화제. 서밋 맵의 '벽 낙하' 기믹 호불호 이어짐. <span class="quiet">진행 업데이트</span></td>
+      </tr>
+      <tr>
+        <td class="game">오버워치 2 (KR)</td>
+        <td>여름 게임즈(Summer Games) 이벤트 패치 진행 중 (7/14 패치)</td>
+        <td>7/14~</td>
+        <td><span class="pill p-event">이벤트</span></td>
+        <td>시즌 이벤트 스킨·모드로 접속 유인. 마블 라이벌즈와의 동접 경쟁이 국내 여론에서도 자주 비교됨.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🌐 글로벌 포커스</h2>
+  <div class="sub">해외 커뮤니티(레딧 각 서브·Dexerto·PC Gamer 등) 및 공식 채널 기준 · 최근 24~48시간 신규 위주</div>
+  <table>
+    <thead>
+      <tr><th style="width:15%">게임</th><th style="width:29%">이벤트/이슈</th><th style="width:9%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="game">Marvel Rivals</td>
+        <td>v20260723 패치 — <b>신규 맵 '테베(Thebes)'</b>(이집트 테마), 블러드 헌트 이벤트 강화(장비 강화/정련·난이도 300층·<b>10/9까지 연장</b>), 신규 스킨 사이록/헬라 번들(7/24), e스포츠 구독·캘린더 기능 (<a href="https://marvelrivals.gg/marvel-rivals-version-20260723-patch-notes/" target="_blank">패치노트</a>)</td>
+        <td>7/23</td>
+        <td><span class="pill p-event">이벤트/맵</span></td>
+        <td>신규 맵·이벤트 연장은 호평 요소. 다만 이번 패치에 <b>영웅 밸런스·신규 영웅 없음</b>이라 "콘텐츠 텀" 지적도. 트위치 드랍 7/29~8/29 예고.</td>
+      </tr>
+      <tr>
+        <td class="game">Call of Duty: BO7 · Warzone</td>
+        <td><b>시즌 5 런칭</b> — 신규 맵 '주빌리(Jubilee)'·Frequency/Dig 리마스터, 좀비 '에이즈칼렌 등대', 워존 'Drone Labs' POI + 리서전스 랭크, 배틀패스 FG42/Gremlin, 오퍼레이터 '스펙터' (<a href="https://blog.playstation.com/2026/07/13/call-of-duty-black-ops-7-and-warzone-season-5-launches-july-23-full-details/" target="_blank">PS Blog</a>)</td>
+        <td>7/23</td>
+        <td><span class="pill p-season">시즌</span></td>
+        <td>대형 콘텐츠 드랍으로 접속 반등 기대. 배틀패스·BlackCell·번들 구성에 대한 '상술' 평가가 매 시즌 반복되는 관전 포인트.</td>
+      </tr>
+      <tr>
+        <td class="game">Overwatch 2 ↔ Marvel Rivals</td>
+        <td>스팀 동접 <b>재역전 공방</b> — 오버워치가 최고 동접 경신하며 마블 라이벌즈 재추월했다는 집계 (<a href="https://www.thegamer.com/overwatch-concurrent-player-overtakes-marvel-rivals/" target="_blank">TheGamer</a>)</td>
+        <td>진행형</td>
+        <td><span class="pill p-metric">지표</span></td>
+        <td>두 히어로 슈터 간 시소 게임 지속. 서드파티 집계라 <b>재확인 권장</b>. 라이브서비스 경쟁 압박의 대표 사례.</td>
+      </tr>
+      <tr>
+        <td class="game">Valorant</td>
+        <td>야시장(Night Market) 스킨 할인 진행 (7/16~) (<a href="https://www.strafe.com/news/read/valorant-night-market-returns-july-16-complete-list-of-skins/" target="_blank">Strafe</a>)</td>
+        <td>7/16~</td>
+        <td><span class="pill p-event">이벤트</span></td>
+        <td>할인 스킨 라인업 매번 반응 큼. 지출 유인 이벤트의 표준 사례. <span class="quiet">진행 업데이트</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>⚠️ 논란·리스크 신호</h2>
+  <div class="sub">우리 운영에 참고할 교훈 포함 — 오늘은 대형 신규 백래시가 두드러지지 않아 '상시 리스크' 중심으로 정리</div>
+
+  <div class="risk-card">
+    <h3><span class="pill p-risk">상시</span> 라이브서비스 '상술' 프레임 — 대형 시즌 런칭일의 함정</h3>
+    <p>같은 날(7/23) CoD 시즌5·마블 라이벌즈 패치가 겹치며 배틀패스·번들·유료 스킨이 대거 노출됐습니다. 히어로/슈터 장르에서 시즌 런칭 직후 가장 빠르게 확산되는 반응이 '가격·구성 상술' 프레임입니다. 특히 마블 라이벌즈는 이번 패치에 <b>영웅 밸런스가 없어</b> "유료 콘텐츠는 나오는데 게임성 개선은 텀이 있다"는 지적이 나오기 쉬운 구조입니다.</p>
+    <p class="lesson">교훈: 우리 이벤트도 '유료 아이템'과 '무료 게임성 개선'을 같은 공지에서 균형 있게 배치하고, 무료 보상을 헤드라인 앞단에 노출해 상술 프레임을 선제 차단할 것.</p>
+  </div>
+
+  <div class="risk-card">
+    <h3><span class="pill p-risk">상시</span> 서드파티 동접 지표의 여론화 리스크</h3>
+    <p>오버워치 ↔ 마블 라이벌즈 스팀 동접 순위가 커뮤니티에서 '승패' 서사로 소비되고 있습니다. 서드파티 집계(스팀 한정)는 콘솔·자체 런처를 제외하므로 실제 규모와 괴리가 있는데도, 캡처 한 장이 여론을 좌우합니다.</p>
+    <p class="lesson">교훈: 우리 지표가 커뮤니티에 노출될 때는 '기준(플랫폼·집계 방식)'을 함께 제시하고, 불리한 서드파티 캡처가 돌 때 공식 채널의 톤(과잉 방어 금지)을 사전 합의해 둘 것.</p>
+  </div>
+
+  <h2>✅ CM 액션 제안</h2>
+
+  <div class="action-card">
+    <h3>1) 7/23 동시 런칭 대응 — 자사 커뮤니티 '경쟁 신작 관심 이탈' 모니터링</h3>
+    <p>CoD 시즌5·마블 라이벌즈 신규 맵이 같은 날 풀리며 슈터 유저 관심이 분산되는 주간입니다. 자사 채널의 접속·언급량이 평소 대비 빠지는지 24~48시간 단위로 체크하고, 이번 주 예정 콘텐츠가 있다면 <b>경쟁작 런칭 피크(주말)를 피한 공지 타이밍</b>을 검토하세요. 짧은 '진행 중 이벤트 리마인드' 카피로 잔류 유저 이탈을 방어할 것.</p>
+  </div>
+
+  <div class="action-card">
+    <h3>2) '무료 보상 먼저' 공지 템플릿 점검</h3>
+    <p>오늘 관찰된 상술 프레임 리스크를 반영해, 차기 이벤트 공지의 첫 3줄에 <b>무료로 받는 것(로그인 보상·이벤트 재화·밸런스 개선)</b>을 배치하는 템플릿을 준비하세요. 유료 번들은 그 아래로. 저장된 '공지·SNS 카피 생성기' 콘솔로 A/B 문안 2종을 미리 뽑아 두면 런칭일 대응이 빨라집니다.</p>
+  </div>
+
+  <div class="note">
+    ⓘ 유의사항: 본 리포트의 동접·시청·판매 수치는 서드파티 트래커/집계 기반이 다수로 <b>재확인 권장</b>입니다. 일부 항목(Act 4·서든어택 시즌3·PUBG 42.2)은 7월 초·중순 업데이트로 '진행 업데이트' 성격이며, 7/22~24 신규 소식은 마블 라이벌즈 7/23 패치와 CoD 시즌5 7/23 런칭이 중심입니다. 오늘은 대형 신규 논란이 두드러지지 않은 비교적 조용한 평일입니다.
+  </div>
+
+  <footer>
+    <h3>📌 출처</h3>
+    <ul>
+      <li>Marvel Rivals v20260723 패치노트 — <a href="https://marvelrivals.gg/marvel-rivals-version-20260723-patch-notes/" target="_blank">marvelrivals.gg</a></li>
+      <li>CoD Black Ops 7 · Warzone 시즌5(7/23) — <a href="https://blog.playstation.com/2026/07/13/call-of-duty-black-ops-7-and-warzone-season-5-launches-july-23-full-details/" target="_blank">PlayStation Blog</a> / <a href="https://www.callofduty.com/patchnotes/2026/07/call-of-duty-black-ops-7-season-05-patch-notes" target="_blank">공식 패치노트</a></li>
+      <li>PUBG 업데이트 42.2 — <a href="https://pubg.com/ko/news/10459" target="_blank">pubg.com/ko</a></li>
+      <li>서든어택 2026 시즌3 '패러독스' — <a href="https://www.inven.co.kr/webzine/news/?news=318057" target="_blank">인벤</a> / <a href="https://bbs.ruliweb.com/news/board/300007/read/2350340" target="_blank">루리웹</a></li>
+      <li>Valorant Act 4 Summit·Night Market — <a href="https://saiganak.com/news/valorant-season2026-act4/" target="_blank">Act4</a> / <a href="https://www.strafe.com/news/read/valorant-night-market-returns-july-16-complete-list-of-skins/" target="_blank">Strafe</a></li>
+      <li>OW ↔ Marvel Rivals 동접 — <a href="https://www.thegamer.com/overwatch-concurrent-player-overtakes-marvel-rivals/" target="_blank">TheGamer</a> (서드파티, 재확인 권장)</li>
+    </ul>
+    <p style="margin-top:12px; color:#8a93a6;">데일리 FPS·슈터 레이더 · 자동 생성 · 커뮤니티 출처는 원문 확인 후 인용 권장 · 라이온하트 CM/기획용 내부 참고 자료</p>
+  </footer>
+
+</div>
+</body>
+</html>

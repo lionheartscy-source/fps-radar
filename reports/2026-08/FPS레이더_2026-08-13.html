@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 커뮤니티/이벤트 레이더 — 2026-08-13</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: #F4F6FB; color: #1F2A44; line-height: 1.6; padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; border-radius: 16px; padding: 28px 30px; box-shadow: 0 6px 24px rgba(31,42,68,.18);
+  }
+  header.hero h1 { font-size: 25px; font-weight: 800; letter-spacing: -.5px; }
+  header.hero .sub { margin-top: 8px; font-size: 14px; opacity: .92; }
+  .badge {
+    display: inline-block; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3);
+    padding: 3px 11px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-top: 14px; margin-right: 6px;
+  }
+  .badge.warm { background: #F6C544; color: #1F2A44; border-color: #F6C544; }
+  section { margin-top: 30px; }
+  h2 {
+    font-size: 18px; color: #1F2A44; font-weight: 800; margin-bottom: 14px;
+    padding-left: 12px; border-left: 5px solid #2E5AAC;
+  }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  .kpi {
+    background: #fff; border-radius: 13px; padding: 17px 18px; border: 1px solid #E3E8F2;
+    box-shadow: 0 2px 8px rgba(31,42,68,.05);
+  }
+  .kpi .label { font-size: 12px; color: #5C6B8A; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
+  .kpi .big { font-size: 21px; font-weight: 800; color: #2E5AAC; margin: 6px 0 3px; letter-spacing: -.3px; }
+  .kpi .desc { font-size: 12.5px; color: #44506B; }
+  .kpi.alert { border-color: #E8B4B0; }
+  .kpi.alert .big { color: #C0392B; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(31,42,68,.06); font-size: 13.5px; }
+  th { background: #1F2A44; color: #fff; text-align: left; padding: 11px 13px; font-weight: 700; font-size: 12.5px; }
+  td { padding: 11px 13px; vertical-align: top; border-bottom: 1px solid #EDF1F8; }
+  tbody tr:nth-child(even) { background: #F7F9FD; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+  .t-new { background: #E3EDFB; color: #2E5AAC; }
+  .t-event { background: #E4F5EC; color: #1E7A47; }
+  .t-live { background: #FFF3D6; color: #9A6B00; }
+  .t-risk { background: #FBE6E4; color: #C0392B; }
+  .t-patch { background: #ECE9FB; color: #6042AC; }
+  .react { color: #44506B; }
+  a { color: #2E5AAC; text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  .risk-card {
+    background: #fff; border: 1px solid #E8B4B0; border-left: 5px solid #C0392B;
+    border-radius: 11px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .risk-card h3 { font-size: 14.5px; color: #C0392B; margin-bottom: 5px; }
+  .risk-card .lesson { font-size: 13px; color: #1F2A44; margin-top: 7px; background: #FBF3F2; padding: 8px 11px; border-radius: 7px; }
+  .action {
+    background: #fff; border: 1px solid #C7D5EE; border-left: 5px solid #2E5AAC;
+    border-radius: 11px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .action h3 { font-size: 14.5px; color: #2E5AAC; margin-bottom: 5px; }
+  .note { font-size: 12px; color: #5C6B8A; }
+  footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid #DDE3EF; }
+  footer h2 { font-size: 15px; border-left-color: #5C6B8A; }
+  .src { font-size: 12.5px; color: #44506B; margin: 4px 0; }
+  .caution { background: #FFF8E6; border: 1px solid #F0D48A; border-radius: 9px; padding: 12px 15px; font-size: 12.5px; color: #6B5200; margin-top: 14px; }
+  .quiet { background: #EEF2FA; border-radius: 10px; padding: 13px 16px; font-size: 13.5px; color: #33405C; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">데일리 여론·이벤트 브리핑 · 기준일 2026-08-13(목) 09:00 KST · 커버 기간: 최근 24~48시간(8/11~8/13)</div>
+    <span class="badge warm">오늘의 헤드라인 · 마블 라이벌즈 여름 페스티벌 Vol.2 오늘 시작</span>
+    <span class="badge">국내 + 글로벌 병행</span>
+  </header>
+
+  <div class="quiet" style="margin-top:24px;">
+    <strong>한 줄 브리핑:</strong> 대형 논란·런칭은 없는 <em>비교적 조용한 평일</em>입니다. 최대 이슈는 오늘 시작하는 <strong>마블 라이벌즈 여름 페스티벌 Vol.2(수영복 스킨 6종)</strong>와 <strong>에이펙스 8/11 핫픽스</strong>. 국내는 발로란트 PC방 이벤트·서든어택 콤보패스 시즌3가 진행 중입니다. 업계 전반의 <strong>스킨 수익화 백래시</strong> 흐름이 여름 스킨 시즌과 맞물려 재점화 소지가 있어 리스크 항목에 정리했습니다.
+  </div>
+
+  <section>
+    <h2>핵심 요약 (KPI)</h2>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="label">오늘 신규 이벤트</div>
+        <div class="big">마블 라이벌즈</div>
+        <div class="desc">여름 페스티벌 Vol.2 · 8/13 시작 · 수영복 스킨 6종 + 낚시형 이벤트 패스</div>
+      </div>
+      <div class="kpi">
+        <div class="label">최신 패치 (글로벌)</div>
+        <div class="big">에이펙스 8/11</div>
+        <div class="desc">신콘텐츠 없는 버그 수정 핫픽스(당일 2차 패치 추가 배포)</div>
+      </div>
+      <div class="kpi">
+        <div class="label">국내 진행 이벤트</div>
+        <div class="big">발로 · 서든</div>
+        <div class="desc">발로란트 PC방 혜택(~8/31) / 서든어택 콤보패스 시즌3(~8/20)</div>
+      </div>
+      <div class="kpi alert">
+        <div class="label">리스크 신호</div>
+        <div class="big">스킨 수익화</div>
+        <div class="desc">여름 스킨 시즌 + 업계 반복되는 가격·과금 백래시 → 사전 커뮤니케이션 필요</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>국내 포커스</h2>
+    <table>
+      <thead>
+        <tr><th style="width:14%">게임</th><th style="width:26%">이벤트/소식</th><th style="width:11%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응·메모</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>발로란트 (KR)</strong></td>
+          <td>8월 PC방 혜택 + VAL조각 이벤트 진행 (PC방 접속 보상·조각 수집)</td>
+          <td>7/29~8/31</td>
+          <td><span class="tag t-live">진행중</span></td>
+          <td class="react">여름방학 PC방 트래픽 겨냥 정기 프로모션. 국내 리텐션 훅으로 무난, 큰 잡음 없음. <a href="https://playvalorant.com/ko-kr/news/announcements/2026-08-pcb-event/">공지</a></td>
+        </tr>
+        <tr>
+          <td><strong>서든어택</strong></td>
+          <td>콤보패스 시즌3(무기 영구제·경험치 보너스) 진행. 앞서 200 FPS 확장·시즌3 '패러독스' 업데이트</td>
+          <td>~8/20<br>(200FPS 7/23)</td>
+          <td><span class="tag t-live">진행중</span></td>
+          <td class="react">200 FPS 확장은 클래식 FPS 최적화 대응으로 호평 기류. 콤보패스는 전형적 시즌 과금 패스. <a href="https://bbs.ruliweb.com/news/read/227282">200FPS</a> · <a href="https://zdnet.co.kr/view/?no=20260702163031">시즌3</a></td>
+        </tr>
+        <tr>
+          <td><strong>배틀그라운드 (PUBG)</strong></td>
+          <td>업데이트 42.1: 엘라이 듀오 모드(RTX 필수)·헤이븐 인텐스 BR·연막 물리 변경·블루존 개편 (배경, 6월 적용)</td>
+          <td>6/17(PC)</td>
+          <td><span class="tag t-patch">배경</span></td>
+          <td class="react">이번 주 신규 아님. RTX 전용 모드에 사양 논쟁 잔존. 8월 신규 상점/콜라보는 별도 확인 필요. <a href="https://pubg.com/ko/news/10179">패치노트</a></td>
+        </tr>
+        <tr>
+          <td><strong>오버워치2 (KR)</strong></td>
+          <td>2026 시즌2 진행 중(르세라핌 등 K-콘텐츠 콜라보 라인업 보유). 8/11~13 대형 신규 발표는 미확인</td>
+          <td>진행중</td>
+          <td><span class="tag t-live">진행중</span></td>
+          <td class="react">국내는 K-pop 콜라보 반응이 화력 포인트. 신규 콜라보/미드시즌 발표 시 반응 급등 예상 — 모니터링 유지. <a href="https://overwatch.inven.co.kr/">인벤</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="caution">※ 국내 커뮤니티(인벤·루리웹·디시·아카라이브·에펨)에서 8/11~13 신규 '단독 대형 이슈'는 관측되지 않음. 위 항목은 현재 진행 중인 라이브 이벤트 중심. 동접·매출 수치는 별도 서드파티 트래커 확인 필요(재확인 권장).</div>
+  </section>
+
+  <section>
+    <h2>글로벌 포커스</h2>
+    <table>
+      <thead>
+        <tr><th style="width:15%">게임</th><th style="width:27%">이벤트/소식</th><th style="width:10%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응·메모</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>마블 라이벌즈</strong></td>
+          <td>여름 페스티벌 Vol.2 시작 — 수영복 스킨 6종(스타로드·윈터솔져·스칼렛위치·블랙캣·스톰·매직) + 'Krakoan Reels Vol.2' 낚시 미니게임 이벤트 패스</td>
+          <td><strong>8/13</strong></td>
+          <td><span class="tag t-new">오늘 신규</span></td>
+          <td class="react">시즌 9.5(8/7 시작) 연장 콘텐츠. 캐주얼 낚시형 이벤트 패스가 리텐션 훅으로 주목. 수영복 스킨은 매번 성적대상화·가격 논쟁 소지 → 반응 추이 관찰 권장. <a href="https://insider-gaming.com/marvel-rivals-summer-festival-vol-2-event-dates-times-every-new-swimsuit-skin/">상세</a> · <a href="https://www.marvelrivals.com/20260805/41525_1310120.html">패치노트</a></td>
+        </tr>
+        <tr>
+          <td><strong>에이펙스 레전드</strong></td>
+          <td>8/11 핫픽스: 미식 CAR 재장전 애니·헴록 반동·월즈엣지 미니맵·라이프라인 힐 오디오·블러드하운드 궁 스폰 버그 수정 (당일 2차 패치)</td>
+          <td>8/11</td>
+          <td><span class="tag t-patch">패치</span></td>
+          <td class="react">신규 콘텐츠 없는 안정화 패치. "빠른 후속 핫픽스" 자체는 대응 속도 측면에서 긍정 신호. <a href="https://store.steampowered.com/news/app/1172470/view/685261553769907857">스팀 뉴스</a></td>
+        </tr>
+        <tr>
+          <td><strong>마블 라이벌즈</strong></td>
+          <td>시즌 9.5 'Dev Vision Vol.20' — 신규 빌런 예고·로드맵 공개 (배경, 8/5~8/7)</td>
+          <td>8/7</td>
+          <td><span class="tag t-event">시즌</span></td>
+          <td class="react">신규 빌런 티저에 커뮤니티 기대감. 위 여름 이벤트의 상위 시즌 맥락. <a href="https://www.marvelrivals.com/20260805/41525_1310107.html">Dev Vision</a></td>
+        </tr>
+        <tr>
+          <td><strong>배틀필드6 / REDSEC</strong></td>
+          <td>시즌2(2/17 시작) 이후 라이브 운영 지속. 진행 개선·이동 개선 패치 흐름 (배경)</td>
+          <td>배경</td>
+          <td><span class="tag t-patch">진행 업데이트</span></td>
+          <td class="react">'와키 스킨'·AI아트 논란 등 정체성 관련 백래시가 반복됐던 타이틀 — 신규 시즌/스킨 발표 시 반응 급변 주의. <a href="https://www.gamespot.com/articles/battlefield-6-and-redsec-season-2-is-packed-with-game-improvements/1100-6538185/">시즌2</a></td>
+        </tr>
+        <tr>
+          <td><strong>CS2 / CoD / R6 등</strong></td>
+          <td>8/11~13 커버 기간 내 대형 단독 발표 미관측(정기 마이너 패치 수준)</td>
+          <td>—</td>
+          <td><span class="tag t-live">특기사항 적음</span></td>
+          <td class="react">조용한 구간. 대형 시즌 전환 시점 도래 시 재점검. <a href="https://csdb.gg/patch-notes/">CS2 패치</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="caution">※ 동접·시청·판매 수치는 이번 리포트에서 확정 인용하지 않음 — Steam Charts·트래커 등 <strong>서드파티 지표는 별도 재확인 권장</strong>. 8/11~13 이내 검증된 항목만 '신규'로 표기, 그 외는 '배경/진행 업데이트'로 구분.</div>
+  </section>
+
+  <section>
+    <h2>논란·리스크 신호 (우리 운영 교훈)</h2>
+
+    <div class="risk-card">
+      <h3>① 여름 '수영복/시즌 스킨' — 반복되는 과금·가격 백래시 사이클</h3>
+      <p class="react">업계 전반에서 스킨 가격 논란이 반복 중: 아크 레이더스 $20 스킨 → <em>가격 인하·환불</em>(2025.11), LoL $430 스킨 보이콧, 포트나이트 '비키니 스킨 너프' 논란, 배틀필드6 '와키 스킨/AI아트' 반발. 마블 라이벌즈의 오늘자 수영복 스킨 6종 출시도 동일 리스크 카테고리에 위치.</p>
+      <div class="lesson"><strong>운영 교훈:</strong> 스킨 체감 가격은 "본편 대비 비율"로 인식됨(F2P/유료 여부 무관). 신규 프리미엄 스킨 출시 시 <strong>가격·수량·획득 경로·번들 구성을 공지 시점에 명확히</strong> 밝히고, 환불/보상 시나리오를 사전 마련해 '백래시→뒤늦은 환불' 반복을 예방.</div>
+      <p class="note" style="margin-top:8px;">출처: <a href="https://kotaku.com/arc-raiders-skins-cosmetics-decks-battle-pass-duos-2000643456">Arc Raiders(Kotaku)</a> · <a href="https://www.pcgamesn.com/league-of-legends/permabanning-ahri-new-skin">LoL 보이콧</a> · <a href="https://www.military.com/feature/2026/01/01/battlefield-6-players-are-furious-over-wacky-skins-and-ai-art-claims.html">BF6 스킨/AI아트</a></p>
+    </div>
+
+    <div class="risk-card">
+      <h3>② 수영복 스킨의 표현 수위 논쟁 — 커뮤니티 양극화</h3>
+      <p class="react">수영복/노출 스킨은 '성적대상화 비판'과 '검열 반발'이 동시에 발생하는 대표적 양극화 소재(포트나이트 DC 비키니 스캔들 사례). 국내 커뮤니티는 특히 캐릭터 IP 정체성과 결부해 반응이 격화되기 쉬움.</p>
+      <div class="lesson"><strong>운영 교훈:</strong> 자사 여름 스킨 기획 시 <strong>양방향 반응을 모두 상정한 톤&매너 가이드</strong>를 준비하고, 출시 직후 24~48h 커뮤니티 센티먼트를 집중 모니터링. 사후 수정(너프/리터치)은 또 다른 반발을 부르므로 <strong>출시 전 확정</strong>이 원칙.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>CM 액션 제안</h2>
+
+    <div class="action">
+      <h3>제안 1 — 여름 스킨 출시 '커뮤니케이션 체크리스트' 선제 정비</h3>
+      <p class="react">경쟁작들이 여름 스킨을 동시다발 출시(마블 라이벌즈 8/13, 발로 PC방, 서든 콤보패스)하며 <em>스킨 과금 담론</em>이 다시 뜨거워지는 시점. 자사 다음 스킨/패스 출시 공지에 <strong>가격·수량·획득 경로·번들 내역·기간</strong>을 한 장으로 명확히 정리한 표준 템플릿을 붙이고, 예상 FAQ와 환불 정책을 사전 배포. → 백래시의 8할은 '정보 불투명'에서 발생하므로 투명성만으로 리스크 상당 부분 상쇄.</p>
+    </div>
+
+    <div class="action">
+      <h3>제안 2 — '캐주얼 리텐션 훅' 벤치마크 (낚시형 이벤트 패스)</h3>
+      <p class="react">마블 라이벌즈가 시즌 중반 리텐션을 <strong>낚시 미니게임형 이벤트 패스(Krakoan Reels)</strong>로 방어하는 패턴이 반복 성공 중. 전투 외 캐주얼 루프 + 일일 접속 보상(서든 콤보패스와 동일 논리)은 여름 이탈 방어에 효과적. → 자사 여름 중간 이벤트에 <strong>저부담 일일 미션 + 미니게임형 훅</strong> 도입을 검토, 하드코어 시즌 콘텐츠와 병행 배치.</p>
+    </div>
+  </section>
+
+  <footer>
+    <h2>출처 · 유의사항</h2>
+    <div class="src">· 마블 라이벌즈 여름 페스티벌 Vol.2: <a href="https://insider-gaming.com/marvel-rivals-summer-festival-vol-2-event-dates-times-every-new-swimsuit-skin/">Insider Gaming</a>, <a href="https://www.marvelrivals.com/20260805/41525_1310120.html">공식 패치노트</a></div>
+    <div class="src">· 에이펙스 8/11 핫픽스: <a href="https://store.steampowered.com/news/app/1172470/view/685261553769907857">Steam News(EA)</a></div>
+    <div class="src">· 발로란트 KR PC방/조각 이벤트: <a href="https://playvalorant.com/ko-kr/news/announcements/2026-08-pcb-event/">공식 공지</a></div>
+    <div class="src">· 서든어택 200FPS·시즌3: <a href="https://bbs.ruliweb.com/news/read/227282">루리웹</a>, <a href="https://zdnet.co.kr/view/?no=20260702163031">ZDNet Korea</a></div>
+    <div class="src">· PUBG 업데이트 42.1: <a href="https://pubg.com/ko/news/10179">공식 뉴스</a></div>
+    <div class="src">· 배틀필드6 시즌2/REDSEC: <a href="https://www.gamespot.com/articles/battlefield-6-and-redsec-season-2-is-packed-with-game-improvements/1100-6538185/">GameSpot</a></div>
+    <div class="src">· 스킨 수익화 백래시 사례: <a href="https://kotaku.com/arc-raiders-skins-cosmetics-decks-battle-pass-duos-2000643456">Arc Raiders(Kotaku)</a>, <a href="https://www.pcgamesn.com/league-of-legends/permabanning-ahri-new-skin">LoL(PCGamesN)</a>, <a href="https://www.military.com/feature/2026/01/01/battlefield-6-players-are-furious-over-wacky-skins-and-ai-art-claims.html">BF6(Military.com)</a></div>
+    <div class="caution" style="margin-top:16px;">
+      <strong>유의사항:</strong> 본 리포트는 8/11~8/13 커버 기간 내 검증 가능한 소식 위주로 작성했으며, 커버 기간 밖 항목은 '배경/진행 업데이트'로 명시했습니다. 동접·시청·판매 등 <strong>서드파티 트래커 수치는 확정 인용을 지양했으며 인용 시 재확인이 필요</strong>합니다. 커뮤니티 반응은 관측 시점의 여론 기류를 요약한 것으로, 개별 커뮤니티(레딧·루리웹·인벤·디시·에펨·아카라이브)에서 편차가 있을 수 있습니다.
+    </div>
+    <div class="note" style="margin-top:14px; text-align:center;">FPS·슈터 이벤트 동향 레이더 · 자동 생성 · 2026-08-13(목) 09:00 KST</div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 FPS·슈터 레이더 · 2026-07-11</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: #F4F6FB; color: #1F2A44; line-height: 1.55; padding: 24px 16px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header.hero {
+    background: linear-gradient(135deg, #1F2A44 0%, #2E5AAC 100%);
+    color: #fff; border-radius: 16px; padding: 28px 30px; box-shadow: 0 6px 22px rgba(31,42,68,.18);
+  }
+  header.hero h1 { font-size: 1.55rem; letter-spacing: -.5px; }
+  header.hero .sub { margin-top: 8px; font-size: .95rem; opacity: .92; }
+  header.hero .cover {
+    margin-top: 14px; display: inline-block; background: rgba(255,255,255,.14);
+    padding: 6px 14px; border-radius: 20px; font-size: .85rem; font-weight: 600;
+  }
+  .note-weekend { margin-top: 10px; font-size: .82rem; opacity: .85; }
+
+  h2.section {
+    font-size: 1.15rem; margin: 32px 0 14px; padding-left: 12px;
+    border-left: 5px solid #2E5AAC; color: #1F2A44;
+  }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr)); gap: 14px; margin-top: 22px; }
+  .kpi {
+    background: #fff; border: 1px solid #E1E7F2; border-radius: 12px; padding: 16px 16px 14px;
+    box-shadow: 0 2px 8px rgba(31,42,68,.05);
+  }
+  .kpi .label { font-size: .74rem; font-weight: 700; color: #2E5AAC; text-transform: uppercase; letter-spacing: .4px; }
+  .kpi .big { font-size: 1.32rem; font-weight: 800; margin: 6px 0 3px; color: #1F2A44; }
+  .kpi .desc { font-size: .82rem; color: #4a5570; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(31,42,68,.06); font-size: .86rem; }
+  thead th { background: #1F2A44; color: #fff; text-align: left; padding: 11px 12px; font-weight: 600; font-size: .8rem; }
+  tbody td { padding: 10px 12px; vertical-align: top; border-bottom: 1px solid #EDF1F8; }
+  tbody tr:nth-child(even) { background: #F7F9FD; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .t-kr { background: #E5EEFB; color: #2E5AAC; }
+  .t-new { background: #E3F4EA; color: #1E7A46; }
+  .t-risk { background: #FBE7E7; color: #B3352F; }
+  .t-esp { background: #EFE7FB; color: #6A34B3; }
+  a { color: #2E5AAC; text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  .src-inline { font-size: .78rem; }
+
+  .risk-card, .action-card {
+    background: #fff; border-radius: 12px; padding: 16px 18px; margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(31,42,68,.05); border-left: 4px solid #B3352F;
+  }
+  .action-card { border-left-color: #1E7A46; }
+  .risk-card h4, .action-card h4 { font-size: .96rem; margin-bottom: 5px; }
+  .risk-card .lesson, .action-card .why { font-size: .84rem; color: #4a5570; margin-top: 6px; }
+  .risk-card .lesson b, .action-card .why b { color: #1F2A44; }
+
+  footer { margin-top: 34px; padding: 20px; background: #fff; border-radius: 12px; border: 1px solid #E1E7F2; font-size: .8rem; color: #4a5570; }
+  footer h3 { font-size: .9rem; color: #1F2A44; margin-bottom: 8px; }
+  footer ul { list-style: none; margin: 6px 0 0; }
+  footer li { padding: 3px 0; border-bottom: 1px dashed #EDF1F8; }
+  .caveat { margin-top: 14px; padding: 10px 12px; background: #FFF7E6; border: 1px solid #F2E2B8; border-radius: 8px; color: #7a5b16; font-size: .8rem; }
+  .muted { color: #7a839a; font-size: .8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🎯 데일리 FPS·슈터 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">발로란트 · 오버워치 · 에이펙스 · 콜옵 · CS2 · R6 · 배틀필드6 · 마블 라이벌즈 · 델타포스 · THE FINALS · PUBG · 서든어택 등</div>
+    <div class="cover">기준일 2026-07-11 (토) · 커버기간: 최근 48시간 + 금주(7/6–7/10) 진행 이슈</div>
+    <div class="note-weekend">※ 정규 스케줄(월~금) 외 토요일 실행 회차입니다. 신규 주말 이슈는 아직 발생 전이므로, 최근 이틀 새 소식과 금주 진행 중 이벤트를 요약합니다.</div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="label">금주 신규·업데이트</div>
+      <div class="big">6+ 타이틀</div>
+      <div class="desc">서든어택·CS2·배필6·마블 라이벌즈·PUBG·오버워치 동시 대형 업데이트</div>
+    </div>
+    <div class="kpi">
+      <div class="label">국내 헤드라인</div>
+      <div class="big">서든어택 시즌3</div>
+      <div class="desc">'패러독스' + 신규 캐릭터 C.베라 (7/2)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">글로벌 핫이슈</div>
+      <div class="big">마블 라이벌즈</div>
+      <div class="desc">대규모 밸런스 개편 — '재생 실드' 신설 (7/10)</div>
+    </div>
+    <div class="kpi">
+      <div class="label">리스크 신호</div>
+      <div class="big">2건</div>
+      <div class="desc">CS2 C4 리디자인 익일 핫픽스 · 마블 광범위 너프 반발 가능</div>
+    </div>
+    <div class="kpi">
+      <div class="label">운영 호평 사례</div>
+      <div class="big">PUBG 확률 개편</div>
+      <div class="desc">제작소 '이중 확률' 제거 → 투명성 강화</div>
+    </div>
+  </div>
+
+  <h2 class="section">🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>서든어택</b> <span class="tag t-kr">국내</span></td>
+        <td>2026 시즌3 <b>'패러독스'</b> · 신규 캐릭터 <b>C.베라</b> · 신무기 RSR Paradox(피격 이속 감소) · 모래파기 이벤트 · PC방 혜택</td>
+        <td>7/2 업데이트<br>(이벤트 ~7/23·7/30)</td>
+        <td><span class="tag t-new">시즌·캐릭터</span></td>
+        <td>신무기·PC방 혜택·서든패스 지급에 긍정적. 통합 시즌전/클랜 랭크전 새 시즌 개시로 경쟁 유저 관심. <span class="src-inline"><a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤</a> · <a href="https://www.khgames.co.kr/news/articleView.html?idxno=306009">경향게임스</a></span></td>
+      </tr>
+      <tr>
+        <td><b>PUBG</b> <span class="tag t-kr">국내</span></td>
+        <td>2026 블랙 마켓 재개 + <b>제작소 개편(이중 확률 체계 제거)</b> · 성장형 무기 스킨/신규 크로마 · '보급고' 통합</td>
+        <td>~7/15(PC)<br>~7/23(콘솔)</td>
+        <td><span class="tag t-new">BM·과금개편</span></td>
+        <td>이중 확률 → 단일 화물 직접 보상으로 단순화, 확률 투명성 측면에서 긍정 평가. <span class="src-inline"><a href="https://pubg.com/ko/news/10182">pubg.com</a></span></td>
+      </tr>
+      <tr>
+        <td><b>발로란트 KR</b> <span class="tag t-kr">국내</span></td>
+        <td>VCT 퍼시픽 스테이지2 <b>티켓 판매 개시</b></td>
+        <td>7/2~</td>
+        <td><span class="tag t-esp">e스포츠</span></td>
+        <td>오프라인 관전 수요·현장 이벤트 관심. 국내 발로란트 커뮤니티 화제. <span class="src-inline"><a href="https://www.inven.co.kr/webzine/news/?news=317716">인벤</a></span></td>
+      </tr>
+      <tr>
+        <td><b>오버워치(넥슨)</b> <span class="tag t-kr">국내</span></td>
+        <td>국내 서비스 시즌 운영 지속 (글로벌 시즌2 'Summit' 연동)</td>
+        <td>진행</td>
+        <td><span class="tag t-esp">진행 업데이트</span></td>
+        <td>특기 신규 이슈 적음 — 진행 상태 모니터링. <span class="src-inline"><a href="https://namu.wiki/w/%EC%98%A4%EB%B2%84%EC%9B%8C%EC%B9%98/%EB%84%A5%EC%8A%A8">참고</a></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 메모</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>마블 라이벌즈</b></td>
+        <td>Ver.20260710 밸런스 — <b>'재생 실드(Regenerative Shields)'</b> 신설 · 궁극기 게이지 축소(뱅가드/듀얼리스트 70→55%) · 너프: 베놈(체력 675→500)·사이클롭스·아이언맨·로그 / 버프: 그루트·헬라·클록&대거</td>
+        <td>7/6~7/10</td>
+        <td><span class="tag t-new">밸런스·시즌</span></td>
+        <td>탱커 다수의 '체력→재생 실드' 전환으로 메타 급변, 주력 픽 조정 논쟁 예상. <span class="src-inline"><a href="https://www.marvelrivals.com/balancepost/20260706/41667_1306647.html">공식 밸런스 포스트</a></span></td>
+      </tr>
+      <tr>
+        <td><b>CS2</b></td>
+        <td>7/8 업데이트 — 프리미어 <b>시즌5</b> 개막 · 맵풀 변경(Cache 편입 / Overpass 제외) · <b>C4 리디자인</b>(확산형 충격파)</td>
+        <td>7/8 (7/9 핫픽스)</td>
+        <td><span class="tag t-new">시즌·맵·무기</span></td>
+        <td>맵풀 개편은 환영, C4 데미지 계산은 익일(7/9) 핫픽스로 조정 — 밸런스 우려 신호. <span class="src-inline"><a href="https://cs2news.gg/cs2-update/cs2-update-2026-07-08-259245">CS2News</a> · <a href="https://www.counter-strike.net/news/updates">공식</a></span></td>
+      </tr>
+      <tr>
+        <td><b>배틀필드6 / REDSEC</b></td>
+        <td>시즌3 업데이트 — <b>Wet Work</b> 계약 이벤트 · <b>Tactical Obliteration</b>(8v8) · <b>Casual BR</b>(AI 봇 혼합, 뉴비/워밍업용)</td>
+        <td>7/1~ (금주 진행)</td>
+        <td><span class="tag t-new">시즌·모드</span></td>
+        <td>진입장벽 낮춘 캐주얼 BR·소규모 모드에 신규/복귀 유저 긍정 반응. <span class="src-inline"><a href="https://www.ea.com/games/battlefield/redsec/news">EA REDSEC</a> · <a href="https://www.otakustudy.com/video-game/2026/07/battlefield-6-and-battlefield-redsec-season-3-update-adds-new-modes-and-event/">Otaku's Study</a></span></td>
+      </tr>
+      <tr>
+        <td><b>오버워치</b></td>
+        <td>시즌2 <b>'Summit'</b> — 스토리 연간화, 신규 리콘 DPS <b>Sierra</b>, 남극 맵 리워크, <b>디아블로 콜라보</b>(미드시즌 예정)</td>
+        <td>진행(4/14~)</td>
+        <td><span class="tag t-esp">진행 업데이트</span></td>
+        <td>진행 중 시즌 — 디아블로 콜라보/미식 스킨 관심. 배경 참고. <span class="src-inline"><a href="https://www.pcgamer.com/games/fps/overwatch-season-2-release-date-roadmap-summit/">PC Gamer</a></span></td>
+      </tr>
+      <tr>
+        <td><b>델타포스 · 에이펙스 · 콜옵</b></td>
+        <td>각 진행 시즌 운영 지속 — 특기할 신규 대형 이슈 적음</td>
+        <td>진행</td>
+        <td><span class="tag t-esp">진행 업데이트</span></td>
+        <td>델타포스는 신규 시즌·콜라보로 서비스 확대 기조 유지(배경). <span class="src-inline"><a href="https://www.playdeltaforce.com/ko/detail/news-version-update-new-season-mophosis-opening-soon.html">델타포스</a></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">⚠️ 논란·리스크 신호 <span class="muted">(우리 운영 교훈 포함)</span></h2>
+
+  <div class="risk-card">
+    <h4>① CS2 C4 리디자인 → 익일 핫픽스</h4>
+    <p>7/8 업데이트로 C4 폭발 데미지를 사전연산 방식으로 재설계했으나, 다음 날(7/9) 데미지 계산 관련 후속 수정이 뒤따랐습니다. 핵심 메카닉 변경 직후 밸런스 우려가 표면화된 사례입니다.</p>
+    <p class="lesson"><b>운영 교훈:</b> 코어 시스템(무기/데미지) 대규모 변경은 <b>익일 핫픽스 대응조·롤백 시나리오·명확한 변경 근거 공지</b>를 사전에 준비해야 커뮤니티 불신을 줄일 수 있습니다.</p>
+  </div>
+
+  <div class="risk-card">
+    <h4>② 마블 라이벌즈 광범위 너프 → 메타 격변 반발 가능</h4>
+    <p>궁극기 게이지 축소와 베놈(675→500) 등 다수 캐릭터 체력·데미지 하향, 탱커의 '체력→재생 실드' 일괄 전환으로 메타가 크게 흔들립니다. 주력 픽 유저층의 불만이 커뮤니티(레딧·인벤)에서 나올 소지가 있습니다.</p>
+    <p class="lesson"><b>운영 교훈:</b> 대형 밸런스 패치는 <b>변경 근거 + 데이터 + 모니터링/재조정 계획</b>을 함께 공지해 "일방적 너프" 인상을 완화하는 커뮤니케이션이 필요합니다.</p>
+  </div>
+
+  <div class="risk-card" style="border-left-color:#C98A1E;">
+    <h4>③ 여름 성수기 동시 대형 업데이트 → 유저 관심 분산</h4>
+    <p>서든어택·CS2·배필6·마블 라이벌즈·PUBG가 같은 주에 대형 업데이트를 집중. 슈터 유저의 플레이 시간·관심이 분산되는 시기입니다.</p>
+    <p class="lesson"><b>운영 교훈:</b> 자사 이벤트/패치 일정을 <b>경쟁작 대형 패치일과 겹치지 않게</b> 조정하고, 겹칠 경우 차별화 포인트(콜라보·한정 보상)를 전면에 배치하세요.</p>
+  </div>
+
+  <h2 class="section">✅ CM 액션 제안</h2>
+
+  <div class="action-card">
+    <h4>제안 1 — 확률 투명성 벤치마킹</h4>
+    <p>PUBG가 제작소의 '이중 확률 체계'를 제거해 단일 화물 직접 보상으로 단순화한 사례를 참고, 자사 확률형 상품 구조를 <b>단순화·명확 고지</b>하는 방향을 검토.</p>
+    <p class="why"><b>기대 효과:</b> 최근 국내 확률형 아이템 규제·여론 민감도가 높은 상황에서 <b>확률 백래시를 선제 차단</b>하고 신뢰도 있는 운영 이미지 확보.</p>
+  </div>
+
+  <div class="action-card">
+    <h4>제안 2 — '코어 변경' 패치노트 커뮤니케이션 템플릿 도입</h4>
+    <p>CS2·마블 라이벌즈 사례처럼, 무기/밸런스 등 코어 변경 공지 시 <b>①변경 근거 ②반영 데이터 ③모니터링·핫픽스 일정</b>을 한 세트로 담는 패치노트 포맷을 표준화.</p>
+    <p class="why"><b>기대 효과:</b> 급격한 변경에도 유저가 "왜/앞으로 어떻게"를 이해해 초기 반발과 문의 폭증을 줄이고 CM 대응 부담 경감.</p>
+  </div>
+
+  <footer>
+    <h3>📌 출처</h3>
+    <ul>
+      <li>서든어택 시즌3 '패러독스' — <a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤</a>, <a href="https://www.khgames.co.kr/news/articleView.html?idxno=306009">경향게임스</a></li>
+      <li>PUBG 2026 블랙 마켓·제작소 개편 — <a href="https://pubg.com/ko/news/10182">pubg.com/ko/news</a></li>
+      <li>VCT 퍼시픽 스테이지2 티켓 — <a href="https://www.inven.co.kr/webzine/news/?news=317716">인벤</a></li>
+      <li>마블 라이벌즈 Ver.20260710 밸런스 포스트 — <a href="https://www.marvelrivals.com/balancepost/20260706/41667_1306647.html">marvelrivals.com</a></li>
+      <li>CS2 7/8 업데이트 — <a href="https://cs2news.gg/cs2-update/cs2-update-2026-07-08-259245">CS2News</a>, <a href="https://www.counter-strike.net/news/updates">공식 업데이트</a></li>
+      <li>배틀필드6/REDSEC 시즌3 — <a href="https://www.ea.com/games/battlefield/redsec/news">EA REDSEC</a>, <a href="https://www.otakustudy.com/video-game/2026/07/battlefield-6-and-battlefield-redsec-season-3-update-adds-new-modes-and-event/">Otaku's Study</a></li>
+      <li>오버워치 시즌2 'Summit' — <a href="https://www.pcgamer.com/games/fps/overwatch-season-2-release-date-roadmap-summit/">PC Gamer</a></li>
+      <li>델타포스 신규 시즌 — <a href="https://www.playdeltaforce.com/ko/detail/news-version-update-new-season-mophosis-opening-soon.html">playdeltaforce.com</a></li>
+    </ul>
+    <div class="caveat">
+      <b>유의사항 —</b> 동시접속·판매·시청 등 수치는 서드파티/기사 기준으로 <b>재확인 권장</b>합니다. 배틀필드6·델타포스의 과거 동접 기록(예: 델타포스 17만대는 2025년 7월 기록)은 <b>현재 시점 지표가 아니므로</b> 본 리포트에서는 배경 참고로만 다뤘습니다. 커버기간을 벗어난 항목(오버워치 4월, 발로란트 믹스 3월 등)은 '진행 업데이트/배경'으로만 표기했습니다.
+    </div>
+    <p class="muted" style="margin-top:10px;">국내 커뮤니티(루리웹·인벤·디시·에펨·아카라이브) 및 전문지(디스이즈게임·게임메카·경향게임스·Dexerto·PC Gamer) 교차 확인. 생성: 데일리 FPS·슈터 레이더 · 2026-07-11(토).</p>
+  </footer>
+
+</div>
+</body>
+</html>

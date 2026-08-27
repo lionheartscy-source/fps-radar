@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPS·슈터 데일리 레이더 · 2026-07-27 (주말 포함)</title>
+<style>
+  :root{
+    --navy:#1F2A44; --blue:#2E5AAC; --blue-soft:#EAF0FA;
+    --ink:#20262F; --muted:#5B6472; --line:#D9DFEA;
+    --bg:#F5F7FB; --card:#FFFFFF; --zebra:#F1F5FB;
+    --warn:#B4322A; --warn-bg:#FCEDEB; --ok:#1E7A46; --ok-bg:#E9F6EE;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+    line-height:1.6;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px;}
+  header.hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;
+    padding:30px 26px 26px;border-radius:0 0 14px 14px;box-shadow:0 4px 18px rgba(31,42,68,.18);}
+  .hero h1{margin:0 0 6px;font-size:25px;letter-spacing:-.3px;}
+  .hero .sub{font-size:14px;opacity:.92;margin:2px 0;}
+  .badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;margin-top:8px;}
+  h2{font-size:19px;color:var(--navy);border-left:5px solid var(--blue);
+    padding-left:10px;margin:34px 0 14px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:20px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;
+    box-shadow:0 1px 3px rgba(31,42,68,.06);}
+  .kpi .lab{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.3px;}
+  .kpi .val{font-size:17px;font-weight:700;color:var(--navy);margin:6px 0 3px;line-height:1.35;}
+  .kpi .note{font-size:12px;color:var(--muted);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;font-size:13.5px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 11px;font-weight:600;font-size:12.5px;}
+  td{padding:10px 11px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--zebra);}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;}
+  .t-event{background:var(--blue-soft);color:var(--blue);}
+  .t-live{background:#FFF4E0;color:#9A6400;}
+  .t-launch{background:var(--ok-bg);color:var(--ok);}
+  .t-risk{background:var(--warn-bg);color:var(--warn);}
+  a{color:var(--blue);text-decoration:none;font-weight:600;}
+  a:hover{text-decoration:underline;}
+  .risk-card{background:var(--warn-bg);border:1px solid #F0C8C3;border-left:5px solid var(--warn);
+    border-radius:10px;padding:14px 16px;margin:12px 0;}
+  .risk-card h3{margin:0 0 6px;font-size:15px;color:var(--warn);}
+  .lesson{background:#fff;border:1px dashed #E0B4AE;border-radius:8px;padding:8px 11px;margin-top:8px;font-size:13px;}
+  .lesson b{color:var(--warn);}
+  .action{background:var(--blue-soft);border:1px solid #CBDAF2;border-left:5px solid var(--blue);
+    border-radius:10px;padding:14px 16px;margin:12px 0;}
+  .action h3{margin:0 0 6px;font-size:15px;color:var(--blue);}
+  .quiet{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--muted);font-size:13.5px;}
+  footer{margin-top:40px;padding-top:18px;border-top:2px solid var(--line);font-size:12.5px;color:var(--muted);}
+  footer h3{color:var(--navy);font-size:14px;margin:0 0 8px;}
+  footer ul{margin:6px 0 14px;padding-left:18px;}
+  footer li{margin:3px 0;}
+  .caveat{background:#fff8e8;border:1px solid #f0dca0;border-radius:8px;padding:10px 13px;font-size:12.5px;color:#7a5c00;margin-top:14px;}
+  .reg{font-size:11px;color:var(--muted);font-style:italic;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <h1>🎯 FPS·슈터 데일리 커뮤니티/이벤트 레이더</h1>
+    <div class="sub">기준일: 2026년 7월 27일 (월) · 라이온하트 CM/기획 관점</div>
+    <div class="sub">커버 기간: 2026-07-24(금) 저녁 ~ 07-26(일) 주말 + 07-27(월) 오전</div>
+    <span class="badge">📅 주말 포함 · 월요일 종합판</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="lab">주말 톤</div>
+      <div class="val">차분한 여름 소강</div>
+      <div class="note">신규 폭발 이슈보다 진행 이벤트·로그인 보상 중심</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">국내 최대 화제</div>
+      <div class="val">오버워치 넥슨 PC 이관</div>
+      <div class="note">8/12 전환 · 계정 연동 백래시 지속</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">글로벌 신규</div>
+      <div class="val">Delta Force 미드시즌</div>
+      <div class="note">7/24~8/6 로그인 이벤트 · 에픽 스킨</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">주목 신맵</div>
+      <div class="val">마블 라이벌즈 'Thebes'</div>
+      <div class="note">7/23 미드시즌 · 아포칼립스 테마</div>
+    </div>
+    <div class="kpi">
+      <div class="lab">리스크 신호</div>
+      <div class="val">플랫폼 이관 반발</div>
+      <div class="note">계정·재화 이전 불안 → 커뮤니티 FAQ 수요</div>
+    </div>
+  </div>
+
+  <!-- 국내 -->
+  <h2>🇰🇷 국내 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:24%">이벤트·이슈</th><th style="width:11%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>오버워치2</b></td>
+        <td>국내 PC 서비스 <b>넥슨 이관</b> — 8/12 전환, 배틀넷↔넥슨 계정 연동 필수, 배틀코인 8/12 이후 사용 불가, Steam 신규 추가 8/11부터 국내 차단 (<a href="https://overwatch.blizzard.com/ko-kr/news/24289716/">공지</a>)</td>
+        <td>연동 7/7~ · D-day 8/12</td>
+        <td><span class="tag t-risk">리스크</span></td>
+        <td>루리웹·디시 <b>불만 지속</b>. "굳이 왜 넥슨" "계정 이전 리스크" "스팀 유저 불이익" 정서. 진행 상황 이전 보장에도 불신 잔존 (<a href="https://bbs.ruliweb.com/family/1476/board/300007/read/2350903">루리웹 스레드</a>)</td>
+      </tr>
+      <tr>
+        <td><b>오버워치2</b></td>
+        <td>2026 프라이드 이벤트 + 신규 스킨, 포트나이트 콜라보(영웅 참전), 탈론의 지배 3시즌 중간 패치</td>
+        <td>7월 진행 중</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td>콜라보엔 우호적, 시즌 밸런스 패치 반응은 갈림. 전반적으로 무난 (<a href="https://overwatch.blizzard.com/ko-kr/news/">새소식</a>)</td>
+      </tr>
+      <tr>
+        <td><b>서든어택</b></td>
+        <td>2026 <b>시즌3 '패러독스'</b> — 무기 개편, 신규 캐릭터, 협동 콘텐츠 <span class="reg">(진행 업데이트)</span></td>
+        <td>7/2 시작</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td>무기 개편 방향엔 관심, 밸런스·과금 라인 지적 병존. 시즌 초 화제성 유지 (<a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤</a>)</td>
+      </tr>
+      <tr>
+        <td><b>배틀그라운드</b></td>
+        <td>업데이트 42.2 적용, 7월 상점/특별 보급, 2026 블랙 마켓 <span class="reg">(진행 업데이트)</span></td>
+        <td>7/14~</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td>맵/제재 리포트 정기 공유엔 신뢰. 신규 화제 이슈는 소강 (<a href="https://pubg.com/ko/news">PUBG 뉴스</a>)</td>
+      </tr>
+      <tr>
+        <td><b>발로란트 KR</b></td>
+        <td>시즌 스킨 번들·에이전트 로테이션 진행 (신규 폭발 이슈 특기사항 적음)</td>
+        <td>주말 소강</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td>번들 가성비 논의 등 통상 화제 수준 (<a href="https://playvalorant.com/ko-kr/news/game-updates/">게임 업데이트</a>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 글로벌 -->
+  <h2>🌐 글로벌 포커스</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">게임</th><th style="width:24%">이벤트·이슈</th><th style="width:11%">날짜</th><th style="width:11%">유형</th><th>커뮤니티 반응</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Delta Force</b></td>
+        <td><b>미드시즌 로그인 이벤트</b> — 에픽 무기 스킨, 'Choose &amp; Conquer' 듀얼 모드 이벤트</td>
+        <td>7/24~8/6</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td>무료 로그인 보상엔 호평. 추출 슈터 팬층 활성, 신규 유입 지속 (<a href="https://patchbot.io/games/delta-force">패치노트</a>)</td>
+      </tr>
+      <tr>
+        <td><b>마블 라이벌즈</b></td>
+        <td><b>신맵 'Thebes'</b>(호송형, 아포칼립스 테마) 미드시즌 투입 · 여름 페스티벌 수영복 스킨 10종 지속 · 시즌9 신영웅 Jubilee</td>
+        <td>맵 7/23 · 시즌9 7/10</td>
+        <td><span class="tag t-launch">신규</span></td>
+        <td>수영복 스킨·신맵에 긍정적. 팀업 시스템 개편 방향엔 기대+우려 혼재 (<a href="https://marvelrivals.gg/season-9/">시즌9</a>, <a href="https://www.gamespot.com/articles/all-swimsuit-skins-in-marvel-rivals-2026-summer-festival-event/">여름 스킨</a>)</td>
+      </tr>
+      <tr>
+        <td><b>배틀필드 6</b></td>
+        <td><b>시즌4</b>(해전 테마) — Wake Island·Tsuru Reef 맵, 함정·잠수함 등 신규 탈것, 커스텀 로비/관전 모드. REDSEC(F2P 배틀로얄) 랭크 확장</td>
+        <td>시즌4 = 7월</td>
+        <td><span class="tag t-launch">신규</span></td>
+        <td>클래식 해전·Wake Island 부활에 호의적. 대규모 탈것전 기대감. 밸런스는 관망 (<a href="https://dotesports.com/battlefield/news/battlefield-6-2026-roadmap">로드맵</a>)</td>
+      </tr>
+      <tr>
+        <td><b>오버워치2</b></td>
+        <td>포트나이트 액트III 쇼다운 콜라보(영웅 참전), 블리즈컨 2026 기념 아이템</td>
+        <td>7월 진행 중</td>
+        <td><span class="tag t-event">이벤트</span></td>
+        <td>크로스 IP 콜라보에 긍정 반응. 아이템 획득 난이도 문의 (<a href="https://overwatch.blizzard.com/ko-kr/news/">새소식</a>)</td>
+      </tr>
+      <tr>
+        <td><b>에이펙스 레전드</b></td>
+        <td>'Overclocked' 시즌 업데이트 & 2026 로드맵 후속 진행</td>
+        <td>7월 진행 중</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td>매치메이킹·안티치트 개선 요구 지속. 로드맵 신뢰 회복 관건 (<a href="https://www.ea.com/en/games/apex-legends/apex-legends/news/overclocked-game-updates">EA 뉴스</a>)</td>
+      </tr>
+      <tr>
+        <td><b>CS2 / R6</b></td>
+        <td>정기 패치·마이너 업데이트 위주 (주말 대형 소식 특기사항 적음)</td>
+        <td>주말 소강</td>
+        <td><span class="tag t-live">진행</span></td>
+        <td>통상 밸런스·케이스 논의 수준 (<a href="https://csgoskins.gg/updates">CS2 업데이트</a>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 리스크 -->
+  <h2>⚠️ 논란·리스크 신호 (우리 운영 교훈)</h2>
+
+  <div class="risk-card">
+    <h3>① 플랫폼/퍼블리셔 이관 = 신뢰 리스크 — 오버워치 넥슨 PC 이관</h3>
+    계정 연동, 재화(배틀코인) 소멸, 스팀 신규 설치 차단 등 "내 자산이 안전한가"에 대한 불안이 반발의 핵심. 진행 상황 이전을 보장해도 <b>절차 복잡성·불투명성</b>이 체감 불신을 키움.
+    <div class="lesson"><b>운영 교훈:</b> 서비스/플랫폼 전환·계정 이전 이슈는 ①단일 FAQ 허브 ②"내 것이 어떻게 되나" 1:1 시뮬레이터(체크리스트) ③마감 카운트다운 리마인더 3종을 <u>사전 배포</u>. 재화·진행도 보존을 '보장'이 아니라 '증거(스크린샷 예시)'로 보여줄 것.</div>
+  </div>
+
+  <div class="risk-card">
+    <h3>② 무기 개편·밸런스 시즌의 양면성 — 서든어택 패러독스</h3>
+    개편은 화제성을 주지만, 신규 무기/캐릭터의 성능·과금 라인이 곧바로 "P2W" 프레임으로 번질 위험. 시즌 초 여론이 중반 이탈률을 좌우.
+    <div class="lesson"><b>운영 교훈:</b> 개편 무기 성능은 <b>수치 근거 + 조정 로드맵</b>을 함께 공지. "핫픽스 여지 있음"을 초기에 명시하면 백래시가 '기대'로 전환됨.</div>
+  </div>
+
+  <div class="caveat">
+    ※ 이번 주말은 신규 대형 논란보다 <b>진행 중 이슈의 연장선</b>이 중심입니다. 여름 성수기 직전 소강 구간으로 판단되며, 다음 주 신규 시즌/콜라보 발표 가능성에 대비 권장.
+  </div>
+
+  <!-- 액션 -->
+  <h2>🎬 CM 액션 제안</h2>
+
+  <div class="action">
+    <h3>액션 1 · '주말 화제 캐치업' 카드뉴스 (금~일 종합)</h3>
+    오버워치 이관 이슈(국내)·Delta Force 로그인 이벤트·마블 신맵(글로벌)을 한 장에 묶은 <b>월요일 아침 캐치업 카드</b> 발행. 자사 채널 유저에게 "주말에 놓친 것 없게" 큐레이션 → 체류·신뢰 동시 확보. 경쟁작 이관 반발 사례는 <u>우리 채널의 '투명 소통' 강점을 대비 노출</u>하는 소재로 활용.
+  </div>
+
+  <div class="action">
+    <h3>액션 2 · 이관/전환 대비 'FAQ 허브' 템플릿 선제 정비</h3>
+    오버워치 사례를 벤치마크해, 향후 자사 대형 전환(시즌 대개편·플랫폼 변경·재화 정책)에 대비한 <b>FAQ 허브 + 계정/재화 체크리스트 템플릿</b>을 지금 초안화. 위기 발생 후가 아니라 <u>발생 전 24~48시간 골든타임</u>에 즉시 배포할 수 있게 상비.
+  </div>
+
+  <!-- 출처 -->
+  <footer>
+    <h3>📎 출처</h3>
+    <ul>
+      <li>오버워치 한국 PC 서비스 변경 안내 — <a href="https://overwatch.blizzard.com/ko-kr/news/24289716/">Blizzard 공지</a> / <a href="https://bbs.ruliweb.com/family/1476/board/300007/read/2350903">루리웹 반응</a></li>
+      <li>오버워치 새소식(콜라보·프라이드·중간패치) — <a href="https://overwatch.blizzard.com/ko-kr/news/">overwatch.blizzard.com</a></li>
+      <li>서든어택 2026 시즌3 패러독스 — <a href="https://www.inven.co.kr/webzine/news/?news=318057">인벤</a> / <a href="https://www.betanews.net/article/view/beta202607020049">베타뉴스</a></li>
+      <li>PUBG 배틀그라운드 뉴스·패치 42.2 — <a href="https://pubg.com/ko/news">pubg.com/ko/news</a></li>
+      <li>Delta Force 미드시즌 로그인 이벤트 — <a href="https://patchbot.io/games/delta-force">patchbot.io</a></li>
+      <li>마블 라이벌즈 시즌9·Thebes·여름 스킨 — <a href="https://marvelrivals.gg/season-9/">marvelrivals.gg</a> / <a href="https://www.gamespot.com/articles/all-swimsuit-skins-in-marvel-rivals-2026-summer-festival-event/">GameSpot</a></li>
+      <li>배틀필드 6 2026 로드맵·시즌4·REDSEC — <a href="https://dotesports.com/battlefield/news/battlefield-6-2026-roadmap">Dot Esports</a></li>
+      <li>에이펙스 Overclocked — <a href="https://www.ea.com/en/games/apex-legends/apex-legends/news/overclocked-game-updates">EA</a></li>
+    </ul>
+    <div class="caveat">
+      <b>유의사항:</b> 동시접속·시청·판매 수치는 본 리포트에 단정 수치로 포함하지 않았습니다. 서드파티 트래커(Steam Charts·Twitch 등) 기반 수치를 인용할 경우 반드시 <b>'재확인 권장'</b> 표기 후 사용하세요. 일부 항목(배틀필드 시즌4 등)은 로드맵·주간 공지 기준으로, 세부 적용일은 공식 채널 재확인을 권장합니다. 커뮤니티 반응은 스레드 정성 요약으로 표본 편향이 있을 수 있습니다.
+    </div>
+    <p style="margin-top:14px;">본 리포트는 '데일리 FPS·슈터 레이더' 자동 작업으로 생성 · 2026-07-27(월) 09:00 KST · 라이온하트 CM/기획용</p>
+  </footer>
+
+</div>
+</body>
+</html>
