@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS·슈터 데일리 레이더 · 아카이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   FPS·슈터 레이더 — 아카이브 뷰어 (캘린더 + iframe) · 고정 인덱스
+   ▸ 이 파일은 매일 수정하지 않습니다(고정).
+   ▸ 매일 바뀌는 것: reports.json(목록) + FPS레이더_YYYY-MM-DD.html(그날 리포트)
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#EEF1F6; --card:#FFFFFF; --card-2:#F4F6FA;
+  --ink:#161C29; --ink-2:#3B4354; --muted:#6B7488; --faint:#8B93A5;
+  --line:#E1E6EF; --line-soft:#EDF0F6; --zebra:#F7F9FC;
+  --navy:#1B2A4A; --blue:#2E5AAC; --blue-2:#3E6FCB; --blue-soft:#E7EEFB; --blue-line:#CBD9F2;
+  --red:#B3352F; --red-soft:#FBECEA; --amber:#9A6A12; --amber-soft:#FBF2DD;
+  --green:#1F7A4D; --green-soft:#E7F5EC;
+  --shadow:0 1px 2px rgba(22,28,41,.04), 0 6px 18px -12px rgba(22,28,41,.22);
+  --shadow-lift:0 2px 6px rgba(22,28,41,.07), 0 20px 40px -22px rgba(22,28,41,.34);
+  --ring:var(--blue);
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+html[data-theme="dark"]{
+  --bg:#0E1016; --card:#171A22; --card-2:#1C2029;
+  --ink:#EAECF1; --ink-2:#C3C8D4; --muted:#8B93A5; --faint:#6E7689;
+  --line:#282D38; --line-soft:#20242D; --zebra:#1B1F27;
+  --navy:#CFE0FF; --blue:#7CA6EE; --blue-2:#8FB4F2; --blue-soft:#16202F; --blue-line:#25344C;
+  --red:#EE7469; --red-soft:#2A1715; --amber:#D9AC55; --amber-soft:#241C0E;
+  --green:#63C793; --green-soft:#0F2018;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -14px rgba(0,0,0,.7);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 44px -22px rgba(0,0,0,.85);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;letter-spacing:-.003em;
+  display:flex;flex-direction:column;height:100vh;overflow:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+a{color:var(--blue);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ring);outline-offset:2px;border-radius:6px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ── 헤더 ── */
+header.bar{flex:none;background:var(--card);border-bottom:1px solid var(--line);
+  padding:11px 20px;display:flex;align-items:center;gap:16px;z-index:5}
+.brand{font-weight:800;color:var(--navy);font-size:16px;letter-spacing:-.01em;white-space:nowrap;flex:none}
+.brand em{font-style:normal;color:var(--blue)}
+.sel{min-width:0;display:flex;align-items:center;gap:10px;flex:1;overflow:hidden}
+.sel .no{font-family:var(--mono);font-size:11px;font-weight:600;color:#fff;background:var(--blue);border-radius:5px;padding:2px 7px;flex:none}
+.sel .no.latest{background:var(--red)}
+.sel .txt{font-size:13.5px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sel .txt b{color:var(--ink);font-weight:700}
+.sel .dd{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
+.bar .actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:8px;padding:7px 13px;font-family:var(--sans);
+  font-size:12.5px;font-weight:700;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink-2);transition:.15s}
+.btn:hover{border-color:var(--muted);color:var(--ink);text-decoration:none}
+.btn.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.pri:hover{background:var(--blue-2);border-color:var(--blue-2);color:#fff}
+.btn .val{font-family:var(--mono);font-size:11px;letter-spacing:.05em}
+.btn.icon{padding:7px 10px}
+
+/* ── 바디 ── */
+.body{flex:1;display:flex;min-height:0}
+.side{flex:none;width:300px;background:var(--card);border-right:1px solid var(--line);
+  padding:16px 16px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:16px}
+
+/* 캘린더 */
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cal-head .mlabel{font-weight:800;color:var(--navy);font-size:14.5px}
+.cal-head .navs{display:flex;gap:6px}
+.cal-head button{width:30px;height:30px;border:1px solid var(--line);background:var(--card);border-radius:8px;
+  cursor:pointer;color:var(--navy);font-size:15px;line-height:1;transition:.15s}
+.cal-head button:hover{background:var(--blue-soft);border-color:var(--blue);color:var(--blue)}
+table.cal{width:100%;border-collapse:collapse;table-layout:fixed}
+table.cal th{font-size:11px;color:var(--muted);font-weight:700;padding:6px 0}
+table.cal th.sun{color:var(--red)} table.cal th.sat{color:var(--blue)}
+table.cal td{text-align:center;padding:2px}
+.day{width:34px;height:34px;line-height:34px;margin:0 auto;border-radius:9px;font-size:13px;color:var(--ink-2);
+  position:relative;transition:background .12s,color .12s}
+.day.blank{visibility:hidden}
+.day.no{color:var(--faint)}
+.day.sun{color:var(--red)} .day.sat{color:var(--blue)}
+.day.has{background:var(--blue-soft);color:var(--blue);font-weight:800;cursor:pointer}
+.day.has:hover{background:var(--blue-line)}
+.day.today{box-shadow:inset 0 0 0 1.5px var(--muted)}
+.day.sel{background:var(--blue)!important;color:#fff!important;box-shadow:0 2px 8px -2px var(--blue)}
+.legend{font-size:11.5px;color:var(--muted);line-height:1.7}
+.legend .dot{display:inline-block;width:11px;height:11px;border-radius:3px;background:var(--blue-soft);vertical-align:-1px;margin-right:5px}
+.legend .dot.b{background:var(--blue)}
+
+/* 최근 편집호 */
+.recent h4{margin:0 0 9px;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.02em;text-transform:uppercase}
+.rlist{display:flex;flex-direction:column;gap:2px}
+.ritem{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:baseline;padding:9px 10px;border-radius:9px;
+  cursor:pointer;transition:background .12s;border:1px solid transparent}
+.ritem:hover{background:var(--card-2)}
+.ritem.active{background:var(--blue-soft);border-color:var(--blue-line)}
+.ritem .rno{font-family:var(--mono);font-size:10px;font-weight:600;color:var(--blue)}
+.ritem .rtitle{font-size:12.5px;color:var(--ink-2);line-height:1.4;font-weight:600}
+.ritem.active .rtitle{color:var(--ink)}
+.ritem .rdate{grid-column:2;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;grid-column:2;margin-top:4px}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:5px;white-space:nowrap}
+.t-new{background:var(--blue-soft);color:var(--blue)} .t-live{background:var(--card-2);color:var(--muted)}
+.t-risk{background:var(--red-soft);color:var(--red)} .t-good{background:var(--green-soft);color:var(--green)} .t-warn{background:var(--amber-soft);color:var(--amber)}
+.empty-list{font-size:12px;color:var(--muted);padding:8px 10px}
+
+.side-foot{margin-top:auto;font-size:11px;color:var(--faint);line-height:1.6;padding-top:6px}
+
+/* 뷰어 */
+.viewer-wrap{flex:1;min-width:0;background:var(--bg);position:relative}
+iframe{width:100%;height:100%;border:0;background:var(--card);display:block}
+
+@media(max-width:820px){
+  header.bar{flex-wrap:wrap;gap:8px 12px}
+  .sel .txt{display:none}
+  .body{flex-direction:column}
+  .side{width:auto;max-height:46vh;border-right:none;border-bottom:1px solid var(--line);flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">FPS·<em>레이더</em></div>
+  <div class="sel" id="sel">
+    <span class="no latest" id="selNo">No.—</span>
+    <span class="dd" id="selDate">—</span>
+    <span class="txt" id="selTxt"></span>
+  </div>
+  <div class="actions">
+    <button class="btn icon" id="themebtn" type="button" aria-pressed="false" title="화면 테마"><span class="val" id="themelbl">LIGHT</span></button>
+    <a class="btn pri" id="openNew" href="#" target="_blank" rel="noopener">새 탭에서 열기 ↗</a>
+  </div>
+</header>
+
+<div class="body">
+  <aside class="side">
+    <div>
+      <div class="cal-head">
+        <div class="mlabel" id="mlabel">—</div>
+        <div class="navs">
+          <button id="prev" aria-label="이전 달">‹</button>
+          <button id="next" aria-label="다음 달">›</button>
+        </div>
+      </div>
+      <table class="cal">
+        <thead><tr>
+          <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
+        </tr></thead>
+        <tbody id="calbody"></tbody>
+      </table>
+      <div class="legend"><span class="dot b"></span>선택한 날 &nbsp; <span class="dot"></span>리포트 있는 날<br>날짜를 클릭하면 오른쪽에 해당 리포트가 열립니다.</div>
+    </div>
+
+    <div class="recent">
+      <h4>최근 편집호</h4>
+      <div class="rlist" id="rlist"></div>
+    </div>
+
+    <div class="side-foot">라이온하트 · 자동 생성 리포트<br>월–금 09:0X KST 발행 · 국내+글로벌 병행</div>
+  </aside>
+
+  <div class="viewer-wrap">
+    <iframe id="viewer" title="선택한 리포트"></iframe>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   고정 인덱스 — 이 스크립트/HTML은 매일 수정하지 않습니다.
+   데이터 출처: 같은 폴더의 reports.json (매일 갱신되는 유일한 목록 파일)
+     형식: [ { "date":"YYYY-MM-DD", "no":"No.8",
+               "title":"헤드라인", "tags":[["여론 반전","risk"],["신작","new"]] }, ... ]
+   reports.json 로드 실패 시 아래 BOOTSTRAP 을 대체로 사용(로컬 미리보기용).
+   ═══════════════════════════════════════════════════════════ */
+var BOOTSTRAP = [
+  { "date":"2026-08-27", "no":"No.8", "title":"MW4 오픈베타 D-1, 얼리베타 여론 '대체로 부정적' 반전", "tags":[["여론 반전","risk"],["신작","new"]] },
+  { "date":"2026-08-25", "no":"No.6", "title":"MW4 베타·BF6 무료주간 동시 마감, 슈터 플레이타임 쟁탈", "tags":[["신규 시즌","new"],["진행","live"]] }
+];
+/* 배포 후 진입 시 최신호 자동 열기: 실서비스는 true 권장. (로컬 파일 미리보기에선 안내화면 유지 위해 false) */
+var AUTO_OPEN_LATEST = true;
+
+var WD = ["일","월","화","수","목","금","토"];
+var REPORTS = [], META = {}, LATEST = null, sel = null;
+var viewer = document.getElementById("viewer");
+var todayISO = (function(){ var t=new Date(); return t.getFullYear()+"-"+pad(t.getMonth()+1)+"-"+pad(t.getDate()); })();
+var view = new Date();
+
+function file(d){ return "FPS레이더_" + d + ".html"; }
+function pad(n){ return (n<10?"0":"")+n; }
+function label(d){ var p=d.split("-"); return p[0]+"."+p[1]+"."+p[2]; }
+function meta(d){ return META[d] || {no:"No.—",title:"",tags:[]}; }
+
+/* 목록 적용 */
+function applyManifest(list){
+  if(!Array.isArray(list)) list=[];
+  list = list.filter(function(x){return x && /^\d{4}-\d{2}-\d{2}$/.test(x.date);});
+  list.sort(function(a,b){return a.date<b.date?-1:(a.date>b.date?1:0);});   // 오름차순
+  REPORTS = list.map(function(x){return x.date;});
+  META = {}; list.forEach(function(x){ META[x.date]={no:x.no||"No.—",title:x.title||"",tags:x.tags||[]}; });
+  LATEST = REPORTS.length ? REPORTS[REPORTS.length-1] : null;
+  view = LATEST ? new Date(LATEST+"T00:00:00") : new Date();
+  boot();
+}
+
+function placeholder(){
+  var dark=document.documentElement.getAttribute("data-theme")==="dark";
+  var bg=dark?"#0E1016":"#EEF1F6", card=dark?"#171A22":"#fff", ink=dark?"#EAECF1":"#161C29",
+      mut=dark?"#8B93A5":"#6B7488", line=dark?"#282D38":"#E1E6EF", blue=dark?"#7CA6EE":"#2E5AAC";
+  var latest=LATEST?(meta(LATEST).no+" · "+label(LATEST)):"";
+  return '<!doctype html><html><head><meta charset="utf-8"><style>'
+    +'html,body{height:100%;margin:0}body{display:flex;align-items:center;justify-content:center;background:'+bg+';'
+    +'font-family:Pretendard,-apple-system,"Malgun Gothic",system-ui,sans-serif;color:'+ink+';text-align:center;padding:24px}'
+    +'.box{max-width:420px}.ic{font-size:34px;margin-bottom:14px}.h{font-size:17px;font-weight:800;margin:0 0 8px}'
+    +'.p{font-size:13px;color:'+mut+';line-height:1.7;margin:0 0 16px}'
+    +'.c{display:inline-block;border:1px solid '+line+';background:'+card+';border-radius:10px;padding:10px 16px;font-size:12.5px;color:'+blue+';font-weight:700}'
+    +'</style></head><body><div class="box"><div class="ic">🗓️</div>'
+    +'<p class="h">왼쪽 달력에서 날짜를 선택하세요</p>'
+    +'<p class="p">선택한 날의 데일리 레이더 리포트가 이 자리에 표시됩니다.<br>배포 환경에서는 진입 시 자동으로 최신호를 엽니다.</p>'
+    +(latest?'<span class="c">최신호 '+latest+'</span>':'')+'</div></body></html>';
+}
+
+function setSelLabel(d){
+  var m=meta(d), wd=WD[new Date(d+"T00:00:00").getDay()];
+  var noEl=document.getElementById("selNo");
+  noEl.textContent=m.no; noEl.className="no"+(d===LATEST?" latest":"");
+  document.getElementById("selDate").textContent=label(d)+" ("+wd+")";
+  document.getElementById("selTxt").innerHTML=m.title?("· <b>"+m.title+"</b>"):"";
+  document.getElementById("openNew").href=file(d);
+}
+function load(d){
+  sel=d; viewer.removeAttribute("srcdoc"); viewer.src=file(d);
+  setSelLabel(d); renderCal(); renderRecent();
+}
+function renderCal(){
+  var y=view.getFullYear(), m=view.getMonth();
+  document.getElementById("mlabel").textContent=y+"년 "+(m+1)+"월";
+  var first=new Date(y,m,1).getDay(), dim=new Date(y,m+1,0).getDate();
+  var tb=document.getElementById("calbody"); tb.innerHTML="";
+  var cell=0, row=document.createElement("tr");
+  for(var i=0;i<first;i++){ var td=document.createElement("td"); td.innerHTML='<div class="day blank"></div>'; row.appendChild(td); cell++; }
+  for(var day=1;day<=dim;day++){
+    var iso=y+"-"+pad(m+1)+"-"+pad(day), dow=new Date(iso+"T00:00:00").getDay(), has=REPORTS.indexOf(iso)>=0;
+    var cls="day "+(has?"has":"no");
+    if(dow===0) cls+=" sun"; if(dow===6) cls+=" sat";
+    if(iso===todayISO) cls+=" today"; if(iso===sel) cls+=" sel";
+    var td=document.createElement("td");
+    td.innerHTML='<div class="'+cls+'"'+(has?' data-d="'+iso+'" role="button" tabindex="0"':'')+'>'+day+'</div>';
+    row.appendChild(td); cell++;
+    if(cell%7===0){ tb.appendChild(row); row=document.createElement("tr"); }
+  }
+  if(cell%7!==0) tb.appendChild(row);
+}
+function renderRecent(){
+  var box=document.getElementById("rlist"); box.innerHTML="";
+  if(!REPORTS.length){ box.innerHTML='<div class="empty-list">아직 발행된 리포트가 없습니다.</div>'; return; }
+  REPORTS.slice().reverse().slice(0,8).forEach(function(d){
+    var m=meta(d), wd=WD[new Date(d+"T00:00:00").getDay()];
+    var chips=(m.tags||[]).map(function(t){return '<span class="tag t-'+t[1]+'">'+t[0]+'</span>';}).join("");
+    var el=document.createElement("div");
+    el.className="ritem"+(d===sel?" active":"");
+    el.setAttribute("data-d",d); el.setAttribute("role","button"); el.setAttribute("tabindex","0");
+    el.innerHTML='<span class="rno">'+m.no+'</span><span class="rtitle">'+(m.title||label(d))+'</span>'
+      +'<span class="rdate">'+label(d)+' ('+wd+')</span>'+(chips?'<span class="chips">'+chips+'</span>':'');
+    box.appendChild(el);
+  });
+}
+function boot(){
+  if(LATEST){ setSelLabel(LATEST); if(AUTO_OPEN_LATEST){ load(LATEST); } else { viewer.srcdoc=placeholder(); renderCal(); renderRecent(); } }
+  else { viewer.srcdoc=placeholder(); renderCal(); renderRecent(); }
+}
+
+/* 이벤트 */
+document.getElementById("calbody").addEventListener("click",function(e){ var el=e.target.closest(".day.has"); if(el&&el.dataset.d) load(el.dataset.d); });
+document.getElementById("calbody").addEventListener("keydown",function(e){ if(e.key!=="Enter"&&e.key!==" ")return; var el=e.target.closest(".day.has"); if(el&&el.dataset.d){ e.preventDefault(); load(el.dataset.d);} });
+document.getElementById("rlist").addEventListener("click",function(e){ var el=e.target.closest(".ritem"); if(el&&el.dataset.d) load(el.dataset.d); });
+document.getElementById("rlist").addEventListener("keydown",function(e){ if(e.key!=="Enter"&&e.key!==" ")return; var el=e.target.closest(".ritem"); if(el&&el.dataset.d){ e.preventDefault(); load(el.dataset.d);} });
+document.getElementById("prev").onclick=function(){ view.setMonth(view.getMonth()-1); renderCal(); };
+document.getElementById("next").onclick=function(){ view.setMonth(view.getMonth()+1); renderCal(); };
+
+/* 테마 (리포트와 동일 localStorage 키 공유) */
+var root=document.documentElement,tbtn=document.getElementById("themebtn"),tlbl=document.getElementById("themelbl");
+function applyTheme(t){ root.setAttribute("data-theme",t); tlbl.textContent=(t==="dark"?"DARK":"LIGHT");
+  tbtn.setAttribute("aria-pressed",t==="dark"?"true":"false"); try{localStorage.setItem("fpsradar-theme",t);}catch(e){}
+  if(!sel) viewer.srcdoc=placeholder(); }
+var savedT=null; try{savedT=localStorage.getItem("fpsradar-theme");}catch(e){}
+if(!savedT&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)savedT="dark";
+applyTheme(savedT||"light");
+tbtn.onclick=function(){ applyTheme(root.getAttribute("data-theme")==="dark"?"light":"dark"); };
+
+/* 목록 로드: reports.json 우선, 실패 시 BOOTSTRAP */
+(function(){
+  try{
+    fetch("reports.json",{cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ applyManifest(j); })
+      .catch(function(){ applyManifest(BOOTSTRAP); });
+  }catch(e){ applyManifest(BOOTSTRAP); }
+})();
+</script>
+</body>
+</html>
