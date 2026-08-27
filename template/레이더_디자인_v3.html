@@ -58,7 +58,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* ═══ 상단부(확정본) — 네이비 그라디언트 헤더 + 4-KPI ═══ */
 .masthead{position:relative;background:var(--mh-grad);color:#fff;
   padding:30px 0 34px;border-bottom:1px solid rgba(255,255,255,.06)}
-.mh-inner{max-width:1120px;margin:0 auto;padding:0 34px}
+.mh-inner{max-width:1400px;margin:0 auto;padding:0 40px}
 .masthead .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
   color:#AFC4EC;margin:0 0 10px;display:flex;align-items:center;gap:10px}
 .masthead .eyebrow .live{width:7px;height:7px;border-radius:50%;background:#FF6B5E;flex:none;
@@ -76,7 +76,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .themebtn:hover{background:rgba(255,255,255,.18)}
 .themebtn .val{font-family:var(--mono);font-size:11px;letter-spacing:.06em}
 
-.wrap{max-width:1120px;margin:0 auto;padding:22px 34px 80px}
+.wrap{max-width:1400px;margin:0 auto;padding:22px 40px 80px}
 
 .lead{color:var(--ink-2);font-size:14.5px;line-height:1.8;margin:0 0 16px;max-width:80ch}
 .lead b{color:var(--ink);font-weight:600;box-shadow:inset 0 -8px 0 var(--blue-soft)}
@@ -109,17 +109,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 /* 표 */
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
-table{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;font-size:13.5px}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:920px;font-size:13.5px}
 thead th{position:sticky;top:0;z-index:2;background:var(--card-2);color:var(--navy);text-align:left;
   padding:11px 14px;font-weight:800;font-size:12.5px;white-space:nowrap;border-bottom:2px solid var(--blue)}
 tbody td{padding:12px 14px;border-top:1px solid var(--line-soft);vertical-align:top}
 tbody tr:nth-child(even){background:var(--zebra)}
 tbody tr:hover{background:var(--blue-soft)}
-.g-cell{display:flex;gap:11px;align-items:flex-start;min-width:150px}
-.thumb{width:64px;height:36px;flex:none;border-radius:6px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
+.g-cell{display:flex;gap:13px;align-items:flex-start;min-width:230px}
+.thumb{width:128px;height:60px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .thumb.noimg img{display:none}
-.thumb.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:rgba(255,255,255,.92);letter-spacing:.02em}
+.thumb.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(255,255,255,.92);letter-spacing:.02em}
 .game{font-weight:800;color:var(--navy);line-height:1.3}
 .game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
 .date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
@@ -134,7 +134,12 @@ tbody tr:hover{background:var(--blue-soft)}
 
 /* 신작 동향 카드 */
 .trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:17px 18px;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s;display:flex;flex-direction:column}
+.tcard .tbanner{position:relative;aspect-ratio:2.5/1;background:linear-gradient(135deg,var(--navy),#12203b);overflow:hidden}
+.tcard .tbanner img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.tcard .tbanner.noimg img{display:none}
+.tcard .tbanner.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:rgba(255,255,255,.9);letter-spacing:.02em}
+.tcard .tin{padding:16px 18px 17px;flex:1}
 .tcard:hover{border-color:var(--muted);box-shadow:var(--shadow-lift)}
 .tcard .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
 .tcard .gm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
@@ -144,6 +149,44 @@ tbody tr:hover{background:var(--blue-soft)}
 .tcard .obs{margin-top:9px;padding-left:12px;border-left:2px solid var(--line);font-size:12.5px}
 .tcard .obs .k{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:3px}
 .tcard .src{margin-top:11px;font-size:12px;color:var(--muted)}
+
+
+/* 오늘의 일정 (타임라인) */
+.timeline{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 10px;box-shadow:var(--shadow)}
+.timeline h3{margin:0 0 3px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.timeline .hint{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:78px 50px 1fr;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line-soft)}
+.tl li:first-child{border-top:none}
+.tl .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.tl .s{font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:5px;line-height:1.5}
+.tl .s.end{background:var(--red-soft);color:var(--red)} .tl .s.start{background:var(--blue-soft);color:var(--blue)}
+.tl .s.on{background:var(--green-soft);color:var(--green)} .tl .s.due{background:var(--card-2);color:var(--muted)}
+.tl .t{font-size:14px;color:var(--ink-2);line-height:1.55}
+.tl .t b{color:var(--ink);font-weight:600}
+.tl .t .win{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:6px}
+.tl li.today{background:linear-gradient(90deg,var(--red-soft),transparent 72%);margin:0 -22px;padding-left:22px;padding-right:22px}
+
+/* 오늘의 헤드라인 (히어로) */
+.heroes{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px}
+.hero{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s}
+.hero:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);text-decoration:none}
+.hero .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--navy),#12203b)}
+.hero .shot img{width:100%;height:100%;object-fit:cover}
+.hero .shot.noimg img{display:none}
+.hero .shot.noimg::before{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:34px;color:rgba(255,255,255,.13);letter-spacing:.06em}
+.hero .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,14,.94) 0%,rgba(8,10,14,.55) 40%,rgba(8,10,14,.05) 74%)}
+.hero .rank{position:absolute;top:11px;left:13px;z-index:2;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero .flag{position:absolute;top:12px;right:12px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--red);color:#fff}
+.hero .flag.n{background:rgba(255,255,255,.93);color:#14161A}
+.hero .over{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:14px 16px}
+.hero .over .gm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:5px}
+.hero .over h3{margin:0;color:#fff;font-size:16px;font-weight:700;line-height:1.42;letter-spacing:-.02em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero:first-child .over h3{font-size:19px}
+.hero .under{padding:14px 16px 15px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.hero .under b{color:var(--ink);font-weight:600}
+@media(max-width:960px){ .heroes{grid-template-columns:1fr 1fr} .hero:first-child{grid-column:1 / -1} }
+@media(max-width:600px){ .heroes{grid-template-columns:1fr} }
 
 /* 리스크 */
 .risk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:var(--radius);padding:17px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
@@ -257,8 +300,52 @@ tbody tr:hover{background:var(--blue-soft)}
     <span><b>디자인 템플릿 v3</b> — 상단부(네이비 헤더 + 4-KPI)는 확정본 유지, 아래 섹션은 v2 구조(표·동향 카드·리스크·액션·출처). 내용은 교체용 <b>샘플</b>입니다.</span>
   </div>
 
-  <!-- ══ 01 국내 ══ -->
-  <div class="sec" id="kr"><span class="idx">01</span><h2>국내 포커스</h2><span class="rule"></span></div>
+  <!-- ══ 01 오늘의 일정 ══ -->
+  <div class="sec" id="today"><span class="idx">01</span><h2>오늘의 일정</h2><span class="rule"></span></div>
+  <p class="sub-lead">오늘 기준으로 마감·시작·진행되는 일정만. 자사 이벤트 편성을 잡을 때 먼저 보는 칸.</p>
+  <div class="timeline">
+    <h3>움직이는 일정</h3>
+    <p class="hint">붉게 표시된 줄이 오늘 마감/진행됩니다.</p>
+    <ol class="tl">
+      <li class="today"><span class="d">MM.DD 요</span><span class="s end">종료</span><span class="t"><b>[이벤트/베타명]</b> 마감<span class="win">MM/DD–MM/DD</span></span></li>
+      <li class="today"><span class="d">MM.DD 요</span><span class="s on">진행</span><span class="t"><b>[진행 항목]</b> 사전 다운로드 등<span class="win">preload</span></span></li>
+      <li><span class="d">MM.DD 요</span><span class="s start">시작</span><span class="t"><b>[신규 시즌/베타]</b> 공개<span class="win">MM/DD–MM/DD</span></span></li>
+      <li><span class="d">MM.DD 요</span><span class="s start">시작</span><span class="t"><b>[신작 출시]</b><span class="win">신작</span></span></li>
+      <li><span class="d">MM.DD 요</span><span class="s on">진행</span><span class="t"><b>[진행 콜라보]</b> 종료 예정<span class="win">~MM/DD</span></span></li>
+      <li><span class="d">MM.DD 요</span><span class="s due">예정</span><span class="t"><b>[대형작 정식 출시]</b><span class="win">하반기 최대어</span></span></li>
+    </ol>
+  </div>
+
+  <!-- ══ 02 오늘의 헤드라인 ══ -->
+  <div class="sec" id="headline"><span class="idx">02</span><h2>오늘의 헤드라인</h2><span class="rule"></span></div>
+  <p class="sub-lead">지난 24–48시간 흐름이 바뀌었거나 오늘 움직이는 톱3. (스팀 이미지 있는 출시작은 사진, 미출시작은 그라디언트 히어로)</p>
+  <section class="heroes">
+    <a class="hero" href="#">
+      <div class="shot noimg" data-mono="G1">
+        <span class="rank">01</span><span class="flag">[플래그]</span>
+        <div class="over"><div class="gm">[게임명]</div><h3>[헤드라인 1 — 그날 최대 이슈]</h3></div>
+      </div>
+      <div class="under">[요지 1–2문장] <b>핵심</b> 강조.</div>
+    </a>
+    <a class="hero" href="#">
+      <div class="shot" data-mono="G2">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg" alt="">
+        <span class="rank">02</span><span class="flag n">[플래그]</span>
+        <div class="over"><div class="gm">[게임명]</div><h3>[헤드라인 2]</h3></div>
+      </div>
+      <div class="under">[요지] 출시작이면 스팀 header.jpg 사용, 미출시작은 shot에 class="noimg" + data-mono.</div>
+    </a>
+    <a class="hero" href="#">
+      <div class="shot noimg" data-mono="G3">
+        <span class="rank">03</span><span class="flag n">[플래그]</span>
+        <div class="over"><div class="gm">[게임명]</div><h3>[헤드라인 3]</h3></div>
+      </div>
+      <div class="under">[요지]</div>
+    </a>
+  </section>
+
+  <!-- ══ 03 국내 ══ -->
+  <div class="sec" id="kr"><span class="idx">03</span><h2>국내 포커스</h2><span class="rule"></span></div>
   <p class="sub-lead">국내 서비스·국내 배경 IP·국내 커뮤니티(<b>인벤·루리웹·디시·아카라이브·에펨</b>) 반응 중심.</p>
   <div class="tablewrap">
     <table>
@@ -290,7 +377,7 @@ tbody tr:hover{background:var(--blue-soft)}
   </div>
 
   <!-- ══ 02 글로벌 ══ -->
-  <div class="sec" id="global"><span class="idx">02</span><h2>글로벌 포커스</h2><span class="rule"></span></div>
+  <div class="sec" id="global"><span class="idx">04</span><h2>글로벌 포커스</h2><span class="rule"></span></div>
   <p class="sub-lead">레딧 각 서브레딧·<b>Dexerto·PC Gamer·IGN</b> 등 글로벌 커뮤니티/전문지 기준.</p>
   <div class="tablewrap">
     <table>
@@ -322,7 +409,7 @@ tbody tr:hover{background:var(--blue-soft)}
   </div>
 
   <!-- ══ 03 신작 레이더 ══ -->
-  <div class="sec" id="launch"><span class="idx">03</span><h2>신작 레이더</h2><span class="rule"></span></div>
+  <div class="sec" id="launch"><span class="idx">05</span><h2>신작 레이더</h2><span class="rule"></span></div>
   <p class="sub-lead">출시일이 확정된 FPS/슈터 신작 위주. 니치·인디 포함, 대형작은 상단 참조. <b>노출 규칙</b>: 출시일로부터 7일간(D0~D+6) 노출, 초과 시 특기 이슈 없으면 제외(출시 예정작·대형작은 예외).</p>
   <div class="tablewrap">
     <table>
@@ -354,37 +441,46 @@ tbody tr:hover{background:var(--blue-soft)}
   </div>
 
   <!-- ══ 04 신작 동향 ══ -->
-  <div class="sec" id="trend"><span class="idx">04</span><h2>신작 동향</h2><span class="rule"></span></div>
+  <div class="sec" id="trend"><span class="idx">06</span><h2>신작 동향</h2><span class="rule"></span></div>
   <p class="sub-lead">개별 신작 카드(03)와 달리, 신작을 둘러싼 <b>흐름과 맥락</b>을 짚는 칸(대형 쇼케이스 발표 러시, 서브장르 트렌드, 로컬 배경 흐름, CBT 모집 동향 등).</p>
   <div class="trend-grid">
     <div class="tcard">
-      <div class="chips"><span class="tag t-new">[분류]</span><span class="tag t-live">[시점]</span></div>
-      <div class="gm">[출처 이벤트/카테고리]</div>
-      <h3>[동향 헤드라인 — 흐름을 한 문장으로]</h3>
-      <p>[동향 요지] 어떤 신작들이/왜 함께 움직이는지 맥락을 서술.</p>
-      <div class="obs"><span class="k">관전 포인트</span>[CM 관점의 시사점 — 경쟁 지형/벤치마크/기회]</div>
-      <div class="src"><a href="#">출처1</a> · <a href="#">출처2</a></div>
+      <div class="tbanner noimg" data-mono="IMG"><img src="" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-new">[분류]</span><span class="tag t-live">[시점]</span></div>
+        <div class="gm">[출처 이벤트/카테고리]</div>
+        <h3>[동향 헤드라인 — 흐름을 한 문장으로]</h3>
+        <p>[동향 요지] 어떤 신작들이/왜 함께 움직이는지 맥락을 서술.</p>
+        <div class="obs"><span class="k">관전 포인트</span>[CM 관점의 시사점 — 경쟁 지형/벤치마크/기회]</div>
+        <div class="src"><a href="#">출처1</a> · <a href="#">출처2</a></div>
+      </div>
     </div>
     <div class="tcard">
-      <div class="chips"><span class="tag t-new">신작 공개</span><span class="tag t-good">CBT 신청</span></div>
-      <div class="gm">[타이틀]</div>
-      <h3>[프리런칭/CBT 동향 헤드라인]</h3>
-      <p>[내용] 장르·특징·CBT 모집 방식 등.</p>
-      <div class="obs"><span class="k">관전 포인트</span>[프리런칭·CBT 실무 벤치마크 포인트]</div>
-      <div class="src"><a href="#">출처</a></div>
+      <div class="tbanner noimg" data-mono="IMG"><img src="" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-new">신작 공개</span><span class="tag t-good">CBT 신청</span></div>
+        <div class="gm">[타이틀]</div>
+        <h3>[프리런칭/CBT 동향 헤드라인]</h3>
+        <p>[내용] 장르·특징·CBT 모집 방식 등.</p>
+        <div class="obs"><span class="k">관전 포인트</span>[프리런칭·CBT 실무 벤치마크 포인트]</div>
+        <div class="src"><a href="#">출처</a></div>
+      </div>
     </div>
     <div class="tcard">
-      <div class="chips"><span class="tag t-live">트렌드 관찰</span></div>
-      <div class="gm">[트렌드 카테고리]</div>
-      <h3>[트렌드 헤드라인 — 예: 로컬 배경 FPS 흐름]</h3>
-      <p>[내용] 여러 타이틀에서 공통으로 보이는 흐름을 묶어 서술.</p>
-      <div class="obs"><span class="k">관전 포인트</span>[우리 채널 활용/큐레이션 기회]</div>
-      <div class="src"><a href="#">출처</a></div>
+      <div class="tbanner noimg" data-mono="IMG"><img src="" alt=""></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-live">트렌드 관찰</span></div>
+        <div class="gm">[트렌드 카테고리]</div>
+        <h3>[트렌드 헤드라인 — 예: 로컬 배경 FPS 흐름]</h3>
+        <p>[내용] 여러 타이틀에서 공통으로 보이는 흐름을 묶어 서술.</p>
+        <div class="obs"><span class="k">관전 포인트</span>[우리 채널 활용/큐레이션 기회]</div>
+        <div class="src"><a href="#">출처</a></div>
+      </div>
     </div>
   </div>
 
   <!-- ══ 05 리스크 ══ -->
-  <div class="sec" id="risk"><span class="idx">05</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
+  <div class="sec" id="risk"><span class="idx">07</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
   <p class="sub-lead">남의 사고에서 먼저 배우는 칸. 백래시·지표 리스크와 우리 운영에 옮길 교훈을 함께.</p>
 
   <article class="risk high">
@@ -405,7 +501,7 @@ tbody tr:hover{background:var(--blue-soft)}
   </article>
 
   <!-- ══ 06 액션 ══ -->
-  <div class="sec" id="action"><span class="idx">06</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
+  <div class="sec" id="action"><span class="idx">08</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
   <p class="sub-lead">오늘 바로 착수 가능한 1–2가지.</p>
 
   <article class="act">
@@ -445,7 +541,7 @@ tbody tr:hover{background:var(--blue-soft)}
 <script>
 (function(){
   /* 이미지 로드 실패 → 약어 타일 대체 */
-  document.querySelectorAll('.thumb img').forEach(function(img){
+  document.querySelectorAll('.thumb img, .tbanner img, .hero .shot img').forEach(function(img){
     if(!img.getAttribute('src')){var p0=img.parentElement;if(p0)p0.classList.add('noimg');return;}
     img.addEventListener('error',function(){var p=img.parentElement;if(p)p.classList.add('noimg');});
   });
