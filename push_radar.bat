@@ -1,17 +1,17 @@
 @echo off
-chcp 65001 >nul
-title FPSë ˆì´ë” - GitHub ì—…ë¡œë“œ
+chcp 949 >nul
+title FPS·¹ÀÌ´õ - GitHub ¾÷·Îµå
 REM ============================================================
-REM  FPSë ˆì´ë” ì»¤ë°‹Â·í‘¸ì‹œ + ì•„ì¹´ì´ë¸Œ ì‚¬ë³¸ ì €ìž¥
-REM  - ì‹œìž‘ ì‹œ ìž”ì—¬ .git ìž ê¸ˆ íŒŒì¼ì„ ë¨¼ì € ì •ë¦¬í•œë‹¤
-REM  - ê° ë‹¨ê³„ ì‹¤íŒ¨ ì‹œ ì›ì¸ì„ í™”ë©´ì— ë‚¨ê¸°ê³  ë©ˆì¶˜ë‹¤
+REM  FPS·¹ÀÌ´õ Ä¿¹Ô¡¤Çª½Ã + ¾ÆÄ«ÀÌºê »çº» ÀúÀå
+REM  - ½ÃÀÛ ½Ã ÀÜ¿© .git Àá±Ý ÆÄÀÏÀ» ¸ÕÀú Á¤¸®ÇÑ´Ù
+REM  - °¢ ´Ü°è ½ÇÆÐ ½Ã ¿øÀÎÀ» È­¸é¿¡ ³²±â°í ¸ØÃá´Ù
 REM ============================================================
 setlocal
 
 set "REPO=C:\Users\LION\Documents\GitHub\fps-radar"
-set "ARCHIVE=C:\Users\LION\Desktop\Project S\14. ì¼ê°„ FPS ì´ë²¤íŠ¸ ë™í–¥ ë¦¬ì„œì¹­"
+set "ARCHIVE=C:\Users\LION\Desktop\Project S\14. ÀÏ°£ FPS ÀÌº¥Æ® µ¿Çâ ¸®¼­Äª"
 
-REM â”€â”€ git ì‹¤í–‰íŒŒì¼ ì°¾ê¸° (PATH ìš°ì„ , ì—†ìœ¼ë©´ GitHub Desktop ë²ˆë“¤)
+REM ¦¡¦¡ git ½ÇÇàÆÄÀÏ Ã£±â (PATH ¿ì¼±, ¾øÀ¸¸é GitHub Desktop ¹øµé)
 set "GIT=git"
 where git >nul 2>nul
 if not errorlevel 1 goto :GITOK
@@ -21,7 +21,7 @@ for /d %%D in ("%LocalAppData%\GitHubDesktop\app-*") do set "GIT=%%D\resources\a
 cd /d "%REPO%"
 if errorlevel 1 goto :NOREPO
 
-REM â”€â”€ ìž”ì—¬ ìž ê¸ˆ íŒŒì¼ ì •ë¦¬ (ì´ê²Œ ìžˆìœ¼ë©´ git ì´ í†µì§¸ë¡œ ë§‰ížŒë‹¤)
+REM ¦¡¦¡ ÀÜ¿© Àá±Ý ÆÄÀÏ Á¤¸® (ÀÌ°Ô ÀÖÀ¸¸é git ÀÌ ÅëÂ°·Î ¸·Èù´Ù)
 if exist "%REPO%\.git\index.lock" del /f /q "%REPO%\.git\index.lock" >nul 2>nul
 if exist "%REPO%\.git\HEAD.lock" del /f /q "%REPO%\.git\HEAD.lock" >nul 2>nul
 if exist "%REPO%\.git\objects\maintenance.lock" del /f /q "%REPO%\.git\objects\maintenance.lock" >nul 2>nul
@@ -29,23 +29,23 @@ if exist "%REPO%\.git\index.lock" goto :LOCKED
 
 for /f %%D in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd"') do set "TODAY=%%D"
 
-REM â”€â”€ ì €ìž¥ì†Œ ë£¨íŠ¸ì— ì˜¤ëŠ˜ ë¦¬í¬íŠ¸ê°€ ìžˆìœ¼ë©´ ì•„ì¹´ì´ë¸Œ í´ë”ì—ë„ ì‚¬ë³¸ ì €ìž¥
+REM ¦¡¦¡ ÀúÀå¼Ò ·çÆ®¿¡ ¿À´Ã ¸®Æ÷Æ®°¡ ÀÖÀ¸¸é ¾ÆÄ«ÀÌºê Æú´õ¿¡µµ »çº» ÀúÀå
 if not exist "%ARCHIVE%" goto :ARCHSKIP
-if not exist "%REPO%\FPSë ˆì´ë”_%TODAY%.html" goto :ARCHDONE
-copy /Y "%REPO%\FPSë ˆì´ë”_%TODAY%.html" "%ARCHIVE%\" >nul
-echo [ì•„ì¹´ì´ë¸Œ] ì‚¬ë³¸ ì €ìž¥ ì™„ë£Œ
+if not exist "%REPO%\FPS·¹ÀÌ´õ_%TODAY%.html" goto :ARCHDONE
+copy /Y "%REPO%\FPS·¹ÀÌ´õ_%TODAY%.html" "%ARCHIVE%\" >nul
+echo [¾ÆÄ«ÀÌºê] »çº» ÀúÀå ¿Ï·á
 goto :ARCHDONE
 :ARCHSKIP
-echo [ì•„ì¹´ì´ë¸Œ] í´ë”ë¥¼ ì°¾ì„ ìˆ˜ ì—†ì–´ ê±´ë„ˆëœ€
+echo [¾ÆÄ«ÀÌºê] Æú´õ¸¦ Ã£À» ¼ö ¾ø¾î °Ç³Ê¶Ü
 :ARCHDONE
 
 echo.
-echo [1/4] ì›ê²© ë™ê¸°í™” (pull --rebase)...
+echo [1/4] ¿ø°Ý µ¿±âÈ­ (pull --rebase)...
 "%GIT%" pull --rebase --autostash
 if errorlevel 1 goto :FAILPULL
 
 echo.
-echo [2/4] ë³€ê²½ë¶„ ìŠ¤í…Œì´ì§•...
+echo [2/4] º¯°æºÐ ½ºÅ×ÀÌÂ¡...
 "%GIT%" add -A
 if errorlevel 1 goto :FAILADD
 
@@ -53,57 +53,57 @@ if errorlevel 1 goto :FAILADD
 if not errorlevel 1 goto :NOCHANGE
 
 echo.
-echo [3/4] ì»¤ë°‹...
+echo [3/4] Ä¿¹Ô...
 "%GIT%" commit -m "FPS Radar %TODAY%"
 if errorlevel 1 goto :FAILCOMMIT
 
 echo.
-echo [4/4] í‘¸ì‹œ...
+echo [4/4] Çª½Ã...
 "%GIT%" push
 if errorlevel 1 goto :FAILPUSH
 
 echo.
 echo ============================================
-echo  [ì™„ë£Œ] %TODAY% GitHub ë°˜ì˜ ì™„ë£Œ
+echo  [¿Ï·á] %TODAY% GitHub ¹Ý¿µ ¿Ï·á
 echo ============================================
 goto :END
 
 :NOCHANGE
 echo.
-echo  [ì•Œë¦¼] ì»¤ë°‹í•  ë³€ê²½ì‚¬í•­ì´ ì—†ìŠµë‹ˆë‹¤. (ì´ë¯¸ ëª¨ë‘ ë°˜ì˜ëœ ìƒíƒœ)
+echo  [¾Ë¸²] Ä¿¹ÔÇÒ º¯°æ»çÇ×ÀÌ ¾ø½À´Ï´Ù. (ÀÌ¹Ì ¸ðµÎ ¹Ý¿µµÈ »óÅÂ)
 goto :END
 
 :NOREPO
 echo.
-echo  [ì˜¤ë¥˜] ì €ìž¥ì†Œ í´ë”ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤: %REPO%
+echo  [¿À·ù] ÀúÀå¼Ò Æú´õ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù: %REPO%
 goto :END
 
 :LOCKED
 echo.
-echo  [ì˜¤ë¥˜] .git\index.lock ì„ ì§€ìš¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
-echo         GitHub Desktop ì´ë‚˜ ë‹¤ë¥¸ git í”„ë¡œê·¸ëž¨ì´ ì‹¤í–‰ ì¤‘ì´ë©´ ì¢…ë£Œí•˜ê³  ë‹¤ì‹œ ì‹œë„í•˜ì„¸ìš”.
+echo  [¿À·ù] .git\index.lock À» Áö¿ï ¼ö ¾ø½À´Ï´Ù.
+echo         GitHub Desktop ÀÌ³ª ´Ù¸¥ git ÇÁ·Î±×·¥ÀÌ ½ÇÇà ÁßÀÌ¸é Á¾·áÇÏ°í ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.
 goto :END
 
 :FAILPULL
 echo.
-echo  [ì‹¤íŒ¨] ì›ê²© ë™ê¸°í™”(pull) ì˜¤ë¥˜. ìœ„ ë©”ì‹œì§€ë¥¼ í™•ì¸í•˜ì„¸ìš”.
-echo         ë„¤íŠ¸ì›Œí¬ ë¬¸ì œì´ê±°ë‚˜ ì¶©ëŒì¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+echo  [½ÇÆÐ] ¿ø°Ý µ¿±âÈ­(pull) ¿À·ù. À§ ¸Þ½ÃÁö¸¦ È®ÀÎÇÏ¼¼¿ä.
+echo         ³×Æ®¿öÅ© ¹®Á¦ÀÌ°Å³ª Ãæµ¹ÀÏ ¼ö ÀÖ½À´Ï´Ù.
 goto :END
 
 :FAILADD
 echo.
-echo  [ì‹¤íŒ¨] ìŠ¤í…Œì´ì§•(add) ì˜¤ë¥˜. ìœ„ ë©”ì‹œì§€ë¥¼ í™•ì¸í•˜ì„¸ìš”.
+echo  [½ÇÆÐ] ½ºÅ×ÀÌÂ¡(add) ¿À·ù. À§ ¸Þ½ÃÁö¸¦ È®ÀÎÇÏ¼¼¿ä.
 goto :END
 
 :FAILCOMMIT
 echo.
-echo  [ì‹¤íŒ¨] ì»¤ë°‹ ì˜¤ë¥˜. ìœ„ ë©”ì‹œì§€ë¥¼ í™•ì¸í•˜ì„¸ìš”.
+echo  [½ÇÆÐ] Ä¿¹Ô ¿À·ù. À§ ¸Þ½ÃÁö¸¦ È®ÀÎÇÏ¼¼¿ä.
 goto :END
 
 :FAILPUSH
 echo.
-echo  [ì‹¤íŒ¨] í‘¸ì‹œ ì˜¤ë¥˜. ìœ„ ë©”ì‹œì§€ë¥¼ í™•ì¸í•˜ì„¸ìš”.
-echo         ì¸ì¦ ë¬¸ì œë¡œ ë³´ì´ë©´ ê¹ƒí—ˆë¸Œ_ìžë™ì„¤ì •.bat ì„ ë‹¤ì‹œ ì‹¤í–‰í•´ ë¡œê·¸ì¸í•˜ì„¸ìš”.
+echo  [½ÇÆÐ] Çª½Ã ¿À·ù. À§ ¸Þ½ÃÁö¸¦ È®ÀÎÇÏ¼¼¿ä.
+echo         ÀÎÁõ ¹®Á¦·Î º¸ÀÌ¸é ±êÇãºê_ÀÚµ¿¼³Á¤.bat À» ´Ù½Ã ½ÇÇàÇØ ·Î±×ÀÎÇÏ¼¼¿ä.
 goto :END
 
 :END
