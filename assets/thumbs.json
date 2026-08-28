@@ -74,20 +74,17 @@
       "name": "VALORANT",
       "steam_appid": null,
       "url": null,
-      "local": null,
-      "메모": "스팀·에픽 미등록으로 안정적 공개 이미지 URL 미확보. assets/thumbs/valorant.jpg 를 넣으면 자동 사용됨."
+      "local": "assets/thumbs/valorant.jpg",
+      "메모": "스팀·에픽 미등록. 사용자 제공 이미지를 저장소에 보관 중(1280x720)."
     },
     "서든어택": {
       "mono": "SA",
       "name": "서든어택",
       "steam_appid": null,
       "url": null,
-      "local": null,
-      "메모": "스팀 미등록. assets/thumbs/sudden-attack.jpg 를 넣으면 자동 사용됨."
+      "local": "assets/thumbs/sudden-attack.jpg",
+      "메모": "스팀 미등록. 공식 로고를 네이비 배경에 합성해 저장소에 보관 중(1280x720)."
     }
   },
-  "_이미지필요": [
-    "발로란트",
-    "서든어택"
-  ]
+  "_이미지필요": []
 }
