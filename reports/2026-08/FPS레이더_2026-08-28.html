@@ -121,6 +121,19 @@ tbody tr:hover{background:var(--blue-soft)}
 .thumb.noimg img{display:none}
 .thumb.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.thumb.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 5px,transparent 5px 13px)}.thumb.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:6px 9px;text-align:center;font-weight:800;font-size:12.5px;line-height:1.25;letter-spacing:-.01em;color:rgba(255,255,255,.96);text-shadow:0 1px 5px rgba(0,0,0,.45)}
 .game{font-weight:800;color:var(--navy);line-height:1.3}
+/* ── 근거 유형 라벨: 이 반응이 어디서 나온 것인지 표시 ── */
+.ev{display:inline-flex;align-items:center;gap:4px;vertical-align:middle;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em;padding:2px 7px;border-radius:999px;border:1px solid;white-space:nowrap;margin-right:5px}
+.ev::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.85}
+.ev.kr{color:var(--blue);background:var(--blue-soft);border-color:var(--blue-line)}
+.ev.gl{color:var(--violet);background:var(--violet-soft);border-color:color-mix(in srgb,var(--violet) 30%,transparent)}
+.ev.cm{color:var(--green);background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 30%,transparent)}
+.ev.mt{color:var(--amber);background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 34%,transparent)}
+.ev.na{color:var(--muted);background:var(--card-2);border-color:var(--line)}
+.ev.of{color:var(--ink-2);background:var(--card-2);border-color:var(--line-soft)}
+.evkey{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:2px 0 14px;padding:10px 14px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:var(--radius-sm);background:var(--card-2);font-size:12.5px;color:var(--ink-2)}
+.evkey b{color:var(--navy);font-size:12px;letter-spacing:.01em}
+.evkey span.d{color:var(--muted)}
+
 .game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
 .date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
 .pt{margin:0;color:var(--ink-2);line-height:1.6}
@@ -319,27 +332,28 @@ tbody tr:hover{background:var(--blue-soft)}
         <span class="rank">01</span><span class="flag">최대 변수</span>
         <div class="over"><div class="gm">Call of Duty: MW4</div><h3>오픈 베타 오늘 전원 개방 — 쟁점은 총이 아니라 '매치메이킹'</h3></div>
       </div>
-      <div class="under">얼리 베타(8/21–25) 직후부터 CoD 서브레딧은 <b>SBMM·스웨티 로비</b> 성토가 지배. 개발사는 "오픈 베타 전 추가 공유" 예고했지만 <b>매치메이킹·에임 어시스트는 언급 없음</b>. 표본이 커지는 오늘이 여론 분수령.</div>
+      <div class="under"><span class="ev gl">글로벌·기사</span><span class="ev mt">지표</span> 얼리 베타(8/21–25) 직후부터 CoD 서브레딧은 <b>SBMM·스웨티 로비</b> 성토가 지배. 개발사는 "오픈 베타 전 추가 공유" 예고했지만 <b>매치메이킹·에임 어시스트는 언급 없음</b>. 표본이 커지는 오늘이 여론 분수령.</div>
     </a>
     <a class="hero" href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener">
       <div class="shot" data-mono="SA" data-name="서든어택"><img src="../../assets/thumbs/sudden-attack.jpg" alt="서든어택">
         <span class="rank">02</span><span class="flag n">국내 화제</span>
         <div class="over"><div class="gm">서든어택</div><h3>21주년 '블랙마켓' 2주 한시 개장, 9/3 마감</h3></div>
       </div>
-      <div class="under">기존 <b>플리마켓에서 거래 불가였던 아이템</b>까지 사고팔 수 있는 한시 콘텐츠. 2026 무기개편 2차와 동시 적용. <b>한시 거래 콘텐츠 운영 벤치마크</b>로 볼 만한 케이스.</div>
+      <div class="under"><span class="ev kr">KR·기사</span> 기존 <b>플리마켓에서 거래 불가였던 아이템</b>까지 사고팔 수 있는 한시 콘텐츠. 2026 무기개편 2차와 동시 적용. <b>한시 거래 콘텐츠 운영 벤치마크</b>로 볼 만한 케이스.</div>
     </a>
     <a class="hero" href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener">
       <div class="shot" data-mono="TT" data-name="TIME TAKERS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3596040/4a802f6ed9806f37dca30048377793a3953ed1e0/header.jpg?t=1781226025" alt="타임 테이커즈">
         <span class="rank">03</span><span class="flag n">신작·테스트</span>
         <div class="over"><div class="gm">타임 테이커즈 (NCSOFT)</div><h3>9/5 스팀 플레이테스트 72시간, 사전 다운로드 9/3</h3></div>
       </div>
-      <div class="under">엔씨의 타임 서바이벌 슈터. <b>9/5 02:00 ~ 9/8 02:00</b> 진행, 스팀 페이지에서 신청. 국내 슈터 프리런칭 <b>CBT 모집·온보딩 실무 벤치마크</b>.</div>
+      <div class="under"><span class="ev kr">KR·기사</span> 엔씨의 타임 서바이벌 슈터. <b>9/5 02:00 ~ 9/8 02:00</b> 진행, 스팀 페이지에서 신청. 국내 슈터 프리런칭 <b>CBT 모집·온보딩 실무 벤치마크</b>.</div>
     </a>
   </section>
 
   <!-- 03 국내 -->
   <div class="sec" id="kr"><span class="idx">03</span><h2>국내 포커스</h2><span class="rule"></span></div>
   <p class="sub-lead">국내 서비스·국내 배경 IP·국내 커뮤니티(<b>인벤·루리웹·디시·아카라이브·에펨</b>) 반응 중심.</p>
+  <div class="evkey"><b>근거 표기</b><span><span class="ev kr">KR·기사</span><span class="d">국내 매체가 전한 여론</span></span><span><span class="ev gl">글로벌·기사</span><span class="d">해외 매체가 전한 여론</span></span><span><span class="ev cm">커뮤니티</span><span class="d">원문 글을 직접 확인</span></span><span><span class="ev of">공식</span><span class="d">공식 공지가 근거(여론 아님)</span></span><span><span class="ev mt">지표</span><span class="d">동접·평점 등 수치</span></span><span><span class="ev na">국내 반응 미확인</span><span class="d">국내 소스에서 확인 못 함</span></span></div>
   <div class="tablewrap"><table>
     <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
     <tbody>
@@ -348,35 +362,35 @@ tbody tr:hover{background:var(--blue-soft)}
         <td class="pt"><b>블랙마켓</b> 2주 한시 개장(플리마켓 거래 불가 아이템 포함) + <b>2026 무기개편 2차</b> 적용</td>
         <td class="date-cell">~9/3 마감</td>
         <td><span class="tag t-new">한시 콘텐츠</span> <span class="tag t-warn">마감 임박</span></td>
-        <td class="pt">21주년 기념 라인업의 핵심 축. <b>거래 제한 해제</b>는 아이템 시세·형평성 논쟁을 부르기 쉬운 구조라 커뮤니티 온도를 주시할 구간. 출첵 이벤트는 9/30까지 별도 진행. <span class="src-inline"><a href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener">게임메카</a></span></td>
+        <td class="pt"><span class="ev kr">KR·기사</span> 21주년 기념 라인업의 핵심 축. <b>거래 제한 해제</b>는 아이템 시세·형평성 논쟁을 부르기 쉬운 구조라 커뮤니티 온도를 주시할 구간. 출첵 이벤트는 9/30까지 별도 진행. <span class="src-inline"><a href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener">게임메카</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="TT" data-name="TIME TAKERS" aria-hidden="true"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3596040/4a802f6ed9806f37dca30048377793a3953ed1e0/header.jpg?t=1781226025" alt=""></span><span><a href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener"><span class="game">타임 테이커즈</span></a><span class="game-sub">NCSOFT · 신작</span></span></div></td>
         <td class="pt">스팀 <b>플레이테스트 72시간</b> — 9/5 02:00 ~ 9/8 02:00, 사전 다운로드 9/3</td>
         <td class="date-cell">9/5 시작</td>
         <td><span class="tag t-new">CBT/테스트</span></td>
-        <td class="pt">게임스컴 이후 국내 슈터 신작 러시의 연장선. <b>모집 → 사전 DL → 72시간 집중 테스트</b> 구조라 프리런칭 온보딩·문의 대응 설계를 그대로 참고할 수 있음. <span class="src-inline"><a href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener">인벤</a></span></td>
+        <td class="pt"><span class="ev kr">KR·기사</span> 게임스컴 이후 국내 슈터 신작 러시의 연장선. <b>모집 → 사전 DL → 72시간 집중 테스트</b> 구조라 프리런칭 온보딩·문의 대응 설계를 그대로 참고할 수 있음. <span class="src-inline"><a href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener">인벤</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="PUBG" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg" alt=""></span><span><a href="https://www.pubg.com/ko/news/10828" target="_blank" rel="noopener"><span class="game">배틀그라운드(PUBG)</span></a></span></div></td>
         <td class="pt"><b>특별 보급 이벤트</b> 진행(8/12–9/16) + 8월 상점(서바이버 패스, M79 무기 스킨 등)</td>
         <td class="date-cell">~9/16</td>
         <td><span class="tag t-live">진행 업데이트</span></td>
-        <td class="pt">신규 국면 소식 없이 <b>장기 보상 이벤트 + 상점 로테이션</b>으로 안정 운영 중. 대형 신작 베타 주간에 자사 이용자를 붙잡는 전형적 편성. <span class="src-inline"><a href="https://www.pubg.com/ko/news/10828" target="_blank" rel="noopener">PUBG 공식</a> · <a href="https://pubg.com/ko/events/notice" target="_blank" rel="noopener">이벤트</a></span></td>
+        <td class="pt"><span class="ev kr">KR·기사</span> 신규 국면 소식 없이 <b>장기 보상 이벤트 + 상점 로테이션</b>으로 안정 운영 중. 대형 신작 베타 주간에 자사 이용자를 붙잡는 전형적 편성. <span class="src-inline"><a href="https://www.pubg.com/ko/news/10828" target="_blank" rel="noopener">PUBG 공식</a> · <a href="https://pubg.com/ko/events/notice" target="_blank" rel="noopener">이벤트</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="VAL" data-name="VALORANT" aria-hidden="true"><img src="../../assets/thumbs/valorant.jpg" alt=""></span><span><a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트 한국</span></a><span class="game-sub">Act 5</span></span></div></td>
         <td class="pt">시즌 2026 <b>Act 5</b> 진행(8/19~) · 8월 <b>라이엇 프리미엄 PC방</b> 혜택</td>
         <td class="date-cell">8/19 시작</td>
         <td><span class="tag t-live">진행 업데이트</span></td>
-        <td class="pt">신규 배틀패스(Verdant·Gourmand 등)·경쟁 맵 로테이션 갱신. 국내는 <b>PC방 채널</b>이 여전히 유효한 오프라인 접점. <span class="src-inline"><a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank" rel="noopener">라이엇 공지</a></span></td>
+        <td class="pt"><span class="ev kr">KR·기사</span> 신규 배틀패스(Verdant·Gourmand 등)·경쟁 맵 로테이션 갱신. 국내는 <b>PC방 채널</b>이 여전히 유효한 오프라인 접점. <span class="src-inline"><a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank" rel="noopener">라이엇 공지</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="OW" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg" alt=""></span><span><a href="https://overwatch.blizzard.com/ko-kr/news/patch-notes/" target="_blank" rel="noopener"><span class="game">오버워치2</span></a><span class="game-sub">시즌 4</span></span></div></td>
         <td class="pt">시즌 4(8/11~) — <b>부산·아이헨발데·파라이소 맵 리워크</b>, 신규 영웅 라인</td>
         <td class="date-cell">8/11 시작</td>
         <td><span class="tag t-live">진행 업데이트</span></td>
-        <td class="pt">국내 지명 '부산' 리워크로 국내 화제 지속. 신규 영웅(D.Mon으로 알려짐) 관련 정보는 <b>공식 확정 전이라 재확인 권장</b>. <span class="src-inline"><a href="https://esports.gg/guides/overwatch/all-overwatch-season-start-and-end-dates/" target="_blank" rel="noopener">esports.gg</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 국내 지명 '부산' 리워크로 국내 화제 지속. 신규 영웅(D.Mon으로 알려짐) 관련 정보는 <b>공식 확정 전이라 재확인 권장</b>. <span class="src-inline"><a href="https://esports.gg/guides/overwatch/all-overwatch-season-start-and-end-dates/" target="_blank" rel="noopener">esports.gg</a></span></td>
       </tr>
     </tbody>
   </table></div>
@@ -392,49 +406,49 @@ tbody tr:hover{background:var(--blue-soft)}
         <td class="pt"><b>오픈 베타</b> 전원 개방 — 사전구매·코드 불필요, 전 플랫폼(Switch 2 포함)</td>
         <td class="date-cell">8/28–9/1</td>
         <td><span class="tag t-new">오픈 베타</span> <span class="tag t-risk">여론 분수령</span></td>
-        <td class="pt">얼리 베타에서 <b>SBMM·짧은 TTK·에임 어시스트·무브먼트</b> 불만이 집중. "캐주얼로 해도 스웨티 로비만 잡힌다"는 성토가 서브레딧을 채움. Open Matchmaking 옵션 병행 테스트 중. <span class="src-inline"><a href="https://dotesports.com/call-of-duty/news/mw4-sbmm-aim-assist-early-access-beta" target="_blank" rel="noopener">Dot Esports</a> · <a href="https://www.pcgamer.com/games/call-of-duty/mw4-beta-dates-times/" target="_blank" rel="noopener">PC Gamer</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span> 얼리 베타에서 <b>SBMM·짧은 TTK·에임 어시스트·무브먼트</b> 불만이 집중. "캐주얼로 해도 스웨티 로비만 잡힌다"는 성토가 서브레딧을 채움. Open Matchmaking 옵션 병행 테스트 중. <span class="src-inline"><a href="https://dotesports.com/call-of-duty/news/mw4-sbmm-aim-assist-early-access-beta" target="_blank" rel="noopener">Dot Esports</a> · <a href="https://www.pcgamer.com/games/call-of-duty/mw4-beta-dates-times/" target="_blank" rel="noopener">PC Gamer</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="MR" aria-hidden="true"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg?t=1786093208" alt=""></span><span><a href="https://www.marvelrivals.com/20260805/41525_1310120.html" target="_blank" rel="noopener"><span class="game">마블 라이벌즈</span></a><span class="game-sub">시즌 9.5</span></span></div></td>
         <td class="pt">시즌 9.5(8/7~) — 신규 뱅가드 <b>The Hood</b>, Summer Finale 코스메틱 · <b>Lady Loki 번들 오늘(8/28) 종료</b></td>
         <td class="date-cell">~8/28</td>
         <td><span class="tag t-warn">판매 종료</span> <span class="tag t-live">진행</span></td>
-        <td class="pt">8/13 패치는 <b>서버 다운타임 없이</b> 번들만 추가하는 방식이었고, 이 운영은 대체로 무난히 수용됨. 최근 스킨 형평성 논쟁의 여진은 남아 있어 <b>가격·등급 커뮤니케이션</b>을 계속 지켜볼 것. <span class="src-inline"><a href="https://www.forbes.com/sites/brianmazique/2026/08/13/marvel-rivals-patch-notes/" target="_blank" rel="noopener">Forbes</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 8/13 패치는 <b>서버 다운타임 없이</b> 번들만 추가하는 방식이었고, 이 운영은 대체로 무난히 수용됨. 최근 스킨 형평성 논쟁의 여진은 남아 있어 <b>가격·등급 커뮤니케이션</b>을 계속 지켜볼 것. <span class="src-inline"><a href="https://www.forbes.com/sites/brianmazique/2026/08/13/marvel-rivals-patch-notes/" target="_blank" rel="noopener">Forbes</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="APEX" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg" alt=""></span><span><a href="https://dotesports.com/apex-legends" target="_blank" rel="noopener"><span class="game">에이펙스 레전드</span></a><span class="game-sub">시즌 30</span></span></div></td>
         <td class="pt">시즌 30 밸런스 — <b>액슬·블러드하운드·시어 너프</b></td>
         <td class="date-cell">8/22–23</td>
         <td><span class="tag t-risk">밸런스 반발</span></td>
-        <td class="pt">7월 블러드하운드 리워크 백래시(No.22)에 이은 <b>연속 하향</b>이라 "리워크해놓고 또 너프" 피로 누적. 리워크→너프 반복은 <b>캐릭터 애착 이용자층을 직접 자극</b>. <span class="src-inline"><a href="https://dotesports.com/apex-legends" target="_blank" rel="noopener">Dot Esports</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 7월 블러드하운드 리워크 백래시(No.22)에 이은 <b>연속 하향</b>이라 "리워크해놓고 또 너프" 피로 누적. 리워크→너프 반복은 <b>캐릭터 애착 이용자층을 직접 자극</b>. <span class="src-inline"><a href="https://dotesports.com/apex-legends" target="_blank" rel="noopener">Dot Esports</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="R6" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg" alt=""></span><span><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener"><span class="game">레인보우 식스 시즈</span></a><span class="game-sub">Y11S2</span></span></div></td>
         <td class="pt"><b>Operation Override</b> — 신규 권총 TACIT.45(일체형 소음기), 보안·랭킹 시스템 개선</td>
         <td class="date-cell">8/15</td>
         <td><span class="tag t-live">진행 업데이트</span> <span class="tag t-good">보안 개선</span></td>
-        <td class="pt">신규 무기보다 <b>안티치트·랭크 개선</b>이 커뮤니티에서 더 후한 평가. 장수 라이브서비스에서 <b>'공정성 투자'가 호평 자산</b>이 되는 전형. <span class="src-inline"><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener">Ubisoft</a> · <a href="https://steamdb.info/app/359550/patchnotes/" target="_blank" rel="noopener">SteamDB</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 신규 무기보다 <b>안티치트·랭크 개선</b>이 커뮤니티에서 더 후한 평가. 장수 라이브서비스에서 <b>'공정성 투자'가 호평 자산</b>이 되는 전형. <span class="src-inline"><a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/roadmap" target="_blank" rel="noopener">Ubisoft</a> · <a href="https://steamdb.info/app/359550/patchnotes/" target="_blank" rel="noopener">SteamDB</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="CS2" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg" alt=""></span><span><a href="https://www.counter-strike.net/news/updates" target="_blank" rel="noopener"><span class="game">Counter-Strike 2</span></a></span></div></td>
         <td class="pt">쾰른 2026 메이저 <b>하이라이트 수브니어 참</b> 메이저 상점 판매 · <b>BLAST Open Fall 2026</b> 개막(상금 110만 달러)</td>
         <td class="date-cell">8/26~</td>
         <td><span class="tag t-live">e스포츠</span> <span class="tag t-new">수익화</span></td>
-        <td class="pt">메이저 6개 스테이지별 하이라이트 10종 판매 = <b>e스포츠 순간을 상품화</b>하는 방식. 싱가포르 메이저를 향한 VRS 경쟁 구간이라 시청·화제 집중. <span class="src-inline"><a href="https://op.gg/cs2/news" target="_blank" rel="noopener">OP.GG</a> · <a href="https://www.counter-strike.net/news/updates" target="_blank" rel="noopener">공식</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 메이저 6개 스테이지별 하이라이트 10종 판매 = <b>e스포츠 순간을 상품화</b>하는 방식. 싱가포르 메이저를 향한 VRS 경쟁 구간이라 시청·화제 집중. <span class="src-inline"><a href="https://op.gg/cs2/news" target="_blank" rel="noopener">OP.GG</a> · <a href="https://www.counter-strike.net/news/updates" target="_blank" rel="noopener">공식</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="VAL" data-name="VALORANT" aria-hidden="true"><img src="../../assets/thumbs/valorant.jpg" alt=""></span><span><a href="https://playvalorant.com/en-us/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트</span></a><span class="game-sub">Season 2026 Act 5</span></span></div></td>
         <td class="pt">Act 5 시작(8/19) — 신규 배틀패스, 경쟁 맵 로테이션 갱신, 요원 튜닝 · <b>Aeris 번들</b>(8/18, 9,500 VP)</td>
         <td class="date-cell">8/18–19</td>
         <td><span class="tag t-new">신규 액트</span></td>
-        <td class="pt">고가 번들(9,500 VP)에 대한 가격 담론은 상수. 액트 전환 직후 <b>맵 로테이션 불만</b>이 나오기 쉬운 구간이라 초기 2주 여론을 주시. <span class="src-inline"><a href="https://www.gfinityesports.com/article/valorant-season-2026-act-5-everything-we-know" target="_blank" rel="noopener">Gfinity</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> 고가 번들(9,500 VP)에 대한 가격 담론은 상수. 액트 전환 직후 <b>맵 로테이션 불만</b>이 나오기 쉬운 구간이라 초기 2주 여론을 주시. <span class="src-inline"><a href="https://www.gfinityesports.com/article/valorant-season-2026-act-5-everything-we-know" target="_blank" rel="noopener">Gfinity</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="OW" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg" alt=""></span><span><a href="https://esports.gg/news/overwatch/" target="_blank" rel="noopener"><span class="game">오버워치 2</span></a><span class="game-sub">시즌 4</span></span></div></td>
         <td class="pt">시즌 4 <b>트위치 드롭스</b> 무료 스프레이 · 레킹볼 신규 코믹 공개</td>
         <td class="date-cell">8/13–14</td>
         <td><span class="tag t-good">무료 보상</span></td>
-        <td class="pt"><b>무료 보상 + 서사 콘텐츠</b> 조합은 8월 초 '무료 보상 인색' 프레임(No.24)을 완화하는 방향. 코믹으로 시즌 서사를 채우는 방식은 저비용 인게이지먼트 참고 사례. <span class="src-inline"><a href="https://esports.gg/news/overwatch/" target="_blank" rel="noopener">esports.gg</a></span></td>
+        <td class="pt"><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span> <b>무료 보상 + 서사 콘텐츠</b> 조합은 8월 초 '무료 보상 인색' 프레임(No.24)을 완화하는 방향. 코믹으로 시즌 서사를 채우는 방식은 저비용 인게이지먼트 참고 사례. <span class="src-inline"><a href="https://esports.gg/news/overwatch/" target="_blank" rel="noopener">esports.gg</a></span></td>
       </tr>
     </tbody>
   </table></div>

@@ -82,6 +82,18 @@ table.cal{width:100%;border-collapse:collapse;table-layout:fixed}
 table.cal th{font-size:11px;color:var(--muted);font-weight:700;padding:6px 0}
 table.cal th.sun{color:var(--red)} table.cal th.sat{color:var(--blue)}
 table.cal td{text-align:center;padding:2px}
+/* 달력 하단 — 주간·월간 리포트 바로가기 */
+.digbar{margin-top:10px;padding-top:10px;border-top:1px solid var(--line-soft);
+  display:flex;flex-direction:column;gap:7px}
+.digrow{display:flex;align-items:flex-start;gap:9px}
+.digrow>.k{flex:none;width:32px;font-size:11.5px;font-weight:800;color:var(--navy);padding-top:4px}
+.digrow>.v{display:flex;flex-wrap:wrap;gap:5px;flex:1}
+.chipw{font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;line-height:1.2;
+  border:1px solid var(--line);background:var(--card-2);color:var(--faint);white-space:nowrap}
+.chipw.has{border-color:var(--blue-line);background:var(--blue-soft);color:var(--blue);cursor:pointer}
+.chipw.has:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.chipw.mo{padding:4px 12px}
+.dighint{font-size:10.5px;color:var(--faint);line-height:1.45}
 .day{width:34px;height:34px;line-height:34px;margin:0 auto;border-radius:9px;font-size:13px;color:var(--ink-2);
   position:relative;transition:background .12s,color .12s}
 .day.blank{visibility:hidden}
@@ -158,6 +170,12 @@ iframe{width:100%;height:100%;border:0;background:var(--card);display:block}
         <tbody id="calbody"></tbody>
       </table>
       <div class="legend"><span class="dot b"></span>선택한 날 &nbsp; <span class="dot"></span>리포트 있는 날<br>날짜를 클릭하면 오른쪽에 해당 리포트가 열립니다.</div>
+
+      <div class="digbar">
+        <div class="digrow"><span class="k">주간</span><span class="v" id="wkchips"></span></div>
+        <div class="digrow"><span class="k">월간</span><span class="v" id="mochip"></span></div>
+        <div class="dighint">주차는 월요일~일요일 기준입니다. 발행된 것만 파랗게 표시됩니다.</div>
+      </div>
     </div>
 
     <div class="recent">
@@ -165,7 +183,12 @@ iframe{width:100%;height:100%;border:0;background:var(--card);display:block}
       <div class="rlist" id="rlist"></div>
     </div>
 
-    <div class="side-foot">라이온하트 · 자동 생성 리포트<br>월–금 09:0X KST 발행 · 국내+글로벌 병행</div>
+    <div class="recent digest">
+      <h4>주간 · 월간</h4>
+      <div class="rlist" id="dlist"></div>
+    </div>
+
+    <div class="side-foot">라이온하트 · 자동 생성 리포트<br>일간 매일 09:3X · 주간 월요일 · 월간 1일 · 국내+글로벌 병행</div>
   </aside>
 
   <div class="viewer-wrap">
@@ -240,6 +263,55 @@ function load(d){
   sel=d; viewer.removeAttribute("srcdoc"); viewer.src=file(d);
   setSelLabel(d); renderCal(); renderRecent();
 }
+/* ISO 8601 주차: 목요일이 속한 해의 주차 (월요일 시작) */
+function isoWeekId(dt){
+  var d=new Date(Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate()));
+  var dn=d.getUTCDay()||7;                 // 월=1 … 일=7
+  d.setUTCDate(d.getUTCDate()+4-dn);       // 그 주 목요일
+  var y=d.getUTCFullYear();
+  var jan1=new Date(Date.UTC(y,0,1));
+  var wk=Math.ceil(((d-jan1)/86400000+1)/7);
+  return y+"-W"+pad(wk);
+}
+/* 그 달이 걸치는 ISO 주차들을 순서대로 — [{id,from,to}] */
+function monthWeeks(y,m){
+  var dim=new Date(y,m+1,0).getDate(), seen={}, out=[];
+  for(var d=1;d<=dim;d++){
+    var dt=new Date(y,m,d), id=isoWeekId(dt);
+    if(seen[id]){ seen[id].to=dt; continue; }
+    seen[id]={id:id,from:dt,to:dt}; out.push(seen[id]);
+  }
+  return out;
+}
+function mmdd(dt){ return pad(dt.getMonth()+1)+"."+pad(dt.getDate()); }
+
+/* 달력 하단 주간·월간 바로가기 */
+function renderDigBar(y,m){
+  var wb=document.getElementById("wkchips"), mb=document.getElementById("mochip");
+  if(wb){
+    wb.innerHTML="";
+    monthWeeks(y,m).forEach(function(w,i){
+      var hit=DIGESTS.filter(function(x){return x&&x.kind==="week"&&x.id===w.id;})[0];
+      var b=document.createElement("span");
+      b.className="chipw"+(hit?" has":"");
+      b.textContent=(i+1)+"주차";
+      b.title=w.id+" · "+mmdd(w.from)+"–"+mmdd(w.to)+(hit?("\n"+(hit.title||"")):"\n(미발행)");
+      if(hit){ b.dataset.f=hit.file; b.setAttribute("role","button"); b.setAttribute("tabindex","0"); }
+      wb.appendChild(b);
+    });
+  }
+  if(mb){
+    mb.innerHTML="";
+    var mid=y+"-"+pad(m+1);
+    var hit=DIGESTS.filter(function(x){return x&&x.kind==="month"&&x.id===mid;})[0];
+    var b=document.createElement("span");
+    b.className="chipw mo"+(hit?" has":"");
+    b.textContent="월간 리포트";
+    b.title=hit?(hit.title||mid):"(미발행)";
+    if(hit){ b.dataset.f=hit.file; b.setAttribute("role","button"); b.setAttribute("tabindex","0"); }
+    mb.appendChild(b);
+  }
+}
 function renderCal(){
   var y=view.getFullYear(), m=view.getMonth();
   document.getElementById("mlabel").textContent=y+"년 "+(m+1)+"월";
@@ -258,6 +330,7 @@ function renderCal(){
     if(cell%7===0){ tb.appendChild(row); row=document.createElement("tr"); }
   }
   if(cell%7!==0) tb.appendChild(row);
+  renderDigBar(y,m);
 }
 function renderRecent(){
   var box=document.getElementById("rlist"); box.innerHTML="";
@@ -304,6 +377,71 @@ tbtn.onclick=function(){ applyTheme(root.getAttribute("data-theme")==="dark"?"li
       .then(function(j){ applyManifest(j); })
       .catch(function(){ applyManifest(BOOTSTRAP); });
   }catch(e){ applyManifest(BOOTSTRAP); }
+})();
+
+/* ── 주간·월간 다이제스트 ────────────────────────────────
+   reports_weekly.json  : [{ "id":"2026-W36", "range":"08.24–08.30",
+                             "title":"...", "file":"reports/weekly/FPS레이더_주간_2026-W36.html" }, ...]
+   reports_monthly.json : [{ "id":"2026-08", "range":"8월",
+                             "title":"...", "file":"reports/monthly/FPS레이더_월간_2026-08.html" }, ...]
+   파일이 없거나 비어 있어도 안전하게 동작합니다.
+   ─────────────────────────────────────────────────────── */
+var DIGESTS=[];
+function renderDigest(){
+  var box=document.getElementById("dlist"); if(!box) return;
+  box.innerHTML="";
+  if(!DIGESTS.length){
+    box.innerHTML='<div class="empty-list">아직 발행된 주간·월간 리포트가 없습니다.<br>주간은 월요일, 월간은 매월 1일에 생성됩니다.</div>';
+    return;
+  }
+  DIGESTS.slice(0,8).forEach(function(d){
+    if(!d || !d.file) return;
+    var el=document.createElement("div");
+    el.className="ritem";
+    el.setAttribute("data-f",d.file);
+    el.setAttribute("role","button"); el.setAttribute("tabindex","0");
+    var kind=(d.kind==="month"?"월간":"주간");
+    el.innerHTML='<span class="rno">'+kind+'</span>'
+      +'<span class="rtitle">'+(d.title||d.id||"")+'</span>'
+      +'<span class="rdate">'+(d.range||d.id||"")+'</span>';
+    box.appendChild(el);
+  });
+}
+function openDigest(file){
+  DIGEST_MODE=true;
+  var s=document.getElementById("sel"); if(s) s.textContent=file.split("/").pop().replace(/\.html$/,"");
+  var o=document.getElementById("openNew"); if(o) o.href=file;
+  viewer.removeAttribute("srcdoc");
+  viewer.src=file;
+  Array.prototype.forEach.call(document.querySelectorAll("#rlist .ritem.active"),function(n){n.classList.remove("active");});
+}
+var DIGEST_MODE=false;
+(function(){
+  var dl=document.getElementById("dlist");
+  if(dl){
+    dl.addEventListener("click",function(e){ var el=e.target.closest(".ritem"); if(el&&el.dataset.f) openDigest(el.dataset.f); });
+    dl.addEventListener("keydown",function(e){ if(e.key!=="Enter"&&e.key!==" ")return; var el=e.target.closest(".ritem"); if(el&&el.dataset.f){ e.preventDefault(); openDigest(el.dataset.f);} });
+  }
+  function grab(url,kind){
+    return fetch(url,{cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ return (Array.isArray(j)?j:[]).map(function(x){ x.kind=kind; return x; }); })
+      .catch(function(){ return []; });
+  }
+  try{
+    Promise.all([grab("reports_monthly.json","month"),grab("reports_weekly.json","week")])
+      .then(function(res){ DIGESTS=res[0].concat(res[1]); renderDigest(); renderCal(); })
+      .catch(function(){ renderDigest(); });
+  }catch(e){ renderDigest(); }
+})();
+
+/* 달력 하단 주간·월간 칩 → 리포트 열기 */
+(function(){
+  ["wkchips","mochip"].forEach(function(id){
+    var box=document.getElementById(id); if(!box) return;
+    box.addEventListener("click",function(e){ var el=e.target.closest(".chipw.has"); if(el&&el.dataset.f) openDigest(el.dataset.f); });
+    box.addEventListener("keydown",function(e){ if(e.key!=="Enter"&&e.key!==" ")return; var el=e.target.closest(".chipw.has"); if(el&&el.dataset.f){ e.preventDefault(); openDigest(el.dataset.f); } });
+  });
 })();
 </script>
 </body>

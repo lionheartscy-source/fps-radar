@@ -1,0 +1,131 @@
+{
+  "_설명": "FPS레이더 국내 커뮤니티 고정 경로표. 매일 반드시 확인하는 '바닥'이며, 웹 검색을 대체하지 않는다.",
+  "_원칙": [
+    "이 표는 최소 보장선(floor)이지 상한(ceiling)이 아니다. 웹 검색은 그대로 병행한다.",
+    "게임별 경로 + 전체 훑기 경로 두 층으로 구성. 전체 훑기가 표에 없는 게임·이슈를 잡는다.",
+    "리포트에 새 게임이 등장하면 그 게임의 경로를 찾아 games 에 추가한다(썸네일 카탈로그와 같은 방식).",
+    "값이 null 인 항목은 아직 경로 미확인. 그 사이트는 건너뛰고 웹 검색으로 대체한다.",
+    "접근 실패가 3일 연속이면 _차단확인 으로 옮기고 요약에 알린다."
+  ],
+  "_근거라벨": {
+    "루리웹·아카라이브·인벤에서 원문 글을 직접 확인": "ev cm (커뮤니티)",
+    "아카라이브 추천수·댓글수, 인벤 유저 평점": "ev mt (지표) 함께 사용",
+    "국내 3축에서 아무것도 확인 못 함": "ev na (국내 반응 미확인)"
+  },
+  "_차단확인": {
+    "디시인사이드": {
+      "시도": [
+        "gall.dcinside.com/board/lists/?id=valorant",
+        "gall.dcinside.com/mgallery/board/lists/?id=jett",
+        "m.dcinside.com/board/valorant/167758"
+      ],
+      "결과": "세 경로 모두 빈 응답. 주소 고정으로는 우회 불가(자동 요청 자체를 차단)",
+      "확인일": "2026-08-28",
+      "대응": "경로표에서 제외. 디시 여론이 필요한 항목은 'ev na' 라벨로 남기고 사용자가 직접 확인"
+    },
+    "에펨코리아": {
+      "시도": [
+        "www.fmkorea.com/other_game"
+      ],
+      "결과": "빈 응답. 봇 차단",
+      "확인일": "2026-08-28",
+      "대응": "동일"
+    }
+  },
+  "_전체훑기": [
+    {
+      "이름": "루리웹 신설 게시판",
+      "url": "https://bbs.ruliweb.com/game",
+      "잡는것": "새 게임 전용 게시판 개설 — 커뮤니티 관심이 붙은 신호. 게임별 경로로는 안 잡힘",
+      "실측": "2026-08-28 확인. PUBG:데드넷 / 라이크 오어 다이 / 노 로우 게시판 신설 확인됨"
+    },
+    {
+      "이름": "루리웹 PC 게임 정보",
+      "url": "https://bbs.ruliweb.com/pc/board/300007",
+      "잡는것": "PC 게임 전반 소식·패치노트가 모이는 곳"
+    },
+    {
+      "이름": "루리웹 베스트",
+      "url": "https://bbs.ruliweb.com/best/humor_only",
+      "잡는것": "그날 크게 터진 이슈. 게임 무관하게 화제성 상위"
+    },
+    {
+      "이름": "아카라이브 채널 리스트",
+      "url": "https://arca.live/channels",
+      "잡는것": "새 게임 채널 개설 여부"
+    },
+    {
+      "이름": "아카라이브 종합게임 채널",
+      "url": "https://arca.live/b/cgame",
+      "잡는것": "전용 채널이 없는 게임의 여론이 모임"
+    },
+    {
+      "eq": "",
+      "이름": "인벤 핫벤",
+      "url": "https://hot.inven.co.kr",
+      "잡는것": "인벤 전체에서 그날 가장 반응 큰 글"
+    },
+    {
+      "이름": "인벤 게임 캘린더",
+      "url": "https://www.inven.co.kr/webzine/calendar/",
+      "잡는것": "국내 기준 신작·업데이트 일정. IGDB가 놓치는 국내 게임 보완"
+    }
+  ],
+  "games": {
+    "발로란트": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/발로란트",
+      "아카라이브": "https://arca.live/b/valorant",
+      "인벤": "https://valorant.inven.co.kr/",
+      "확인": "루리웹·아카 실측 완료(2026-08-28)"
+    },
+    "오버워치2": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/오버워치",
+      "아카라이브": "https://arca.live/b/playoverwatch",
+      "인벤": "https://overwatch.inven.co.kr/",
+      "확인": "아카 채널명 검색 확인"
+    },
+    "배틀그라운드(PUBG)": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/배틀그라운드",
+      "아카라이브": "https://arca.live/b/battlegroundspc",
+      "인벤": "https://pubg.inven.co.kr/",
+      "확인": "아카·인벤 검색 확인"
+    },
+    "서든어택": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/서든어택",
+      "아카라이브": null,
+      "인벤": "https://www.inven.co.kr/webzine/game/?game=105",
+      "메모": "인벤은 전용 서브도메인 없음. 게임DB 페이지에 유저 평점 분포가 있어 지표로 쓸 것",
+      "확인": "인벤 게임DB 실측 완료(유저 평점 3.1/10, 239명)"
+    },
+    "콜오브듀티": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/콜오브듀티",
+      "아카라이브": null,
+      "인벤": null
+    },
+    "에이펙스 레전드": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/에이펙스",
+      "아카라이브": null,
+      "인벤": null
+    },
+    "마블 라이벌즈": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/마블라이벌즈",
+      "아카라이브": null,
+      "인벤": null
+    },
+    "배틀필드": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/배틀필드",
+      "아카라이브": null,
+      "인벤": null
+    },
+    "Counter-Strike 2": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/카운터스트라이크",
+      "아카라이브": null,
+      "인벤": null
+    },
+    "레인보우 식스 시즈": {
+      "루리웹": "https://bbs.ruliweb.com/hashtag/레인보우식스",
+      "아카라이브": null,
+      "인벤": null
+    }
+  }
+}
