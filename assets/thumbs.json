@@ -3,6 +3,7 @@
   "_사용법": [
     "1) local 값이 있으면 최우선 사용 (저장소 내 파일이라 절대 안 깨짐). 예: assets/thumbs/valorant.jpg",
     "2) local이 없으면 url 사용.",
+    "★ 스팀 이미지 주소를 손으로 만들지 말 것. 반드시 store.steampowered.com/app/<id>/ 를 WebFetch 해서 실제 header.jpg 주소(해시 포함)를 읽어 쓴다. 2024년 이후 출시작은 .../apps/<id>/header.jpg 가 404다.",
     "3) 둘 다 없으면 웹 검색으로 이미지 URL을 찾아 추가하고 리포트에 반영.",
     "4) 끝내 못 찾으면 noimg 브랜드 타일(data-mono + data-name 필수)로 넣고 완료 보고에 '이미지 필요' 명시.",
     "5) 새 게임을 확보할 때마다 이 파일에 추가할 것."
@@ -49,13 +50,15 @@
       "mono": "MR",
       "name": "MARVEL RIVALS",
       "steam_appid": "2767030",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg"
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg?t=1786093208",
+      "메모": "2024년 출시 신규 앱 — 해시 경로 필수. 스팀 상점 페이지에서 확인한 실제 주소."
     },
     "타임 테이커즈": {
       "mono": "TT",
       "name": "TIME TAKERS",
       "steam_appid": "3596040",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596040/header.jpg"
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3596040/4a802f6ed9806f37dca30048377793a3953ed1e0/header.jpg?t=1781226025",
+      "메모": "신규 앱은 앱ID 뒤 해시 경로 필수. 스팀 상점 페이지의 og:image/header.jpg 에서 실제 주소를 확인해 기록."
     },
     "THE FINALS": {
       "mono": "TF",
@@ -86,5 +89,25 @@
       "메모": "스팀 미등록. 공식 로고를 네이비 배경에 합성해 저장소에 보관 중(1280x720)."
     }
   },
-  "_이미지필요": []
+  "_이미지필요": [],
+  "_검증완료": {
+    "화면에서 실제 렌더 확인": [
+      "콜오브듀티: MW4",
+      "오버워치2",
+      "배틀그라운드(PUBG)",
+      "발로란트",
+      "서든어택"
+    ],
+    "스팀 상점 페이지에서 실주소 확인": [
+      "타임 테이커즈",
+      "마블 라이벌즈"
+    ],
+    "미검증(구형 앱, 해시 없는 경로가 통상 동작)": [
+      "Counter-Strike 2",
+      "에이펙스 레전드",
+      "레인보우 식스 시즈",
+      "THE FINALS",
+      "데스티니 2"
+    ]
+  }
 }
