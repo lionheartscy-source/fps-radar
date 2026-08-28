@@ -1,0 +1,93 @@
+{
+  "_설명": "FPS레이더 리포트 썸네일 카탈로그. 리포트 생성 시 게임명으로 여기를 먼저 조회한다.",
+  "_사용법": [
+    "1) local 값이 있으면 최우선 사용 (저장소 내 파일이라 절대 안 깨짐). 예: assets/thumbs/valorant.jpg",
+    "2) local이 없으면 url 사용.",
+    "3) 둘 다 없으면 웹 검색으로 이미지 URL을 찾아 추가하고 리포트에 반영.",
+    "4) 끝내 못 찾으면 noimg 브랜드 타일(data-mono + data-name 필수)로 넣고 완료 보고에 '이미지 필요' 명시.",
+    "5) 새 게임을 확보할 때마다 이 파일에 추가할 것."
+  ],
+  "_경로주의": "리포트는 reports/YYYY-MM/ 안에 있으므로 로컬 이미지 경로는 ../../assets/thumbs/파일명 으로 쓴다.",
+  "games": {
+    "콜오브듀티: MW4": {
+      "mono": "MW4",
+      "name": "CALL OF DUTY: MW4",
+      "steam_appid": "4783780",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/header.jpg"
+    },
+    "오버워치2": {
+      "mono": "OW",
+      "name": "OVERWATCH 2",
+      "steam_appid": "2357570",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg"
+    },
+    "배틀그라운드(PUBG)": {
+      "mono": "PUBG",
+      "name": "PUBG: BATTLEGROUNDS",
+      "steam_appid": "578080",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg"
+    },
+    "Counter-Strike 2": {
+      "mono": "CS2",
+      "name": "COUNTER-STRIKE 2",
+      "steam_appid": "730",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
+    },
+    "에이펙스 레전드": {
+      "mono": "APEX",
+      "name": "APEX LEGENDS",
+      "steam_appid": "1172470",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
+    },
+    "레인보우 식스 시즈": {
+      "mono": "R6",
+      "name": "RAINBOW SIX SIEGE",
+      "steam_appid": "359550",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
+    },
+    "마블 라이벌즈": {
+      "mono": "MR",
+      "name": "MARVEL RIVALS",
+      "steam_appid": "2767030",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg"
+    },
+    "타임 테이커즈": {
+      "mono": "TT",
+      "name": "TIME TAKERS",
+      "steam_appid": "3596040",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596040/header.jpg"
+    },
+    "THE FINALS": {
+      "mono": "TF",
+      "name": "THE FINALS",
+      "steam_appid": "2073850",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/header.jpg"
+    },
+    "데스티니 2": {
+      "mono": "D2",
+      "name": "DESTINY 2",
+      "steam_appid": "1085660",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
+    },
+    "발로란트": {
+      "mono": "VAL",
+      "name": "VALORANT",
+      "steam_appid": null,
+      "url": null,
+      "local": null,
+      "메모": "스팀·에픽 미등록으로 안정적 공개 이미지 URL 미확보. assets/thumbs/valorant.jpg 를 넣으면 자동 사용됨."
+    },
+    "서든어택": {
+      "mono": "SA",
+      "name": "서든어택",
+      "steam_appid": null,
+      "url": null,
+      "local": null,
+      "메모": "스팀 미등록. assets/thumbs/sudden-attack.jpg 를 넣으면 자동 사용됨."
+    }
+  },
+  "_이미지필요": [
+    "발로란트",
+    "서든어택"
+  ]
+}

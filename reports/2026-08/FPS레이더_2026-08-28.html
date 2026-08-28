@@ -119,7 +119,7 @@ tbody tr:hover{background:var(--blue-soft)}
 .thumb{width:128px;height:60px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .thumb.noimg img{display:none}
-.thumb.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(255,255,255,.92);letter-spacing:.02em}
+.thumb.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.thumb.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 5px,transparent 5px 13px)}.thumb.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:6px 9px;text-align:center;font-weight:800;font-size:12.5px;line-height:1.25;letter-spacing:-.01em;color:rgba(255,255,255,.96);text-shadow:0 1px 5px rgba(0,0,0,.45)}
 .game{font-weight:800;color:var(--navy);line-height:1.3}
 .game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
 .date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
@@ -138,7 +138,7 @@ tbody tr:hover{background:var(--blue-soft)}
 .tcard .tbanner{position:relative;aspect-ratio:2.5/1;background:linear-gradient(135deg,var(--navy),#12203b);overflow:hidden}
 .tcard .tbanner img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
 .tcard .tbanner.noimg img{display:none}
-.tcard .tbanner.noimg::after{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:rgba(255,255,255,.9);letter-spacing:.02em}
+.tcard .tbanner.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.tcard .tbanner.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 7px,transparent 7px 18px)}.tcard .tbanner.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10px 16px;text-align:center;font-weight:800;font-size:19px;line-height:1.25;color:rgba(255,255,255,.96);text-shadow:0 1px 8px rgba(0,0,0,.45)}
 .tcard .tin{padding:16px 18px 17px;flex:1}
 .tcard:hover{border-color:var(--muted);box-shadow:var(--shadow-lift)}
 .tcard .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
@@ -174,7 +174,7 @@ tbody tr:hover{background:var(--blue-soft)}
 .hero .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--navy),#12203b)}
 .hero .shot img{width:100%;height:100%;object-fit:cover}
 .hero .shot.noimg img{display:none}
-.hero .shot.noimg::before{content:attr(data-mono);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:34px;color:rgba(255,255,255,.13);letter-spacing:.06em}
+.hero .shot.noimg{background:linear-gradient(135deg,#2a4778 0%,#141f38 100%)}.hero .shot.noimg::before{content:attr(data-name);position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;padding:0 22px 46px;text-align:center;font-weight:800;font-size:26px;line-height:1.25;color:rgba(255,255,255,.22);letter-spacing:-.01em}
 .hero .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,14,.94) 0%,rgba(8,10,14,.55) 40%,rgba(8,10,14,.05) 74%)}
 .hero .rank{position:absolute;top:11px;left:13px;z-index:2;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .hero .flag{position:absolute;top:12px;right:12px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--red);color:#fff}
@@ -322,14 +322,14 @@ tbody tr:hover{background:var(--blue-soft)}
       <div class="under">얼리 베타(8/21–25) 직후부터 CoD 서브레딧은 <b>SBMM·스웨티 로비</b> 성토가 지배. 개발사는 "오픈 베타 전 추가 공유" 예고했지만 <b>매치메이킹·에임 어시스트는 언급 없음</b>. 표본이 커지는 오늘이 여론 분수령.</div>
     </a>
     <a class="hero" href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener">
-      <div class="shot noimg" data-mono="SA">
+      <div class="shot noimg" data-mono="SA" data-name="서든어택 · SUDDEN ATTACK">
         <span class="rank">02</span><span class="flag n">국내 화제</span>
         <div class="over"><div class="gm">서든어택</div><h3>21주년 '블랙마켓' 2주 한시 개장, 9/3 마감</h3></div>
       </div>
       <div class="under">기존 <b>플리마켓에서 거래 불가였던 아이템</b>까지 사고팔 수 있는 한시 콘텐츠. 2026 무기개편 2차와 동시 적용. <b>한시 거래 콘텐츠 운영 벤치마크</b>로 볼 만한 케이스.</div>
     </a>
     <a class="hero" href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener">
-      <div class="shot noimg" data-mono="TT">
+      <div class="shot" data-mono="TT" data-name="TIME TAKERS"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596040/header.jpg" alt="타임 테이커즈">
         <span class="rank">03</span><span class="flag n">신작·테스트</span>
         <div class="over"><div class="gm">타임 테이커즈 (NCSOFT)</div><h3>9/5 스팀 플레이테스트 72시간, 사전 다운로드 9/3</h3></div>
       </div>
@@ -344,14 +344,14 @@ tbody tr:hover{background:var(--blue-soft)}
     <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
     <tbody>
       <tr>
-        <td><div class="g-cell"><span class="thumb noimg" data-mono="SA" aria-hidden="true"></span><span><a href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener"><span class="game">서든어택</span></a><span class="game-sub">21주년 · 넥슨</span></span></div></td>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="SA" data-name="서든어택" aria-hidden="true"></span><span><a href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener"><span class="game">서든어택</span></a><span class="game-sub">21주년 · 넥슨</span></span></div></td>
         <td class="pt"><b>블랙마켓</b> 2주 한시 개장(플리마켓 거래 불가 아이템 포함) + <b>2026 무기개편 2차</b> 적용</td>
         <td class="date-cell">~9/3 마감</td>
         <td><span class="tag t-new">한시 콘텐츠</span> <span class="tag t-warn">마감 임박</span></td>
         <td class="pt">21주년 기념 라인업의 핵심 축. <b>거래 제한 해제</b>는 아이템 시세·형평성 논쟁을 부르기 쉬운 구조라 커뮤니티 온도를 주시할 구간. 출첵 이벤트는 9/30까지 별도 진행. <span class="src-inline"><a href="https://www.gamemeca.com/view.php?gid=1779355" target="_blank" rel="noopener">게임메카</a></span></td>
       </tr>
       <tr>
-        <td><div class="g-cell"><span class="thumb noimg" data-mono="TT" aria-hidden="true"></span><span><a href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener"><span class="game">타임 테이커즈</span></a><span class="game-sub">NCSOFT · 신작</span></span></div></td>
+        <td><div class="g-cell"><span class="thumb" data-mono="TT" data-name="TIME TAKERS" aria-hidden="true"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596040/header.jpg" alt=""></span><span><a href="https://www.inven.co.kr/webzine/news/?news=319849" target="_blank" rel="noopener"><span class="game">타임 테이커즈</span></a><span class="game-sub">NCSOFT · 신작</span></span></div></td>
         <td class="pt">스팀 <b>플레이테스트 72시간</b> — 9/5 02:00 ~ 9/8 02:00, 사전 다운로드 9/3</td>
         <td class="date-cell">9/5 시작</td>
         <td><span class="tag t-new">CBT/테스트</span></td>
@@ -365,7 +365,7 @@ tbody tr:hover{background:var(--blue-soft)}
         <td class="pt">신규 국면 소식 없이 <b>장기 보상 이벤트 + 상점 로테이션</b>으로 안정 운영 중. 대형 신작 베타 주간에 자사 이용자를 붙잡는 전형적 편성. <span class="src-inline"><a href="https://www.pubg.com/ko/news/10828" target="_blank" rel="noopener">PUBG 공식</a> · <a href="https://pubg.com/ko/events/notice" target="_blank" rel="noopener">이벤트</a></span></td>
       </tr>
       <tr>
-        <td><div class="g-cell"><span class="thumb noimg" data-mono="VAL" aria-hidden="true"></span><span><a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트 한국</span></a><span class="game-sub">Act 5</span></span></div></td>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="VAL" data-name="VALORANT" aria-hidden="true"></span><span><a href="https://playvalorant.com/ko-kr/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트 한국</span></a><span class="game-sub">Act 5</span></span></div></td>
         <td class="pt">시즌 2026 <b>Act 5</b> 진행(8/19~) · 8월 <b>라이엇 프리미엄 PC방</b> 혜택</td>
         <td class="date-cell">8/19 시작</td>
         <td><span class="tag t-live">진행 업데이트</span></td>
@@ -423,7 +423,7 @@ tbody tr:hover{background:var(--blue-soft)}
         <td class="pt">메이저 6개 스테이지별 하이라이트 10종 판매 = <b>e스포츠 순간을 상품화</b>하는 방식. 싱가포르 메이저를 향한 VRS 경쟁 구간이라 시청·화제 집중. <span class="src-inline"><a href="https://op.gg/cs2/news" target="_blank" rel="noopener">OP.GG</a> · <a href="https://www.counter-strike.net/news/updates" target="_blank" rel="noopener">공식</a></span></td>
       </tr>
       <tr>
-        <td><div class="g-cell"><span class="thumb noimg" data-mono="VAL" aria-hidden="true"></span><span><a href="https://playvalorant.com/en-us/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트</span></a><span class="game-sub">Season 2026 Act 5</span></span></div></td>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="VAL" data-name="VALORANT" aria-hidden="true"></span><span><a href="https://playvalorant.com/en-us/news/announcements/" target="_blank" rel="noopener"><span class="game">발로란트</span></a><span class="game-sub">Season 2026 Act 5</span></span></div></td>
         <td class="pt">Act 5 시작(8/19) — 신규 배틀패스, 경쟁 맵 로테이션 갱신, 요원 튜닝 · <b>Aeris 번들</b>(8/18, 9,500 VP)</td>
         <td class="date-cell">8/18–19</td>
         <td><span class="tag t-new">신규 액트</span></td>
@@ -444,7 +444,7 @@ tbody tr:hover{background:var(--blue-soft)}
   <p class="sub-lead">개별 신작 카드(02)와 달리 신작을 둘러싼 <b>흐름과 맥락</b>을 짚는 칸.</p>
   <div class="trend-grid">
     <div class="tcard">
-      <div class="tbanner noimg" data-mono="TT"></div>
+      <div class="tbanner" data-mono="TT" data-name="TIME TAKERS"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596040/header.jpg" alt=""></div>
       <div class="tin">
         <div class="chips"><span class="tag t-new">국내 신작</span><span class="tag t-live">테스트 모집</span></div>
         <div class="gm">타임 테이커즈 · NCSOFT</div>
@@ -466,7 +466,7 @@ tbody tr:hover{background:var(--blue-soft)}
       </div>
     </div>
     <div class="tcard">
-      <div class="tbanner noimg" data-mono="SBMM"></div>
+      <div class="tbanner noimg" data-mono="SBMM" data-name="SBMM · 매치메이킹 담론"></div>
       <div class="tin">
         <div class="chips"><span class="tag t-live">트렌드 관찰</span></div>
         <div class="gm">매치메이킹 담론</div>
