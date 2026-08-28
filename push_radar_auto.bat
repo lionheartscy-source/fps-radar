@@ -1,20 +1,20 @@
 @echo off
-chcp 949 >nul
+chcp 65001 >nul
 REM ============================================================
-REM  ÀÛ¾÷ ½ºÄÉÁÙ·¯°¡ ¸ÅÀÏ È£ÃâÇÏ´Â ·¡ÆÛÀÔ´Ï´Ù. Á÷Á¢ ½ÇÇàÇÒ ÇÊ¿ä ¾ø½À´Ï´Ù.
-REM  - push_radar.bat À» »ç¶÷ °³ÀÔ ¾øÀÌ ½ÇÇà (< nul ·Î pause ¹«ÇÑ´ë±â ¹æÁö)
-REM  - ½ÇÇà ±â·ÏÀ» ÀúÀå¼Ò ¹Û ·Î±× ÆÄÀÏ¿¡ ³²±è (ÀúÀå¼Ò ¿À¿° ¹æÁö)
+REM  ì‘ì—… ìŠ¤ì¼€ì¤„ëŸ¬ê°€ ë§¤ì¼ í˜¸ì¶œí•˜ëŠ” ë˜í¼ì…ë‹ˆë‹¤. ì§ì ‘ ì‹¤í–‰í•  í•„ìš” ì—†ìŠµë‹ˆë‹¤.
+REM  - push_radar.bat ì„ ì‚¬ëŒ ê°œì… ì—†ì´ ì‹¤í–‰ (< nul ë¡œ pause ë¬´í•œëŒ€ê¸° ë°©ì§€)
+REM  - ì‹¤í–‰ ê¸°ë¡ì„ ì €ì¥ì†Œ ë°– ë¡œê·¸ íŒŒì¼ì— ë‚¨ê¹€ (ì €ì¥ì†Œ ì˜¤ì—¼ ë°©ì§€)
 REM ============================================================
 setlocal
 set "LOG=%LocalAppData%\fps-radar-push.log"
 cd /d "%~dp0"
 
-REM ¦¡¦¡ ÀÜ¿© Àá±İ ÆÄÀÏÀÌ ÀÖÀ¸¸é Á¤¸®
+REM ì”ì—¬ ì ê¸ˆ íŒŒì¼ì´ ìˆìœ¼ë©´ ì •ë¦¬
 if exist "%~dp0.git\index.lock" del /f /q "%~dp0.git\index.lock" 2>nul
 if exist "%~dp0.git\HEAD.lock" del /f /q "%~dp0.git\HEAD.lock" 2>nul
 
 >>"%LOG%" echo.
 >>"%LOG%" echo ===== %DATE% %TIME% =====
 call "%~dp0push_radar.bat" <nul >>"%LOG%" 2>&1
->>"%LOG%" echo ----- Á¾·á ÄÚµå: %errorlevel% -----
+>>"%LOG%" echo ----- exit code: %errorlevel% -----
 endlocal

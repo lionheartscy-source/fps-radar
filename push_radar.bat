@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 REM ============================================================
 REM  FPS 레이더 자동 커밋·푸시 + 아카이브 사본 저장 (Windows)
 REM  - fps-radar 저장소에서 실행: 오늘 리포트 + reports.json 커밋 후 GitHub push
@@ -45,10 +46,18 @@ REM ▼ 변경 없으면 종료
 "%GIT%" diff --cached --quiet && (echo [알림] 커밋할 변경사항이 없습니다. & exit /b 0)
 
 echo [3/4] 커밋...
-"%GIT%" commit -m "FPS 레이더 %TODAY%" || (echo [오류] 커밋 실패 & pause & exit /b 1)
+"%GIT%" commit -m "FPS Radar %TODAY%" || (echo [오류] 커밋 실패 & pause & exit /b 1)
 
 echo [4/4] 푸시...
-"%GIT%" push || (echo [오류] 푸시 실패 - 인증(PAT/SSH) 확인 & pause & exit /b 1)
+"%GIT%" push
+if errorlevel 1 (
+  echo.
+  echo [오류] 푸시 실패 - 위에 표시된 git 메시지를 확인하세요.
+  echo        인증 문제로 보이면 깃허브_자동설정.bat 을 다시 실행해 로그인하세요.
+  echo.
+  pause
+  exit /b 1
+)
 
 echo [완료] %TODAY% 편집호 GitHub 반영 + 아카이브 사본 저장 완료.
 endlocal
