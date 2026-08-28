@@ -1,0 +1,10 @@
+# IGDB 인증정보·토큰 (절대 커밋 금지)
+tools/igdb_config.json
+tools/.igdb_token.json
+
+# 실행 로그
+*.log
+
+# 파이썬 캐시
+tools/__pycache__/
+__pycache__/

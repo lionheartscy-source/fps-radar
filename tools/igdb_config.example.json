@@ -1,0 +1,7 @@
+{
+  "_설명": "이 파일을 복사해 igdb_config.json 으로 이름을 바꾸고 값을 채우세요. igdb_config.json 은 git에 올라가지 않습니다.",
+  "_발급방법": "https://dev.twitch.tv/console/apps 에서 앱 등록 -> Client ID 확인, New Secret 으로 Secret 발급",
+  "client_id": "여기에 Twitch Client ID",
+  "client_secret": "여기에 Twitch Client Secret",
+  "upcoming_days": 60
+}

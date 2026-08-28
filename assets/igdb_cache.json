@@ -1,0 +1,404 @@
+{
+    "_생성시각":  "2026-08-28 13:17:41",
+    "_출처":  "IGDB (api.igdb.com/v4) · 이미지는 images.igdb.com 핫링크 허용",
+    "_이미지주소규칙":  "https://images.igdb.com/igdb/image/upload/t_\u003csize\u003e/\u003cimage_id\u003e.jpg (size: thumb / cover_small / cover_big / screenshot_med / screenshot_big / screenshot_huge / 720p / 1080p)",
+    "_사용법":  "리포트 썸네일은 banner_url 우선, 없으면 cover_url.",
+    "games":  {
+                  "발로란트":  {
+                               "igdb_id":  126459,
+                               "igdb_name":  "Valorant",
+                               "igdb_url":  "https://www.igdb.com/games/valorant",
+                               "cover_image_id":  "cocqbp",
+                               "banner_image_id":  "ar5iqo",
+                               "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar5iqo.jpg",
+                               "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocqbp.jpg",
+                               "artworks":  [
+                                                "ar5iqo",
+                                                "ar5iqm",
+                                                "ar5iqn",
+                                                "ar65oj",
+                                                "ar6388"
+                                            ],
+                               "screenshots":  [
+                                                   "scybc3",
+                                                   "scybc4",
+                                                   "scybc5",
+                                                   "scybc6"
+                                               ],
+                               "genres":  [
+                                              "Shooter",
+                                              "Tactical"
+                                          ],
+                               "companies":  [
+                                                 "Riot Games"
+                                             ]
+                           },
+                  "오버워치2":  {
+                                "igdb_id":  261335,
+                                "igdb_name":  "Overwatch 2: Hero Collection",
+                                "igdb_url":  "https://www.igdb.com/games/overwatch-2-hero-collection--1",
+                                "cover_image_id":  "co6y2d",
+                                "banner_image_id":  "ar2ggj",
+                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar2ggj.jpg",
+                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6y2d.jpg",
+                                "artworks":  [
+                                                 "ar2ggj",
+                                                 "ar2gh0"
+                                             ],
+                                "screenshots":  [
+                                                    "scnwbr"
+                                                ],
+                                "genres":  [
+
+                                           ],
+                                "companies":  [
+                                                  "Blizzard Entertainment"
+                                              ]
+                            },
+                  "에이펙스 레전드":  {
+                                   "igdb_id":  114795,
+                                   "igdb_name":  "Apex Legends",
+                                   "igdb_url":  "https://www.igdb.com/games/apex-legends",
+                                   "cover_image_id":  "cocqh2",
+                                   "banner_image_id":  "ar4p99",
+                                   "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar4p99.jpg",
+                                   "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocqh2.jpg",
+                                   "artworks":  [
+                                                    "ar4p99",
+                                                    "ar4zq",
+                                                    "ar5ubb",
+                                                    "ar4zn",
+                                                    "ar4zp"
+                                                ],
+                                   "screenshots":  [
+                                                       "sc62g1",
+                                                       "sc62g3",
+                                                       "sc62g5",
+                                                       "sc62g4",
+                                                       "sc62g2"
+                                                   ],
+                                   "genres":  [
+                                                  "Shooter",
+                                                  "Tactical"
+                                              ],
+                                   "companies":  [
+                                                     "Respawn Entertainment",
+                                                     "Electronic Arts"
+                                                 ]
+                               },
+                  "콜오브듀티: MW4":  {
+                                     "igdb_id":  403310,
+                                     "igdb_name":  "Call of Duty: Modern Warfare 4",
+                                     "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
+                                     "cover_image_id":  "coc4mu",
+                                     "banner_image_id":  "ar604t",
+                                     "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar604t.jpg",
+                                     "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
+                                     "artworks":  [
+                                                      "ar604t",
+                                                      "ar604u",
+                                                      "ar604o",
+                                                      "ar604s",
+                                                      "ar5y29"
+                                                  ],
+                                     "screenshots":  [
+                                                         "sc13i3n",
+                                                         "sc13i3o",
+                                                         "sc13i3p",
+                                                         "sc13i3q",
+                                                         "sc13i3r"
+                                                     ],
+                                     "genres":  [
+                                                    "Shooter"
+                                                ],
+                                     "companies":  [
+                                                       "Infinity Ward",
+                                                       "Activision"
+                                                   ]
+                                 },
+                  "Counter-Strike 2":  {
+                                           "igdb_id":  242408,
+                                           "igdb_name":  "Counter-Strike 2",
+                                           "igdb_url":  "https://www.igdb.com/games/counter-strike-2",
+                                           "cover_image_id":  "coaczd",
+                                           "banner_image_id":  "ar4kon",
+                                           "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar4kon.jpg",
+                                           "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaczd.jpg",
+                                           "artworks":  [
+                                                            "ar4kon",
+                                                            "ar439t",
+                                                            "ar5k6z"
+                                                        ],
+                                           "screenshots":  [
+                                                               "scoqi3",
+                                                               "scoqi4",
+                                                               "scoqi5",
+                                                               "scoqi7",
+                                                               "scoqi8"
+                                                           ],
+                                           "genres":  [
+                                                          "Shooter",
+                                                          "Tactical"
+                                                      ],
+                                           "companies":  [
+                                                             "Valve"
+                                                         ]
+                                       },
+                  "레인보우 식스 시즈":  {
+                                     "igdb_id":  349484,
+                                     "igdb_name":  "Tom Clancy\u0027s Rainbow Six Siege X",
+                                     "igdb_url":  "https://www.igdb.com/games/tom-clancys-rainbow-six-siege-x",
+                                     "cover_image_id":  "co9zbc",
+                                     "banner_image_id":  "scxits",
+                                     "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scxits.jpg",
+                                     "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9zbc.jpg",
+                                     "artworks":  [
+
+                                                  ],
+                                     "screenshots":  [
+                                                         "scxits",
+                                                         "scxitt",
+                                                         "scxitu"
+                                                     ],
+                                     "genres":  [
+                                                    "Shooter",
+                                                    "Tactical"
+                                                ],
+                                     "companies":  [
+                                                       "Ubisoft Montreal",
+                                                       "Ubisoft Entertainment"
+                                                   ]
+                                 },
+                  "배틀필드 6":  {
+                                 "igdb_id":  317407,
+                                 "igdb_name":  "Battlefield 6",
+                                 "igdb_url":  "https://www.igdb.com/games/battlefield-6",
+                                 "cover_image_id":  "coa5zt",
+                                 "banner_image_id":  "ar3vs1",
+                                 "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar3vs1.jpg",
+                                 "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5zt.jpg",
+                                 "artworks":  [
+                                                  "ar3vs1",
+                                                  "ar3vs2",
+                                                  "ar3vs0",
+                                                  "ar5jzg"
+                                              ],
+                                 "screenshots":  [
+                                                     "sczde5",
+                                                     "scy45j",
+                                                     "scy45k",
+                                                     "scy45l",
+                                                     "scy45m"
+                                                 ],
+                                 "genres":  [
+                                                "Shooter"
+                                            ],
+                                 "companies":  [
+                                                   "EA Digital Illusions CE",
+                                                   "Electronic Arts",
+                                                   "Motive Studios"
+                                               ]
+                             },
+                  "데스티니 2":  {
+                                 "igdb_id":  25657,
+                                 "igdb_name":  "Destiny 2",
+                                 "igdb_url":  "https://www.igdb.com/games/destiny-2",
+                                 "cover_image_id":  "coc89g",
+                                 "banner_image_id":  "ar6gei",
+                                 "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar6gei.jpg",
+                                 "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc89g.jpg",
+                                 "artworks":  [
+                                                  "ar6gei",
+                                                  "ar6gej",
+                                                  "ar6gek",
+                                                  "ar62ue",
+                                                  "ar4n9t"
+                                              ],
+                                 "screenshots":  [
+                                                     "ymxy2otllrluvcqwnyhk",
+                                                     "d0s5upisfnao3h3jdsib",
+                                                     "nmuz3tmvxva1nqhjaxvn",
+                                                     "m9mdkmpv1efkc2nmxqlt",
+                                                     "sctjb5"
+                                                 ],
+                                 "genres":  [
+                                                "Shooter",
+                                                "Role-playing (RPG)",
+                                                "Adventure"
+                                            ],
+                                 "companies":  [
+                                                   "Activision",
+                                                   "High Moon Studios",
+                                                   "Vicarious Visions"
+                                               ]
+                             },
+                  "마블 라이벌즈":  {
+                                  "igdb_id":  294041,
+                                  "igdb_name":  "Marvel Rivals",
+                                  "igdb_url":  "https://www.igdb.com/games/marvel-rivals",
+                                  "cover_image_id":  "cocmx1",
+                                  "banner_image_id":  "ar57p3",
+                                  "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar57p3.jpg",
+                                  "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmx1.jpg",
+                                  "artworks":  [
+                                                   "ar57p3",
+                                                   "ar57p4",
+                                                   "ar57p5",
+                                                   "ar3zem",
+                                                   "ar4kg0"
+                                               ],
+                                  "screenshots":  [
+                                                      "scripy",
+                                                      "scripz",
+                                                      "scriq0",
+                                                      "scripw",
+                                                      "scripx"
+                                                  ],
+                                  "genres":  [
+                                                 "Shooter"
+                                             ],
+                                  "companies":  [
+                                                    "NetEase Games",
+                                                    "Marvel Games"
+                                                ]
+                              },
+                  "델타 포스":  {
+                                "igdb_id":  262186,
+                                "igdb_name":  "Delta Force",
+                                "igdb_url":  "https://www.igdb.com/games/delta-force--1",
+                                "cover_image_id":  "coa98y",
+                                "banner_image_id":  "ar6c72",
+                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar6c72.jpg",
+                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa98y.jpg",
+                                "artworks":  [
+                                                 "ar6c72",
+                                                 "ar6c73",
+                                                 "ar2zi2"
+                                             ],
+                                "screenshots":  [
+                                                    "scnzqs",
+                                                    "scv3bq",
+                                                    "scv3bp"
+                                                ],
+                                "genres":  [
+                                               "Shooter",
+                                               "Tactical"
+                                           ],
+                                "companies":  [
+                                                  "Garena",
+                                                  "TiMi Studio Group"
+                                              ]
+                            },
+                  "THE FINALS":  {
+                                     "igdb_id":  214417,
+                                     "igdb_name":  "The Finals",
+                                     "igdb_url":  "https://www.igdb.com/games/the-finals",
+                                     "cover_image_id":  "cociuq",
+                                     "banner_image_id":  "ar5rh4",
+                                     "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar5rh4.jpg",
+                                     "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cociuq.jpg",
+                                     "artworks":  [
+                                                      "ar5rh4",
+                                                      "ar5ly0",
+                                                      "ar5mck",
+                                                      "ar5mcj",
+                                                      "ar5rgw"
+                                                  ],
+                                     "screenshots":  [
+                                                         "scz4ry",
+                                                         "scvvo7",
+                                                         "scvvo8",
+                                                         "sc12qvv",
+                                                         "sc12qvw"
+                                                     ],
+                                     "genres":  [
+                                                    "Shooter"
+                                                ],
+                                     "companies":  [
+                                                       "Embark Studios",
+                                                       "Nexon"
+                                                   ]
+                                 },
+                  "배틀그라운드(PUBG)":  {
+                                       "igdb_id":  27789,
+                                       "igdb_name":  "PUBG: Battlegrounds",
+                                       "igdb_url":  "https://www.igdb.com/games/pubg-battlegrounds",
+                                       "cover_image_id":  "coaam4",
+                                       "banner_image_id":  "ar6535",
+                                       "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar6535.jpg",
+                                       "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaam4.jpg",
+                                       "artworks":  [
+                                                        "ar6535",
+                                                        "ar6536",
+                                                        "ar4pz",
+                                                        "ar4q0",
+                                                        "ar60k"
+                                                    ],
+                                       "screenshots":  [
+                                                           "sc87lj",
+                                                           "qcg2nnbxwvhxab7qf4c4",
+                                                           "qylzgzuruxc0xnlulktw",
+                                                           "sc87li",
+                                                           "sc87lh"
+                                                       ],
+                                       "genres":  [
+                                                      "Shooter"
+                                                  ],
+                                       "companies":  [
+                                                         "Bluehole Studio",
+                                                         "Microsoft Studios",
+                                                         "The Coalition"
+                                                     ]
+                                   },
+                  "서든어택":  {
+                               "igdb_id":  66463,
+                               "igdb_name":  "Sudden Attack",
+                               "igdb_url":  "https://www.igdb.com/games/sudden-attack",
+                               "cover_image_id":  "co2hvp",
+                               "banner_image_id":  "co2hvp",
+                               "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co2hvp.jpg",
+                               "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2hvp.jpg",
+                               "artworks":  [
+
+                                            ],
+                               "screenshots":  [
+
+                                               ],
+                               "genres":  [
+                                              "Shooter"
+                                          ],
+                               "companies":  [
+                                                 "Nexon",
+                                                 "Netmarble Games",
+                                                 "REDBANA CORPORATION"
+                                             ]
+                           },
+                  "타임 테이커즈":  {
+                                  "igdb_id":  361861,
+                                  "igdb_name":  "Time Takers",
+                                  "igdb_url":  "https://www.igdb.com/games/time-takers",
+                                  "cover_image_id":  "cobrh3",
+                                  "banner_image_id":  "ar5jn0",
+                                  "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar5jn0.jpg",
+                                  "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobrh3.jpg",
+                                  "artworks":  [
+                                                   "ar5jn0",
+                                                   "ar41dc",
+                                                   "ar5jn8"
+                                               ],
+                                  "screenshots":  [
+                                                      "sc12kyt",
+                                                      "sc12kys",
+                                                      "sc12kyu",
+                                                      "sc12kyv"
+                                                  ],
+                                  "genres":  [
+                                                 "Shooter"
+                                             ],
+                                  "companies":  [
+                                                    "NC",
+                                                    "Mistil Games"
+                                                ]
+                              }
+              }
+}
