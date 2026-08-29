@@ -100,7 +100,9 @@
     "콜오브듀티": {
       "루리웹": "https://bbs.ruliweb.com/hashtag/콜오브듀티",
       "아카라이브": null,
-      "인벤": null
+      "인벤": null,
+      "루리웹_게시판": "https://bbs.ruliweb.com/game/87271",
+      "확인": "루리웹 콜오브듀티(콘솔) 게시판 실측 완료(2026-08-29)"
     },
     "에이펙스 레전드": {
       "루리웹": "https://bbs.ruliweb.com/hashtag/에이펙스",
@@ -126,6 +128,18 @@
       "루리웹": "https://bbs.ruliweb.com/hashtag/레인보우식스",
       "아카라이브": null,
       "인벤": null
+    },
+    "오버워치(넥슨 국내)": {
+      "루리웹": "https://bbs.ruliweb.com/game/85995",
+      "아카라이브": "https://arca.live/b/playoverwatch",
+      "인벤": "https://overwatch.inven.co.kr/",
+      "확인": "루리웹 오버워치 PC 게시판 실측(2026-08-29)"
+    },
+    "라이크 오어 다이": {
+      "루리웹": "https://bbs.ruliweb.com/game/87353",
+      "아카라이브": null,
+      "인벤": null,
+      "확인": "루리웹 전용 게시판 신설 확인(2026-08-29)"
     }
   }
 }
