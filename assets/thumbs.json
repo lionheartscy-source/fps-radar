@@ -1,141 +1,148 @@
 {
-  "_설명": "FPS레이더 리포트 썸네일 카탈로그. 리포트 생성 시 게임명으로 여기를 먼저 조회한다.",
-  "_사용법": [
-    "1) local 값이 있으면 최우선 사용 (저장소 내 파일이라 절대 안 깨짐). 예: assets/thumbs/valorant.jpg",
-    "2) local이 없으면 url 사용.",
-    "★ 스팀 이미지 주소를 손으로 만들지 말 것. 반드시 store.steampowered.com/app/<id>/ 를 WebFetch 해서 실제 header.jpg 주소(해시 포함)를 읽어 쓴다. 2024년 이후 출시작은 .../apps/<id>/header.jpg 가 404다.",
-    "3) 둘 다 없으면 웹 검색으로 이미지 URL을 찾아 추가하고 리포트에 반영.",
-    "4) 끝내 못 찾으면 noimg 브랜드 타일(data-mono + data-name 필수)로 넣고 완료 보고에 '이미지 필요' 명시.",
-    "5) 새 게임을 확보할 때마다 이 파일에 추가할 것."
-  ],
-  "_경로주의": "리포트는 reports/YYYY-MM/ 안에 있으므로 로컬 이미지 경로는 ../../assets/thumbs/파일명 으로 쓴다.",
-  "games": {
-    "콜오브듀티: MW4": {
-      "mono": "MW4",
-      "name": "CALL OF DUTY: MW4",
-      "steam_appid": "4783780",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/header.jpg"
-    },
-    "오버워치2": {
-      "mono": "OW",
-      "name": "OVERWATCH 2",
-      "steam_appid": "2357570",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg"
-    },
-    "배틀그라운드(PUBG)": {
-      "mono": "PUBG",
-      "name": "PUBG: BATTLEGROUNDS",
-      "steam_appid": "578080",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg"
-    },
-    "Counter-Strike 2": {
-      "mono": "CS2",
-      "name": "COUNTER-STRIKE 2",
-      "steam_appid": "730",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
-    },
-    "에이펙스 레전드": {
-      "mono": "APEX",
-      "name": "APEX LEGENDS",
-      "steam_appid": "1172470",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
-    },
-    "레인보우 식스 시즈": {
-      "mono": "R6",
-      "name": "RAINBOW SIX SIEGE",
-      "steam_appid": "359550",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
-    },
-    "마블 라이벌즈": {
-      "mono": "MR",
-      "name": "MARVEL RIVALS",
-      "steam_appid": "2767030",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg?t=1786093208",
-      "메모": "2024년 출시 신규 앱 — 해시 경로 필수. 스팀 상점 페이지에서 확인한 실제 주소."
-    },
-    "타임 테이커즈": {
-      "mono": "TT",
-      "name": "TIME TAKERS",
-      "steam_appid": "3596040",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3596040/4a802f6ed9806f37dca30048377793a3953ed1e0/header.jpg?t=1781226025",
-      "메모": "신규 앱은 앱ID 뒤 해시 경로 필수. 스팀 상점 페이지의 og:image/header.jpg 에서 실제 주소를 확인해 기록."
-    },
-    "THE FINALS": {
-      "mono": "TF",
-      "name": "THE FINALS",
-      "steam_appid": "2073850",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/header.jpg"
-    },
-    "데스티니 2": {
-      "mono": "D2",
-      "name": "DESTINY 2",
-      "steam_appid": "1085660",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
-    },
-    "발로란트": {
-      "mono": "VAL",
-      "name": "VALORANT",
-      "steam_appid": null,
-      "url": null,
-      "local": "assets/thumbs/valorant.jpg",
-      "메모": "스팀·에픽 미등록. 사용자 제공 이미지를 저장소에 보관 중(1280x720)."
-    },
-    "서든어택": {
-      "mono": "SA",
-      "name": "서든어택",
-      "steam_appid": null,
-      "url": null,
-      "local": "assets/thumbs/sudden-attack.jpg",
-      "메모": "스팀 미등록. 공식 로고를 네이비 배경에 합성해 저장소에 보관 중(1280x720)."
-    },
-    "라이크 오어 다이": {
-      "mono": "LOD",
-      "name": "LIKE OR DIE",
-      "steam_appid": null,
-      "url": "https://i3.ruliweb.com/img/26/08/27/1a0428a9dcc4cacdc.webp",
-      "메모": "스팀 미등록(미출시). 루리웹 게임스컴 인터뷰 기사 이미지. 핫링크 차단 시 타일 폴백."
-    },
-    "AVA RE:BIRTH": {
-      "mono": "AVA",
-      "name": "AVA RE:BIRTH",
-      "steam_appid": null,
-      "url": "https://static.inven.co.kr/column/2026/08/28/news/i1167729908.jpg",
-      "메모": "스팀 미등록. 인벤 보도 이미지(밸로프 제공)."
-    },
-    "스페셜포스 리마스터": {
-      "mono": "SF",
-      "name": "SPECIAL FORCE REMASTERED",
-      "steam_appid": "4261320",
-      "url": "https://cdn.gamemeca.com/data_center/339/927/20260820105025.jpg",
-      "메모": "스팀 신규 앱(4261320) — 해시 경로 미확인이라 손으로 만들지 말 것. 현재는 게임메카 보도 이미지(드래곤플라이 제공) 사용."
-    },
-    "프로젝트 제타": {
-      "mono": "ZETA",
-      "name": "PROJECT ZETA",
-      "steam_appid": null,
-      "url": "https://cdn.gamevu.co.kr/news/photo/202608/60331_90425_4735.jpg",
-      "메모": "스팀 미등록(개발 중). 게임뷰 게임스컴 2026 현장 기사 이미지(2026-08-31 확보)."
-    }
+ "_설명": "FPS레이더 리포트 썸네일 카탈로그. 리포트 생성 시 게임명으로 여기를 먼저 조회한다.",
+ "_사용법": [
+  "1) local 값이 있으면 최우선 사용 (저장소 내 파일이라 절대 안 깨짐). 예: assets/thumbs/valorant.jpg",
+  "2) local이 없으면 url 사용.",
+  "★ 스팀 이미지 주소를 손으로 만들지 말 것. 반드시 store.steampowered.com/app/<id>/ 를 WebFetch 해서 실제 header.jpg 주소(해시 포함)를 읽어 쓴다. 2024년 이후 출시작은 .../apps/<id>/header.jpg 가 404다.",
+  "3) 둘 다 없으면 웹 검색으로 이미지 URL을 찾아 추가하고 리포트에 반영.",
+  "4) 끝내 못 찾으면 noimg 브랜드 타일(data-mono + data-name 필수)로 넣고 완료 보고에 '이미지 필요' 명시.",
+  "5) 새 게임을 확보할 때마다 이 파일에 추가할 것."
+ ],
+ "_경로주의": "리포트는 reports/YYYY-MM/ 안에 있으므로 로컬 이미지 경로는 ../../assets/thumbs/파일명 으로 쓴다.",
+ "games": {
+  "콜오브듀티: MW4": {
+   "mono": "MW4",
+   "name": "CALL OF DUTY: MW4",
+   "steam_appid": "4783780",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/header.jpg"
   },
-  "_이미지필요": [],
-  "_검증완료": {
-    "화면에서 실제 렌더 확인": [
-      "콜오브듀티: MW4",
-      "오버워치2",
-      "배틀그라운드(PUBG)",
-      "발로란트",
-      "서든어택"
-    ],
-    "스팀 상점 페이지에서 실주소 확인": [
-      "타임 테이커즈",
-      "마블 라이벌즈"
-    ],
-    "미검증(구형 앱, 해시 없는 경로가 통상 동작)": [
-      "Counter-Strike 2",
-      "에이펙스 레전드",
-      "레인보우 식스 시즈",
-      "THE FINALS",
-      "데스티니 2"
-    ]
+  "오버워치2": {
+   "mono": "OW",
+   "name": "OVERWATCH 2",
+   "steam_appid": "2357570",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg"
+  },
+  "배틀그라운드(PUBG)": {
+   "mono": "PUBG",
+   "name": "PUBG: BATTLEGROUNDS",
+   "steam_appid": "578080",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg"
+  },
+  "Counter-Strike 2": {
+   "mono": "CS2",
+   "name": "COUNTER-STRIKE 2",
+   "steam_appid": "730",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
+  },
+  "에이펙스 레전드": {
+   "mono": "APEX",
+   "name": "APEX LEGENDS",
+   "steam_appid": "1172470",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
+  },
+  "레인보우 식스 시즈": {
+   "mono": "R6",
+   "name": "RAINBOW SIX SIEGE",
+   "steam_appid": "359550",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
+  },
+  "마블 라이벌즈": {
+   "mono": "MR",
+   "name": "MARVEL RIVALS",
+   "steam_appid": "2767030",
+   "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg?t=1786093208",
+   "메모": "2024년 출시 신규 앱 — 해시 경로 필수. 스팀 상점 페이지에서 확인한 실제 주소."
+  },
+  "타임 테이커즈": {
+   "mono": "TT",
+   "name": "TIME TAKERS",
+   "steam_appid": "3596040",
+   "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3596040/4a802f6ed9806f37dca30048377793a3953ed1e0/header.jpg?t=1781226025",
+   "메모": "신규 앱은 앱ID 뒤 해시 경로 필수. 스팀 상점 페이지의 og:image/header.jpg 에서 실제 주소를 확인해 기록."
+  },
+  "THE FINALS": {
+   "mono": "TF",
+   "name": "THE FINALS",
+   "steam_appid": "2073850",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/header.jpg"
+  },
+  "데스티니 2": {
+   "mono": "D2",
+   "name": "DESTINY 2",
+   "steam_appid": "1085660",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
+  },
+  "발로란트": {
+   "mono": "VAL",
+   "name": "VALORANT",
+   "steam_appid": null,
+   "url": null,
+   "local": "assets/thumbs/valorant.jpg",
+   "메모": "스팀·에픽 미등록. 사용자 제공 이미지를 저장소에 보관 중(1280x720)."
+  },
+  "서든어택": {
+   "mono": "SA",
+   "name": "서든어택",
+   "steam_appid": null,
+   "url": null,
+   "local": "assets/thumbs/sudden-attack.jpg",
+   "메모": "스팀 미등록. 공식 로고를 네이비 배경에 합성해 저장소에 보관 중(1280x720)."
+  },
+  "라이크 오어 다이": {
+   "mono": "LOD",
+   "name": "LIKE OR DIE",
+   "steam_appid": null,
+   "url": "https://i3.ruliweb.com/img/26/08/27/1a0428a9dcc4cacdc.webp",
+   "메모": "스팀 미등록(미출시). 루리웹 게임스컴 인터뷰 기사 이미지. 핫링크 차단 시 타일 폴백."
+  },
+  "AVA RE:BIRTH": {
+   "mono": "AVA",
+   "name": "AVA RE:BIRTH",
+   "steam_appid": null,
+   "url": "https://static.inven.co.kr/column/2026/08/28/news/i1167729908.jpg",
+   "메모": "스팀 미등록. 인벤 보도 이미지(밸로프 제공)."
+  },
+  "스페셜포스 리마스터": {
+   "mono": "SF",
+   "name": "SPECIAL FORCE REMASTERED",
+   "steam_appid": "4261320",
+   "url": "https://cdn.gamemeca.com/data_center/339/927/20260820105025.jpg",
+   "메모": "스팀 신규 앱(4261320) — 해시 경로 미확인이라 손으로 만들지 말 것. 현재는 게임메카 보도 이미지(드래곤플라이 제공) 사용."
+  },
+  "프로젝트 제타": {
+   "mono": "ZETA",
+   "name": "PROJECT ZETA",
+   "steam_appid": null,
+   "url": "https://cdn.gamevu.co.kr/news/photo/202608/60331_90425_4735.jpg",
+   "메모": "스팀 미등록(개발 중). 게임뷰 게임스컴 2026 현장 기사 이미지(2026-08-31 확보)."
+  },
+  "배틀필드 6 · REDSEC": {
+   "mono": "BF6",
+   "name": "BATTLEFIELD 6 / REDSEC",
+   "steam_appid": "2807960",
+   "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1787669881",
+   "메모": "2025년 출시 신규 앱 — 해시 경로 필수. 2026-09-01 스팀 상점 og:image에서 실제 주소 확인. REDSEC은 별도 앱(3028330)이나 배너는 BF6 공용 사용."
   }
+ },
+ "_이미지필요": [],
+ "_검증완료": {
+  "화면에서 실제 렌더 확인": [
+   "콜오브듀티: MW4",
+   "오버워치2",
+   "배틀그라운드(PUBG)",
+   "발로란트",
+   "서든어택"
+  ],
+  "스팀 상점 페이지에서 실주소 확인": [
+   "타임 테이커즈",
+   "마블 라이벌즈"
+  ],
+  "미검증(구형 앱, 해시 없는 경로가 통상 동작)": [
+   "Counter-Strike 2",
+   "에이펙스 레전드",
+   "레인보우 식스 시즈",
+   "THE FINALS",
+   "데스티니 2"
+  ]
+ }
 }
