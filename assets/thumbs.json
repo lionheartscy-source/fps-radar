@@ -122,6 +122,13 @@
    "steam_appid": "2807960",
    "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1787669881",
    "메모": "2025년 출시 신규 앱 — 해시 경로 필수. 2026-09-01 스팀 상점 og:image에서 실제 주소 확인. REDSEC은 별도 앱(3028330)이나 배너는 BF6 공용 사용."
+  },
+  "델타포스": {
+   "mono": "DF",
+   "name": "DELTA FORCE",
+   "steam_appid": "2507950",
+   "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2507950/cea88d74c3fd2cd872e83dab8be8b7557ae9dc48/header.jpg?t=1786330120",
+   "메모": "2026-09-01 스팀 커뮤니티 허브 og:image에서 실제 해시 경로 확인."
   }
  },
  "_이미지필요": [],
