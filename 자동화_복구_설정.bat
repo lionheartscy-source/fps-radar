@@ -32,6 +32,8 @@ where powershell >nul 2>nul
 if errorlevel 1 goto :NOPS
 powershell -NoProfile -ExecutionPolicy Bypass -File "%REPO%\tools\fix_schedules.ps1"
 if errorlevel 1 goto :FAIL
+REM PowerShell 이 콘솔 코드페이지를 UTF-8 로 바꿔 놓으므로 되돌린다 (한글 깨짐 방지)
+chcp 949 >nul
 
 echo.
 echo ================================================
