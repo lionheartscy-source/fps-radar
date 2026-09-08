@@ -307,6 +307,21 @@ td .pt-lead{display:block;margin-bottom:5px}
   .ev2:hover .e2::after{opacity:1}
 }
 @media print{ .ev2 .d2{display:block} .ev2 .e2::after{display:none} }
+
+/* ── 05 관전 포인트: 라벨만 보이고 오버·탭으로 펼침 (2026-09-08) ── */
+.obs{position:relative}
+.obs .e2{display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
+.obs .k{margin-bottom:0;padding-right:14px}
+.obs .e2::after{content:"";position:absolute;top:.3em;right:0;width:5px;height:5px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);transition:transform .15s ease;opacity:.7}
+.obs .d2{display:none;margin-top:5px}
+.obs .e2:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.obs.open .d2{display:block}
+.obs.open .e2::after{transform:rotate(-135deg);opacity:1}
+@media (hover:hover) and (pointer:fine){
+  .obs:hover .d2{display:block}
+  .obs:hover .e2::after{opacity:1}
+}
+@media print{ .obs .d2{display:block} .obs .e2::after{display:none} }
 </style></head><body>
 <a class="skip" href="#main">본문 바로가기</a>
 <div id="prog" aria-hidden="true"></div>
@@ -503,7 +518,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <div class="gm">9월 슈터 캘린더</div>
         <h3>8일 안에 국내와 해외 일정이 한꺼번에 겹친다</h3>
         <p>로컬 캐시 assets/igdb_upcoming.json은 8월 28일에 만들어졌습니다. 오늘로 11일이 지나 9월 하순 일정은 다시 확인해야 합니다.<span class="lb"></span>캐시에 남은 9월 슈터 신작은 10일 Wardogs, 15일 Active Matter, 17일 Sniper Dan, 24일 Sin: Reloaded, 30일 EVE Vanguard입니다.</p>
-        <div class="obs"><span class="k">관전 포인트</span> IGDB 캐시는 8월 28일에 만들어졌습니다. 오늘로 11일이 지나 다시 확인해야 합니다. 9월 남은 슈터 신작은 5종입니다. 10일에 Wardogs가 나옵니다.<span class="lb"></span>행사는 10일부터 17일까지 8일 동안 몰려 있습니다. 서든어택 챔피언십 접수와 마블 라이벌즈 새 시즌이 여기 들어갑니다. 17일 스페셜포스 리마스터 출시도 같은 주입니다.<span class="lb"></span>자사 행사는 그 뒤로 잡는 편이 낫습니다.</div>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">IGDB 캐시는 8월 28일에 만들어졌습니다. 오늘로 11일이 지나 다시 확인해야 합니다. 9월 남은 슈터 신작은 5종입니다. 10일에 Wardogs가 나옵니다.<span class="lb"></span>행사는 10일부터 17일까지 8일 동안 몰려 있습니다. 서든어택 챔피언십 접수와 마블 라이벌즈 새 시즌이 여기 들어갑니다. 17일 스페셜포스 리마스터 출시도 같은 주입니다.<span class="lb"></span>자사 행사는 그 뒤로 잡는 편이 낫습니다.</span></div>
         <div class="src">근거: 로컬 <code>assets/igdb_upcoming.json</code>(<b>11일 경과</b>) · <a href="https://www.inven.co.kr/webzine/calendar/" target="_blank" rel="noopener">인벤 게임 캘린더</a></div>
       </div>
     </div>
@@ -514,7 +529,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <div class="gm">국내 커뮤니티 자리</div>
         <h3>목록 맨 위는 또 바뀌었는데 슈터 칸만 12일째 비어 있다</h3>
         <p>오늘 오전 7시 39분에 루리웹 신설 게시판 목록 14건을 확인했습니다.<span class="lb"></span>맨 위는 씰M2로 바뀌었습니다. 전날 그 자리에는 파이널 판타지 레조넌스가 있었습니다.</p>
-        <div class="obs"><span class="k">관전 포인트</span> 루리웹 신설 게시판 목록은 14건입니다. 맨 위가 씰M2로 바뀌었습니다. 전날은 파이널 판타지 레조넌스였습니다. 새로 생긴 슈터 게시판은 0건입니다.<span class="lb"></span>스페셜포스 리마스터는 8월 29일부터 12일째 목록에 없습니다. 출시일은 9월 17일입니다. 사전예약은 하루 앞선 16일에 닫힙니다.<span class="lb"></span>출시까지 국내 커뮤니티 자리가 비어 있습니다. 예약 마감 전에 이야기가 모일 곳을 살펴 둘 만합니다.</div>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">루리웹 신설 게시판 목록은 14건입니다. 맨 위가 씰M2로 바뀌었습니다. 전날은 파이널 판타지 레조넌스였습니다. 새로 생긴 슈터 게시판은 0건입니다.<span class="lb"></span>스페셜포스 리마스터는 8월 29일부터 12일째 목록에 없습니다. 출시일은 9월 17일입니다. 사전예약은 하루 앞선 16일에 닫힙니다.<span class="lb"></span>출시까지 국내 커뮤니티 자리가 비어 있습니다. 예약 마감 전에 이야기가 모일 곳을 살펴 둘 만합니다.</span></div>
         <div class="src"><a href="https://bbs.ruliweb.com/" target="_blank" rel="noopener">루리웹 신설 게시판(직접 확인)</a> · <a href="https://sfr.dfl.co.kr/" target="_blank" rel="noopener">공식 사이트</a></div>
       </div>
     </div>
@@ -525,7 +540,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <div class="gm">콘텐츠와 처리 상태</div>
         <h3>오늘 세 게임 모두 새 콘텐츠보다 처리 상태를 묻는 글이 위에 있었다</h3>
         <p>오늘 아침에 국내 게시판 한 곳과 해외 토론 목록 두 곳을 직접 열었습니다.<span class="lb"></span>인벤 오버워치 자유게시판은 7시 30분, 델타포스는 7시 35분, 레인보우 식스 시즈는 7시 37분에 확인했습니다.</p>
-        <div class="obs"><span class="k">관전 포인트</span> 오늘 세 게임에서 같은 모습이 보입니다.<span class="lb"></span>오버워치는 이벤트가 끝나자 신고와 매칭 불만 7글이 남았습니다. 델타포스는 시즌 개막일 아침을 맞았습니다. 그런데 치트와 잘못된 제재 이야기가 4건 앞에 나옵니다. 레인보우 식스 시즈는 새 시즌 8일째입니다. 여기도 매칭과 제재, 결함 문의가 자리를 차지했습니다.<span class="lb"></span>세 게임 모두 새 콘텐츠보다 처리 상태를 묻는 글이 위에 있습니다.</div>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">오늘 세 게임에서 같은 모습이 보입니다.<span class="lb"></span>오버워치는 이벤트가 끝나자 신고와 매칭 불만 7글이 남았습니다. 델타포스는 시즌 개막일 아침을 맞았습니다. 그런데 치트와 잘못된 제재 이야기가 4건 앞에 나옵니다. 레인보우 식스 시즈는 새 시즌 8일째입니다. 여기도 매칭과 제재, 결함 문의가 자리를 차지했습니다.<span class="lb"></span>세 게임 모두 새 콘텐츠보다 처리 상태를 묻는 글이 위에 있습니다.</span></div>
         <div class="src"><a href="https://www.inven.co.kr/board/overwatch/4538" target="_blank" rel="noopener">인벤 자유게시판(직접 확인)</a> · <a href="https://steamcommunity.com/app/2507950/discussions/" target="_blank" rel="noopener">델타포스 토론 목록</a> · <a href="https://steamcommunity.com/app/359550/discussions/0/" target="_blank" rel="noopener">R6 토론 목록</a></div>
       </div>
     </div>
@@ -618,9 +633,9 @@ td .pt-lead{display:block;margin-bottom:5px}
     img.addEventListener('error',function(){var p=img.parentElement;if(p)p.classList.add('noimg');});
   });
   /* 표 2열 상세 펼치기 (오버는 CSS, 클릭·키보드는 여기) */
-  document.querySelectorAll('td.ev2 .e2').forEach(function(b){
+  document.querySelectorAll('td.ev2 .e2, .obs .e2').forEach(function(b){
     b.addEventListener('click',function(){
-      var td=b.closest('td.ev2'),on=td.classList.toggle('open');
+      var box=b.closest('td.ev2, .obs'),on=box.classList.toggle('open');
       b.setAttribute('aria-expanded',on?'true':'false');
     });
   });

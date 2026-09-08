@@ -96,7 +96,7 @@ def collect(html):
 
 def visible(html):
     """접힌 상세(span.d2)는 화면에 안 보이므로 분량 계산에서 뺀다."""
-    return re.sub(r'<span class="d2">.*?</span>\s*</td>', '</td>', html, flags=re.S)
+    return re.sub(r'<span class="d2">.*?</span>\s*(</td>|</div>)', r'\1', html, flags=re.S)
 
 
 def section_lengths(html):
