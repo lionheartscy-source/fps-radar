@@ -64,7 +64,13 @@ def collect(html):
             g = g.group(1)[:10] if g else '?'
             cell = re.sub(r'<span class="src-inline">.*?</span>', '', tds[4], flags=re.S)
             cell = re.sub(r'<span class="evrow">.*?</span>', '', cell, flags=re.S)
-            out.append((f'{name}·{g}·2열', tds[1]))
+            d1 = re.search(r'<span class="d1">(.*?)</span>', tds[1], re.S)
+            d2 = re.search(r'<span class="d2">(.*)</span>\s*$', tds[1].strip(), re.S)
+            if d1 and d2:
+                out.append((f'{name}·{g}·요약', d1.group(1)))
+                out.append((f'{name}·{g}·상세', d2.group(1)))
+            else:
+                out.append((f'{name}·{g}·2열', tds[1]))
             out.append((f'{name}·{g}·반응', cell))
     m = re.search(r'<p class="lead">(.*?)</p>', html, re.S)
     if m:
@@ -84,8 +90,13 @@ def collect(html):
     return out
 
 
+def visible(html):
+    """접힌 상세(span.d2)는 화면에 안 보이므로 분량 계산에서 뺀다."""
+    return re.sub(r'<span class="d2">.*?</span>\s*</td>', '</td>', html, flags=re.S)
+
+
 def section_lengths(html):
-    body = html[html.index('<main id="main">'):html.index('</main>')]
+    body = visible(html[html.index('<main id="main">'):html.index('</main>')])
     marks = [('lead+notice+kpi', '<p class="lead">', '<div class="sec" id="today">'),
              ('01 일정', '<div class="sec" id="today">', '<div class="sec" id="headline">'),
              ('02 헤드라인', '<div class="sec" id="headline">', '<div class="sec" id="kr">'),
@@ -105,9 +116,28 @@ def section_lengths(html):
     return len(strip_tags(body)), res
 
 
+SUMMARY_MAX = 42
+
+
+def check_summaries(html, problems):
+    """표 2열 한 줄 요약: 길이와 서술형 종결."""
+    for anchor, name in [('id="kr"', '03'), ('id="gl"', '04')]:
+        if anchor not in html:
+            continue
+        i = html.index(anchor)
+        seg = html[i:html.index('</table>', i)]
+        for mm in re.finditer(r'<span class="d1">(.*?)</span>', seg, re.S):
+            t = strip_tags(mm.group(1))
+            if len(t) > SUMMARY_MAX:
+                problems.append((f'{name} 2열 요약', f'{len(t)}자로 깁니다 (상한 {SUMMARY_MAX})', t))
+            if not re.search(r'(다|요)\.$', t):
+                problems.append((f'{name} 2열 요약', '서술형으로 끝나지 않습니다', t))
+
+
 def main(path):
     html = open(path, encoding='utf-8').read()
     problems = []
+    check_summaries(html, problems)
     lens = []
 
     for label, raw in collect(html):
