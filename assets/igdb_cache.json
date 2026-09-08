@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-08-28 13:17:41",
+    "_생성시각":  "2026-09-08 09:20:14",
     "_출처":  "IGDB (api.igdb.com/v4) · 이미지는 images.igdb.com 핫링크 허용",
     "_이미지주소규칙":  "https://images.igdb.com/igdb/image/upload/t_\u003csize\u003e/\u003cimage_id\u003e.jpg (size: thumb / cover_small / cover_big / screenshot_med / screenshot_big / screenshot_huge / 720p / 1080p)",
     "_사용법":  "리포트 썸네일은 banner_url 우선, 없으면 cover_url.",
@@ -194,9 +194,9 @@
                                                 "Shooter"
                                             ],
                                  "companies":  [
-                                                   "EA Digital Illusions CE",
                                                    "Electronic Arts",
-                                                   "Motive Studios"
+                                                   "Motive Studios",
+                                                   "Ripple Effect"
                                                ]
                              },
                   "데스티니 2":  {
@@ -263,30 +263,30 @@
                                                 ]
                               },
                   "델타 포스":  {
-                                "igdb_id":  262186,
+                                "igdb_id":  666,
                                 "igdb_name":  "Delta Force",
-                                "igdb_url":  "https://www.igdb.com/games/delta-force--1",
-                                "cover_image_id":  "coa98y",
-                                "banner_image_id":  "ar6c72",
-                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar6c72.jpg",
-                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa98y.jpg",
+                                "igdb_url":  "https://www.igdb.com/games/delta-force",
+                                "cover_image_id":  "co2dk4",
+                                "banner_image_id":  "ar50m6",
+                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar50m6.jpg",
+                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dk4.jpg",
                                 "artworks":  [
-                                                 "ar6c72",
-                                                 "ar6c73",
-                                                 "ar2zi2"
+                                                 "ar50m6"
                                              ],
                                 "screenshots":  [
-                                                    "scnzqs",
-                                                    "scv3bq",
-                                                    "scv3bp"
+                                                    "ej4xk4iqirtj0t7gscmj",
+                                                    "t4uqkvatqdxcqydnbze5",
+                                                    "xycyfi6tiva1cqfnyimt",
+                                                    "r2n9qqo6hdpj2n6ibwsb",
+                                                    "q3wjt94ia9wl2fpzc5zf"
                                                 ],
                                 "genres":  [
                                                "Shooter",
                                                "Tactical"
                                            ],
                                 "companies":  [
-                                                  "Garena",
-                                                  "TiMi Studio Group"
+                                                  "NovaLogic",
+                                                  "Brasoft Produtos de InformÃ¡tica"
                                               ]
                             },
                   "THE FINALS":  {
