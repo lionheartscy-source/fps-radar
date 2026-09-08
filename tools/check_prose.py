@@ -34,6 +34,10 @@ SENT_MAX = 70          # 인용문이 든 문장은 예외
 SENT_AVG_MAX = 38
 VAGUE = ['구간', '지점', '부분', '측면', '차원', '여진', '방아쇠', '거점',
          '논지', '비교치', '실무 포인트', '격상']
+# 순우리말 날짜 수는 나흘까지만. 닷새부터는 숫자로 적는다(2026-09-08 확정).
+NATIVE_DAYS = {'닷새': '5일', '엿새': '6일', '이레': '7일', '여드레': '8일',
+               '아흐레': '9일', '열흘': '10일', '열하루': '11일',
+               '열이틀': '12일', '열사흘': '13일', '보름': '15일'}
 # 인접 중복 검사에서 무시할 흔한 낱말
 COMMON = {'입니다', '있습니다', '합니다', '없습니다', '했습니다', '됐습니다',
           '오늘', '어제', '그리고', '하지만', '때문', '이번', '다음'}
@@ -119,6 +123,15 @@ def section_lengths(html):
 SUMMARY_MAX = 42
 
 
+def check_native_days(html, problems):
+    """닷새 이상을 순우리말로 세면 잡는다. 하루~나흘은 허용."""
+    body = strip_tags(html[html.index('<main id="main">'):html.index('</main>')])
+    for w, num in NATIVE_DAYS.items():
+        for m in re.finditer(w, body):
+            ctx = body[max(0, m.start() - 22):m.start() + 24]
+            problems.append(('날짜 표기', f'"{w}" 대신 "{num}"으로 적습니다', ctx))
+
+
 def check_summaries(html, problems):
     """표 2열 한 줄 요약: 길이와 서술형 종결."""
     for anchor, name in [('id="kr"', '03'), ('id="gl"', '04')]:
@@ -137,6 +150,7 @@ def check_summaries(html, problems):
 def main(path):
     html = open(path, encoding='utf-8').read()
     problems = []
+    check_native_days(html, problems)
     check_summaries(html, problems)
     lens = []
 
