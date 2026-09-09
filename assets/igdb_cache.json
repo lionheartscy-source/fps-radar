@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-09-08 09:20:14",
+    "_생성시각":  "2026-09-09 09:20:14",
     "_출처":  "IGDB (api.igdb.com/v4) · 이미지는 images.igdb.com 핫링크 허용",
     "_이미지주소규칙":  "https://images.igdb.com/igdb/image/upload/t_\u003csize\u003e/\u003cimage_id\u003e.jpg (size: thumb / cover_small / cover_big / screenshot_med / screenshot_big / screenshot_huge / 720p / 1080p)",
     "_사용법":  "리포트 썸네일은 banner_url 우선, 없으면 cover_url.",
@@ -263,30 +263,30 @@
                                                 ]
                               },
                   "델타 포스":  {
-                                "igdb_id":  666,
+                                "igdb_id":  262186,
                                 "igdb_name":  "Delta Force",
-                                "igdb_url":  "https://www.igdb.com/games/delta-force",
-                                "cover_image_id":  "co2dk4",
-                                "banner_image_id":  "ar50m6",
-                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar50m6.jpg",
-                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dk4.jpg",
+                                "igdb_url":  "https://www.igdb.com/games/delta-force--1",
+                                "cover_image_id":  "coa98y",
+                                "banner_image_id":  "ar6c72",
+                                "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar6c72.jpg",
+                                "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa98y.jpg",
                                 "artworks":  [
-                                                 "ar50m6"
+                                                 "ar6c72",
+                                                 "ar6c73",
+                                                 "ar2zi2"
                                              ],
                                 "screenshots":  [
-                                                    "ej4xk4iqirtj0t7gscmj",
-                                                    "t4uqkvatqdxcqydnbze5",
-                                                    "xycyfi6tiva1cqfnyimt",
-                                                    "r2n9qqo6hdpj2n6ibwsb",
-                                                    "q3wjt94ia9wl2fpzc5zf"
+                                                    "scnzqs",
+                                                    "scv3bq",
+                                                    "scv3bp"
                                                 ],
                                 "genres":  [
                                                "Shooter",
                                                "Tactical"
                                            ],
                                 "companies":  [
-                                                  "NovaLogic",
-                                                  "Brasoft Produtos de InformÃ¡tica"
+                                                  "Garena",
+                                                  "TiMi Studio Group"
                                               ]
                             },
                   "THE FINALS":  {
@@ -294,15 +294,15 @@
                                      "igdb_name":  "The Finals",
                                      "igdb_url":  "https://www.igdb.com/games/the-finals",
                                      "cover_image_id":  "cociuq",
-                                     "banner_image_id":  "ar5rh4",
-                                     "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar5rh4.jpg",
+                                     "banner_image_id":  "ar5rgz",
+                                     "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar5rgz.jpg",
                                      "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cociuq.jpg",
                                      "artworks":  [
-                                                      "ar5rh4",
-                                                      "ar5ly0",
-                                                      "ar5mck",
-                                                      "ar5mcj",
-                                                      "ar5rgw"
+                                                      "ar5rgz",
+                                                      "ar5rh2",
+                                                      "ar5rgx",
+                                                      "ar5rh3",
+                                                      "ar5rh0"
                                                   ],
                                      "screenshots":  [
                                                          "scz4ry",
