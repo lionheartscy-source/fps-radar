@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-09-09 09:20:14",
+    "_생성시각":  "2026-09-11 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Wardogs",
-                         "date":  "2026-09-10",
-                         "human":  "Sep 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/wardogs",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocs6d.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocs6d.jpg"
-                     },
-                     {
-                         "name":  "Deep Sheol",
-                         "date":  "2026-09-11",
-                         "human":  "Sep 11, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/deep-sheol",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocsba.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocsba.jpg"
-                     },
                      {
                          "name":  "Rig Riot",
                          "date":  "2026-09-14",
@@ -54,8 +36,8 @@
                          "human":  "Sep 15, 2026",
                          "platform":  "PC (Microsoft Windows)",
                          "igdb_url":  "https://www.igdb.com/games/active-matter",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocu3i.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocu3i.jpg"
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv7g.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv7g.jpg"
                      },
                      {
                          "name":  "Fallout 76",
@@ -173,6 +155,15 @@
                          "igdb_url":  "https://www.igdb.com/games/sin-reloaded",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h2r.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co2h2r.jpg"
+                     },
+                     {
+                         "name":  "Hostile Lands",
+                         "date":  "2026-09-25",
+                         "human":  "Sep 25, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/hostile-lands",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocu4w.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocu4w.jpg"
                      },
                      {
                          "name":  "Runner Gunner",
@@ -371,6 +362,15 @@
                          "igdb_url":  "https://www.igdb.com/games/last-flag",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtsb.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobtsb.jpg"
+                     },
+                     {
+                         "name":  "Muchi Muchi Pork! \u0026 PinkSweets Boosted",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/muchi-muchi-pork-and-pinksweets-boosted",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc60z.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc60z.jpg"
                      },
                      {
                          "name":  "Fiefdom",

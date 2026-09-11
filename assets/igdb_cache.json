@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-09-09 09:20:14",
+    "_생성시각":  "2026-09-11 09:20:13",
     "_출처":  "IGDB (api.igdb.com/v4) · 이미지는 images.igdb.com 핫링크 허용",
     "_이미지주소규칙":  "https://images.igdb.com/igdb/image/upload/t_\u003csize\u003e/\u003cimage_id\u003e.jpg (size: thumb / cover_small / cover_big / screenshot_med / screenshot_big / screenshot_huge / 720p / 1080p)",
     "_사용법":  "리포트 썸네일은 banner_url 우선, 없으면 cover_url.",
@@ -236,10 +236,10 @@
                                   "igdb_id":  294041,
                                   "igdb_name":  "Marvel Rivals",
                                   "igdb_url":  "https://www.igdb.com/games/marvel-rivals",
-                                  "cover_image_id":  "cocmx1",
+                                  "cover_image_id":  "cocvia",
                                   "banner_image_id":  "ar57p3",
                                   "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/ar57p3.jpg",
-                                  "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmx1.jpg",
+                                  "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocvia.jpg",
                                   "artworks":  [
                                                    "ar57p3",
                                                    "ar57p4",
@@ -278,7 +278,9 @@
                                 "screenshots":  [
                                                     "scnzqs",
                                                     "scv3bq",
-                                                    "scv3bp"
+                                                    "scv3bp",
+                                                    "sc14yh4",
+                                                    "sc14ygt"
                                                 ],
                                 "genres":  [
                                                "Shooter",
