@@ -38,7 +38,7 @@
    "이름": "루리웹 신설 게시판",
    "url": "https://bbs.ruliweb.com/game",
    "잡는것": "새 게임 전용 게시판 개설 — 커뮤니티 관심이 붙은 신호. 게임별 경로로는 안 잡힘",
-   "실측": "2026-09-08 확인. bbs.ruliweb.com 메인에서 신설 게시판 14건 확보(개별 /game 경로는 provenance 차단). 최상단이 씰M2로 교체. 슈터 신설 0건."
+   "실측": "2026-09-12 확인. bbs.ruliweb.com 메인에서 신설 게시판 14건 확보(개별 /game 경로는 provenance 차단). 최상단은 도깨비의 세계. 슈터 인접은 PUBG: 데드넷·프로젝트 제타뿐이고 신설 0건. 스페셜포스 리마스터는 8/29 이후 계속 목록 밖. ★메인 응답이 5만 자를 넘겨 파일로 저장되므로 Grep으로 '신설 게시판'을 찾아 읽을 것."
   },
   {
    "이름": "루리웹 PC 게임 정보",
@@ -136,7 +136,7 @@
    "루리웹": "https://bbs.ruliweb.com/game/85995",
    "아카라이브": "https://arca.live/b/playoverwatch",
    "인벤": "https://overwatch.inven.co.kr/",
-   "확인": "2026-09-08 07:30 베어 URL은 9/7 스냅샷을 반환. '?p=1'을 붙이니 당일 목록(최신 05:53) 수신. 1페이지 50글 중 팀 드라이브 8글(전날 20글), 핵·신고·제재·매칭 7글.",
+   "확인": "2026-09-12 오전 베어 URL(?p=1 없이)로도 당일 목록 수신 — 최신 글 06:47. 1페이지 50글 중 르세라핌 3차 콜라보 스킨 10글, 블리즈컨·옵드컵 6글, 계정 이전 문의 3글. 조회 1위는 옵갤에서 퍼 온 드롭스 가이드 941회. ★provenance: 'inven.co.kr/board/overwatch/4538' WebSearch 노출 뒤 베어 URL fetch 성공.",
    "인벤_자유게시판": "https://www.inven.co.kr/board/overwatch/4538"
   },
   "라이크 오어 다이": {
@@ -171,6 +171,7 @@
   "★자동화 상태(2026-09-07 점검)": "9/5·9/6 결손 원인 점검 결과. ①Claude 예약작업(매일 07:30)과 PC의 push_radar.bat(매일 10:00)이 같은 이틀만 나란히 빠졌다. git 로그상 9/4 17:03 다음 커밋이 9/7 10:00이고, 직전 주말인 8/29·8/30에는 10:00 커밋이 정상 존재한다. → 주말에 PC가 깨어 있지 않았을 가능성이 가장 크다. 예약작업은 놓친 실행을 따라잡지 않는다. ②별개 고장: IGDB 동기화(매일 09:20, igdb_sync_auto.bat)가 8/28 이후 한 번도 산출물을 갱신하지 못했다. tools/.igdb_token.json 이 8/28 12:19, assets/igdb_*.json 이 8/28 13:17로 멈춰 있다. 토큰 자체는 10/23까지 유효하므로 인증 만료가 아니라 작업 미실행 또는 스크립트 오류로 보인다. 평일 10:00 커밋은 계속 성공했으므로 'PC 꺼짐'으로는 설명되지 않는다. 확인처: schtasks /query /tn \"FPS레이더 IGDB 동기화\" 와 %LocalAppData%\\fps-radar-igdb.log (연결 폴더 밖이라 여기서는 못 읽음).",
   "사후 보완 표기 규칙(2026-09-07 신설)": "결손분을 소급 생성할 때는 ①리드 마지막 줄에 사후 작성 사실 ②notice와 caveat에 확인 시각 ③표 반응 칸에 '당일 미확인'과 '사후 확인' 구분을 반드시 적는다. 목록 조회수는 시간이 지나면 오르므로 사후에 읽은 값으로 하루치 증감을 계산하지 않는다. 글 작성 시각은 목록에 찍힌 그대로라 그대로 인용해도 된다.",
   "★provenance 우회(2026-09-08 추가)": "이날 성공 패턴: ①인벤은 'inven.co.kr/board/overwatch/4538' 직접 WebSearch가 실패해도, 첫 검색 결과에 뜬 overwatch.inven.co.kr 을 fetch하면 본문에 자유게시판 URL이 노출돼 이어서 열린다. 단 베어 URL은 전날 스냅샷이라 '?p=1' 필수. ②스팀은 WebSearch로 개별 스레드 URL을 노출시킨 뒤 그 스레드를 fetch하면 본문에 /discussions/ 목록 링크가 들어와 목록을 열 수 있다. 목록 페이지가 허브 첫 화면보다 신선하다.",
+  "★샌드박스 셸 고장(2026-09-12 신규)": "mcp__workspace__bash 가 5회 연속 동일 오류로 실패했다. 'A Windows update released September 8 prevents Claude's workspace from reaching your files.' 라는 안내가 함께 나왔다. 그래서 이날은 python3 tools/check_prose.py 를 돌리지 못했고, 검사기 규칙을 서브에이전트에게 손으로 적용시켜 대신했다. 파일 복사도 셸 대신 Read+Write 로 처리했다. 셸이 살아나면 저장된 리포트에 검사기를 한 번 돌려 볼 것.",
   "목록 페이지 우선(2026-09-08)": "스팀 허브 첫 화면 대신 /discussions/ 목록만 열면 '1시간 전·14시간 전' 시각과 댓글·어워드 수가 모두 나온다. 인게임 동접은 못 얻지만 캐시 오염 위험이 없어 이쪽이 낫다. 동접이 필요할 때만 허브를 추가로 연다."
  },
  "_해외경로": {
@@ -219,12 +220,12 @@
    "마블 라이벌즈": {
     "appid": "2767030",
     "허브": "https://steamcommunity.com/app/2767030/",
-    "확인": "2026-09-07 07:46 허브 실측 — 인게임 84,973명이 9/4와 동일(캐시 확정, 사용 금지). 토론은 신선: mute ban 증거 요구 댓글 6개(52분 전), 트롤 제재 항의 10개(1시간 전), 'Games gonna die' 8개(3시간 전), 32GB RAM 9개(58분 전). 리뷰 비추천 1,613.5시간·도움됨 13명(8/27), 추천 1,207.0시간·도움됨 3명(8/29)."
+    "확인": "2026-09-12 오전 /discussions/ 실측 — 활성 740건(전일 703건). 고정글 5건 제외 상위 10건: 'Tired' 댓글 15개·어워드 1개(1시간 전), 'Worst season by far?' 3개(55분 전), 'Dropping Rogue skins 2 months in a row is some BS' 8개(1시간 전), 제재·트롤 3건('15 ban because I refuse to play bot lobby' 10개, 'Penalty for throwing' 6개, 'Start banning players?' 0개). 개막 전날 최다 34개 → 개막 뒤 15개. ★허브 첫 화면(/app/2767030/)은 2026-09-07에 읽은 내용을 통째로 재반환(인게임 84,973 · mute ban 6개 · Games gonna die 8개 · 32GB RAM 9개까지 동일). 허브 캐시는 5일 이상 묵을 수 있으니 동접은 절대 쓰지 말 것."
    },
    "배틀필드 6": {
     "appid": "2807960",
     "허브": "https://steamcommunity.com/app/2807960/",
-    "확인": "2026-09-03 실측 — 토론은 분 단위로 신선하나 리뷰·공지 블록은 7월 21~22일자 정체. 스토어 50% 할인($69.99→$34.99). 인게임 26,791."
+    "확인": "2026-09-12 오전 /discussions/ 실측 — 활성 1,825건. 고정글에 공식 [BFComms] Ranked Battle Royale Matchmaking이 7시간 전 등록(댓글 3개). 고정글 5건 제외 상위 10건이 23분~1시간 전으로 매우 신선. 랭크 매칭 2건('Falling asleep waiting for a ranked match' 0개 27분 전, 'Another Ranked Queue Option' 3개), 최다 댓글 'Base AA is useless' 7개, 결함 2건('BF6 Closing itself' 3개, 'Battlefield 6 Connection Issue' 5개). 허브 첫 화면 미열람. / 2026-09-03: 리뷰·공지 블록은 7월 21~22일자 정체."
    },
    "배틀필드 REDSEC": {
     "appid": "3028330",
