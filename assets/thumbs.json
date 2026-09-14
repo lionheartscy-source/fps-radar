@@ -9,6 +9,23 @@
     "5) 새 게임을 확보할 때마다 이 파일에 추가할 것."
   ],
   "_경로주의": "리포트는 reports/YYYY-MM/ 안에 있으므로 로컬 이미지 경로는 ../../assets/thumbs/파일명 으로 쓴다.",
+  "_핫링크차단": {
+    "확인일": "2026-09-14",
+    "차단": [
+      "static.inven.co.kr",
+      "upload3.inven.co.kr",
+      "i3.ruliweb.com"
+    ],
+    "메모": "인벤 이미지는 외부 문서에서 로드하면 무조건 깨진다(브라우저 Image() 테스트에서 onerror). 리포트에 절대 쓰지 말 것. 인벤 기사는 링크로만 인용한다.",
+    "정상확인": [
+      "shared.fastly.steamstatic.com (460x215 header.jpg)",
+      "bnetcmsus-a.akamaihd.net (블리자드 공식 CMS)",
+      "a.storyblok.com (오버워치 e스포츠 CDN)",
+      "cdn.gamemeca.com (715x402)",
+      "www.dexerto.com/cdn-image"
+    ],
+    "검증법": "브라우저에서 new Image()로 onload/onerror와 naturalWidth를 확인한다. naturalWidth가 32면 자리표시자이므로 실패로 친다."
+  },
   "games": {
     "콜오브듀티: MW4": {
       "mono": "MW4",
@@ -96,15 +113,36 @@
       "mono": "LOD",
       "name": "LIKE OR DIE",
       "steam_appid": null,
-      "url": "https://i3.ruliweb.com/img/26/08/27/1a0428a9dcc4cacdc.webp",
-      "메모": "스팀 미등록(미출시). 루리웹 게임스컴 인터뷰 기사 이미지. 핫링크 차단 시 타일 폴백."
+      "url": null,
+      "메모": "⚠️ 2026-09-14 실측: 루리웹 이미지(i3.ruliweb.com)도 핫링크 차단으로 깨짐. 대체 주소 미확보라 브랜드 타일로 넣을 것."
     },
     "AVA RE:BIRTH": {
       "mono": "AVA",
       "name": "AVA RE:BIRTH",
       "steam_appid": null,
-      "url": "https://static.inven.co.kr/column/2026/08/28/news/i1167729908.jpg",
-      "메모": "스팀 미등록. 인벤 보도 이미지(밸로프 제공)."
+      "url": null,
+      "메모": "⚠️ 2026-09-14: 기존 인벤 주소(static.inven.co.kr)는 핫링크 차단으로 깨짐. 대체 주소 미확보 상태이므로 현재는 브랜드 타일로 넣을 것."
+    },
+    "오버워치 · 블리즈컨 2026": {
+      "mono": "OW",
+      "name": "OVERWATCH BLIZZCON 2026",
+      "steam_appid": null,
+      "url": "https://bnetcmsus-a.akamaihd.net/cms/gallery/HOKLURVU8GWL1788902299535.png",
+      "메모": "2026-09-14 확인 2124x1080. 블리자드 공식 뉴스 갤러리(독트린 포함 시즌5 라인업). 같은 글의 그림스뵈튼 맵컷은 .../cms/gallery/ZVJY459E50DI1788902299498.png"
+    },
+    "오버워치 월드컵(OWWC)": {
+      "mono": "OWWC",
+      "name": "OVERWATCH WORLD CUP",
+      "steam_appid": null,
+      "url": "https://a.storyblok.com/f/267720/1920x1080/c26bc1086f/viewership-incentives-full-1920x1080.jpg",
+      "메모": "2026-09-14 확인 1920x1080. 오버워치 e스포츠 공식 CDN(시청 보상 드롭스 이미지). 8강 대진표는 .../1a7edd8df5/1920x1080-groups.jpg"
+    },
+    "스타크래프트(신작)": {
+      "mono": "SC",
+      "name": "STARCRAFT",
+      "steam_appid": null,
+      "url": "https://www.dexerto.com/cdn-image/wp-content/uploads/2026/09/12/starcraft-shooter-announced-blizzcon.jpg",
+      "메모": "2026-09-14 확인 1600x900. 블리자드 자체 CDN 이미지는 못 찾아 Dexerto 보도 이미지 사용. 2030년 출시 예정이라 스팀 페이지 없음."
     },
     "스페셜포스 리마스터": {
       "mono": "SF",
