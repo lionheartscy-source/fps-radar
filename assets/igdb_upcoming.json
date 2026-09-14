@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-09-13 09:20:13",
+    "_생성시각":  "2026-09-14 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Rig Riot",
-                         "date":  "2026-09-14",
-                         "human":  "Sep 14, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/rig-riot",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9lh8.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9lh8.jpg"
-                     },
                      {
                          "name":  "Sublight",
                          "date":  "2026-09-15",
