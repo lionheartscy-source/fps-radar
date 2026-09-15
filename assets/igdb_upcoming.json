@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-09-14 09:20:13",
+    "_생성시각":  "2026-09-15 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Sublight",
-                         "date":  "2026-09-15",
-                         "human":  "Sep 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/sublight--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc9ad.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc9ad.jpg"
-                     },
-                     {
-                         "name":  "The Bow: Ultimate Weapon",
-                         "date":  "2026-09-15",
-                         "human":  "Sep 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-bow-ultimate-weapon",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwys.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwys.jpg"
-                     },
-                     {
-                         "name":  "Active Matter",
-                         "date":  "2026-09-15",
-                         "human":  "Sep 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/active-matter",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv7g.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv7g.jpg"
-                     },
-                     {
-                         "name":  "Fallout 76",
-                         "date":  "2026-09-15",
-                         "human":  "Sep 15, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/fallout-76",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yc4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co1yc4.jpg"
-                     },
                      {
                          "name":  "Concrete Burial",
                          "date":  "2026-09-17",
@@ -119,6 +83,15 @@
                          "igdb_url":  "https://www.igdb.com/games/eon-survivor",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc98z.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc98z.jpg"
+                     },
+                     {
+                         "name":  "Somnius",
+                         "date":  "2026-09-22",
+                         "human":  "Sep 22, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/somnius",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocwec.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwec.jpg"
                      },
                      {
                          "name":  "Gunclone Arena",
@@ -355,13 +328,31 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobtsb.jpg"
                      },
                      {
-                         "name":  "Muchi Muchi Pork! \u0026 PinkSweets Boosted",
+                         "name":  "Sanasana",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/sanasana",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclqx.jpg"
+                     },
+                     {
+                         "name":  "RetroSpace",
                          "date":  "2026-10-01",
                          "human":  "Oct 01, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/muchi-muchi-pork-and-pinksweets-boosted",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc60z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc60z.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/retrospace",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co79jg.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co79jg.jpg"
+                     },
+                     {
+                         "name":  "Gears of War: E-Day",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/gears-of-war-e-day",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc77n.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc77n.jpg"
                      },
                      {
                          "name":  "Fiefdom",
@@ -371,6 +362,15 @@
                          "igdb_url":  "https://www.igdb.com/games/fiefdom--1",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9bwo.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9bwo.jpg"
+                     },
+                     {
+                         "name":  "Muchi Muchi Pork! \u0026 PinkSweets Boosted",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/muchi-muchi-pork-and-pinksweets-boosted",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc60z.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc60z.jpg"
                      }
                  ]
 }
