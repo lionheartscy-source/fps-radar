@@ -70,8 +70,8 @@
       "mono": "MR",
       "name": "MARVEL RIVALS",
       "steam_appid": "2767030",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg?t=1786093208",
-      "메모": "2024년 출시 신규 앱 — 해시 경로 필수. 스팀 상점 페이지에서 확인한 실제 주소."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/088fc787d8513a6f9782d03968e5ac1a01840087/header.jpg?t=1789119923",
+      "메모": "2026-09-16 해시 경로가 44ca658e…에서 088fc787…로 바뀐 것을 확인(스팀 og:image). 해시는 고정이 아니므로 매번 og:image로 재확인할 것."
     },
     "타임 테이커즈": {
       "mono": "TT",
@@ -162,8 +162,8 @@
       "mono": "BF6",
       "name": "BATTLEFIELD 6 / REDSEC",
       "steam_appid": "2807960",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1784839791",
-      "메모": "2026-09-03 스팀 허브 og:image 재확인(t값 갱신)."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400",
+      "메모": "2026-09-16 og:image에서 t값 갱신(해시는 동일)."
     },
     "델타포스": {
       "mono": "DF",
