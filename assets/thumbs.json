@@ -202,6 +202,13 @@
       "mono": "AC8",
       "name": "ACE COMBAT 8",
       "메모": "PS5 전용이라 스팀 header 가 없다. IGDB banner_url(세로 커버를 720p로 올린 것)이라 16:9 칸에서는 가운데가 잘린다."
+    },
+    "콜오브듀티: 블랙옵스7": {
+      "mono": "BO7",
+      "name": "BLACK OPS 7",
+      "steam_appid": "3606480",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
+      "확인": "2026-09-19 스팀 상점 og:image에서 해시 포함 주소 확보(연령 확인 페이지에서도 노출)."
     }
   },
   "_이미지필요": [],
