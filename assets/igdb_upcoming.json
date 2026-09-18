@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-09-17 09:20:13",
+    "_생성시각":  "2026-09-18 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Save Mom",
-                         "date":  "2026-09-18",
-                         "human":  "Sep 18, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/save-mom",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coafou.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coafou.jpg"
-                     },
                      {
                          "name":  "The Stickman",
                          "date":  "2026-09-21",
@@ -371,6 +362,15 @@
                          "igdb_url":  "https://www.igdb.com/games/gears-of-war-e-day",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc77n.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc77n.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat Zero: The Belkan War",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-zero-the-belkan-war",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6o8z.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6o8z.jpg"
                      }
                  ]
 }
