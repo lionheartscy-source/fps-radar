@@ -322,6 +322,67 @@ td .pt-lead{display:block;margin-bottom:5px}
   .obs:hover .e2::after{opacity:1}
 }
 @media print{ .obs .d2{display:block} .obs .e2::after{display:none} }
+
+/* ═══ 05 신작 출시·발표 표 (2026-09-18 신설) ═══ */
+/* 열 순서: 게임 / 상태 / 날짜 / 개발·배급 / 관심 신호 / 링크(마지막) */
+/* ⚠ .tablewrap th:nth-child() 너비 규칙(03·04용)이 여기까지 걸리므로 더 높은 특정도로 덮어쓴다. */
+.tablewrap.launch table{min-width:1080px;table-layout:fixed}
+.tablewrap.launch th:nth-child(1),.tablewrap.launch td:nth-child(1){width:27%}
+.tablewrap.launch th:nth-child(2),.tablewrap.launch td:nth-child(2){width:7%}
+.tablewrap.launch th:nth-child(3),.tablewrap.launch td:nth-child(3){width:7%}
+.tablewrap.launch th:nth-child(4),.tablewrap.launch td:nth-child(4){width:10%}
+.tablewrap.launch th:nth-child(5),.tablewrap.launch td:nth-child(5){width:42%}
+.tablewrap.launch th:nth-child(6),.tablewrap.launch td:nth-child(6){width:7%}
+.launch col.c-g{width:27%} .launch col.c-s{width:7%} .launch col.c-d{width:7%}
+.launch col.c-m{width:10%} .launch col.c-sig{width:42%} .launch col.c-l{width:7%}
+.launch thead th,.launch tbody td{padding:11px 10px}
+.launch td.g{font-weight:700;color:var(--ink);line-height:1.4;
+  overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.launch td.g em{display:block;font-style:normal;font-weight:500;font-size:11.5px;color:var(--muted);margin-top:3px}
+.launch td.dt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2);font-weight:600}
+.launch td.dt em{display:block;font-family:var(--sans);font-style:normal;font-weight:500;font-size:11px;color:var(--faint);margin-top:3px;white-space:normal}
+.launch td.mk{color:var(--muted);font-size:12px;line-height:1.45;word-break:keep-all}
+.launch td.sig{color:var(--ink-2);line-height:1.55;word-break:keep-all}
+.launch td.sig b{color:var(--ink);font-weight:700}
+.launch td.lk{font-size:12px;line-height:1.55;border-left:1px solid var(--line-soft)}
+.launch thead th:nth-child(6){border-left:1px solid var(--line-soft)}
+.launch td.lk a{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;margin:1px 0}
+.launch td.lk svg{flex:none;width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.launch td.lk a:hover svg{opacity:1}
+.launch tbody tr:nth-child(even) td{background:var(--zebra)}
+
+/* ═══ 01 일정 — 날짜별 아코디언 (2026-09-18 도입) ═══ */
+.timeline details.dgroup{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin:0 0 8px;overflow:hidden}
+.timeline details.dgroup[open]{box-shadow:var(--shadow)}
+.timeline details.dgroup>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+  padding:9px 14px;background:var(--card-2);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
+  border-bottom:1px solid transparent}
+.timeline details.dgroup[open]>summary{border-bottom-color:var(--line-soft)}
+.timeline details.dgroup>summary::-webkit-details-marker{display:none}
+.timeline details.dgroup>summary::after{content:"";margin-left:auto;width:7px;height:7px;flex:none;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s ease}
+.timeline details.dgroup[open]>summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.timeline details.dgroup>summary:hover{background:var(--blue-soft)}
+.timeline details.dgroup>summary:focus-visible{outline:2px solid var(--ring);outline-offset:-2px}
+.timeline details.dgroup>summary .dg-d{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--navy)}
+.timeline details.dgroup>summary .dg-t{font-size:11.5px;font-weight:800;letter-spacing:.04em;
+  background:var(--red);color:#fff;border-radius:999px;padding:1px 8px}
+.timeline details.dgroup>summary .dg-n{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:0 7px}
+.timeline details.dgroup.today>summary{background:var(--red-soft)}
+.timeline details.dgroup.today>summary .dg-d{color:var(--red)}
+.timeline details.dgroup>.tl{padding:2px 14px 8px}
+.timeline details.dgroup>.tl li{grid-template-columns:50px 1fr;gap:12px}
+.timeline details.dgroup>.tl li.today{background:none;margin:0;padding-left:0;padding-right:0}
+@media print{
+  .timeline details.dgroup>summary::after{display:none}
+  .timeline details.dgroup>.tl{display:block}
+}
+@media (max-width:560px){
+  .timeline details.dgroup>.tl li{grid-template-columns:44px 1fr;gap:9px}
+}
 </style></head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -344,7 +405,7 @@ td .pt-lead{display:block;margin-bottom:5px}
 
 <main id="main">
 <div class="wrap">
-<p class="lead"><span class="lrow hi"><b class="lk">핵심</b><span class="lt"><b>넥슨으로 옮긴 오버워치 여론이 세 갈래로 굳었습니다. 과금 811회, 핵 658회, 차별 319회입니다.</b></span></span><span class="lrow"><b class="lk">국내</b><span class="lt">스페셜포스 리마스터가 어제 정식 출시했습니다. 스팀 평가는 344개에 긍정 22%로 그대로입니다.</span></span><span class="lrow"><b class="lk">지표</b><span class="lt">인벤 자유게시판 일일 최다는 넥슨 추석 행사 안내입니다. 조회 1,110회입니다.</span></span><span class="lrow"><b class="lk">해외</b><span class="lt">배틀필드 6 토론 최다 글이 프레임 저하 신고로 바뀌었습니다. 댓글은 711개입니다.</span></span><span class="lrow"><b class="lk">일정</b><span class="lt">콜오브듀티 시즌6가 이틀째입니다. 에이펙스와 스트리트 파이터 6 협업은 9월 22일에 엽니다.</span></span></p>
+<p class="lead"><span class="lrow hi"><b class="lk">핵심</b><span class="lt"><b>넥슨으로 옮긴 오버워치 여론이 세 갈래로 굳었습니다. 과금 811회, 핵 658회, 차별 319회입니다.</b></span></span><span class="lrow"><b class="lk">국내</b><span class="lt">스페셜포스 리마스터가 어제 정식 출시했습니다. 스팀 평가는 344개에 긍정 22%로 그대로입니다.</span></span><span class="lrow"><b class="lk">지표</b><span class="lt">워독스 토론이 1,935건으로 배틀필드 6를 앞질렀습니다. 국내 평점은 0점입니다.</span></span><span class="lrow"><b class="lk">해외</b><span class="lt">배틀필드 6 토론 최다 글이 프레임 저하 신고로 바뀌었습니다. 댓글은 711개입니다.</span></span><span class="lrow"><b class="lk">일정</b><span class="lt">콜오브듀티 시즌6가 이틀째입니다. 에이펙스와 스트리트 파이터 6 협업은 9월 22일에 엽니다.</span></span></p>
 
   <div class="notice"><span class="k">측정 주의</span><span><b>인벤 자유게시판은 게임 메인에서 이어 열었습니다.</b> 오늘 05시 46분 글까지 받았습니다.<span class="lb"></span>핫벤 상위 200건은 어제와 같은 값이라 쓰지 않았습니다.<span class="lb"></span>스팀은 목록 화면으로 열어 2분 전 글까지 받았습니다. 허브 첫 화면은 보지 않았습니다.</span></div>
 
@@ -374,30 +435,87 @@ td .pt-lead{display:block;margin-bottom:5px}
   <!-- 01 오늘의 일정 -->
   <div class="sec" id="today"><span class="idx">01</span><h2>오늘의 일정</h2><span class="rule"></span></div>
   <div class="timeline">
-    <h3>움직이는 일정 20건</h3>
-    <p class="hint">붉게 표시된 줄이 오늘(9/18) 진행 중입니다.</p>
-    <ol class="tl">
-      <li class="today"><span class="d">09.18 금</span><span class="s on">갱신</span><span class="t"><b>오버워치 디몬 핫픽스</b>가 새벽에 적용됐습니다<span class="win">인벤 정리 글 05:36</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>서든어택 시즌4 문라이즈</b>가 이틀째입니다<span class="win">~12/10 · C.루나</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>콜오브듀티 시즌6 The Haunting</b>이 이틀째입니다<span class="win">블랙옵스7 · 워존</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>도쿄게임쇼 2026</b>이 둘째 날입니다<span class="win">지바 마쿠하리 멧세</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>배틀필드 6 Deep Six</b>가 나흘째입니다<span class="win">~10/12</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>배틀필드 6 무료 체험</b>이 열려 있습니다<span class="win">~9/22</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>마블 라이벌즈 시즌 10</b>이 8일째입니다<span class="win">~10/9 · 고르</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>넥슨 막시밀리앙의 금고털이</b>가 걸려 있습니다<span class="win">한국 전용</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>넥슨 추석 행사</b>가 열려 있습니다<span class="win">조회 1,110회</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>르세라핌 3차 콜라보 스킨</b>을 계속 팝니다<span class="win">~9/29</span></span></li>
-      <li class="today"><span class="d">09.18 금</span><span class="s on">진행</span><span class="t"><b>블리즈컨 신화 선물</b>을 바꿀 수 있습니다<span class="win">~10/3</span></span></li>
-      <li><span class="d">09.22 화</span><span class="s start">시작</span><span class="t"><b>에이펙스 × 스트리트 파이터 6</b>협업이 열립니다<span class="win">~10/13 · 스킨 8종</span></span></li>
-      <li><span class="d">09.22 화</span><span class="s end">종료</span><span class="t"><b>배틀필드 6 무료 체험</b>이 닫힙니다<span class="win">8일 열림</span></span></li>
-      <li><span class="d">09.22 화</span><span class="s end">종료</span><span class="t"><b>OWWC 우승 기념 행사</b>가 닫힙니다<span class="win">종료 23:59</span></span></li>
-      <li><span class="d">09.25 금</span><span class="s start">시작</span><span class="t"><b>마블 라이벌즈 God Quarry</b>가 열립니다<span class="win">시즌 10 중반</span></span></li>
-      <li><span class="d">09.29 화</span><span class="s start">출시</span><span class="t"><b>에이스 컴뱃 8</b>이 나옵니다<span class="win">IGDB 캐시 기준</span></span></li>
-      <li><span class="d">09.30 수</span><span class="s start">출시</span><span class="t"><b>EVE Vanguard</b>를 포함해 슈터 13종이 몰립니다<span class="win">Black Mesa: Classic</span></span></li>
-      <li><span class="d">10.01 목</span><span class="s end">종료</span><span class="t"><b>서든어택 스페셜 아이템 상점</b>이 닫힙니다<span class="win">2주 열림</span></span></li>
-      <li><span class="d">10.03 토</span><span class="s end">종료</span><span class="t"><b>블리즈컨 신화 바우처</b>사용이 마감됩니다<span class="win">교환 목록 확인</span></span></li>
-      <li><span class="d">10.07 수</span><span class="s start">시작</span><span class="t"><b>오버워치 2026: 5시즌</b>이 열립니다<span class="win">독트린 합류</span></span></li>
-    </ol>
+    <h3>움직이는 일정 24건</h3>
+    <p class="hint">날짜 머리를 누르면 그 날 일정을 접거나 펼칠 수 있습니다. 붉은 묶음이 오늘(9/18)입니다.</p>
+      <details class="dgroup today" open>
+        <summary><span class="dg-d">09.18 금</span><span class="dg-t">오늘</span><span class="dg-n">12건</span></summary>
+        <ol class="tl">
+          <li class="today"><span class="s on">갱신</span><span class="t"><b>오버워치 디몬 핫픽스</b>가 새벽에 적용됐습니다<span class="win">인벤 정리 글 05:36</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>서든어택 시즌4 문라이즈</b>가 이틀째입니다<span class="win">~12/10 · C.루나</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>콜오브듀티 시즌6 The Haunting</b>이 이틀째입니다<span class="win">블랙옵스7 · 워존</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>도쿄게임쇼 2026</b>이 둘째 날입니다<span class="win">지바 마쿠하리 멧세</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>배틀필드 6 Deep Six</b>가 나흘째입니다<span class="win">~10/12</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>배틀필드 6 무료 체험</b>이 열려 있습니다<span class="win">~9/22</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>마블 라이벌즈 시즌 10</b>이 8일째입니다<span class="win">~10/9 · 고르</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>워독스 앞서 해보기</b>가 9일째입니다<span class="win">스팀 토론 1,935건</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>넥슨 막시밀리앙의 금고털이</b>가 걸려 있습니다<span class="win">한국 전용</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>넥슨 추석 행사</b>가 열려 있습니다<span class="win">조회 1,110회</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>르세라핌 3차 콜라보 스킨</b>을 계속 팝니다<span class="win">~9/29</span></span></li>
+          <li class="today"><span class="s on">진행</span><span class="t"><b>블리즈컨 신화 선물</b>을 바꿀 수 있습니다<span class="win">~10/3</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup" open>
+        <summary><span class="dg-d">09.22 화</span><span class="dg-n">3건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">시작</span><span class="t"><b>에이펙스 × 스트리트 파이터 6</b> 협업이 열립니다<span class="win">~10/13 · 스킨 8종</span></span></li>
+          <li><span class="s end">종료</span><span class="t"><b>배틀필드 6 무료 체험</b>이 닫힙니다<span class="win">8일 열림</span></span></li>
+          <li><span class="s end">종료</span><span class="t"><b>OWWC 우승 기념 행사</b>가 닫힙니다<span class="win">종료 23:59</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">09.24 목</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">출시</span><span class="t"><b>Alien Breed 35th Anniversary Collection</b>이 나옵니다<span class="win">스팀 데모 공개 중</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">09.25 금</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">시작</span><span class="t"><b>마블 라이벌즈 God Quarry</b>가 열립니다<span class="win">시즌 10 중반</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">09.28 월</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">시작</span><span class="t"><b>에이스 컴뱃 8 디럭스판 앞서 해보기</b>가 열립니다<span class="win">정식은 10/2</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">09.30 수</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">출시</span><span class="t"><b>IGDB 등록 슈터 13종</b>이 같은 날 몰립니다<span class="win">Black Mesa: Classic 포함</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">10.01 목</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s end">종료</span><span class="t"><b>서든어택 스페셜 아이템 상점</b>이 닫힙니다<span class="win">2주 열림</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">10.02 금</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">출시</span><span class="t"><b>에이스 컴뱃 8: 시브의 날개</b>가 나옵니다<span class="win">PS5 글로벌</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">10.03 토</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s end">종료</span><span class="t"><b>블리즈컨 신화 바우처</b>사용이 마감됩니다<span class="win">교환 목록 확인</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">10.06 화</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">출시</span><span class="t"><b>기어스 오브 워: 이데이</b>가 나옵니다<span class="win">게임패스 1일차</span></span></li>
+        </ol>
+      </details>
+      <details class="dgroup">
+        <summary><span class="dg-d">10.07 수</span><span class="dg-n">1건</span></summary>
+        <ol class="tl">
+          <li><span class="s start">시작</span><span class="t"><b>오버워치 2026: 5시즌</b>이 열립니다<span class="win">독트린 합류</span></span></li>
+        </ol>
+      </details>
   </div>
 
   <!-- 02 오늘의 헤드라인 -->
@@ -417,12 +535,12 @@ td .pt-lead{display:block;margin-bottom:5px}
       </div>
       <div class="under"><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></span> 드래곤플라이가 2004년 원작을 언리얼 엔진 5로 다시 만든 작품입니다.<span class="lb"></span>어제 정식 출시를 알렸습니다.<span class="lb"></span>오늘 오전 스팀 평가는 <b>344개에 긍정 22%입니다.</b><span class="lb"></span>어제와 숫자가 같아 하루 증가분이 <b>0건입니다.</b><span class="lb"></span>상점 장르에는 "앞서 해보기"가 그대로 붙어 있습니다.<span class="lb"></span>루리웹 신설 게시판 14건에는 이름이 없어 <b>20일째입니다.</b></div>
     </a>
-    <a class="hero" href="https://steamcommunity.com/app/2807960/discussions/" target="_blank" rel="noopener">
-      <div class="shot" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt="BATTLEFIELD 6">
-        <span class="rank">03</span><span class="flag">댓글 711개</span>
-        <div class="over"><div class="gm">배틀필드 6 · 시즌 4 나흘째</div><h3>토론 최다 글이 프레임 저하 신고로 교체</h3></div>
+    <a class="hero" href="https://steamcommunity.com/app/1867240/discussions/" target="_blank" rel="noopener">
+      <div class="shot" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt="WARDOGS">
+        <span class="rank">03</span><span class="flag">토론 1,935건</span>
+        <div class="over"><div class="gm">워독스 · 앞서 해보기 9일째</div><h3>스팀 토론 수가 배틀필드 6를 앞질렀습니다</h3></div>
       </div>
-      <div class="under"><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span><span class="ev na">국내 반응 미확인</span></span> 오늘 오전 스팀 일반 토론 활성 주제는 <b>1,786건입니다.</b><span class="lb"></span>어제 1,790건에서 사흘 연속 줄었습니다.<span class="lb"></span>고정글을 뺀 상위 13건은 2분 전부터 1시간 전 사이입니다.<span class="lb"></span>최다 글은 프레임 저하 신고이고 <b>댓글 711개입니다.</b><span class="lb"></span>운영진 고정글 갱신일이 9월 17일로 바뀌었습니다.</div>
+      <div class="under"><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></span> 벌크헤드의 100인 전술 FPS가 9월 10일에 나왔습니다.<span class="lb"></span>오늘 오전 스팀 토론 활성 주제는 <b>1,935건입니다.</b><span class="lb"></span>같은 시각 배틀필드 6는 1,786건에 그쳤습니다.<span class="lb"></span>그런데 루리웹 전용 게시판 평점은 아직 <b>0점입니다.</b><span class="lb"></span>한국어 스팀 평가는 505개이고 긍정이 63%입니다.</div>
     </a>
   </section>
 
@@ -471,6 +589,8 @@ td .pt-lead{display:block;margin-bottom:5px}
     <b>오늘 연 해외 커뮤니티</b>
     <span><span class="ev cm">확인</span><a href="https://steamcommunity.com/app/2807960/discussions/" target="_blank" rel="noopener">배틀필드 6 일반 토론 목록</a><span class="d">오전 확인 · 활성 1,786건 · 고정글을 뺀 상위 13건이 2분 전부터 1시간 전 사이</span></span>
     <span><span class="ev cm">확인</span><a href="https://steamcommunity.com/app/2767030/discussions/0/" target="_blank" rel="noopener">마블 라이벌즈 일반 토론 목록</a><span class="d">오전 확인 · 활성 667건 · 상위 10건이 27분 전부터 3시간 전 사이</span></span>
+    <span><span class="ev cm">확인</span><a href="https://steamcommunity.com/app/1867240/discussions/" target="_blank" rel="noopener">워독스 일반 토론 목록</a><span class="d">오전 확인 · 활성 1,935건 · 상위 11건이 방금부터 5분 전 사이</span></span>
+    <span><span class="ev cm">확인</span><a href="https://bbs.ruliweb.com/game/87335/read/2503651" target="_blank" rel="noopener">워독스 루리웹 전용 게시판</a><span class="d">오전 확인 · 루리웹 전용 게시판 평점 0점 · 글 조회 659회</span></span>
     <span><span class="ev gl">매체·공식만</span><span class="d">콜오브듀티 블랙옵스7과 에이펙스 레전드는 스팀 토론을 열지 않아 기사와 공식 안내만 썼습니다</span></span>
     <span><span class="ev na">미열람</span><span class="d">허브 첫 화면을 열지 않아 인게임 접속자 수는 오늘 없습니다</span></span>
     <span><span class="ev na">미열람</span><span class="d">레인보우 식스 시즈 · CS2 · PUBG · 델타포스 · 데스티니 2 · THE FINALS</span></span>
@@ -485,28 +605,120 @@ td .pt-lead{display:block;margin-bottom:5px}
         <td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">스팀 토론 최다 글이 프레임 저하 신고로 바뀌었습니다.</span></button><span class="d2">시즌 4 Tidal Strike는 9월 15일에 열렸고 판올림 번호는 1.4.3.0입니다.<span class="lb"></span>오늘 오전 스팀 일반 토론 활성 주제는 1,786건입니다.<span class="lb"></span>Deep Six 수집 행사는 10월 12일까지이고 무료 체험은 9월 22일에 닫힙니다.</span></td>
         <td>9/15 적용<span class="dsub">나흘째</span></td>
         <td><span class="typ">성능 신고 · 문서 갱신</span></td>
-        <td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span><span class="ev na">국내 반응 미확인</span></span> <b>① 성능</b> 목록 최다 글은 "Frametime spikes which results in stuttering on the following maps"입니다.<span class="lb"></span>1시간 전에 올라와 댓글 711개를 모았습니다.<span class="lb"></span>어워드는 10개입니다.<span class="lb"></span>어제 최다였던 크로스플레이 청원은 상위 13건 밖으로 밀렸습니다.<span class="lb"></span><b>② 불만</b> "Bait and switch marketing"은 38분 전 글입니다.<span class="lb"></span>여기에는 의견 31개와 어워드 4개가 붙었습니다.<span class="lb"></span>"Vote to stop the rotation mode system."은 댓글 26개입니다.<span class="lb"></span><b>③ 공식</b> 운영진 고정글 "Status and Known Issues"의 갱신일이 9월 17일로 바뀌었습니다.<span class="lb"></span>직전 표기는 9월 15일이었습니다.<span class="lb"></span>활성 주제도 어제 1,790건에서 1,786건으로 줄었습니다.<span class="lb"></span>최다 글은 하루 만에 바뀝니다.<span class="lb"></span>같은 시각에 다시 세어야 합니다.<span class="lb"></span>성능 신고는 알려진 문제 문서에 지도 이름까지 적어야 합니다.<span class="src-inline"><a href="https://steamcommunity.com/app/2807960/discussions/" target="_blank" rel="noopener">일반 토론 목록 활성 1,786건</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/591784958348260246/" target="_blank" rel="noopener">프레임 저하 신고 댓글 711개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/581680955258897649/" target="_blank" rel="noopener">마케팅 비판 댓글 31개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/564794055139009742/" target="_blank" rel="noopener">알려진 문제 문서 9월 17일 갱신</a></span></td>
+        <td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span><span class="ev na">국내 반응 미확인</span></span> <b>① 성능</b> 목록 최다 글은 "Frametime spikes which results in stuttering on the following maps"입니다.<span class="lb"></span>1시간 전에 올라와 댓글 711개를 모았습니다.<span class="lb"></span>어워드는 10개입니다.<span class="lb"></span>어제 최다였던 크로스플레이 청원은 상위 13건 밖으로 밀렸습니다.<span class="lb"></span><b>② 불만</b> "Bait and switch marketing"은 38분 전 글입니다.<span class="lb"></span>여기에는 의견 31개와 어워드 4개가 붙었습니다.<span class="lb"></span><b>③ 공식</b> 운영진 고정글 "Status and Known Issues"의 갱신일이 9월 17일로 바뀌었습니다.<span class="lb"></span>활성 주제도 어제 1,790건에서 1,786건으로 줄었습니다.<span class="lb"></span>목록 최다 글은 하루 만에 바뀌므로 같은 시각에 다시 세어야 합니다.<span class="src-inline"><a href="https://steamcommunity.com/app/2807960/discussions/" target="_blank" rel="noopener">일반 토론 목록 활성 1,786건</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/591784958348260246/" target="_blank" rel="noopener">프레임 저하 신고 댓글 711개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/581680955258897649/" target="_blank" rel="noopener">마케팅 비판 댓글 31개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/564794055139009742/" target="_blank" rel="noopener">알려진 문제 문서 9월 17일 갱신</a></span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt=""></span><span class="g-name">워독스<em>앞서 해보기 9일째</em></span></div></td>
+        <td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">해외 토론은 1,935건인데 국내 평점은 0점입니다.</span></button><span class="d2">벌크헤드가 만들고 팀17이 낸 100인 전술 FPS입니다.<span class="lb"></span>9월 10일에 앞서 해보기를 열어 오늘로 9일째입니다.<span class="lb"></span>세 팀이 256km 지도에서 무작위 점령 구역을 놓고 겨룹니다.</span></td>
+        <td>9/10 시작<span class="dsub">9일째</span></td>
+        <td><span class="typ">신작 흥행 · 국내 공백</span></td>
+        <td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></span> <b>① 규모</b> 오늘 오전 스팀 토론 활성 주제는 1,935건입니다.<span class="lb"></span>같은 시각 배틀필드 6의 1,786건보다 많습니다.<span class="lb"></span><b>② 불만</b> "Hacking is an Issue Regardless of Dev's Supposed Action"에 댓글 127개가 달렸습니다.<span class="lb"></span>"WARDOGS Is a Joke Its Team System Is Even Worse"는 어워드 40개를 받았습니다.<span class="lb"></span>초기화를 다룬 "WIPE confirmed"에는 의견 381개가 모였습니다.<span class="lb"></span><b>③ 국내</b> 루리웹 전용 게시판은 평점이 아직 0점입니다.<span class="lb"></span>9월 12일 14시 43분에 올라온 디스코드 모집 글이 659회 읽혔습니다.<span class="lb"></span>추천과 답글은 둘 다 0개입니다.<span class="lb"></span>한국어 스팀 평가는 505개이고 긍정 비율이 63%입니다.<span class="lb"></span>사는 사람은 있는데 모이는 자리가 비어 있습니다.<span class="src-inline"><a href="https://steamcommunity.com/app/1867240/discussions/" target="_blank" rel="noopener">스팀 토론 활성 1,935건</a> · <a href="https://steamcommunity.com/app/1867240/discussions/0/562541966849680144/" target="_blank" rel="noopener">치트 신고 댓글 127개</a> · <a href="https://steamcommunity.com/app/1867240/discussions/0/562541966849756885/" target="_blank" rel="noopener">팀 배분 비판 어워드 40개</a> · <a href="https://bbs.ruliweb.com/game/87335/read/2503651" target="_blank" rel="noopener">루리웹 게시판 조회 659회·답글 0개</a> · <a href="https://store.steampowered.com/app/1867240/WARDOGS/?l=koreana" target="_blank" rel="noopener">한국어 평가 505개 중 63%</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb" data-mono="MR" data-name="MARVEL RIVALS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/088fc787d8513a6f9782d03968e5ac1a01840087/header.jpg?t=1789119923" alt=""></span><span class="g-name">마블 라이벌즈<em>시즌 10 8일째</em></span></div></td>
         <td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">활성 토론이 677건에서 667건으로 줄었습니다.</span></button><span class="d2">시즌 10은 9월 11일에 열려 10월 9일까지 이어집니다.<span class="lb"></span>새 영웅으로 고르가 왔습니다.<span class="lb"></span>스팀 일반 토론 활성 주제는 9월 16일 677건에서 오늘 667건으로 줄었습니다.</span></td>
         <td>9/11 개막<span class="dsub">8일째</span></td>
         <td><span class="typ">토론 감소 · 기술 결함</span></td>
-        <td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev na">국내 반응 미확인</span></span> <b>① 결함</b> 고정글을 뺀 상위 10건 가운데 5건이 기술 결함 글입니다.<span class="lb"></span>"Shader compilation on every launch."와 "voice chat is not working"이 있습니다.<span class="lb"></span>"Game crashes"와 "Stuck at loading shaders (Fixed)"도 올랐습니다.<span class="lb"></span>"Optimization. I will never download this game again"까지 다섯입니다.<span class="lb"></span><b>② 최다</b> "I'm So Tired..."는 1시간 전 글입니다.<span class="lb"></span>댓글 8개와 어워드 2개로 상위 10건 최다입니다.<span class="lb"></span><b>③ 밸런스</b> "hood/mag nerfs ruined qp"가 31분 전에 올랐습니다.<span class="lb"></span>여기에 의견 3개가 붙었습니다.<span class="lb"></span>"if marvel rivals allows pc controller ranked why not add cross -play ranked?"는 27분 전 글입니다.<span class="lb"></span>이쪽도 답글 수는 똑같이 3개입니다.<span class="lb"></span>개막 뒤 중반에는 밸런스보다 실행 결함이 목록을 채웁니다.<span class="lb"></span>성능 점검 창구를 계속 열어 두어야 합니다.<span class="src-inline"><a href="https://steamcommunity.com/app/2767030/discussions/0/" target="_blank" rel="noopener">일반 토론 목록 활성 667건</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675367782911841/" target="_blank" rel="noopener">상위 최다 댓글 8개</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578520592/" target="_blank" rel="noopener">셰이더 컴파일 신고</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578527809/" target="_blank" rel="noopener">크로스플레이 경쟁전 요청</a></span></td>
+        <td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev na">국내 반응 미확인</span></span> <b>① 결함</b> 고정글을 뺀 상위 10건 가운데 5건이 기술 결함 글입니다.<span class="lb"></span>"Shader compilation on every launch."와 "Game crashes", "voice chat is not working"이 여기 듭니다.<span class="lb"></span><b>② 최다</b> "I'm So Tired..."는 1시간 전 글입니다.<span class="lb"></span>댓글 8개와 어워드 2개로 상위 10건 최다입니다.<span class="lb"></span><b>③ 밸런스</b> "hood/mag nerfs ruined qp"가 31분 전에 올랐습니다.<span class="lb"></span>여기에 의견 3개가 붙었습니다.<span class="lb"></span>개막 뒤 중반에는 밸런스보다 실행 결함이 목록을 채웁니다.<span class="src-inline"><a href="https://steamcommunity.com/app/2767030/discussions/0/" target="_blank" rel="noopener">일반 토론 목록 활성 667건</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675367782911841/" target="_blank" rel="noopener">상위 최다 댓글 8개</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578520592/" target="_blank" rel="noopener">셰이더 컴파일 신고</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578527809/" target="_blank" rel="noopener">크로스플레이 경쟁전 요청</a></span></td>
       </tr>
       <tr>
         <td><div class="g-cell"><span class="thumb noimg" data-mono="BO7" data-name="CALL OF DUTY BLACK OPS 7"></span><span class="g-name">콜오브듀티 블랙옵스7 · 워존<em>시즌6 The Haunting</em></span></div></td>
         <td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">시즌6 The Haunting이 오늘로 이틀째입니다.</span></button><span class="d2">시즌6 The Haunting이 9월 17일에 블랙옵스7과 워존에 동시에 열렸습니다.<span class="lb"></span>Bloodstead와 Hordepoint, Haunted Hollow, Doom이 들어갔습니다.<span class="lb"></span>신규 지도 Quantum도 추가됐습니다.<span class="lb"></span>배틀패스로는 VMP 기관단총과 TR51 파라 돌격소총을 풉니다.</span></td>
         <td>9/17 개막<span class="dsub">이틀째</span></td>
         <td><span class="typ">시즌 전환 · 대형 콜라보</span></td>
-        <td><span class="evrow"><span class="ev gl">글로벌·기사</span><span class="ev of">공식</span><span class="ev na">국내 반응 미확인</span></span> <b>① 행사</b> Forbidden Summoning 월드 행사로 봉인을 풀어 옛 위협을 깨웁니다.<span class="lb"></span>Doom 소재는 별도 패스로 함께 들어갑니다.<span class="lb"></span><b>② 무기</b> 인게임 도전으로 Arcblade 근접 무기를 줍니다.<span class="lb"></span>Roc 20mm 특수 무기와 부착물 3종도 풉니다.<span class="lb"></span><b>③ 유료</b> BlackCell에는 Revenant 오퍼레이터가 들어갑니다.<span class="lb"></span>마스터크래프트 설계도도 함께 묶였습니다.<span class="lb"></span>둘 다 인게임 도전으로 변형을 더 풀 수 있습니다.<span class="lb"></span>오늘 스팀 토론을 열지 않아 이용자 반응은 확인하지 못했습니다.<span class="lb"></span>공식 패치노트와 해외 기사를 근거로 썼습니다.<span class="lb"></span>무료 보상과 유료 등급 보상은 목록을 나눠 적어야 합니다.<span class="src-inline"><a href="https://www.callofduty.com/blog/2026/09/call-of-duty-black-ops-7-warzone-season-6-the-haunting-announcement" target="_blank" rel="noopener">시즌6 공식 안내</a> · <a href="https://www.callofduty.com/patchnotes/2026/09/call-of-duty-black-ops-7-season-06-patch-notes" target="_blank" rel="noopener">시즌6 패치노트</a> · <a href="https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/" target="_blank" rel="noopener">개막일 9월 17일 공지</a></span></td>
+        <td><span class="evrow"><span class="ev gl">글로벌·기사</span><span class="ev of">공식</span><span class="ev na">국내 반응 미확인</span></span> <b>① 행사</b> Forbidden Summoning 월드 행사로 봉인을 풀어 옛 위협을 깨웁니다.<span class="lb"></span>Doom 소재는 별도 패스로 함께 들어갑니다.<span class="lb"></span><b>② 무기</b> 인게임 도전으로 Arcblade 근접 무기와 Roc 20mm 특수 무기를 줍니다.<span class="lb"></span><b>③ 유료</b> BlackCell에는 Revenant 오퍼레이터와 설계도가 들어갑니다.<span class="lb"></span>오늘 스팀 토론을 열지 않아 공식 패치노트와 해외 기사만 썼습니다.<span class="lb"></span>무료 보상과 유료 등급 보상은 목록을 나눠 적어야 합니다.<span class="src-inline"><a href="https://www.callofduty.com/blog/2026/09/call-of-duty-black-ops-7-warzone-season-6-the-haunting-announcement" target="_blank" rel="noopener">시즌6 공식 안내</a> · <a href="https://www.callofduty.com/patchnotes/2026/09/call-of-duty-black-ops-7-season-06-patch-notes" target="_blank" rel="noopener">시즌6 패치노트</a> · <a href="https://blog.playstation.com/2026/09/08/call-of-duty-black-ops-7-and-warzone-season-06-launches-the-haunting-september-17/" target="_blank" rel="noopener">개막일 9월 17일 공지</a></span></td>
       </tr>
     </tbody>
   </table></div>
 
-  <!-- 05 신작 동향 -->
-  <div class="sec" id="trend"><span class="idx">05</span><h2>신작 동향</h2><span class="rule"></span></div>
+  <!-- 05 신작 출시·발표 -->
+  <div class="sec" id="launch"><span class="idx">05</span><h2>신작 출시·발표</h2><span class="rule"></span></div>
+  <p class="sub-lead">최근 나온 슈터와 앞으로 나올 슈터, 그리고 새로 공개된 이름을 한 표에 모읍니다. 날짜는 로컬 <code>assets/igdb_upcoming.json</code>을 스팀·PS 스토어와 대조해 바로잡은 값입니다.</p>
+  <div class="tablewrap launch"><table>
+    <colgroup><col class="c-g"><col class="c-s"><col class="c-d"><col class="c-m"><col class="c-sig"><col class="c-l"></colgroup>
+    <thead><tr><th>게임</th><th>상태</th><th>날짜</th><th>개발 · 배급</th><th>관심 신호</th><th>링크</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="g">워독스 (WARDOGS)<em>앞서 해보기 9일째</em></td>
+        <td><span class="tag t-new">출시</span></td>
+        <td class="dt">09.10</td>
+        <td class="mk">BULKHEAD · Team17</td>
+        <td class="sig">스팀 토론 <b>1,935건</b> · 한국어 평가 505개 중 63% · 루리웹 평점 <b>0점</b></td>
+        <td class="lk"><a href="https://store.steampowered.com/app/1867240/WARDOGS/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://bulkhead.com/games/wardogs" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">스페셜포스 리마스터<em>정식 출시 이튿날</em></td>
+        <td><span class="tag t-new">출시</span></td>
+        <td class="dt">09.17</td>
+        <td class="mk">드래곤플라이</td>
+        <td class="sig">스팀 평가 <b>344개 중 22%</b> · 루리웹 신설 게시판 20일째 밖</td>
+        <td class="lk"><a href="https://store.steampowered.com/app/4261320/_/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://sfr.dfl.co.kr/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">Alien Breed 35th Anniversary Collection<em>고전 6종 묶음</em></td>
+        <td><span class="tag t-live">예정</span></td>
+        <td class="dt">09.24</td>
+        <td class="mk">Commodore</td>
+        <td class="sig">스팀 데모 공개 중 · PS5·Xbox·스위치 동시 · 같은 날 Sin: Reloaded</td>
+        <td class="lk"><a href="https://store.steampowered.com/app/4870460/Alien_Breed_35th_Anniversary_Collection/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">IGDB 등록 슈터 13종<em>9월 최다 겹침</em></td>
+        <td><span class="tag t-warn">예정</span></td>
+        <td class="dt">09.30</td>
+        <td class="mk">—</td>
+        <td class="sig">Black Mesa: Classic · The Midnight Walkers 포함 · 공지가 서로를 가립니다</td>
+        <td class="lk">—</td>
+      </tr>
+      <tr>
+        <td class="g">에이스 컴뱃 8: 시브의 날개<em>PS5 글로벌</em></td>
+        <td><span class="tag t-live">예정</span></td>
+        <td class="dt">10.02<em>디럭스 09.28</em></td>
+        <td class="mk">반다이 남코 · PROJECT ACES</td>
+        <td class="sig">캐시는 09.29로 적혀 있지만 <b>정식은 10월 2일</b>입니다</td>
+        <td class="lk"><a href="https://store.playstation.com/en-us/product/JP0700-PPSA24913_00-MAINGAME00000000" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.2" y="4.6" width="13.6" height="7.4" rx="3.7"/><path d="M4.4 7v2.6M3.1 8.3h2.6M10.7 7.7h.01M12.4 9.4h.01"/></svg><span>PS 스토어</span></a><br><a href="https://www.bandainamcoent.com/games/ace-combat-8" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">기어스 오브 워: 이데이<em>게임패스 1일차</em></td>
+        <td><span class="tag t-live">예정</span></td>
+        <td class="dt">10.06<em>프리미엄 10.01</em></td>
+        <td class="mk">The Coalition · Xbox</td>
+        <td class="sig">캐시는 10.01로 적혀 있지만 <b>정식은 10월 6일</b>입니다</td>
+        <td class="lk"><a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://www.xbox.com/en-US/games/gears-of-war-eday" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1.7 14.2 4.9v6.3L8 14.4 1.8 11.2V4.9z"/><path d="M1.8 4.9 8 8.1l6.2-3.2M8 8.1v6.3"/></svg><span>Xbox</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">EVE Vanguard<em>날짜 미확정</em></td>
+        <td><span class="tag t-warn">예정</span></td>
+        <td class="dt">Q3 2026<em>캐시 09.30</em></td>
+        <td class="mk">Fenris Creations</td>
+        <td class="sig">스팀 상점은 <b>아직 이용 불가</b>로 적혀 있습니다</td>
+        <td class="lk"><a href="https://store.steampowered.com/app/1872800/EVE_Vanguard/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://vanguard.eveonline.com/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
+      </tr>
+      <tr>
+        <td class="g">도쿄게임쇼 2026 Xbox 쇼케이스<em>공개 17종</em></td>
+        <td><span class="tag t-live">발표</span></td>
+        <td class="dt">09.17</td>
+        <td class="mk">Xbox</td>
+        <td class="sig">기존 시리즈 트레일러를 빼면 <b>새 슈터 발표는 0건</b>입니다</td>
+        <td class="lk"><a href="https://dotesports.com/general/news/all-xbox-tokyo-game-show-announcements" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a><br><a href="https://news.xbox.com/en-us/2026/09/17/xbox-tokyo-game-show-2026-recap/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1.7 14.2 4.9v6.3L8 14.4 1.8 11.2V4.9z"/><path d="M1.8 4.9 8 8.1l6.2-3.2M8 8.1v6.3"/></svg><span>Xbox</span></a></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 06 신작 동향 -->
+  <div class="sec" id="trend"><span class="idx">06</span><h2>신작 동향</h2><span class="rule"></span></div>
   <div class="trend-grid">
+    <div class="tcard">
+      <div class="tbanner" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt="WARDOGS"></div>
+      <div class="tin">
+        <div class="chips"><span class="tag t-new">앞서 해보기 9일째</span><span class="tag t-live">토론 1,935건</span></div>
+        <div class="gm">신작 슈터 · 워독스</div>
+        <h3>워독스가 스팀 토론 수에서 배틀필드 6를 앞질렀습니다.</h3>
+        <p>벌크헤드의 100인 전술 FPS가 9월 10일 앞서 해보기로 나왔습니다.<span class="lb"></span>가격은 39.99달러이고 후원 판은 49.99달러입니다.<span class="lb"></span>오늘 오전 스팀 토론 활성 주제가 <b>1,935건입니다.</b></p>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">같은 시각 배틀필드 6는 1,786건이라 신작이 더 많습니다.<span class="lb"></span>고정글 "UPDATE: Linux Compatibility"는 댓글 1,719개에 어워드 346개입니다.<span class="lb"></span>7분 전에도 글이 달려 가장 최근입니다.<span class="lb"></span>그런데 루리웹 전용 게시판은 평점이 0점에 머물러 있습니다.<span class="lb"></span>한국어 스팀 평가는 505개이고 긍정이 63%입니다.<span class="lb"></span>국내 이용자는 샀지만 모이는 자리는 아직 비었습니다.</span></div>
+        <div class="src"><a href="https://steamcommunity.com/app/1867240/discussions/" target="_blank" rel="noopener">스팀 토론 활성 1,935건</a> · <a href="https://bbs.ruliweb.com/game/87335/read/2503651" target="_blank" rel="noopener">루리웹 게시판 조회 659회</a></div>
+      </div>
+    </div>
     <div class="tcard">
       <div class="tbanner noimg" data-mono="RW" data-name="루리웹 신설 게시판"></div>
       <div class="tin">
@@ -514,7 +726,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <div class="gm">루리웹 신설 게시판 · 14건</div>
         <h3>슈터 신작은 오늘도 국내 커뮤니티에서 자리를 얻지 못했습니다.</h3>
         <p>루리웹 메인의 신설 게시판은 오늘 <b>14건</b>입니다.<span class="lb"></span>상단 2건이 "13Z: 십이지의 시련"과 "와룡 2: 윙스 오브 엠버"로 새로 바뀌었습니다.<span class="lb"></span>9월 16일 확인 때는 GOBBLE~가블~과 신모의 클리파, 디아블로 5가 위에 있었습니다.</p>
-        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">상단 2건이 도쿄게임쇼에서 공개된 신작으로 갈렸습니다.<span class="lb"></span>"데드 어카운트: 두 개의 푸른 불꽃"도 목록에 들어왔습니다.<span class="lb"></span>오늘 새로 생긴 슈터 게시판은 하나도 없습니다.<span class="lb"></span>남아 있는 인접 항목은 "PUBG: 데드넷"과 "프로젝트 제타" 둘뿐입니다.<span class="lb"></span>스페셜포스 리마스터는 어제 정식 출시했는데도 <b>20일째</b> 목록 밖입니다.<span class="lb"></span>국내 관심이 콘솔과 서브컬처 신작으로 쏠려 있습니다.<span class="lb"></span>전용 게시판은 공개 시점에 붙는다고 봐야 합니다.</span></div>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">상단 2건이 도쿄게임쇼에서 공개된 신작으로 갈렸습니다.<span class="lb"></span>"데드 어카운트: 두 개의 푸른 불꽃"도 목록에 들어왔습니다.<span class="lb"></span>오늘 새로 생긴 슈터 게시판은 하나도 없습니다.<span class="lb"></span>남아 있는 인접 항목은 "PUBG: 데드넷"과 "프로젝트 제타" 둘뿐입니다.<span class="lb"></span>스페셜포스 리마스터는 어제 정식 출시했는데도 <b>20일째</b> 목록 밖입니다.<span class="lb"></span>국내 관심이 콘솔과 서브컬처 신작으로 쏠려 있습니다.<span class="lb"></span>워독스는 자기 게시판을 받고도 평점이 0점에 멈춰 있습니다.<span class="lb"></span>전용 자리는 공개 시점에 붙는다고 봐야 합니다.</span></div>
         <div class="src"><a href="https://bbs.ruliweb.com/" target="_blank" rel="noopener">루리웹 신설 게시판 14건</a> · <a href="https://store.steampowered.com/app/4261320/_/?l=koreana" target="_blank" rel="noopener">스팀 상점 평가 344개</a></div>
       </div>
     </div>
@@ -532,18 +744,18 @@ td .pt-lead{display:block;margin-bottom:5px}
     <div class="tcard">
       <div class="tbanner noimg" data-mono="9M" data-name="2026년 9월 슈터 캘린더"></div>
       <div class="tin">
-        <div class="chips"><span class="tag t-live">일정 관찰</span><span class="tag t-new">9/30 13종</span></div>
+        <div class="chips"><span class="tag t-live">일정 관찰</span><span class="tag t-warn">캐시 오차 3건</span></div>
         <div class="gm">9월 말 슈터 캘린더</div>
-        <h3>월말 하루에 슈터 13종이 한꺼번에 쏟아집니다.</h3>
-        <p>로컬 캐시 assets/igdb_upcoming.json은 9월 17일 오전 9시 20분판이라 하루 지났습니다.<span class="lb"></span>9월 24일에는 Alien Breed 35th Anniversary와 Sin: Reloaded가 나옵니다.<span class="lb"></span>29일에는 에이스 컴뱃 8: Wings of Theve와 Way of the Hunter 2가 이어집니다.</p>
-        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">9월 30일에 슈터 <b>13종</b>이 같은 날 몰립니다.<span class="lb"></span>EVE Vanguard와 Black Mesa: Classic이 여기 들어갑니다.<span class="lb"></span>The Midnight Walkers도 같은 날짜입니다.<span class="lb"></span>IGDB 기준으로는 스페셜포스 리마스터도 그날로 적혀 있습니다.<span class="lb"></span>10월 1일에는 Mycopunk와 Moros Protocol, RetroSpace가 뒤를 잇습니다.<span class="lb"></span>하루에 13종이 겹치면 노출이 서로를 깎아먹습니다.<span class="lb"></span>우리 공지 일정은 그 날짜를 피해 잡을 수 있습니다.</span></div>
-        <div class="src">근거: 로컬 <code>assets/igdb_upcoming.json</code>(<b>하루 경과</b>) · <a href="https://www.inven.co.kr/webzine/calendar/" target="_blank" rel="noopener">인벤 게임 캘린더</a></div>
+        <h3>IGDB 캐시 날짜가 실제 출시일과 세 건이나 어긋납니다.</h3>
+        <p>로컬 캐시 assets/igdb_upcoming.json은 9월 17일 오전 9시 20분판입니다.<span class="lb"></span>여기 적힌 9월 말 슈터는 13종이고 10월 초에도 4종이 이어집니다.<span class="lb"></span>그런데 상점을 직접 열어 보니 세 건의 날짜가 달랐습니다.</p>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">에이스 컴뱃 8은 캐시가 9월 29일인데 PS5 글로벌 출시는 10월 2일입니다.<span class="lb"></span>디럭스판 앞서 해보기가 9월 28일에 열려 그 언저리가 찍힌 듯합니다.<span class="lb"></span>기어스 오브 워: 이데이도 캐시는 10월 1일이지만 정식 출시는 10월 6일입니다.<span class="lb"></span>프리미엄판이 최대 5일 먼저 열리는 구조입니다.<span class="lb"></span>EVE Vanguard는 스팀 상점에 아직 Q3 2026으로만 적혀 있습니다.<span class="lb"></span>캐시 날짜는 예고일 뿐이니 상점에서 한 번 더 확인해야 합니다.</span></div>
+        <div class="src">근거: 로컬 <code>assets/igdb_upcoming.json</code>(<b>하루 경과</b>) · <a href="https://blog.playstation.com/2026/06/02/ace-combat-8-wings-of-theve-launches-globally-october-2-on-ps5/" target="_blank" rel="noopener">에이스 컴뱃 8 출시일 공지</a> · <a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener">기어스 이데이 스팀 예약</a></div>
       </div>
     </div>
   </div>
 
-  <!-- 06 리스크 -->
-  <div class="sec" id="risk"><span class="idx">06</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
+  <!-- 07 리스크 -->
+  <div class="sec" id="risk"><span class="idx">07</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
   <article class="risk high">
     <div class="lvl">HIGH · 축하 공지와 과금·핵 지적이 같은 날 상위</div>
     <h3>넥슨 이관 뒤 첫 축하 행사가 여러 불만 글과 나란히 올랐습니다.</h3>
@@ -565,9 +777,16 @@ td .pt-lead{display:block;margin-bottom:5px}
     <div class="row"><span class="k">맥락</span><span>같은 목록에서 프레임 저하 신고 글이 <b>댓글 711개</b>로 최다입니다.<span class="lb"></span>어워드는 10개가 붙었습니다.<span class="lb"></span>활성 주제는 어제 <b>1,790건에서 1,786건</b>으로 줄었습니다.<span class="lb"></span>성능 신고가 쌓이는 동안 운영진이 문서를 먼저 손봤습니다.<span class="lb"></span>갱신 주기를 지킨 점은 호평할 만합니다.</span></div>
     <div class="lesson"><span class="k">우리 운영 교훈</span><ol><li>알려진 문제 문서는 시즌이 열린 뒤에도 정해진 주기로 다시 씁니다.</li><li>갱신일을 제목에 적어 이용자가 최신 여부를 바로 알게 합니다.</li><li>성능 신고는 지도 이름 단위로 받아 원인을 좁힙니다.</li></ol></div>
   </article>
+  <article class="risk">
+    <div class="lvl">MID · 해외 흥행작도 국내 자리가 비어 있음</div>
+    <h3>워독스는 해외에서 크게 붙었지만 국내 게시판은 비어 있습니다.</h3>
+    <div class="row"><span class="k">무엇이</span><span>벌크헤드의 워독스가 9월 10일 앞서 해보기로 나왔습니다.<span class="lb"></span>100명이 세 팀으로 갈려 점령 구역을 놓고 겨루는 전술 FPS입니다.<span class="lb"></span>루리웹 전용 게시판은 9월 11일에 이미 열렸습니다.<span class="lb"></span>가격은 39.99달러입니다.</span></div>
+    <div class="row"><span class="k">맥락</span><span>오늘 오전 스팀 토론 활성 주제는 <b>1,935건</b>입니다.<span class="lb"></span>같은 시각 배틀필드 6의 1,786건을 넘어섰습니다.<span class="lb"></span>그런데 루리웹 평점은 아직 <b>0점</b>입니다.<span class="lb"></span>그 게시판에 걸린 디스코드 모집 글은 조회 659회에 답글 0개입니다.<span class="lb"></span>한국어 스팀 평가가 505개나 쌓인 것과 대비됩니다.</span></div>
+    <div class="lesson"><span class="k">우리 운영 교훈</span><ol><li>해외 흥행이 국내 유입으로 이어졌는지 판매가 아니라 게시판 글 수로 확인합니다.</li><li>전용 게시판이 열렸다면 공식 계정이 첫 글로 자리를 채웁니다.</li><li>한국어 리뷰 수와 국내 커뮤니티 글 수를 같은 표에 놓고 견줍니다.</li></ol></div>
+  </article>
 
-  <!-- 07 액션 -->
-  <div class="sec" id="action"><span class="idx">07</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
+  <!-- 08 액션 -->
+  <div class="sec" id="action"><span class="idx">08</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
   <article class="act">
     <div class="num">1</div>
     <div><h3>넥슨 이관 뒤 첫 행사는 결제 설명이 함께 가야 합니다.</h3>
@@ -583,12 +802,12 @@ td .pt-lead{display:block;margin-bottom:5px}
 
   <div class="caveat">
     <span class="k">유의사항</span>
-    <span class="crow"><b class="ck">신선도</b><span>인벤 자유게시판은 게임 메인에서 이어 열어 오늘 <b>05시 46분</b> 글까지 받았습니다. 조회수는 그 시각에 읽은 값입니다.</span></span><span class="crow"><b class="ck">캐시</b><span>인벤 핫벤 상위 200건이 어제와 같은 값을 돌려줘 오늘 수치로 쓰지 않았습니다.</span></span><span class="crow"><b class="ck">방법</b><span>스팀은 /discussions/ 목록으로 열어 2분 전 글까지 받았습니다.</span></span><span class="crow"><b class="ck">미열람</b><span>허브 첫 화면을 열지 않아 인게임 접속자 수가 오늘 없습니다.</span></span><span class="crow"><b class="ck">차단</b><span>스페셜포스 리마스터 토론 목록은 주소 확인에 막혀 오늘 상점 페이지만 봤습니다.</span></span><span class="crow"><b class="ck">미확인</b><span>아카라이브와 인벤 게임DB는 오늘 열지 못했습니다. Call of Duty: MW4는 8월 31일 리포트를 끝으로 다루지 않습니다.</span></span>
+    <span class="crow"><b class="ck">신선도</b><span>인벤 자유게시판은 게임 메인에서 이어 열어 오늘 <b>05시 46분</b> 글까지 받았습니다. 조회수는 그 시각에 읽은 값입니다.</span></span><span class="crow"><b class="ck">캐시</b><span>인벤 핫벤 상위 200건이 어제와 같은 값을 돌려줘 오늘 수치로 쓰지 않았습니다.</span></span><span class="crow"><b class="ck">방법</b><span>스팀은 /discussions/ 목록으로 열어 2분 전 글까지 받았습니다.</span></span><span class="crow"><b class="ck">미열람</b><span>허브 첫 화면을 열지 않아 인게임 접속자 수가 오늘 없습니다.</span></span><span class="crow"><b class="ck">차단</b><span>스페셜포스 리마스터 토론 목록은 주소 확인에 막혀 오늘 상점 페이지만 봤습니다.</span></span><span class="crow"><b class="ck">캐시 오차</b><span>IGDB 캐시 날짜가 <b>세 건</b> 어긋나 05 표는 스팀·PS 스토어 표기로 바로잡았습니다.</span></span><span class="crow"><b class="ck">미확인</b><span>아카라이브와 인벤 게임DB는 오늘 열지 못했습니다. Call of Duty: MW4는 8월 31일 리포트를 끝으로 다루지 않습니다.</span></span>
   </div>
 
-  <!-- 08 출처 -->
+  <!-- 09 출처 -->
   <details class="sources" id="sources" open>
-    <summary>출처 링크 10건</summary>
+    <summary>출처 링크 12건</summary>
     <div class="body">
       <ul>
         <li><b>넥슨 이관 뒤 과금 여론</b><a href="https://www.inven.co.kr/board/overwatch/4538/5938923" target="_blank" rel="noopener">추석 이벤트 안내 조회 1,110회</a> · <a href="https://www.inven.co.kr/board/overwatch/4538/5938914" target="_blank" rel="noopener">과금 지적 조회 811회</a> · <a href="https://www.inven.co.kr/board/overwatch/4538/5938875" target="_blank" rel="noopener">결제 방식 글 조회 611회</a></li>
@@ -600,6 +819,8 @@ td .pt-lead{display:block;margin-bottom:5px}
         <li><b>배틀필드 6 시즌 4</b><a href="https://steamcommunity.com/app/2807960/discussions/" target="_blank" rel="noopener">일반 토론 목록 활성 1,786건</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/591784958348260246/" target="_blank" rel="noopener">프레임 저하 신고 댓글 711개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/564794055139009742/" target="_blank" rel="noopener">알려진 문제 문서 9월 17일 갱신</a></li>
         <li><b>배틀필드 6 이용자 불만</b><a href="https://steamcommunity.com/app/2807960/discussions/0/581680955258897649/" target="_blank" rel="noopener">마케팅 비판 댓글 31개</a> · <a href="https://steamcommunity.com/app/2807960/discussions/0/564793766239760896/" target="_blank" rel="noopener">모드 순환 반대 댓글 26개</a></li>
         <li><b>마블 라이벌즈 시즌 10</b><a href="https://steamcommunity.com/app/2767030/discussions/0/" target="_blank" rel="noopener">일반 토론 목록 활성 667건</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675367782911841/" target="_blank" rel="noopener">상위 최다 댓글 8개</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578520601/" target="_blank" rel="noopener">밸런스 불만 댓글 3개</a> · <a href="https://steamcommunity.com/app/2767030/discussions/0/572675438578520592/" target="_blank" rel="noopener">셰이더 컴파일 신고</a></li>
+        <li><b>신작 출시·발표 링크</b><a href="https://store.steampowered.com/app/1867240/WARDOGS/?l=koreana" target="_blank" rel="noopener">워독스 스팀 상점</a> · <a href="https://store.steampowered.com/app/4870460/Alien_Breed_35th_Anniversary_Collection/" target="_blank" rel="noopener">Alien Breed 컬렉션 스팀</a> · <a href="https://store.playstation.com/en-us/product/JP0700-PPSA24913_00-MAINGAME00000000" target="_blank" rel="noopener">에이스 컴뱃 8 PS 스토어</a> · <a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener">기어스 이데이 스팀</a> · <a href="https://store.steampowered.com/app/1872800/EVE_Vanguard/" target="_blank" rel="noopener">EVE Vanguard 스팀</a></li>
+        <li><b>워독스 앞서 해보기 9일째</b><a href="https://steamcommunity.com/app/1867240/discussions/" target="_blank" rel="noopener">스팀 토론 활성 1,935건</a> · <a href="https://store.steampowered.com/app/1867240/WARDOGS/?l=koreana" target="_blank" rel="noopener">한국어 평가 505개 중 63%</a> · <a href="https://steamcommunity.com/app/1867240/discussions/0/562541966849680144/" target="_blank" rel="noopener">치트 신고 댓글 127개</a> · <a href="https://bbs.ruliweb.com/game/87335/read/2503651" target="_blank" rel="noopener">루리웹 게시판 조회 659회·답글 0개</a></li>
         <li><b>콜오브듀티 시즌6와 에이펙스 협업</b><a href="https://www.callofduty.com/blog/2026/09/call-of-duty-black-ops-7-warzone-season-6-the-haunting-announcement" target="_blank" rel="noopener">시즌6 공식 안내</a> · <a href="https://www.callofduty.com/patchnotes/2026/09/call-of-duty-black-ops-7-season-06-patch-notes" target="_blank" rel="noopener">시즌6 패치노트</a> · <a href="https://worthplaying.com/article/2026/9/15/news/150975-apex-legends-reveals-street-fighter-6-crossover-event-with-wildcard-takeover-fighter-form-cosmetics-and-8-character-inspired-skins-trailer/" target="_blank" rel="noopener">에이펙스 협업 공개 보도</a> · <a href="https://gameriv.com/apex-legends-x-street-fighter-6-event-all-skins-hadoken-melee-showdown-and-more/" target="_blank" rel="noopener">스킨과 모드 정리</a></li>
       </ul>
       <div class="colophon">
@@ -629,6 +850,8 @@ td .pt-lead{display:block;margin-bottom:5px}
       b.setAttribute('aria-expanded',on?'true':'false');
     });
   });
+  /* 01 일정 아코디언 — 인쇄 시 전부 펼침 */
+  window.addEventListener('beforeprint',function(){document.querySelectorAll('details.dgroup').forEach(function(d){d.open=true;});});
   /* 읽기 진행바 */
   var prog=document.getElementById('prog');
   function tick(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}

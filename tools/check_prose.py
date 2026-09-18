@@ -24,11 +24,14 @@ import sys
 from statistics import mean
 
 # ── 상한 ──────────────────────────────────────────────
-BODY_MAX = 12900
+BODY_MAX = 13800
 SECTION_MAX = {
     'lead+notice+kpi': 750, '01 일정': 1150, '02 헤드라인': 800,
-    '03 국내': 2250, '04 글로벌': 2600, '05 신작': 1450,
-    '06 리스크': 2300, '07 액션': 600, 'caveat': 500, '08 출처': 1150,
+    '03 국내': 2250, '04 글로벌': 2600,
+    '05 출시·발표': 1200, '06 신작': 1450,
+    '07 리스크': 2300, '08 액션': 600, 'caveat': 500, '09 출처': 1150,
+    # 2026-09-18 이전 판(05 신작 / 06 리스크 / 07 액션 / 08 출처) 호환
+    '05 신작': 1450, '06 리스크': 2300, '07 액션': 600, '08 출처': 1150,
 }
 SENT_MAX = 70          # 인용문이 든 문장은 예외
 SENT_AVG_MAX = 38
@@ -101,21 +104,29 @@ def visible(html):
 
 def section_lengths(html):
     body = visible(html[html.index('<main id="main">'):html.index('</main>')])
-    marks = [('lead+notice+kpi', '<p class="lead">', '<div class="sec" id="today">'),
-             ('01 일정', '<div class="sec" id="today">', '<div class="sec" id="headline">'),
-             ('02 헤드라인', '<div class="sec" id="headline">', '<div class="sec" id="kr">'),
-             ('03 국내', '<div class="sec" id="kr">', '<div class="sec" id="gl">'),
-             ('04 글로벌', '<div class="sec" id="gl">', '<div class="sec" id="trend">'),
-             ('05 신작', '<div class="sec" id="trend">', '<div class="sec" id="risk">'),
-             ('06 리스크', '<div class="sec" id="risk">', '<div class="sec" id="action">'),
-             ('07 액션', '<div class="sec" id="action">', '<div class="caveat">'),
-             ('caveat', '<div class="caveat">', '<details class="sources"'),
-             ('08 출처', '<details class="sources"', '</details>')]
+    marks = [('lead+notice+kpi', '<p class="lead">', ['<div class="sec" id="today">']),
+             ('01 일정', '<div class="sec" id="today">', ['<div class="sec" id="headline">']),
+             ('02 헤드라인', '<div class="sec" id="headline">', ['<div class="sec" id="kr">']),
+             ('03 국내', '<div class="sec" id="kr">', ['<div class="sec" id="gl">']),
+             ('04 글로벌', '<div class="sec" id="gl">',
+              ['<div class="sec" id="launch">', '<div class="sec" id="trend">']),
+             ('05 출시·발표', '<div class="sec" id="launch">', ['<div class="sec" id="trend">']),
+             ('06 신작', '<div class="sec" id="trend">', ['<div class="sec" id="risk">']),
+             ('07 리스크', '<div class="sec" id="risk">', ['<div class="sec" id="action">']),
+             ('08 액션', '<div class="sec" id="action">', ['<div class="caveat">']),
+             ('caveat', '<div class="caveat">', ['<details class="sources"']),
+             ('09 출처', '<details class="sources"', ['</details>'])]
     res = {}
-    for name, a, z in marks:
+    for name, a, zs in marks:
         if a not in body:
             continue
-        seg = body[body.index(a):body.index(z)] if z in body else body[body.index(a):]
+        i0 = body.index(a)
+        j0 = -1
+        for z in zs:
+            j0 = body.find(z, i0)
+            if j0 != -1:
+                break
+        seg = body[i0:j0] if j0 != -1 else body[i0:]
         res[name] = len(strip_tags(seg))
     return len(strip_tags(body)), res
 
