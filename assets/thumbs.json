@@ -184,6 +184,24 @@
       "mono": "EVE",
       "name": "EVE VANGUARD",
       "메모": "스팀 appid 1872800. 2026-09-18 상점 og:image."
+    },
+    "Alien Breed 35th Anniversary Collection": {
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4870460/03a8113754074a9e82b9a05caf5de5e6d73bfe8c/header.jpg?t=1789648174",
+      "mono": "AB",
+      "name": "ALIEN BREED",
+      "메모": "스팀 appid 4870460. 2026-09-18 상점 og:image. 개발 Antstream · 배급 Commodore · 공식 alienbreed35.com"
+    },
+    "기어스 오브 워: 이데이": {
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3010850/1abb0c5ef76c14f463dd6e3964adb64f984237d2/header.jpg?t=1789676311",
+      "mono": "GOW",
+      "name": "GEARS OF WAR E-DAY",
+      "메모": "스팀 appid 3010850. 연령 확인 페이지가 떠도 og:image 는 그대로 나온다."
+    },
+    "에이스 컴뱃 8: 시브의 날개": {
+      "url": "https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg",
+      "mono": "AC8",
+      "name": "ACE COMBAT 8",
+      "메모": "PS5 전용이라 스팀 header 가 없다. IGDB banner_url(세로 커버를 720p로 올린 것)이라 16:9 칸에서는 가운데가 잘린다."
     }
   },
   "_이미지필요": [],

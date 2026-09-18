@@ -324,21 +324,24 @@ td .pt-lead{display:block;margin-bottom:5px}
 @media print{ .obs .d2{display:block} .obs .e2::after{display:none} }
 
 /* ═══ 05 신작 출시·발표 표 (2026-09-18 신설) ═══ */
-/* 열 순서: 게임 / 상태 / 날짜 / 개발·배급 / 관심 신호 / 링크(마지막) */
+/* 열 순서: 게임(썸네일) / 상태 / 날짜 / 개발·배급 / 관심 신호 / 링크(마지막) */
 /* ⚠ .tablewrap th:nth-child() 너비 규칙(03·04용)이 여기까지 걸리므로 더 높은 특정도로 덮어쓴다. */
 .tablewrap.launch table{min-width:1080px;table-layout:fixed}
-.tablewrap.launch th:nth-child(1),.tablewrap.launch td:nth-child(1){width:27%}
+.tablewrap.launch th:nth-child(1),.tablewrap.launch td:nth-child(1){width:28%}
 .tablewrap.launch th:nth-child(2),.tablewrap.launch td:nth-child(2){width:7%}
 .tablewrap.launch th:nth-child(3),.tablewrap.launch td:nth-child(3){width:7%}
-.tablewrap.launch th:nth-child(4),.tablewrap.launch td:nth-child(4){width:10%}
+.tablewrap.launch th:nth-child(4),.tablewrap.launch td:nth-child(4){width:9%}
 .tablewrap.launch th:nth-child(5),.tablewrap.launch td:nth-child(5){width:42%}
 .tablewrap.launch th:nth-child(6),.tablewrap.launch td:nth-child(6){width:7%}
-.launch col.c-g{width:27%} .launch col.c-s{width:7%} .launch col.c-d{width:7%}
-.launch col.c-m{width:10%} .launch col.c-sig{width:42%} .launch col.c-l{width:7%}
+.launch col.c-g{width:28%} .launch col.c-s{width:7%} .launch col.c-d{width:7%}
+.launch col.c-m{width:9%} .launch col.c-sig{width:42%} .launch col.c-l{width:7%}
 .launch thead th,.launch tbody td{padding:11px 10px}
-.launch td.g{font-weight:700;color:var(--ink);line-height:1.4;
+.launch .g-cell{gap:9px;min-width:0;align-items:center}
+.launch .thumb{width:64px;height:36px;border-radius:6px}
+.launch .thumb.noimg::after{font-size:9px;line-height:1.15;padding:2px 4px;letter-spacing:-.02em}
+.launch .g-name{font-weight:700;color:var(--ink);line-height:1.35;min-width:0;
   overflow-wrap:normal;word-break:keep-all;hyphens:none}
-.launch td.g em{display:block;font-style:normal;font-weight:500;font-size:11.5px;color:var(--muted);margin-top:3px}
+.launch .g-name em{display:block;font-style:normal;font-weight:500;font-size:11.5px;color:var(--muted);margin-top:3px}
 .launch td.dt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2);font-weight:600}
 .launch td.dt em{display:block;font-family:var(--sans);font-style:normal;font-weight:500;font-size:11px;color:var(--faint);margin-top:3px;white-space:normal}
 .launch td.mk{color:var(--muted);font-size:12px;line-height:1.45;word-break:keep-all}
@@ -351,6 +354,10 @@ td .pt-lead{display:block;margin-bottom:5px}
   stroke-linecap:round;stroke-linejoin:round;opacity:.72}
 .launch td.lk a:hover svg{opacity:1}
 .launch tbody tr:nth-child(even) td{background:var(--zebra)}
+/* 묶음 행(그날 몰린 출시·쇼케이스)은 맨 아래에 모으고 구분선을 둔다 */
+.launch tbody tr.grp td{border-top:2px solid var(--line)}
+.launch tbody tr.grp + tr.grp td{border-top:1px solid var(--line-soft)}
+.launch tbody tr.grp .g-name{color:var(--ink-2)}
 
 /* ═══ 01 일정 — 날짜별 아코디언 (2026-09-18 도입) ═══ */
 .timeline details.dgroup{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin:0 0 8px;overflow:hidden}
@@ -483,7 +490,7 @@ td .pt-lead{display:block;margin-bottom:5px}
       <details class="dgroup">
         <summary><span class="dg-d">09.30 수</span><span class="dg-n">1건</span></summary>
         <ol class="tl">
-          <li><span class="s start">출시</span><span class="t"><b>IGDB 등록 슈터 13종</b>이 같은 날 몰립니다<span class="win">Black Mesa: Classic 포함</span></span></li>
+          <li><span class="s start">출시</span><span class="t"><b>IGDB 등록 슈터 17종</b>이 같은 날 몰립니다<span class="win">Black Mesa: Classic 포함</span></span></li>
         </ol>
       </details>
       <details class="dgroup">
@@ -639,7 +646,7 @@ td .pt-lead{display:block;margin-bottom:5px}
     <thead><tr><th>게임</th><th>상태</th><th>날짜</th><th>개발 · 배급</th><th>관심 신호</th><th>링크</th></tr></thead>
     <tbody>
       <tr>
-        <td class="g">워독스 (WARDOGS)<em>앞서 해보기 9일째</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt=""></span><span class="g-name">워독스 (WARDOGS)<em>앞서 해보기 9일째</em></span></div></td>
         <td><span class="tag t-new">출시</span></td>
         <td class="dt">09.10</td>
         <td class="mk">BULKHEAD · Team17</td>
@@ -647,7 +654,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <td class="lk"><a href="https://store.steampowered.com/app/1867240/WARDOGS/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://bulkhead.com/games/wardogs" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
       </tr>
       <tr>
-        <td class="g">스페셜포스 리마스터<em>정식 출시 이튿날</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="SF" data-name="SPECIAL FORCE REMASTERED"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4261320/9e7c779e80c58f935dd12378d48b7e3028135c61/header.jpg?t=1789582060" alt=""></span><span class="g-name">스페셜포스 리마스터<em>정식 출시 이튿날</em></span></div></td>
         <td><span class="tag t-new">출시</span></td>
         <td class="dt">09.17</td>
         <td class="mk">드래곤플라이</td>
@@ -655,23 +662,15 @@ td .pt-lead{display:block;margin-bottom:5px}
         <td class="lk"><a href="https://store.steampowered.com/app/4261320/_/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://sfr.dfl.co.kr/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
       </tr>
       <tr>
-        <td class="g">Alien Breed 35th Anniversary Collection<em>고전 6종 묶음</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="AB" data-name="ALIEN BREED"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4870460/03a8113754074a9e82b9a05caf5de5e6d73bfe8c/header.jpg?t=1789648174" alt=""></span><span class="g-name">Alien Breed 35th Anniversary<em>고전 6종 컬렉션</em></span></div></td>
         <td><span class="tag t-live">예정</span></td>
         <td class="dt">09.24</td>
-        <td class="mk">Commodore</td>
+        <td class="mk">Antstream · Commodore</td>
         <td class="sig">스팀 데모 공개 중 · PS5·Xbox·스위치 동시 · 같은 날 Sin: Reloaded</td>
-        <td class="lk"><a href="https://store.steampowered.com/app/4870460/Alien_Breed_35th_Anniversary_Collection/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a></td>
+        <td class="lk"><a href="https://store.steampowered.com/app/4870460/Alien_Breed_35th_Anniversary_Collection/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://www.alienbreed35.com" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
       </tr>
       <tr>
-        <td class="g">IGDB 등록 슈터 13종<em>9월 최다 겹침</em></td>
-        <td><span class="tag t-warn">예정</span></td>
-        <td class="dt">09.30</td>
-        <td class="mk">—</td>
-        <td class="sig">Black Mesa: Classic · The Midnight Walkers 포함 · 공지가 서로를 가립니다</td>
-        <td class="lk">—</td>
-      </tr>
-      <tr>
-        <td class="g">에이스 컴뱃 8: 시브의 날개<em>PS5 글로벌</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="AC8" data-name="ACE COMBAT 8"><img src="https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg" alt=""></span><span class="g-name">에이스 컴뱃 8: 시브의 날개<em>PS5 글로벌</em></span></div></td>
         <td><span class="tag t-live">예정</span></td>
         <td class="dt">10.02<em>디럭스 09.28</em></td>
         <td class="mk">반다이 남코 · PROJECT ACES</td>
@@ -679,7 +678,7 @@ td .pt-lead{display:block;margin-bottom:5px}
         <td class="lk"><a href="https://store.playstation.com/en-us/product/JP0700-PPSA24913_00-MAINGAME00000000" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.2" y="4.6" width="13.6" height="7.4" rx="3.7"/><path d="M4.4 7v2.6M3.1 8.3h2.6M10.7 7.7h.01M12.4 9.4h.01"/></svg><span>PS 스토어</span></a><br><a href="https://www.bandainamcoent.com/games/ace-combat-8" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
       </tr>
       <tr>
-        <td class="g">기어스 오브 워: 이데이<em>게임패스 1일차</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="GOW" data-name="GEARS OF WAR E-DAY"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3010850/1abb0c5ef76c14f463dd6e3964adb64f984237d2/header.jpg?t=1789676311" alt=""></span><span class="g-name">기어스 오브 워: 이데이<em>게임패스 1일차</em></span></div></td>
         <td><span class="tag t-live">예정</span></td>
         <td class="dt">10.06<em>프리미엄 10.01</em></td>
         <td class="mk">The Coalition · Xbox</td>
@@ -687,15 +686,23 @@ td .pt-lead{display:block;margin-bottom:5px}
         <td class="lk"><a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://www.xbox.com/en-US/games/gears-of-war-eday" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1.7 14.2 4.9v6.3L8 14.4 1.8 11.2V4.9z"/><path d="M1.8 4.9 8 8.1l6.2-3.2M8 8.1v6.3"/></svg><span>Xbox</span></a></td>
       </tr>
       <tr>
-        <td class="g">EVE Vanguard<em>날짜 미확정</em></td>
+        <td class="g"><div class="g-cell"><span class="thumb" data-mono="EVE" data-name="EVE VANGUARD"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1872800/43fda50b449bce12be79d9db69cbc803749a4db1/header.jpg?t=1784552548" alt=""></span><span class="g-name">EVE Vanguard<em>날짜 미확정</em></span></div></td>
         <td><span class="tag t-warn">예정</span></td>
         <td class="dt">Q3 2026<em>캐시 09.30</em></td>
         <td class="mk">Fenris Creations</td>
         <td class="sig">스팀 상점은 <b>아직 이용 불가</b>로 적혀 있습니다</td>
         <td class="lk"><a href="https://store.steampowered.com/app/1872800/EVE_Vanguard/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://vanguard.eveonline.com/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
       </tr>
-      <tr>
-        <td class="g">도쿄게임쇼 2026 Xbox 쇼케이스<em>공개 17종</em></td>
+      <tr class="grp">
+        <td class="g"><div class="g-cell"><span class="thumb noimg" data-mono="9/30" data-name="9월 30일 17종"></span><span class="g-name">9월 30일 출시 몰림<em>IGDB 등록 17종</em></span></div></td>
+        <td><span class="tag t-warn">예정</span></td>
+        <td class="dt">09.30</td>
+        <td class="mk">—</td>
+        <td class="sig">이름난 것은 Black Mesa: Classic · The Midnight Walkers뿐이고 나머지 12종은 소규모입니다 · 이미 나온 스페셜포스도 목록에 남아 있습니다</td>
+        <td class="lk">—</td>
+      </tr>
+      <tr class="grp">
+        <td class="g"><div class="g-cell"><span class="thumb noimg" data-mono="TGS" data-name="TGS 2026 쇼케이스"></span><span class="g-name">도쿄게임쇼 2026 Xbox 쇼케이스<em>공개 17종</em></span></div></td>
         <td><span class="tag t-live">발표</span></td>
         <td class="dt">09.17</td>
         <td class="mk">Xbox</td>
@@ -747,8 +754,8 @@ td .pt-lead{display:block;margin-bottom:5px}
         <div class="chips"><span class="tag t-live">일정 관찰</span><span class="tag t-warn">캐시 오차 3건</span></div>
         <div class="gm">9월 말 슈터 캘린더</div>
         <h3>IGDB 캐시 날짜가 실제 출시일과 세 건이나 어긋납니다.</h3>
-        <p>로컬 캐시 assets/igdb_upcoming.json은 9월 17일 오전 9시 20분판입니다.<span class="lb"></span>여기 적힌 9월 말 슈터는 13종이고 10월 초에도 4종이 이어집니다.<span class="lb"></span>그런데 상점을 직접 열어 보니 세 건의 날짜가 달랐습니다.</p>
-        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">에이스 컴뱃 8은 캐시가 9월 29일인데 PS5 글로벌 출시는 10월 2일입니다.<span class="lb"></span>디럭스판 앞서 해보기가 9월 28일에 열려 그 언저리가 찍힌 듯합니다.<span class="lb"></span>기어스 오브 워: 이데이도 캐시는 10월 1일이지만 정식 출시는 10월 6일입니다.<span class="lb"></span>프리미엄판이 최대 5일 먼저 열리는 구조입니다.<span class="lb"></span>EVE Vanguard는 스팀 상점에 아직 Q3 2026으로만 적혀 있습니다.<span class="lb"></span>캐시 날짜는 예고일 뿐이니 상점에서 한 번 더 확인해야 합니다.</span></div>
+        <p>로컬 캐시 assets/igdb_upcoming.json은 9월 17일 오전 9시 20분판입니다.<span class="lb"></span>여기 적힌 9월 30일 슈터만 17종이고 10월 초에도 4종이 이어집니다.<span class="lb"></span>그런데 상점을 직접 열어 보니 세 건의 날짜가 달랐습니다.</p>
+        <div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">에이스 컴뱃 8은 캐시가 9월 29일인데 PS5 글로벌 출시는 10월 2일입니다.<span class="lb"></span>디럭스판 앞서 해보기가 9월 28일에 열려 그 언저리가 찍힌 듯합니다.<span class="lb"></span>기어스 오브 워: 이데이도 캐시는 10월 1일이지만 정식 출시는 10월 6일입니다.<span class="lb"></span>프리미엄판이 최대 5일 먼저 열리는 구조입니다.<span class="lb"></span>EVE Vanguard는 스팀 상점에 아직 Q3 2026으로만 적혀 있습니다.<span class="lb"></span>이미 나온 스페셜포스 리마스터도 9월 30일 목록에 남아 있습니다.<span class="lb"></span>캐시 날짜는 예고일 뿐이니 상점에서 한 번 더 확인해야 합니다.</span></div>
         <div class="src">근거: 로컬 <code>assets/igdb_upcoming.json</code>(<b>하루 경과</b>) · <a href="https://blog.playstation.com/2026/06/02/ace-combat-8-wings-of-theve-launches-globally-october-2-on-ps5/" target="_blank" rel="noopener">에이스 컴뱃 8 출시일 공지</a> · <a href="https://store.steampowered.com/app/3010850/Gears_of_War_EDay/" target="_blank" rel="noopener">기어스 이데이 스팀 예약</a></div>
       </div>
     </div>
