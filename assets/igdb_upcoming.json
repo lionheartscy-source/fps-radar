@@ -1,35 +1,8 @@
 {
-    "_생성시각":  "2026-09-20 09:20:14",
+    "_생성시각":  "2026-09-21 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "The Stickman",
-                         "date":  "2026-09-21",
-                         "human":  "Sep 21, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-stickman",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw7u.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw7u.jpg"
-                     },
-                     {
-                         "name":  "Guinea Pig Gunner",
-                         "date":  "2026-09-21",
-                         "human":  "Sep 21, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/guinea-pig-gunner",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocm03.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocm03.jpg"
-                     },
-                     {
-                         "name":  "Eon Survivor",
-                         "date":  "2026-09-21",
-                         "human":  "Sep 21, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/eon-survivor",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc98z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc98z.jpg"
-                     },
                      {
                          "name":  "Somnius",
                          "date":  "2026-09-22",
@@ -301,6 +274,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvqj.jpg"
                      },
                      {
+                         "name":  "Sanasana",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/sanasana",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclqx.jpg"
+                     },
+                     {
                          "name":  "RetroSpace",
                          "date":  "2026-10-01",
                          "human":  "Oct 01, 2026",
@@ -310,15 +292,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co79jg.jpg"
                      },
                      {
-                         "name":  "Mycopunk",
-                         "date":  "2026-10-01",
-                         "human":  "Oct 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mycopunk",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qrc.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9qrc.jpg"
-                     },
-                     {
                          "name":  "Moros Protocol",
                          "date":  "2026-10-01",
                          "human":  "Oct 01, 2026",
@@ -326,15 +299,6 @@
                          "igdb_url":  "https://www.igdb.com/games/moros-protocol",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9a41.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9a41.jpg"
-                     },
-                     {
-                         "name":  "Sanasana",
-                         "date":  "2026-10-01",
-                         "human":  "Oct 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/sanasana",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclqx.jpg"
                      },
                      {
                          "name":  "Fiefdom",
@@ -362,6 +326,24 @@
                          "igdb_url":  "https://www.igdb.com/games/gears-of-war-e-day",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc77n.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc77n.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat 8: Wings of Theve - Customizable Cosmetic Set",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-customizable-cosmetic-set",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t6.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t6.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat 8: Wings of Theve - Playable Aircraft: F-14A",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
                      },
                      {
                          "name":  "Ace Combat Zero: The Belkan War",
