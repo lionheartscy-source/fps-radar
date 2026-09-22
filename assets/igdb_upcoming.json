@@ -1,35 +1,8 @@
 {
-    "_생성시각":  "2026-09-21 09:20:14",
+    "_생성시각":  "2026-09-22 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Somnius",
-                         "date":  "2026-09-22",
-                         "human":  "Sep 22, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/somnius",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocwec.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwec.jpg"
-                     },
-                     {
-                         "name":  "Gunclone Arena",
-                         "date":  "2026-09-22",
-                         "human":  "Sep 22, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/gunclone-arena",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobuc0.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobuc0.jpg"
-                     },
-                     {
-                         "name":  "Obscurity: Unknown Threat",
-                         "date":  "2026-09-22",
-                         "human":  "Sep 22, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/obscurity-unknown-threat",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4k82.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co4k82.jpg"
-                     },
                      {
                          "name":  "Alien Breed 35th Anniversary",
                          "date":  "2026-09-24",
@@ -56,15 +29,6 @@
                          "igdb_url":  "https://www.igdb.com/games/hostile-lands",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocu4w.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocu4w.jpg"
-                     },
-                     {
-                         "name":  "Runner Gunner",
-                         "date":  "2026-09-25",
-                         "human":  "Sep 25, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/runner-gunner",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocu1o.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocu1o.jpg"
                      },
                      {
                          "name":  "Lunar Drifter",
@@ -191,15 +155,6 @@
                          "igdb_url":  "https://www.igdb.com/games/dimenshot",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3c.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3c.jpg"
-                     },
-                     {
-                         "name":  "Special Force Remastered",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/special-force-remastered",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc3me.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc3me.jpg"
                      },
                      {
                          "name":  "EVE Vanguard",
@@ -337,13 +292,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t6.jpg"
                      },
                      {
-                         "name":  "Ace Combat 8: Wings of Theve - Playable Aircraft: F-14A",
+                         "name":  "Bloodspill",
                          "date":  "2026-10-02",
                          "human":  "Oct 02, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/bloodspill",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpbb.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpbb.jpg"
                      },
                      {
                          "name":  "Ace Combat Zero: The Belkan War",
@@ -353,6 +308,15 @@
                          "igdb_url":  "https://www.igdb.com/games/ace-combat-zero-the-belkan-war",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6o8z.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6o8z.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat 8: Wings of Theve - Playable Aircraft: F-14A",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
                      }
                  ]
 }
