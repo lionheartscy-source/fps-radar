@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-09-23 09:20:13",
+    "_생성시각":  "2026-09-24 09:20:12",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Alien Breed 35th Anniversary",
-                         "date":  "2026-09-24",
-                         "human":  "Sep 24, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/alien-breed-35th-anniversary",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocr96.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocr96.jpg"
-                     },
-                     {
-                         "name":  "Sin: Reloaded",
-                         "date":  "2026-09-24",
-                         "human":  "Sep 24, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/sin-reloaded",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h2r.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co2h2r.jpg"
-                     },
                      {
                          "name":  "Hostile Lands",
                          "date":  "2026-09-25",
@@ -317,6 +299,33 @@
                          "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
+                     },
+                     {
+                         "name":  "Chill Cat",
+                         "date":  "2026-10-05",
+                         "human":  "Oct 05, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/chill-cat--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjse.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocjse.jpg"
+                     },
+                     {
+                         "name":  "Kingdom Hearts II Final Mix",
+                         "date":  "2026-10-08",
+                         "human":  "Oct 08, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/kingdom-hearts-ii-final-mix--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8m1s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8m1s.jpg"
+                     },
+                     {
+                         "name":  "Paperhead",
+                         "date":  "2026-10-09",
+                         "human":  "Oct 09, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/paperhead",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co914x.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co914x.jpg"
                      }
                  ]
 }
