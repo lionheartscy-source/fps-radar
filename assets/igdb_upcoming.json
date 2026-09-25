@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-09-24 09:20:12",
+    "_생성시각":  "2026-09-25 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Hostile Lands",
-                         "date":  "2026-09-25",
-                         "human":  "Sep 25, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/hostile-lands",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocu4w.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocu4w.jpg"
-                     },
-                     {
-                         "name":  "Lunar Drifter",
-                         "date":  "2026-09-25",
-                         "human":  "Sep 25, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/lunar-drifter",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gsv.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9gsv.jpg"
-                     },
                      {
                          "name":  "Galactic Bounty",
                          "date":  "2026-09-28",
