@@ -1,35 +1,8 @@
 {
-    "_생성시각":  "2026-09-27 09:20:14",
+    "_생성시각":  "2026-09-28 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Galactic Bounty",
-                         "date":  "2026-09-28",
-                         "human":  "Sep 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/galactic-bounty",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxjp.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxjp.jpg"
-                     },
-                     {
-                         "name":  "Ammossum",
-                         "date":  "2026-09-28",
-                         "human":  "Sep 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/ammossum",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocvyi.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocvyi.jpg"
-                     },
-                     {
-                         "name":  "Unshine Arcade",
-                         "date":  "2026-09-28",
-                         "human":  "Sep 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/unshine-arcade",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaldr.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaldr.jpg"
-                     },
                      {
                          "name":  "Way of the Hunter 2",
                          "date":  "2026-09-29",
@@ -193,15 +166,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvqj.jpg"
                      },
                      {
-                         "name":  "Sanasana",
-                         "date":  "2026-10-01",
-                         "human":  "Oct 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/sanasana",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclqx.jpg"
-                     },
-                     {
                          "name":  "RetroSpace",
                          "date":  "2026-10-01",
                          "human":  "Oct 01, 2026",
@@ -218,6 +182,24 @@
                          "igdb_url":  "https://www.igdb.com/games/moros-protocol",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9a41.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9a41.jpg"
+                     },
+                     {
+                         "name":  "Heartworm",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 01, 2026",
+                         "platform":  "PlayStation 4",
+                         "igdb_url":  "https://www.igdb.com/games/heartworm",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co79lv.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co79lv.jpg"
+                     },
+                     {
+                         "name":  "Sanasana",
+                         "date":  "2026-10-01",
+                         "human":  "Oct 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/sanasana",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclqx.jpg"
                      },
                      {
                          "name":  "Fiefdom",
