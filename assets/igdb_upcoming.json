@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-09-28 09:20:14",
+    "_생성시각":  "2026-09-29 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Way of the Hunter 2",
-                         "date":  "2026-09-29",
-                         "human":  "Sep 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/way-of-the-hunter-2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobdqj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobdqj.jpg"
-                     },
-                     {
-                         "name":  "Ace Combat 8: Wings of Theve",
-                         "date":  "2026-09-29",
-                         "human":  "Sep 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0h1.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg"
-                     },
                      {
                          "name":  "The Crimson Hunt",
                          "date":  "2026-09-30",
@@ -247,15 +229,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpbb.jpg"
                      },
                      {
-                         "name":  "Ace Combat Zero: The Belkan War",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-zero-the-belkan-war",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6o8z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6o8z.jpg"
-                     },
-                     {
                          "name":  "Ace Combat 8: Wings of Theve - Playable Aircraft: F-14A",
                          "date":  "2026-10-02",
                          "human":  "Oct 02, 2026",
@@ -263,6 +236,24 @@
                          "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat 8: Wings of Theve",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0h1.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg"
+                     },
+                     {
+                         "name":  "Ace Combat Zero: The Belkan War",
+                         "date":  "2026-10-02",
+                         "human":  "Oct 02, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/ace-combat-zero-the-belkan-war",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6o8z.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6o8z.jpg"
                      },
                      {
                          "name":  "Chill Cat",
@@ -290,6 +281,33 @@
                          "igdb_url":  "https://www.igdb.com/games/paperhead",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz72.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz72.jpg"
+                     },
+                     {
+                         "name":  "Star Conflict",
+                         "date":  "2026-10-10",
+                         "human":  "Oct 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/star-conflict",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co1szt.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co1szt.jpg"
+                     },
+                     {
+                         "name":  "Valor Mortis",
+                         "date":  "2026-10-13",
+                         "human":  "Oct 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/valor-mortis",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaazc.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaazc.jpg"
+                     },
+                     {
+                         "name":  "Warhammer 40,000: Boltgun 2",
+                         "date":  "2026-10-14",
+                         "human":  "Oct 14, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/warhammer-40000-boltgun-2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uam.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
                      }
                  ]
 }
