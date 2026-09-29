@@ -44,7 +44,8 @@
       "mono": "PUBG",
       "name": "PUBG: BATTLEGROUNDS",
       "steam_appid": "578080",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg"
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1786493086",
+      "확인": "2026-09-29 연령확인 페이지 og:image에서 해시 포함 주소로 교체(기존 무해시 주소는 404 위험)"
     },
     "Counter-Strike 2": {
       "mono": "CS2",
@@ -209,6 +210,20 @@
       "steam_appid": "3606480",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
       "확인": "2026-09-19 스팀 상점 og:image에서 해시 포함 주소 확보(연령 확인 페이지에서도 노출)."
+    },
+    "워프레임": {
+      "mono": "WF",
+      "name": "WARFRAME",
+      "steam_appid": "230410",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg?t=1790176468",
+      "확인": "2026-09-29 상점 og:image"
+    },
+    "아크 레이더스": {
+      "mono": "ARC",
+      "name": "ARC RAIDERS",
+      "steam_appid": "1808500",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/b1379225bf8d50a4b4ad26aad2c637278222a20c/header_alt_assets_7.jpg?t=1789143012",
+      "확인": "2026-09-29 상점 본문 header_alt_assets_7"
     }
   },
   "_이미지필요": [],
