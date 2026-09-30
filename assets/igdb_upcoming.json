@@ -1,152 +1,8 @@
 {
-    "_생성시각":  "2026-09-29 09:20:14",
+    "_생성시각":  "2026-09-30 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "The Crimson Hunt",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-crimson-hunt",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc813.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc813.jpg"
-                     },
-                     {
-                         "name":  "Black Mesa: Classic",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/black-mesa-classic",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa0gu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
-                     },
-                     {
-                         "name":  "Dodgebrawl",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/dodgebrawl",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4kt.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4kt.jpg"
-                     },
-                     {
-                         "name":  "Catnip Cosmos",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/catnip-cosmos",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4ra.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4ra.jpg"
-                     },
-                     {
-                         "name":  "Exoshock",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/exoshock",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9it7.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9it7.jpg"
-                     },
-                     {
-                         "name":  "The Binding of Isaac: Repentance+",
-                         "date":  "2026-09-30",
-                         "human":  "Sep 30, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/the-binding-of-isaac-repentance-plus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co949f.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co949f.jpg"
-                     },
-                     {
-                         "name":  "Slendyjan",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/slendyjan",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobqz0.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobqz0.jpg"
-                     },
-                     {
-                         "name":  "Dimenshot",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/dimenshot",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3c.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3c.jpg"
-                     },
-                     {
-                         "name":  "EVE Vanguard",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/eve-vanguard",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cociud.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cociud.jpg"
-                     },
-                     {
-                         "name":  "Wukong Survivors: God Slayer",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/wukong-survivors-god-slayer",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobdl4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobdl4.jpg"
-                     },
-                     {
-                         "name":  "100 Caliber Dash",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/100-caliber-dash",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9hiy.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9hiy.jpg"
-                     },
-                     {
-                         "name":  "The Midnight Walkers",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-midnight-walkers",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2m4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa2m4.jpg"
-                     },
-                     {
-                         "name":  "Otpisani: Nightingale",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/otpisani-nightingale",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc167.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc167.jpg"
-                     },
-                     {
-                         "name":  "Demon Spore",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/demon-spore",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8tf2.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8tf2.jpg"
-                     },
-                     {
-                         "name":  "Last Flag",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/last-flag",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtsb.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobtsb.jpg"
-                     },
-                     {
-                         "name":  "Polydangerous",
-                         "date":  "2026-09-30",
-                         "human":  "Q3 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/polydangerous",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvqj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvqj.jpg"
-                     },
                      {
                          "name":  "RetroSpace",
                          "date":  "2026-10-01",
@@ -265,6 +121,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocjse.jpg"
                      },
                      {
+                         "name":  "Deep Rock Galactic: Survivor",
+                         "date":  "2026-10-07",
+                         "human":  "Oct 07, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/deep-rock-galactic-survivor",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co68ah.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co68ah.jpg"
+                     },
+                     {
                          "name":  "Kingdom Hearts II Final Mix",
                          "date":  "2026-10-08",
                          "human":  "Oct 08, 2026",
@@ -301,6 +166,24 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaazc.jpg"
                      },
                      {
+                         "name":  "Deunocta",
+                         "date":  "2026-10-14",
+                         "human":  "Oct 14, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/deunocta",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczy5.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczy5.jpg"
+                     },
+                     {
+                         "name":  "No Such Place",
+                         "date":  "2026-10-14",
+                         "human":  "Oct 14, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/no-such-place",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v89.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9v89.jpg"
+                     },
+                     {
                          "name":  "Warhammer 40,000: Boltgun 2",
                          "date":  "2026-10-14",
                          "human":  "Oct 14, 2026",
@@ -308,6 +191,78 @@
                          "igdb_url":  "https://www.igdb.com/games/warhammer-40000-boltgun-2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uam.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
+                     },
+                     {
+                         "name":  "Call of Duty: Modern Warfare 4",
+                         "date":  "2026-10-16",
+                         "human":  "Oct 16, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4mu.jpg"
+                     },
+                     {
+                         "name":  "Athanasia",
+                         "date":  "2026-10-19",
+                         "human":  "Oct 19, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/athanasia",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wni.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9wni.jpg"
+                     },
+                     {
+                         "name":  "Mycopunk",
+                         "date":  "2026-10-20",
+                         "human":  "Oct 20, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mycopunk",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qrc.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9qrc.jpg"
+                     },
+                     {
+                         "name":  "I Am Your Beast: Quitting Time",
+                         "date":  "2026-10-20",
+                         "human":  "Oct 20, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/i-am-your-beast-quitting-time",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxcd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxcd.jpg"
+                     },
+                     {
+                         "name":  "You Are Empty: Absolute Edition",
+                         "date":  "2026-10-27",
+                         "human":  "Oct 27, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/you-are-empty-absolute-edition",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocswn.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocswn.jpg"
+                     },
+                     {
+                         "name":  "Knell",
+                         "date":  "2026-10-27",
+                         "human":  "Oct 27, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/knell",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmjf.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocmjf.jpg"
+                     },
+                     {
+                         "name":  "Anomalith",
+                         "date":  "2026-10-28",
+                         "human":  "Oct 28, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/anomalith",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc3jf.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc3jf.jpg"
+                     },
+                     {
+                         "name":  "Milo",
+                         "date":  "2026-10-29",
+                         "human":  "Oct 29, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/milo--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctbe.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctbe.jpg"
                      }
                  ]
 }
