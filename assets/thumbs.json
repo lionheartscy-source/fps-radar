@@ -224,6 +224,20 @@
       "steam_appid": "1808500",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/b1379225bf8d50a4b4ad26aad2c637278222a20c/header_alt_assets_7.jpg?t=1789143012",
       "확인": "2026-09-29 상점 본문 header_alt_assets_7"
+    },
+    "에이스 컴뱃 8": {
+      "mono": "AC8",
+      "name": "ACE COMBAT 8",
+      "steam_appid": "2288340",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288340/3bd993fa9f94ebd60c1b05dd61a4315cde829830/capsule_616x353.jpg?t=1790892196",
+      "메모": "2026-10-02 스팀 한국어 상점 og:image(capsule_616x353)."
+    },
+    "워해머 40,000: 볼트건 2": {
+      "mono": "BG2",
+      "name": "WARHAMMER 40,000: BOLTGUN 2",
+      "steam_appid": "3115160",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3115160/09adcf16d427fc26e6d1ad48e9f2a05ba015fdef/capsule_616x353.jpg?t=1790785313",
+      "메모": "2026-10-02 스팀 한국어 상점 og:image."
     }
   },
   "_이미지필요": [],
