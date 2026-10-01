@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS·슈터 월간 레이더 · 2026년 9월</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   FPS·슈터 레이더 — 디자인 템플릿 v3
+   상단부(네이비 그라디언트 헤더 + 4-KPI): 확정본 유지
+   그 아래 섹션: v2 템플릿 구조(표·동향 카드·리스크·액션·출처) · 풀폭 단일 컬럼
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#EEF1F6; --card:#FFFFFF; --card-2:#F4F6FA;
+  --ink:#161C29; --ink-2:#3B4354; --muted:#6B7488; --faint:#8B93A5;
+  --line:#E1E6EF; --line-soft:#EDF0F6; --zebra:#F7F9FC;
+  --navy:#1B2A4A; --blue:#2E5AAC; --blue-2:#3E6FCB; --blue-soft:#E7EEFB; --blue-line:#CBD9F2;
+  --red:#B3352F; --red-soft:#FBECEA; --amber:#9A6A12; --amber-soft:#FBF2DD;
+  --green:#1F7A4D; --green-soft:#E7F5EC; --violet:#6D4AA6; --violet-soft:#F0EAFA;
+  --shadow:0 1px 2px rgba(22,28,41,.04), 0 6px 18px -12px rgba(22,28,41,.22);
+  --shadow-lift:0 2px 6px rgba(22,28,41,.07), 0 20px 40px -22px rgba(22,28,41,.34);
+  --ring:var(--blue);
+  --mh-grad:linear-gradient(118deg,#152039 0%,#1F2A44 44%,#2B4A7C 100%);
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:14px; --radius-sm:9px;
+}
+html[data-theme="dark"]{
+  --bg:#0E1016; --card:#171A22; --card-2:#1C2029;
+  --ink:#EAECF1; --ink-2:#C3C8D4; --muted:#8B93A5; --faint:#6E7689;
+  --line:#282D38; --line-soft:#20242D; --zebra:#1B1F27;
+  --navy:#CFE0FF; --blue:#7CA6EE; --blue-2:#8FB4F2; --blue-soft:#16202F; --blue-line:#25344C;
+  --red:#EE7469; --red-soft:#2A1715; --amber:#D9AC55; --amber-soft:#241C0E;
+  --green:#63C793; --green-soft:#0F2018; --violet:#B79BE6; --violet-soft:#1C1630;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -14px rgba(0,0,0,.7);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 44px -22px rgba(0,0,0,.85);
+  --mh-grad:linear-gradient(118deg,#0C1220 0%,#111A2E 46%,#1B3357 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.66;letter-spacing:-.003em;word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:4px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:0 0 6px 0;font-size:14px;font-weight:700}
+.skip:focus{left:0}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--blue),var(--blue-2));transition:width .12s linear}
+
+/* ═══ 상단부(확정본) — 네이비 그라디언트 헤더 + 4-KPI ═══ */
+.masthead{position:relative;background:var(--mh-grad);color:#fff;
+  padding:30px 0 34px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mh-inner{max-width:1400px;margin:0 auto;padding:0 40px}
+.masthead .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#AFC4EC;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.masthead .eyebrow .live{width:7px;height:7px;border-radius:50%;background:#FF6B5E;flex:none;
+  box-shadow:0 0 0 0 rgba(255,107,94,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(255,107,94,0)}100%{box-shadow:0 0 0 0 rgba(255,107,94,0)}}
+.masthead h1{margin:0;font-size:clamp(23px,3.1vw,30px);font-weight:800;line-height:1.24;letter-spacing:-.02em;color:#fff}
+.masthead .meta{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;
+  font-size:13px;color:#C7D2E6}
+.masthead .meta b{color:#fff;font-weight:700}
+.masthead .cover-pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  color:#EAF0FB;padding:3px 12px;border-radius:999px;font-size:12.5px;font-weight:700}
+.themebtn{position:absolute;top:22px;right:24px;min-height:36px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#EAF0FB;border-radius:9px;
+  padding:8px 12px;font-family:var(--sans);font-size:12px;font-weight:600;cursor:pointer;transition:background .15s}
+.themebtn:hover{background:rgba(255,255,255,.18)}
+.themebtn .val{font-family:var(--mono);font-size:11px;letter-spacing:.06em}
+
+.wrap{max-width:1400px;margin:0 auto;padding:22px 40px 80px}
+
+.lead{color:var(--ink-2);font-size:14.5px;line-height:1.8;margin:0 0 16px;max-width:80ch}
+.lead b{color:var(--ink);font-weight:600;box-shadow:inset 0 -8px 0 var(--blue-soft)}
+
+.notice{display:flex;gap:12px;align-items:flex-start;margin:0 0 22px;padding:12px 15px;background:var(--blue-soft);
+  border:1px solid var(--blue-line);border-radius:var(--radius-sm);font-size:13px;color:var(--ink-2);line-height:1.6}
+.notice .k{font-size:11.5px;font-weight:800;color:var(--blue);white-space:nowrap;padding-top:1px}
+.notice b{color:var(--ink)}
+
+/* 4-KPI 행 */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px 16px;
+  box-shadow:var(--shadow);border-top:4px solid var(--blue)}
+.kpi.good{border-top-color:var(--green)} .kpi.warn{border-top-color:var(--amber)} .kpi.risk{border-top-color:var(--red)}
+.kpi .lbl{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.kpi .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:6px;letter-spacing:-.02em}
+.kpi.risk .big{color:var(--red)}
+.kpi .sub{font-size:12.5px;color:var(--muted);line-height:1.55}
+.kpi .sub a{font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.kpi .sub a:hover{text-decoration:none;border-bottom-style:solid}
+.kpi .sep{opacity:.4;padding:0 3px}
+
+/* ═══ 이하 섹션: v2 구조 ═══ */
+.sec{display:flex;align-items:center;gap:12px;margin:44px 0 6px;scroll-margin-top:16px}
+.sec .idx{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--blue);flex:none}
+.sec h2{margin:0;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.sec .rule{flex:1;height:1px;background:var(--line)}
+.sub-lead{color:var(--muted);font-size:13.5px;margin:8px 0 16px;max-width:74ch;line-height:1.7}
+.sub-lead b{color:var(--ink-2);font-weight:600}
+
+/* 표 */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:920px;font-size:13.5px}
+thead th{position:sticky;top:0;z-index:2;background:var(--card-2);color:var(--navy);text-align:left;
+  padding:11px 14px;font-weight:800;font-size:12.5px;white-space:nowrap;border-bottom:2px solid var(--blue)}
+tbody td{padding:12px 14px;border-top:1px solid var(--line-soft);vertical-align:top}
+tbody tr:nth-child(even){background:var(--zebra)}
+tbody tr:hover{background:var(--blue-soft)}
+.g-cell{display:flex;gap:13px;align-items:flex-start;min-width:230px}
+.thumb{width:128px;height:60px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.noimg img{display:none}
+.thumb.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.thumb.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 5px,transparent 5px 13px)}.thumb.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:6px 9px;text-align:center;font-weight:800;font-size:12.5px;line-height:1.25;letter-spacing:-.01em;color:rgba(255,255,255,.96);text-shadow:0 1px 5px rgba(0,0,0,.45)}
+.game{font-weight:800;color:var(--navy);line-height:1.3}
+/* ── 근거 유형 라벨: 이 반응이 어디서 나온 것인지 표시 ── */
+.ev{display:inline-flex;align-items:center;gap:4px;vertical-align:middle;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em;padding:2px 7px;border-radius:999px;border:1px solid;white-space:nowrap;margin-right:5px}
+.ev::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.85}
+.ev.kr{color:var(--blue);background:var(--blue-soft);border-color:var(--blue-line)}
+.ev.gl{color:var(--violet);background:var(--violet-soft);border-color:color-mix(in srgb,var(--violet) 30%,transparent)}
+.ev.cm{color:var(--green);background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 30%,transparent)}
+.ev.mt{color:var(--amber);background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 34%,transparent)}
+.ev.na{color:var(--muted);background:var(--card-2);border-color:var(--line)}
+.ev.of{color:var(--ink-2);background:var(--card-2);border-color:var(--line-soft)}
+.evkey{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:2px 0 14px;padding:10px 14px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:var(--radius-sm);background:var(--card-2);font-size:12.5px;color:var(--ink-2)}
+.evkey b{color:var(--navy);font-size:12px;letter-spacing:.01em}
+.evkey span.d{color:var(--muted)}
+
+.game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
+.date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.pt{margin:0;color:var(--ink-2);line-height:1.6}
+.pt b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;margin-bottom:2px}
+.t-new{background:var(--blue-soft);color:var(--blue)} .t-live{background:var(--card-2);color:var(--muted)}
+.t-risk{background:var(--red-soft);color:var(--red)} .t-good{background:var(--green-soft);color:var(--green)}
+.t-warn{background:var(--amber-soft);color:var(--amber)}
+.src-inline a{font-size:12px;font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.src-inline a:hover{text-decoration:none;border-bottom-style:solid}
+
+/* 신작 동향 카드 */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s;display:flex;flex-direction:column}
+.tcard .tbanner{position:relative;aspect-ratio:2.5/1;background:linear-gradient(135deg,var(--navy),#12203b);overflow:hidden}
+.tcard .tbanner img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.tcard .tbanner.noimg img{display:none}
+.tcard .tbanner.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.tcard .tbanner.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 7px,transparent 7px 18px)}.tcard .tbanner.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10px 16px;text-align:center;font-weight:800;font-size:19px;line-height:1.25;color:rgba(255,255,255,.96);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tcard .tin{padding:16px 18px 17px;flex:1}
+.tcard:hover{border-color:var(--muted);box-shadow:var(--shadow-lift)}
+.tcard .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tcard .gm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tcard h3{margin:0 0 8px;font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.45;color:var(--ink)}
+.tcard p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.65}
+.tcard p b{color:var(--ink);font-weight:600}
+.tcard .obs{margin-top:9px;padding-left:12px;border-left:2px solid var(--line);font-size:12.5px}
+.tcard .obs .k{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:3px}
+.tcard .src{margin-top:11px;font-size:12px;color:var(--muted)}
+
+
+/* 오늘의 일정 (타임라인) */
+.timeline{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 10px;box-shadow:var(--shadow)}
+.timeline h3{margin:0 0 3px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.timeline .hint{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:78px 50px 1fr;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line-soft)}
+.tl li:first-child{border-top:none}
+.tl .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.tl .s{font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:5px;line-height:1.5}
+.tl .s.end{background:var(--red-soft);color:var(--red)} .tl .s.start{background:var(--blue-soft);color:var(--blue)}
+.tl .s.on{background:var(--green-soft);color:var(--green)} .tl .s.due{background:var(--card-2);color:var(--muted)}
+.tl .t{font-size:14px;color:var(--ink-2);line-height:1.55}
+.tl .t b{color:var(--ink);font-weight:600}
+.tl .t .win{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:6px}
+.tl li.today{background:linear-gradient(90deg,var(--red-soft),transparent 72%);margin:0 -22px;padding-left:22px;padding-right:22px}
+
+/* 오늘의 헤드라인 (히어로) */
+.heroes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hero{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s}
+.hero:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);text-decoration:none}
+.hero .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--navy),#12203b)}
+.hero .shot img{width:100%;height:100%;object-fit:cover}
+.hero .shot.noimg img{display:none}
+.hero .shot.noimg{background:linear-gradient(135deg,#2a4778 0%,#141f38 100%)}.hero .shot.noimg::before{content:attr(data-name);position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;padding:0 22px 46px;text-align:center;font-weight:800;font-size:26px;line-height:1.25;color:rgba(255,255,255,.22);letter-spacing:-.01em}
+.hero .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,14,.94) 0%,rgba(8,10,14,.55) 40%,rgba(8,10,14,.05) 74%)}
+.hero .rank{position:absolute;top:11px;left:13px;z-index:2;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero .flag{position:absolute;top:12px;right:12px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--red);color:#fff}
+.hero .flag.n{background:rgba(255,255,255,.93);color:#14161A}
+.hero .over{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:14px 16px}
+.hero .over .gm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:5px}
+.hero .over h3{margin:0;color:#fff;font-size:16px;font-weight:700;line-height:1.42;letter-spacing:-.02em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero .under{padding:14px 16px 15px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.hero .under b{color:var(--ink);font-weight:600}
+@media(max-width:820px){ .heroes{grid-template-columns:1fr 1fr} }
+@media(max-width:600px){ .heroes{grid-template-columns:1fr} }
+
+/* 리스크 */
+.risk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:var(--radius);padding:17px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.risk.high{border-left-color:var(--red)}
+.risk .lvl{font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:7px}
+.risk.high .lvl{color:var(--red)}
+.risk h3{margin:0 0 11px;font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.4}
+.risk .row{display:grid;grid-template-columns:62px 1fr;gap:14px;margin-bottom:8px;font-size:13.5px;color:var(--ink-2);line-height:1.65}
+.risk .row .k{font-size:11.5px;font-weight:700;color:var(--muted);padding-top:4px}
+.risk .row b{color:var(--ink);font-weight:600}
+.risk .lesson{margin-top:12px;background:var(--amber-soft);border-radius:var(--radius-sm);padding:12px 15px;font-size:13px;color:var(--ink-2);line-height:1.7}
+.risk .lesson .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.risk .lesson b{color:var(--ink);font-weight:600}
+.risk .lesson ol{margin:0;padding-left:17px} .risk .lesson li{margin:4px 0}
+
+/* 액션 */
+.act{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.act .num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;flex:none;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.act h3{margin:0 0 6px;font-size:15.5px;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.act p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.7}
+.act p b{color:var(--ink);font-weight:600}
+
+.caveat{border:1px dashed var(--line);border-radius:var(--radius-sm);padding:14px 17px;margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.7}
+.caveat .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.caveat b{color:var(--ink-2)}
+
+/* 출처 */
+.sources{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+.sources summary{cursor:pointer;list-style:none;padding:15px 20px;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--ink);min-height:44px}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:17px;color:var(--muted);transition:transform .25s}
+.sources[open] summary::after{transform:rotate(45deg)}
+.sources .body{padding:0 20px 18px}
+.sources ul{margin:0;padding:0;list-style:none;columns:2;column-gap:34px}
+.sources li{font-size:12.5px;line-height:1.6;margin:0 0 11px;color:var(--muted);break-inside:avoid;padding-left:12px;border-left:1px solid var(--line-soft)}
+.sources li b{display:block;color:var(--ink-2);font-weight:700;margin-bottom:2px}
+.colophon{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7}
+.colophon b{color:var(--navy)}
+
+.tpl-note{display:flex;gap:9px;align-items:flex-start;margin:16px 0 0;padding:10px 14px;border:1px dashed var(--blue-line);
+  background:var(--blue-soft);border-radius:var(--radius-sm);font-size:12px;color:var(--ink-2);line-height:1.6}
+.tpl-note b{color:var(--navy)}
+
+/* 반응형 */
+@media(max-width:900px){ .mh-inner,.wrap{padding-left:18px;padding-right:18px} .themebtn{right:14px} }
+@media(max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  .masthead h1{font-size:21px} .risk .row{grid-template-columns:1fr;gap:2px} .sources ul{columns:1}
+  .act{grid-template-columns:1fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media print{#prog,.skip,.themebtn,.tpl-note{display:none}.masthead{background:#1F2A44!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{max-width:none}.sources ul{columns:1}body{background:#fff}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<div id="prog" aria-hidden="true"></div>
+
+<a class="skip" href="#main">본문 바로가기</a>
+<div id="prog" aria-hidden="true"></div>
+
+<header class="masthead">
+  <button class="themebtn" id="themebtn" type="button" aria-pressed="false" title="화면 테마">
+    <span class="lbltext">테마</span><span class="val" id="themelbl">LIGHT</span>
+  </button>
+  <div class="mh-inner">
+    <p class="eyebrow"><span class="live"></span>FPS · 슈터 먼슬리 커뮤니티/이벤트 레이더</p>
+    <h1>월간 FPS·슈터 레이더</h1>
+    <div class="meta">
+      <span>커버 기간 <b>2026년 9월 1일 – 9월 30일</b></span>
+      <span class="cover-pill">2026년 9월 · 일간 리포트 No.54–No.83(30건) + 주간 W36–W39</span>
+      <span>작성 2026-10-01 (목)</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+<p class="lead"><b>9월에는 회사가 내놓은 말과 이용자가 원한 답이 계속 어긋났습니다.</b> 제재 공지는 신병이 확보된 사람 수를 알리는 데 그쳤습니다. 이용자는 오탐 밴 목록 글에 댓글 142개를 달며 증거를 요구했습니다. PUBG 아시아 스타즈에서는 사전 기준이 없던 점도 사과 대상이 됐습니다. 오버워치가 넥슨으로 옮겨 온 뒤 팀 드라이브가 게시판 50글 중 20글을 채웠습니다. 이벤트가 끝나자 점유는 8건으로 줄었지만 매칭, 접속, 과금 불만은 남았습니다. 국내 신작이 모일 자리가 비어 있는 상태도 되풀이됐습니다. 월말에는 에이스 컴뱃 8 선행 접속에서 출시 직후 결함 신고가 여론을 채웠습니다.</p>
+
+  <div class="notice">
+    <span class="k">이 리포트</span>
+    <span>월간 리포트는 <b>새로 검색하지 않고 주간 리포트 4건(W36–W39)과 9월 28일~30일 일간 3건을 다시 읽어 해석</b>합니다. 개별 사건의 근거와 수치는 하단 <a href="#digest">주차별 다이제스트</a>에서 해당 리포트를 참조하세요. 월말 상태 일부는 <b>10월 1일 일간(No.84)이 읽은 값</b>입니다.</span>
+  </div>
+
+  <div class="kpis" id="summary">
+    <div class="kpi risk">
+      <div class="lbl">이 달의 지배 이슈</div>
+      <div class="big">판정 근거 없는 제재</div>
+      <div class="sub">델타포스 오탐 밴 목록 댓글 <b>132개에서 142개</b>(9/3~4) · PUBG 대회 영구 제재(9/23)</div>
+    </div>
+    <div class="kpi warn">
+      <div class="lbl">가장 오래 끈 논란</div>
+      <div class="big">넥슨 이관 뒤 오버워치 불만</div>
+      <div class="sub">9/2 매칭 <b>1,994회</b> → 9/18 과금·핵·차별 → 9/27 그룹 큐 분리 요구</div>
+    </div>
+    <div class="kpi good">
+      <div class="lbl">국내 포커스</div>
+      <div class="big">신작에 모일 자리가 없었습니다</div>
+      <div class="sub">스페셜포스 신설 목록 밖 <b>33일째</b> · 워독스 루리웹 평점 0점</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">다음 달 분수령</div>
+      <div class="big">10/1 · 10/6 · 10/7</div>
+      <div class="sub"><b>10/1</b> 에이스 컴뱃 8 · <b>10/6</b> 기어스 오브 워: 이데이 · <b>10/7</b> 오버워치 5시즌</div>
+    </div>
+  </div>
+
+  <!-- 01 -->
+  <div class="sec" id="trend"><span class="idx">01</span><h2>이 달의 장르 트렌드</h2><span class="rule"></span></div>
+  <p class="sub-lead">개별 사건이 아니라 <b>9월 내내 여러 게임에서 반복된 흐름</b>만 골랐습니다.</p>
+
+  <article class="risk high">
+    <div class="lvl">트렌드 01 · 제재 신뢰</div>
+    <h3>델타포스와 PUBG 대회에서 제재 판정 근거를 묻는 이용자 불신이 9월에 반복됐습니다.</h3>
+    <div class="row"><span class="k">무슨 일이</span><span>9/1 델타포스 허브에 이용자가 밴 사례를 모은 글이 처음 보였습니다. 9/3에는 치트를 만들어 판 30명 넘는 사람의 신병이 확보됐다고 알렸습니다. 같은 날 가장 많은 댓글이 달린 글은 오탐 밴 목록으로 <b>132개</b>였습니다.<span class="lb"></span>9/7에는 마블 라이벌즈에서도 증거를 보여 달라는 항의가 나왔습니다. 델타포스 인기 가이드 1위는 치트 쓰는 법 문서였습니다. <b>이용자 평가는 236개</b>입니다.</span></div>
+    <div class="row"><span class="k">어떻게 전개됐나</span><span>9/2 인벤 오버워치 자유게시판에도 비슷한 연재글이 올랐습니다. 제재 불신 글은 하루 <b>4건</b>이었습니다. 9/4에는 오탐 밴 목록의 댓글이 <b>142개</b>로 늘었습니다. 밴이 풀렸는데 리더보드 제한은 남았다는 호소가 이어졌습니다.<span class="lb"></span>제재·신뢰 문제는 9/7부터 나흘 연속 HIGH 리스크였습니다.<span class="lb"></span>9/20 PUBG 아시아 스타즈는 남은 경기를 접었고 한국 선수 8명은 불참했습니다. 크래프톤은 9/21 밤 사과문을 올렸습니다. 9/23에는 방송을 보며 뛴 베트남 참가자 2명이 영구 제재를 받았습니다.</span></div>
+    <div class="lesson"><span class="k">무엇을 시사하나</span>회사가 내놓은 답은 신병이 확보된 사람 수에 그쳤습니다. 이용자가 요구한 것은 <b>판정 근거</b>였습니다. PUBG 대회에서도 사전 기준이 없던 점이 사과 대상이 됐습니다.<span class="lb"></span>제재 공지에는 판단 근거와 이의 제기 경로를 <b>한 화면</b>에 적어야 합니다.</div>
+  </article>
+
+  <article class="risk">
+    <div class="lvl">트렌드 02 · 넥슨 오버워치</div>
+    <h3>넥슨 이관 뒤 오버워치는 이벤트로 점유율을 얻었으나 이용자 마찰은 게시판에만 남았습니다.</h3>
+    <div class="row"><span class="k">무슨 일이</span><span>8/29 PC방 점유율은 <b>9.07%</b>로 3위였고 전날보다 3.46%포인트 올랐습니다. 직전 주 평균은 5.53%로 6위에 머물렀습니다.<span class="lb"></span>9/2 첫 평일 자유게시판 1위는 매칭 불만이었고 조회 1,994회였습니다. 9/4에는 접속 실패 호소가 사흘 사이 3번 올랐습니다.<span class="lb"></span>9/5 팀 드라이브가 열리자 게시판 50글 중 <b>20글</b>을 채웠습니다. 9/8 이벤트가 끝나자 점유는 20건에서 8건으로 줄었습니다.</span></div>
+    <div class="row"><span class="k">어떻게 전개됐나</span><span>9/9 미드시즌 패치가 게시판 글 21건을 만들었습니다. 9/13 독트린 공개는 49건 중 27건이었습니다. 9/15 신화 바우처를 안 쓰면 프리즘 50개를 준다는 오해가 퍼졌습니다. 이용자 정정 글을 읽은 횟수가 178회에서 848회로 늘었습니다. 이어 올라온 두 번째 글은 1,110회였고 조회와 추천은 9월 30일 기준입니다.<span class="lb"></span>9/18 불만은 과금 811회, 핵 658회, 차별 319회 세 갈래로 갈렸습니다. 9/22~9/27에는 탱커, 성능·매칭, 침공 할인 제외 764회로 주제가 날마다 바뀌었습니다. 그룹 큐 불만은 9/26 하루 6건이었습니다. 분리 요구는 9/27에 5건 올랐고 추천 최다는 7개였습니다.</span></div>
+    <div class="lesson"><span class="k">무엇을 시사하나</span>이벤트가 데려온 사람은 점유율에 잡히고 그가 겪은 마찰은 <b>게시판에만 남습니다</b>. 불만 주제는 매일 바뀌어 하나씩 답해서는 따라가지 못합니다.<span class="lb"></span>그룹 큐 이야기가 9/26 불평에서 9/27 분리 요구로 옮겨 갔습니다. 개별 불만보다 <b>대기열 구조</b>에 먼저 답하는 공지를 내야 합니다.</div>
+  </article>
+
+  <article class="risk">
+    <div class="lvl">트렌드 03 · 국내 신작</div>
+    <h3>국내 신작은 공개 시점에 전용 게시판이 없거나, 있어도 이야기가 붙지 않았습니다.</h3>
+    <div class="row"><span class="k">무슨 일이</span><span>스페셜포스 리마스터는 8/29 이후 루리웹 신설 목록에 이름이 없었습니다.<span class="lb"></span>워독스는 9/18 전용 게시판이 있어도 평점 <b>0점</b>, 답글 0개였습니다.<span class="lb"></span>VCT 퍼시픽 파이널 부산에는 국내 반응이 붙지 않았습니다.<span class="lb"></span>에이스 컴뱃 8도 10/1 루리웹 신설 목록에 전용 게시판이 없었습니다.<span class="lb"></span>공개 시점에 이용자가 모일 자리가 비어 있었습니다.</span></div>
+    <div class="row"><span class="k">어떻게 전개됐나</span><span>스페셜포스는 9/6에 10일째, 9/15에 17일째 목록에 없었습니다.<span class="lb"></span>9/16 사전예약이 <b>10만 명</b>으로 닫혔습니다.<span class="lb"></span>9/17 출시 첫날 알려진 문제 5건이 공지됐습니다.<span class="lb"></span>9/19에 21일째, 10/1에는 <b>33일째</b>까지 이어졌습니다.<span class="lb"></span>스팀 평가는 9/17~18 344개 중 <b>22%</b>, 9/30 427개 중 <b>26%</b>입니다.<span class="lb"></span>9/6 우승 글 댓글은 1개, 같은 목록의 디아블로2 확장팩 루머 글은 <b>35개</b>였습니다.</span></div>
+    <div class="lesson"><span class="k">무엇을 시사하나</span>루리웹 뉴스의 에이스 컴뱃 8 리뷰 번역 글은 조회 <b>10,885회</b>, 댓글 8개였습니다.<span class="lb"></span>워독스는 스팀에서 63%를 받던 시기에도 국내 게시판 답글이 하나도 없었습니다.<span class="lb"></span>노출이 아무리 많아도 대화를 만들지는 못합니다.<span class="lb"></span>공개 시점에 이용자가 모일 자리를 <b>먼저 열어야</b> 합니다.</div>
+  </article>
+
+  <article class="risk">
+    <div class="lvl">트렌드 04 · 출시 직후 결함</div>
+    <h3>출시와 판올림 직후 실행 불가와 충돌 같은 결함 신고가 커뮤니티 여론을 채웠습니다.</h3>
+    <div class="row"><span class="k">무슨 일이</span><span>델타포스는 9/4 첫날 실행 불가 문의가 최근 15건 중 <b>9건</b>이었습니다.<span class="lb"></span>워독스는 9/23 윈도우 업데이트 KB5124010 충돌을 알렸습니다.<span class="lb"></span>배틀필드 6은 9/18 프레임 저하 신고 댓글이 <b>711개</b>였습니다.<span class="lb"></span>에이스 컴뱃 8은 9/30 충돌과 HOTAS 인식 제한을 공지로 인정했습니다.<span class="lb"></span>성과 소식 옆에서 결함 신고가 여론을 채웠습니다.</span></div>
+    <div class="row"><span class="k">어떻게 전개됐나</span><span>델타포스는 9/7 런처가 93%에서 멈춘다는 호소가 댓글 <b>17개</b>로 1위였습니다.<span class="lb"></span>그동안에도 마감 날짜는 줄지 않고 그대로 흘러갔습니다.<span class="lb"></span>배틀필드 6은 9/17 13건 중 <b>6건</b>이 오류 신고였습니다.<span class="lb"></span>운영진은 9/14부터 고정글을 올리거나 고쳤고 9/25에도 갱신했습니다.<span class="lb"></span>9/30 패치 노트에는 끊김 수정이 없습니다.<span class="lb"></span>워독스는 9/26 오류 답글이 <b>2,220번째</b>였습니다. 9/27 기사는 300만 장 판매를 전했습니다.</span></div>
+    <div class="lesson"><span class="k">무엇을 시사하나</span>배틀필드 6 고정글은 10/1 답글 <b>753개</b>, 토론 활성 <b>1,496건</b>입니다.<span class="lb"></span>운영진이 문서를 갱신해도 불만은 계속 쌓였습니다.<span class="lb"></span>에이스 컴뱃 8 구매 만류 글에는 답글 183개가 달렸습니다.<span class="lb"></span>성과 소식에 오류 경과를 붙이고 알려진 문제 문서를 <b>신고 속도에 맞춰</b> 갱신해야 합니다.</div>
+  </article>
+
+  <!-- 02 -->
+  <div class="sec" id="pattern"><span class="idx">02</span><h2>반복된 실패·성공 패턴</h2><span class="rule"></span></div>
+  <p class="sub-lead">9월에 <b>두 번 이상 관찰된 운영 패턴</b>만 추려 우리 교훈으로 정리했습니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>패턴</th><th>9월 관찰 사례</th><th>왜 그렇게 됐나</th><th>우리 운영 규칙으로 옮기면</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="tag t-risk">실패 A</span><br><b>결과 수만 알리고 판정 근거는 밝히지 않음</b></td>
+        <td>9/3 델타포스는 치트를 만들어 판 <b>30명</b>이 붙잡혔다고 알렸습니다. 허브 댓글 1위는 오탐 밴 목록 <b>132개</b>, 다음 날 <b>142개</b>였습니다. 신뢰 문제는 9/7부터 9/10까지 나흘 연속 HIGH였습니다. 9/23 PUBG 아시아 스타즈 영구 제재도 사전 기준 부재로 사과받았습니다.</td>
+        <td>회사가 내놓은 것은 <b>30명</b> 넘게 붙잡혔다는 결과였습니다. 이용자는 무엇을 보고 판정했는지 밝히라고 요구했습니다. 알리기만 하는 동안 반대편 문서가 목록 위쪽을 지켰습니다.</td>
+        <td>제재 공지에는 무엇을 보고 판단했는지 먼저 적습니다. 이의를 접수하는 창구 위치도 같은 화면에 둡니다. 제재를 풀 때는 남아 있는 조치까지 한꺼번에 풉니다.</td>
+      </tr>
+      <tr>
+        <td><span class="tag t-risk">실패 B</span><br><b>이벤트 사이 빈 날에 아무것도 두지 않음</b></td>
+        <td>9/7 팀 드라이브가 인벤 오버워치 50글 중 <b>20글</b>을 채웠습니다. 9/8 이벤트가 끝나자 같은 목록의 글이 <b>8건</b>으로 줄었습니다. PC방 2주차는 9/6에 마무리됐고 다음 추첨은 9/12라 5일이 비었습니다. 9/9 패치가 21건, 9/13 독트린 공개가 49건 중 27건이었습니다.</td>
+        <td>게시판 활기가 운영 일정에 그대로 끌려다녔습니다. 행사나 패치가 비는 날에는 새 화제도 멈췄습니다. 이벤트와 이벤트 사이를 채울 글은 따로 준비하지 않았습니다.</td>
+        <td>이벤트가 끝난 이튿날 아침에 올릴 글을 미리 만들어 둡니다. 다음 일정까지 며칠 남았는지 같은 게시물에 적습니다. 행사 사이에 화제가 끊기지 않게 하기 위해서입니다.</td>
+      </tr>
+      <tr>
+        <td><span class="tag t-risk">실패 C</span><br><b>신작과 재출시에 모일 자리를 만들지 않음</b></td>
+        <td>스페셜포스 리마스터는 10/1 기준 33일째 루리웹 신설 목록에 없습니다. 스팀 평가는 344개 중 <b>22%</b>에서 427개 중 <b>26%</b>로 올랐습니다. 워독스는 루리웹 전용 게시판이 있어도 평점이 0점이었습니다. VCT 부산 우승 소식 글에 달린 댓글은 1개였습니다.</td>
+        <td>기사 노출은 있었지만 이야기할 자리가 없었습니다. 읽은 사람이 의견을 남길 곳이 마땅치 않았습니다. 기사가 많이 보여도 대화는 저절로 이어지지 못합니다.</td>
+        <td>신작이나 재출시를 공개하는 시점에 국내 게시판과 카페를 먼저 엽니다. 출시 첫 주에는 실플레이 반응을 모아서 봅니다. 기사가 얼마나 보였는지는 별도 표에 적습니다.</td>
+      </tr>
+      <tr>
+        <td><span class="tag t-warn">실패 D</span><br><b>예외 조건과 날짜를 뒤에 적거나 다르게 적음</b></td>
+        <td>9/15 밤 신화 바우처를 안 쓰면 프리즘 50개를 준다는 오해가 퍼졌습니다. 이용자 정정 글 조회가 <b>178회에서 848회</b>로 늘었습니다. 에이스 컴뱃 8 출시일은 10/1과 10/2 두 가지였습니다. 배틀필드 6 Deep Six는 종료가 9/29 또는 10/12로 적혔습니다.</td>
+        <td>예외 조건이 안내 아래쪽에 적혔습니다. 출시 날짜에는 기종과 지역 시차가 반영되지 않았습니다. 그 빈자리를 이용자가 먼저 고쳐 쓰는 일이 생겼습니다.</td>
+        <td>예외 조건은 첫 줄에 대상 조건과 함께 적습니다. 일정 안내에는 기종과 지역별 날짜를 나란히 놓습니다. 에이스 컴뱃 8이라면 스팀 영어 상점과 한국어 상점 출시일을 같은 줄에 둡니다.</td>
+      </tr>
+      <tr>
+        <td><span class="tag t-good">성공 A</span><br><b>고정글을 꾸준히 손보며 갱신일을 보여 줌</b></td>
+        <td>배틀필드 6 운영진은 9/14·9/18·9/25에 고정글을 손봤습니다. 9/16에는 알려진 문제 안내도 새로 올렸습니다. 9/2 델타포스의 사전등록 보상 9일 분할은 호평을 받았습니다. 다만 배틀필드 6 프레임 저하 신고 답글은 9/18 <b>711개</b>에서 10/1 <b>753개</b>로 늘었습니다.</td>
+        <td>고정글에 갱신 날짜가 보이면 이용자가 운영진의 움직임을 직접 확인합니다. 그러나 수정만으로 결함이 풀리지는 않았습니다. 프레임 저하 신고 답글이 늘어난 점이 이를 보여 줍니다.</td>
+        <td>고정글에는 마지막 갱신일을 빠짐없이 적습니다. 결함마다 해결됐는지 여부를 한 줄씩 덧붙입니다. 고쳤는데도 답글이 늘면 다음 갱신 예정일을 밝힙니다. 배틀필드 6 프레임 저하 신고가 이런 경우였습니다.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 03 -->
+  <div class="sec" id="games"><span class="idx">03</span><h2>게임별 한 달 요약</h2><span class="rule"></span></div>
+  <p class="sub-lead">9월 한 달(9/1–9/30) 동안의 궤적과 월말 상태입니다. ↑ 개선 · ↓ 악화 · → 유지 · ↕ 분리.</p>
+  <div class="evkey"><b>근거 표기</b><span><span class="ev kr">KR·기사</span><span class="d">국내 매체가 전한 여론</span></span><span><span class="ev gl">글로벌·기사</span><span class="d">해외 매체가 전한 여론</span></span><span><span class="ev cm">커뮤니티</span><span class="d">원문 글을 직접 확인</span></span><span><span class="ev of">공식</span><span class="d">공식 공지가 근거(여론 아님)</span></span><span><span class="ev mt">지표</span><span class="d">동접·평점 등 수치</span></span><span><span class="ev na">국내 반응 미확인</span><span class="d">국내 소스에서 확인 못 함</span></span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>9월 궤적</th><th>월말 상태</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="OW" data-name="OVERWATCH 2"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2357570/26446ff05a359d4942e277f82fd347e89b275be3/header.jpg?t=1786471282" alt=""></span><span class="g-name">오버워치<em>넥슨 국내 서비스</em></span></div></td>
+        <td>8/29 PC방 점유율 <b>9.07%</b>로 3위였습니다. 9/2 매칭 불만 게시물은 <b>1,994회</b> 읽혔습니다. 9/13 독트린 공개 글이 인벤 최다 조회 <b>2,358회</b>였습니다. 9/18 불만이 과금 811회, 핵 658회, 차별 319회로 갈렸습니다. 9/22~27 탱커, 성능, 할인 제외, 그룹 큐 분리로 주제가 바뀌었습니다.</td>
+        <td><span class="tag t-risk">↕ 상승 뒤 마찰</span> 9/30 인벤에서 PC방 점유율 1%대라는 글이 <b>553회</b> 읽혔습니다. 작성자 본인의 주장이며 아직 확인되지 않았습니다. 트롤 패작 제재를 묻는 글도 올랐고 5시즌은 10/7입니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="DF" data-name="DELTA FORCE"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2507950/cea88d74c3fd2cd872e83dab8be8b7557ae9dc48/header.jpg?t=1786330120" alt=""></span><span class="g-name">델타포스<em>제재 설명과 실행 오류</em></span></div></td>
+        <td>9/2 사전등록 보상을 9일에 나눠 주는 방식이 호평받았습니다. 9/3 치트를 만들어 판 30명 넘게 붙잡혔다고 알렸습니다. 같은 날 오탐 밴 목록 댓글이 <b>132개</b>였다가 다음 날 <b>142개</b>가 됐습니다. 9/4 Home Stretch 첫날 실행 불가 문의가 <b>15건 중 9건</b>을 차지했습니다. 9/7 런처 93% 멈춤 글이 댓글 17개로 1위였습니다.</td>
+        <td><span class="tag t-risk">↓ 악화</span> 9/8 2주년 시즌 뒤 일간에는 별도 수치가 없습니다. 그래서 이후 상황은 확인하지 못했습니다. 설명과 실행 오류가 한 달의 쟁점이었습니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt=""></span><span class="g-name">배틀필드 6<em>끊김과 고정글</em></span></div></td>
+        <td>9/14 랭크 대기 불만이 <b>3건</b> 올라왔습니다. 9/16 상위 12건 중 <b>6건</b>, 9/17 13건 중 <b>6건</b>이 오류 신고였습니다. 9/18 프레임 저하를 알리는 글에 댓글 <b>711개</b>가 달렸습니다. 9/22 무료 체험이 끝났고 9/25 공식 고정글이 갱신됐습니다. 9/30 패치 1.000.032 노트에 메뉴, 무한 로딩, 관전 충돌 수정은 있고 끊김은 없습니다.</td>
+        <td><span class="tag t-warn">→ 정체</span> 10/1 끊김을 다룬 글에 답글 <b>753개</b>가 달렸습니다. 토론 활성은 <b>1,496건</b>이었습니다. 빈 로비를 말하는 글도 올랐습니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt=""></span><span class="g-name">워독스<em>판매와 오류의 동시 진행</em></span></div></td>
+        <td>9/10 앞서 해보기가 시작됐고 9/13 최고 동시 접속 <b>40만 명</b>이 공지됐습니다. 9/15 판매 <b>200만 장</b>이라는 소식이 알려졌습니다. 9/18 토론 <b>1,935건</b>이 배틀필드 6의 <b>1,786건</b>을 넘었습니다. 9/19 패치 0.11이 나왔고 9/23 윈도우 업데이트 KB5124010 충돌 고정글이 올라왔습니다. 9/26 오류 게시물의 답글이 2,220번째에 닿았고 9/27에 판매 <b>300만 장</b> 기사가 실렸습니다.</td>
+        <td><span class="tag t-live">↕ 분리</span> 10/1 한국어 평가 <b>916개</b> 중 <b>61%</b>입니다. 패치 0.1.2 고정글에는 답글이 218개 달렸습니다. 시즌 02는 10/15입니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="MR" data-name="MARVEL RIVALS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/088fc787d8513a6f9782d03968e5ac1a01840087/header.jpg?t=1789119923" alt=""></span><span class="g-name">마블 라이벌즈<em>시즌 10</em></span></div></td>
+        <td>9/3 업데이트는 스킨 번들 세 종이 전부였습니다. 9/7 토론 상위 네 글 중 두 글이 제재 근거를 요구했습니다. 9/11 새 영웅 고르와 함께 시즌 10이 열렸습니다. 9/16~18 활성 토론이 <b>677건</b>에서 <b>667건</b>으로 줄었고 상위 10건 중 5건이 밸런스 불만이나 기술 결함이었습니다. 9/25 새 전장 God Quarry가 나왔습니다.</td>
+        <td><span class="tag t-warn">→ 유지</span> 9월 말 일간에서 새로 확인한 별도 수치는 없습니다. 10/2 루나 스노·피닉스 스킨이 로드맵에 잡혀 있습니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev gl">글로벌·기사</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="SF" data-name="SPECIAL FORCE REMASTERED"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4261320/9e7c779e80c58f935dd12378d48b7e3028135c61/header.jpg?t=1789582060" alt=""></span><span class="g-name">스페셜포스 리마스터<em>국내 정식 서비스</em></span></div></td>
+        <td>9/16 사전예약이 <b>10만 명</b>으로 마감됐습니다. 9/17 출시했고 첫날 알려진 문제 <b>5건</b>을 공지했습니다. 9/18 스팀 평가는 <b>344개</b> 중 <b>22%</b> 그대로였고 상점 분류도 앞서 해보기였습니다. 9/19 스페셜포스는 루리웹 신설 목록 밖에 21일째 머물렀습니다. 9/30 스팀 한국어 평가는 <b>427개</b> 중 <b>26%</b>였습니다.</td>
+        <td><span class="tag t-risk">↓ 악화</span> 10/1 기준 스페셜포스는 루리웹 신설 목록 밖에서 <b>33일째</b> 머뭅니다. 기사 노출은 있었지만 이용자가 모일 자리가 없습니다.</td>
+        <td><span class="ev of">공식</span><span class="ev mt">지표</span><span class="ev na">국내 반응 미확인</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="PUBG" data-name="PUBG: BATTLEGROUNDS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1786493086" alt=""></span><span class="g-name">배틀그라운드<em>아시아 스타즈 사고</em></span></div></td>
+        <td>9/20 PUBG 아시아 스타즈 남은 경기가 중단돼 한국 선수 <b>8명</b>이 불참했습니다. 9/21 밤 크래프톤이 사과문을 냈습니다. 9/23 방송을 보며 뛴 베트남 선수 <b>2명</b>이 영구 제재를 받았습니다. 루리웹 사과 글 추천은 <b>248개</b>입니다. 9/30에 읽은 인벤 "옆동네 배그 논란 결말"은 조회 <b>868회</b>였습니다.</td>
+        <td><span class="tag t-live">→ 진정</span> 9/29 아시안게임 모바일 결선에서 한국이 <b>71점</b>으로 6위에 올랐습니다. 주술회전 협업이 10/11까지 진행됩니다. 인벤과 아카라이브의 배틀그라운드 게시판은 열지 못했습니다.</td>
+        <td><span class="ev kr">KR·기사</span><span class="ev cm">커뮤니티</span><span class="ev na">국내 반응 미확인</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="VAL" data-name="VALORANT"><img src="../../assets/thumbs/valorant.jpg" alt=""></span><span class="g-name">발로란트<em>VCT 퍼시픽·챔피언스</em></span></div></td>
+        <td>9/1 아카라이브 채널 최다 조회 글은 "탈주하겠다"였습니다. 9/6 퍼시픽 파이널에서 Global Esports가 농심 레드포스를 <b>3 대 2</b>로 꺾었습니다. 루리웹 우승 소식 글 댓글은 <b>1개</b>였습니다. 9/22 13.06 패치로 요원 장비 체계가 개편됐습니다. 9/25 농심 레드포스, 9/27 T1이 챔피언스 상하이에서 <b>0 대 2</b>로 졌습니다.</td>
+        <td><span class="tag t-live">↕ 분리</span> 9/29 Paper Rex가 G2를 2 대 1로 꺾었습니다. 플레이오프는 10/7부터 10/18까지입니다. 국내 커뮤니티 반응은 월말에도 찾지 못했습니다.</td>
+        <td><span class="ev gl">글로벌·기사</span><span class="ev cm">커뮤니티</span><span class="ev na">국내 반응 미확인</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 04 -->
+  <div class="sec" id="launch"><span class="idx">04</span><h2>이 달의 신작 출시·발표 결산</h2><span class="rule"></span></div>
+  <p class="sub-lead">9월 일간 리포트의 신작 표에 오른 이름을 한 달 단위로 묶었습니다. <b>출시 5종, 선행 접속 1종, 발표 4건</b>이며 흥행과 부진은 스팀 평가와 국내 모일 자리로 가렸습니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>상태 · 날짜</th><th>9월 결과</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126" alt=""></span><span class="g-name">워독스 (WARDOGS)<em>앞서 해보기</em></span></div></td>
+        <td><span class="tag t-good">출시</span> 9/10</td>
+        <td>판매 <b>300만 장</b> 기사(9/27)와 최고 동시 접속 <b>40만 명</b> 공지(9/13)가 나왔습니다. 스팀 한국어 평가는 916개 중 61%이고 루리웹 평점은 0점이었습니다.</td>
+        <td><span class="ev mt">지표</span><span class="ev gl">글로벌·기사</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="SF" data-name="SPECIAL FORCE REMASTERED"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4261320/9e7c779e80c58f935dd12378d48b7e3028135c61/header.jpg?t=1789582060" alt=""></span><span class="g-name">스페셜포스 리마스터<em>국내 정식 서비스</em></span></div></td>
+        <td><span class="tag t-risk">출시</span> 9/17</td>
+        <td>스팀 평가는 <b>427개 중 26%</b>입니다. 사전예약은 10만 명이었고 루리웹 신설 목록 밖 기간은 10/1 기준 33일째입니다.</td>
+        <td><span class="ev of">공식</span><span class="ev mt">지표</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="SIN" data-name="SIN: RELOADED"></span><span class="g-name">SiN: Reloaded<em>1998년 원작 리마스터</em></span></div></td>
+        <td><span class="tag t-good">출시</span> 9/24</td>
+        <td>스팀 평가 85개 중 92%(9/30 값)이고 콘솔과 동시에 나왔습니다.</td>
+        <td><span class="ev mt">지표</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="AB" data-name="ALIEN BREED"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4870460/03a8113754074a9e82b9a05caf5de5e6d73bfe8c/header.jpg?t=1789648174" alt=""></span><span class="g-name">Alien Breed 35th Anniversary<em>고전 6종 컬렉션</em></span></div></td>
+        <td><span class="tag t-live">출시</span> 9/24</td>
+        <td>스팀 평가 48개 중 85%(9/29 일간)입니다. 소개 할인 20%는 10/1까지입니다.</td>
+        <td><span class="ev mt">지표</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="WF" data-name="WARFRAME"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg?t=1790176468" alt=""></span><span class="g-name">워프레임: 나린의 얼음검<em>전 플랫폼 동시</em></span></div></td>
+        <td><span class="tag t-live">출시</span> 9/24</td>
+        <td>무료 밴쉬 배포가 10/7까지 이어집니다. 얼음 협동 모드도 같은 날 열렸습니다.</td>
+        <td><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb" data-mono="AC8" data-name="ACE COMBAT 8"><img src="https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg" alt=""></span><span class="g-name">에이스 컴뱃 8: 시브의 날개<em>디럭스 선행 9/28</em></span></div></td>
+        <td><span class="tag t-warn">선행·출시 직전</span> 스팀 10/1 · 한국어 상점 10/2</td>
+        <td>메타크리틱 87점, 스팀 평가는 처음 24시간 약 66%에서 9/30 76%로 올랐습니다. 10/1 한국어 상점 전체 평가는 3,543개 중 74%입니다. 반다이 남코는 9/30 충돌을 공지로 인정했습니다.</td>
+        <td><span class="ev mt">지표</span><span class="ev cm">커뮤니티</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="BC" data-name="블리즈컨 2026"></span><span class="g-name">블리즈컨 2026<em>오버워치 54번째 영웅</em></span></div></td>
+        <td><span class="tag t-live">발표</span> 9/13</td>
+        <td>독트린이 공개됐고 인벤 최다 조회는 2,358회였습니다. 정식 합류는 10/7입니다.</td>
+        <td><span class="ev cm">커뮤니티</span><span class="ev of">공식</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="TGS" data-name="도쿄게임쇼 · PC Gaming Show"></span><span class="g-name">도쿄게임쇼 · PC Gaming Show<em>9/17~21 · 9/20</em></span></div></td>
+        <td><span class="tag t-live">발표</span> 9/17~21</td>
+        <td>도쿄게임쇼 Xbox 쇼케이스의 새 슈터 발표는 <b>0건</b>이었습니다. PC Gaming Show Tokyo Direct는 36개 가운데 월드 프리미어가 13건이고 슈터는 Mycopunk 1.0이었습니다.</td>
+        <td><span class="ev gl">글로벌·기사</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="ARC" data-name="아크 레이더스 PvE 시험"></span><span class="g-name">아크 레이더스 PvE 시험<em>10/13~10/20</em></span></div></td>
+        <td><span class="tag t-live">발표</span> 9/25</td>
+        <td>협동 37%, 혼합 27%, 순수 PvP 34% 설문과 전용 PvE 관심 51%가 전해졌습니다. 10/1 최근 30일 평가는 2,451개 중 52%입니다.</td>
+        <td><span class="ev of">공식</span><span class="ev mt">지표</span></td>
+      </tr>
+      <tr>
+        <td><div class="g-cell"><span class="thumb noimg" data-mono="APEX" data-name="에이펙스 × 스트리트 파이터 6"></span><span class="g-name">에이펙스 × 스트리트 파이터 6<em>9/22~10/13</em></span></div></td>
+        <td><span class="tag t-live">발표</span> 9/22</td>
+        <td>스킨 8종과 와일드카드 모드가 나왔습니다. 개막일이 9/22와 9/23으로 갈려 적혔고 국내 반응은 확인하지 못했습니다.</td>
+        <td><span class="ev gl">글로벌·기사</span><span class="ev na">국내 반응 미확인</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <!-- 05 -->
+  <div class="sec" id="next"><span class="idx">05</span><h2>다음 달 주요 일정</h2><span class="rule"></span></div>
+  <p class="sub-lead">10월에 마감·시작·전환되는 일정입니다. <b>국내 일정은 굵게</b> 적었습니다.</p>
+  <div class="timeline">
+    <h3>10월 일정 19건</h3>
+    <ol class="tl">
+      <li><span class="d">10.01 목</span><span class="s start">출시</span><span class="t"><b>에이스 컴뱃 8</b> 스팀 정식 출시<span class="win">한국어 상점은 10/2</span></span></li>
+      <li><span class="d">10.01 목</span><span class="s start">해제</span><span class="t"><b>기어스 오브 워: 이데이</b> 리뷰 금지 해제<span class="win">미 동부 오전 9시</span></span></li>
+      <li><span class="d">10.02 금</span><span class="s start">출시</span><span class="t"><b>에이스 컴뱃 8</b> 일본·한국어판 콘솔<span class="win">시차 하루</span></span></li>
+      <li><span class="d">10.02 금</span><span class="s start">선행</span><span class="t"><b>기어스 오브 워: 이데이</b> 프리미엄 선행<span class="win">미 동부 10/1 11시</span></span></li>
+      <li><span class="d">10.03 토</span><span class="s start">시작</span><span class="t"><b>서든어택 e스포츠 예선</b><span class="win">개막 10/24</span></span></li>
+      <li><span class="d">10.03 토</span><span class="s end">종료</span><span class="t"><b>블리즈컨 신화 바우처</b> 마감<span class="win">교환 목록 확인</span></span></li>
+      <li><span class="d">10.06 화</span><span class="s start">출시</span><span class="t"><b>기어스 오브 워: 이데이</b> 정식 출시<span class="win">게임패스 1일차</span></span></li>
+      <li><span class="d">10.06 화</span><span class="s end">종료</span><span class="t"><b>오버워치 금고털이</b> 종료<span class="win">종료 23:59</span></span></li>
+      <li><span class="d">10.07 수</span><span class="s start">시작</span><span class="t"><b>오버워치 2026: 5시즌</b>과 독트린 정식 합류<span class="win">솜브라 지원 전환</span></span></li>
+      <li><span class="d">10.07 수</span><span class="s start">시작</span><span class="t"><b>VCT 챔피언스 플레이오프</b><span class="win">결승 10/18</span></span></li>
+      <li><span class="d">10.08 목</span><span class="s end">종료</span><span class="t"><b>서든어택 한가위 행사</b> 종료<span class="win">2주 열림</span></span></li>
+      <li><span class="d">10.09 금</span><span class="s end">종료</span><span class="t"><b>마블 라이벌즈 시즌 10</b> 마감<span class="win">시즌 11 대기</span></span></li>
+      <li><span class="d">10.11 일</span><span class="s end">종료</span><span class="t"><b>배틀그라운드 주술회전 협업</b> 종료<span class="win">일간 26일 판 기준</span></span></li>
+      <li><span class="d">10.12 월</span><span class="s end">종료</span><span class="t"><b>배틀필드 6 Deep Six</b> 종료<span class="win">일간 판마다 날짜가 갈림</span></span></li>
+      <li><span class="d">10.13 화</span><span class="s start">시작</span><span class="t"><b>아크 레이더스 PvE 전용 베타</b><span class="win">~10/20</span></span></li>
+      <li><span class="d">10.15 목</span><span class="s start">시작</span><span class="t"><b>워독스 시즌 02</b><span class="win">9/22 예고</span></span></li>
+      <li><span class="d">10.20 화</span><span class="s start">출시</span><span class="t"><b>Mycopunk 1.0</b> 정식판<span class="win">PC · PS5 동시</span></span></li>
+      <li><span class="d">10.22 목</span><span class="s end">종료</span><span class="t"><b>오버워치 출석체크</b>와 <b>서든어택 브레드 스킨</b> 마감<span class="win">오전 10시</span></span></li>
+      <li><span class="d">10.24 토</span><span class="s start">시작</span><span class="t"><b>서든어택 e스포츠</b> 개막<span class="win">예선 10/3</span></span></li>
+    </ol>
+  </div>
+
+  <!-- 06 -->
+  <div class="sec" id="action"><span class="idx">06</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
+  <p class="sub-lead">9월 관찰에서 나온, <b>월 단위 기획에 바로 넣을 수 있는</b> 세 가지입니다.</p>
+  <article class="act">
+    <div class="num">1</div>
+    <div><h3>제재 공지가 오탐 밴 목록 글에 밀렸고 제재 신뢰 문제가 나흘 연속 이어졌습니다.</h3>
+      <p>9/3 델타포스는 치트를 만들어 판 <b>30명</b>이 붙잡혔다고 알렸습니다. 같은 날 허브 댓글 1위는 오탐 밴 목록 글이었고 <b>132개</b>가 달렸습니다. 이튿날에는 그 수가 <b>142개</b>로 불었습니다. 9/7부터 9/10까지 허브의 신뢰 문제가 나흘 연속 HIGH였습니다. 9/23 PUBG 아시아 스타즈 대회에서 영구 제재가 나왔습니다. 이 대회는 사전 기준이 없었던 점이 사과 대상이 됐습니다.<span class="lb"></span><b>①</b> 제재 공지 서식에 판단 근거를 한 줄이라도 고정으로 넣습니다.<span class="lb"></span><b>②</b> 이의 제기 경로를 같은 화면에 적습니다.<span class="lb"></span><b>③</b> 제재를 풀 때 리더보드 제한처럼 남은 조치도 함께 풉니다.</p>
+    </div>
+  </article>
+  <article class="act">
+    <div class="num">2</div>
+    <div><h3>스페셜포스 리마스터는 신설 목록에 33일째 없고 VCT 부산 우승 글 댓글은 1개였습니다.</h3>
+      <p>스페셜포스 리마스터는 8/29 이후 루리웹 신설 게시판 목록에 이름이 없습니다. 10/1 기준으로 벌써 <b>33일째</b>입니다. 스페셜포스 스팀 평가는 <b>427개</b> 중 <b>26%</b>입니다. 워독스는 루리웹 전용 게시판이 있는데도 평점이 0점이었습니다. 워독스 한국어 평가는 <b>916개</b> 중 <b>61%</b>입니다. VCT 부산 우승 소식 글에 달린 댓글은 <b>1개</b>였습니다.<span class="lb"></span><b>①</b> 신작과 재출시는 공개일에 맞춰 국내 게시판과 카페를 먼저 열어 둡니다.<span class="lb"></span><b>②</b> 출시 첫 주에는 기사 노출 말고 실제 플레이 반응을 따로 모읍니다.<span class="lb"></span><b>③</b> 해외 흥행작은 국내 한국어 평가를 주 단위로 나눠 보고합니다.</p>
+    </div>
+  </article>
+  <article class="act">
+    <div class="num">3</div>
+    <div><h3>에이스 컴뱃 8 출시일이 영어 상점과 한국어 안내에서 하루 어긋났고 오해가 번졌습니다.</h3>
+      <p>에이스 컴뱃 8은 스팀 상점 영어 표기가 <b>10/1</b>로 적혀 있습니다. 한국어 상점과 공식 안내는 하루 뒤인 <b>10/2</b>입니다. 에이펙스 협업 개막은 9/22와 9/23으로 나뉘어 적혔습니다. 배틀필드 6 Deep Six 종료는 9/29와 10/12로 갈렸습니다. 일간 판마다 같은 날짜 어긋남이 이어졌습니다. 신화 바우처 예외 조건 오해는 이용자 정정 글 조회 <b>1,110회</b>로 번졌습니다.<span class="lb"></span><b>①</b> 출시 안내에 기종과 지역별 날짜를 표로 함께 병기합니다.<span class="lb"></span><b>②</b> 신화 바우처 등 예외 조건은 맨 앞 첫 줄에 적습니다.<span class="lb"></span><b>③</b> 날짜를 고치면 고친 사유를 같은 글에 남깁니다.</p>
+    </div>
+  </article>
+
+  <!-- 07 -->
+  <div class="sec" id="digest"><span class="idx">07</span><h2>주차별 다이제스트</h2><span class="rule"></span></div>
+  <p class="sub-lead">9월 일간 리포트 <b>30건(No.54–No.83)</b>을 ISO 주차로 묶었습니다. 주간 리포트가 있는 주차에는 링크가 걸려 있습니다.</p>
+  <div class="timeline">
+    <h3>2026-W36 – 2026-W40</h3>
+    <ol class="tl">
+      <li><span class="d">W36</span><span class="s due">No.54–59</span><span class="t"><b>델타포스 소식은 오탐 밴 목록 글에 밀렸습니다.</b> 댓글이 132개에서 142개로 늘었습니다. 넥슨 오버워치 PC방 3위 뒤 매칭 불만 조회는 1,994회였습니다.<span class="win">9/1–9/6 · <a href="../weekly/FPS레이더_주간_2026-W36.html" target="_blank" rel="noopener">주간 리포트 보기</a></span></span></li>
+      <li><span class="d">W37</span><span class="s due">No.60–66</span><span class="t"><b>이벤트가 있는 날에만 게시판이 붐볐습니다.</b> 건수는 20건에서 8건, 27건으로 오르내렸습니다. 제재 설명은 나흘 연속 HIGH였고 9/13에는 독트린 공개가 판매 소식을 덮었습니다.<span class="win">9/7–9/13 · <a href="../weekly/FPS레이더_주간_2026-W37.html" target="_blank" rel="noopener">주간 리포트 보기</a></span></span></li>
+      <li><span class="d">W38</span><span class="s due">No.67–73</span><span class="t"><b>월드컵 우승 축하가 이관 불만으로 닫혔습니다.</b> 과금 811회, 핵 658회, 차별 319회였습니다. 워독스 토론 1,935건이 배틀필드 6의 1,786건을 넘었습니다.<span class="win">9/14–9/20 · <a href="../weekly/FPS레이더_주간_2026-W38.html" target="_blank" rel="noopener">주간 리포트 보기</a></span></span></li>
+      <li><span class="d">W39</span><span class="s due">No.74–80</span><span class="t"><b>PUBG 대회 사고가 9/23 영구 제재로 끝났습니다.</b> 오버워치 불만은 탱커에서 그룹 큐로 옮겨 갔습니다. 워독스 판매 300만 장과 윈도우 충돌이 같은 주였습니다.<span class="win">9/21–9/27 · <a href="../weekly/FPS레이더_주간_2026-W39.html" target="_blank" rel="noopener">주간 리포트 보기</a></span></span></li>
+      <li><span class="d">W40</span><span class="s due">No.81–83</span><span class="t"><b>에이스 컴뱃 8 디럭스 선행 접속이 9/28 열렸습니다.</b> 배틀필드 6 끊김 글 답글은 9/29에 711개였습니다. 평가는 66%에서 76%로 올랐고 충돌 사과가 나왔습니다.<span class="win">9/28–9/30 · 주간 리포트 미생성 · <a href="../2026-09/FPS레이더_2026-09-30.html" target="_blank" rel="noopener">No.83 보기</a></span></span></li>
+    </ol>
+  </div>
+
+  <div class="caveat">
+    <span class="k">유의사항</span>
+    이 월간 리포트는 주간 4건(W36–W39)과 9월 28~30일 일간 3건을 다시 읽어 해석했습니다. <b>새로 수집한 내용은 없습니다.</b> 9월 5일·6일 일간은 7일 <b>사후 작성</b>, 20~27일 일간 8편과 주간 W38·W39는 30일 <b>사후 작성</b>입니다. 그 기간의 조회수와 추천수는 읽은 날의 값이라 증감을 재지 못했습니다. 9월 28~30일은 주간이 없어 일간 값을 그대로 옮겼습니다. 월말 상태 일부는 <b>10월 1일 판(No.84)이 브라우저로 읽은 값</b>입니다. 9월 30일 판의 스팀 수치 중 오늘 화면에서 확인되지 않은 것은 쓰지 않았습니다. 인용 수치는 작성 시점 기준이니 대외 공유 전에 재확인하세요. 에이스 컴뱃 8 출시일은 스팀 영어 상점 10/1, 한국어 상점과 공식 안내 10/2로 갈립니다.
+  </div>
+
+  <details class="sources" id="sources" open>
+    <summary>근거가 된 리포트</summary>
+    <div class="body">
+      <ul>
+        <li><b>주간 리포트</b><a href="../weekly/FPS레이더_주간_2026-W36.html" target="_blank" rel="noopener">W36</a> · <a href="../weekly/FPS레이더_주간_2026-W37.html" target="_blank" rel="noopener">W37</a> · <a href="../weekly/FPS레이더_주간_2026-W38.html" target="_blank" rel="noopener">W38</a> · <a href="../weekly/FPS레이더_주간_2026-W39.html" target="_blank" rel="noopener">W39</a></li>
+        <li><b>제재 신뢰</b><a href="../2026-09/FPS레이더_2026-09-03.html" target="_blank" rel="noopener">No.56(델타포스 30명·오탐 밴 목록)</a> · <a href="../2026-09/FPS레이더_2026-09-04.html" target="_blank" rel="noopener">No.57</a> · <a href="../2026-09/FPS레이더_2026-09-07.html" target="_blank" rel="noopener">No.60</a> · <a href="../2026-09/FPS레이더_2026-09-10.html" target="_blank" rel="noopener">No.63(공식 창구 치트 문서)</a> · <a href="../2026-09/FPS레이더_2026-09-23.html" target="_blank" rel="noopener">No.76(PUBG 영구 제재)</a></li>
+        <li><b>넥슨 오버워치 이관</b><a href="../2026-09/FPS레이더_2026-09-01.html" target="_blank" rel="noopener">No.54(PC방 3위)</a> · <a href="../2026-09/FPS레이더_2026-09-02.html" target="_blank" rel="noopener">No.55(매칭 불만 1,994회)</a> · <a href="../2026-09/FPS레이더_2026-09-05.html" target="_blank" rel="noopener">No.58(팀 드라이브)</a> · <a href="../2026-09/FPS레이더_2026-09-13.html" target="_blank" rel="noopener">No.66(독트린 공개)</a> · <a href="../2026-09/FPS레이더_2026-09-18.html" target="_blank" rel="noopener">No.71(불만 세 갈래)</a> · <a href="../2026-09/FPS레이더_2026-09-27.html" target="_blank" rel="noopener">No.80(그룹 큐 분리 요구)</a></li>
+        <li><b>국내 신작의 빈자리</b><a href="../2026-09/FPS레이더_2026-09-06.html" target="_blank" rel="noopener">No.59(VCT 부산 우승)</a> · <a href="../2026-09/FPS레이더_2026-09-17.html" target="_blank" rel="noopener">No.70(스페셜포스 출시)</a> · <a href="../2026-09/FPS레이더_2026-09-19.html" target="_blank" rel="noopener">No.72(33일째 전 21일째)</a> · <a href="../2026-10/FPS레이더_2026-10-01.html" target="_blank" rel="noopener">No.84(10월 1일)</a></li>
+        <li><b>출시 직후 결함</b><a href="../2026-09/FPS레이더_2026-09-04.html" target="_blank" rel="noopener">No.57(델타포스 실행 불가)</a> · <a href="../2026-09/FPS레이더_2026-09-18.html" target="_blank" rel="noopener">No.71(배틀필드 6 711개)</a> · <a href="../2026-09/FPS레이더_2026-09-29.html" target="_blank" rel="noopener">No.82</a> · <a href="../2026-09/FPS레이더_2026-09-30.html" target="_blank" rel="noopener">No.83(에이스 컴뱃 8 사과)</a></li>
+      </ul>
+      <div class="colophon">
+        <b>FPS 이벤트 동향 레이더</b> · 라이온하트 · 월간 종합 리포트 · <b>2026년 9월</b> (일간 No.54–No.83 · 30건 종합)<br>
+        모니터링: 루리웹 · 인벤 · 아카라이브 · 스팀 커뮤니티 · 해외 전문지 (국내+글로벌 병행)
+      </div>
+    </div>
+  </details>
+
+</div>
+
+</main>
+
+
+<script>
+(function(){
+  /* 이미지 로드 실패 → 약어 타일 대체 */
+  document.querySelectorAll('.thumb img, .tbanner img, .hero .shot img').forEach(function(img){
+    if(!img.getAttribute('src')){var p0=img.parentElement;if(p0)p0.classList.add('noimg');return;}
+    img.addEventListener('error',function(){var p=img.parentElement;if(p)p.classList.add('noimg');});
+  });
+  /* 읽기 진행바 */
+  var prog=document.getElementById('prog');
+  function tick(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',tick,{passive:true});window.addEventListener('resize',tick);tick();
+  /* 테마 토글 (리포트/뷰어와 동일 localStorage 키 공유) */
+  var root=document.documentElement,btn=document.getElementById('themebtn'),lbl=document.getElementById('themelbl');
+  function apply(t){root.setAttribute('data-theme',t);lbl.textContent=(t==='dark'?'DARK':'LIGHT');
+    btn.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('fpsradar-theme',t);}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('fpsradar-theme');}catch(e){}
+  if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)saved='dark';
+  apply(saved||'light');
+  btn.addEventListener('click',function(){apply(root.getAttribute('data-theme')==='dark'?'light':'dark');});
+})();
+</script>
+</body>
+</html>
