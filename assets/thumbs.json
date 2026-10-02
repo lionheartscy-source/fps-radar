@@ -175,10 +175,10 @@
       "메모": "2026-09-01 스팀 커뮤니티 허브 og:image에서 실제 해시 경로 확인."
     },
     "워독스 (WARDOGS)": {
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/24c0b6c0621560e922fbed18545921e7eaa9036e/capsule_616x353.jpg?t=1790774170",
       "mono": "WD",
       "name": "WARDOGS",
-      "메모": "스팀 appid 1867240. 2026-09-18 상점 og:image에서 해시 포함 주소 확보."
+      "메모": "스팀 appid 1867240. 2026-10-03 상점 og:image(capsule_616x353)로 갱신."
     },
     "EVE Vanguard": {
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1872800/43fda50b449bce12be79d9db69cbc803749a4db1/header.jpg?t=1784552548",
@@ -193,16 +193,16 @@
       "메모": "스팀 appid 4870460. 2026-09-18 상점 og:image. 개발 Antstream · 배급 Commodore · 공식 alienbreed35.com"
     },
     "기어스 오브 워: 이데이": {
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3010850/1abb0c5ef76c14f463dd6e3964adb64f984237d2/header.jpg?t=1789676311",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/1abb0c5ef76c14f463dd6e3964adb64f984237d2/header.jpg?t=1790871278",
       "mono": "GOW",
       "name": "GEARS OF WAR E-DAY",
       "메모": "스팀 appid 3010850. 연령 확인 페이지가 떠도 og:image 는 그대로 나온다."
     },
     "에이스 컴뱃 8: 시브의 날개": {
-      "url": "https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288340/3bd993fa9f94ebd60c1b05dd61a4315cde829830/capsule_616x353.jpg?t=1790908088",
       "mono": "AC8",
       "name": "ACE COMBAT 8",
-      "메모": "PS5 전용이라 스팀 header 가 없다. IGDB banner_url(세로 커버를 720p로 올린 것)이라 16:9 칸에서는 가운데가 잘린다."
+      "메모": "2026-10-03 스팀 상점 og:image(capsule_616x353)로 교체. 이전 IGDB 세로 커버는 폐기."
     },
     "콜오브듀티: 블랙옵스7": {
       "mono": "BO7",
