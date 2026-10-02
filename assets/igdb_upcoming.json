@@ -1,62 +1,8 @@
 {
-    "_생성시각":  "2026-10-01 09:20:15",
+    "_생성시각":  "2026-10-02 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Ace Combat 8: Wings of Theve - Customizable Cosmetic Set",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-customizable-cosmetic-set",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t6.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t6.jpg"
-                     },
-                     {
-                         "name":  "Bloodspill",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bloodspill",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpbb.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpbb.jpg"
-                     },
-                     {
-                         "name":  "Shroomwood",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/shroomwood",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coavy6.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coavy6.jpg"
-                     },
-                     {
-                         "name":  "Ace Combat 8: Wings of Theve",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0h1.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob0h1.jpg"
-                     },
-                     {
-                         "name":  "Ace Combat Zero: The Belkan War",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-zero-the-belkan-war",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6o8z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6o8z.jpg"
-                     },
-                     {
-                         "name":  "Ace Combat 8: Wings of Theve - Playable Aircraft: F-14A",
-                         "date":  "2026-10-02",
-                         "human":  "Oct 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/ace-combat-8-wings-of-theve-playable-aircraft-f-14a",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5t4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5t4.jpg"
-                     },
                      {
                          "name":  "Chill Cat",
                          "date":  "2026-10-05",
@@ -94,6 +40,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co68ah.jpg"
                      },
                      {
+                         "name":  "Kill Your Friends",
+                         "date":  "2026-10-08",
+                         "human":  "Oct 08, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/kill-your-friends--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocamu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocamu.jpg"
+                     },
+                     {
                          "name":  "Kingdom Hearts II Final Mix",
                          "date":  "2026-10-08",
                          "human":  "Oct 08, 2026",
@@ -119,6 +74,15 @@
                          "igdb_url":  "https://www.igdb.com/games/star-conflict",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co1szt.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co1szt.jpg"
+                     },
+                     {
+                         "name":  "Legion Breaker",
+                         "date":  "2026-10-13",
+                         "human":  "Oct 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/legion-breaker",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8kj.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc8kj.jpg"
                      },
                      {
                          "name":  "Valor Mortis",
@@ -157,6 +121,33 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
                      },
                      {
+                         "name":  "Whispers of The Shadow",
+                         "date":  "2026-10-15",
+                         "human":  "Oct 15, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/whispers-of-the-shadow",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8uv7.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8uv7.jpg"
+                     },
+                     {
+                         "name":  "Dimenshot",
+                         "date":  "2026-10-16",
+                         "human":  "Oct 16, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/dimenshot",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3c.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3c.jpg"
+                     },
+                     {
+                         "name":  "The Guardians",
+                         "date":  "2026-10-16",
+                         "human":  "Oct 16, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-guardians",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa6tw.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa6tw.jpg"
+                     },
+                     {
                          "name":  "Call of Duty: Modern Warfare 4",
                          "date":  "2026-10-16",
                          "human":  "Oct 16, 2026",
@@ -164,6 +155,15 @@
                          "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4mu.jpg"
+                     },
+                     {
+                         "name":  "Vanisha",
+                         "date":  "2026-10-16",
+                         "human":  "Oct 16, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/vanisha",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobxb3.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobxb3.jpg"
                      },
                      {
                          "name":  "Athanasia",
@@ -193,6 +193,24 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxcd.jpg"
                      },
                      {
+                         "name":  "Galactic Bounty",
+                         "date":  "2026-10-26",
+                         "human":  "Oct 26, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/galactic-bounty",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxjp.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxjp.jpg"
+                     },
+                     {
+                         "name":  "Divine Frequency",
+                         "date":  "2026-10-27",
+                         "human":  "Oct 27, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/divine-frequency--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co79k2.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co79k2.jpg"
+                     },
+                     {
                          "name":  "You Are Empty: Absolute Edition",
                          "date":  "2026-10-27",
                          "human":  "Oct 27, 2026",
@@ -211,6 +229,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocmjf.jpg"
                      },
                      {
+                         "name":  "Bulletjump",
+                         "date":  "2026-10-28",
+                         "human":  "Oct 28, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/bulletjump",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocwrn.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwrn.jpg"
+                     },
+                     {
                          "name":  "Anomalith",
                          "date":  "2026-10-28",
                          "human":  "Oct 28, 2026",
@@ -227,6 +254,15 @@
                          "igdb_url":  "https://www.igdb.com/games/milo--2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctbe.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctbe.jpg"
+                     },
+                     {
+                         "name":  "Pinballoid Crush",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
                      },
                      {
                          "name":  "Day 31",
@@ -335,6 +371,33 @@
                          "igdb_url":  "https://www.igdb.com/games/hill-z",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
+                     },
+                     {
+                         "name":  "Powerfuel",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/powerfuel",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
+                     },
+                     {
+                         "name":  "AsterMaster",
+                         "date":  "2026-11-17",
+                         "human":  "Nov 17, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/astermaster",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxym.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxym.jpg"
+                     },
+                     {
+                         "name":  "Grand Theft Auto VI",
+                         "date":  "2026-11-19",
+                         "human":  "Nov 19, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vi",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv1v.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv1v.jpg"
                      }
                  ]
 }
