@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-10-05 09:20:13",
+    "_생성시각":  "2026-10-06 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Gears of War: E-Day",
-                         "date":  "2026-10-06",
-                         "human":  "Oct 06, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/gears-of-war-e-day",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc77n.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc77n.jpg"
-                     },
                      {
                          "name":  "Deep Rock Galactic: Survivor - Heavy Duty",
                          "date":  "2026-10-07",
@@ -128,6 +119,15 @@
                          "igdb_url":  "https://www.igdb.com/games/warhammer-40000-boltgun-2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uam.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
+                     },
+                     {
+                         "name":  "Wolfsschanze: Operation GÃ¶tterdÃ¤mmerung",
+                         "date":  "2026-10-15",
+                         "human":  "Oct 15, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/wolfsschanze-operation-gotterdammerung",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod20u.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod20u.jpg"
                      },
                      {
                          "name":  "Whispers of The Shadow",
@@ -301,15 +301,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclre.jpg"
                      },
                      {
-                         "name":  "Alteredblood+",
-                         "date":  "2026-11-01",
-                         "human":  "Nov 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
-                     },
-                     {
                          "name":  "ShootyCraft",
                          "date":  "2026-11-02",
                          "human":  "Nov 02, 2026",
@@ -326,6 +317,15 @@
                          "igdb_url":  "https://www.igdb.com/games/spaceshooter--1",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpdx.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
+                     },
+                     {
+                         "name":  "Alteredblood+",
+                         "date":  "2026-11-04",
+                         "human":  "Nov 04, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
                      },
                      {
                          "name":  "Blood of Rations",
@@ -398,15 +398,6 @@
                          "igdb_url":  "https://www.igdb.com/games/astermaster",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxym.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxym.jpg"
-                     },
-                     {
-                         "name":  "Grand Theft Auto VI",
-                         "date":  "2026-11-19",
-                         "human":  "Nov 19, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vi",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv1v.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv1v.jpg"
                      }
                  ]
 }
