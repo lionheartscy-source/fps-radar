@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-10-06 09:20:13",
+    "_생성시각":  "2026-10-07 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Deep Rock Galactic: Survivor - Heavy Duty",
-                         "date":  "2026-10-07",
-                         "human":  "Oct 07, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/deep-rock-galactic-survivor-heavy-duty",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobrch.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobrch.jpg"
-                     },
-                     {
-                         "name":  "Deep Rock Galactic: Survivor",
-                         "date":  "2026-10-07",
-                         "human":  "Oct 07, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/deep-rock-galactic-survivor",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co68ah.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co68ah.jpg"
-                     },
                      {
                          "name":  "Kill Your Friends",
                          "date":  "2026-10-08",
@@ -319,6 +301,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
                      },
                      {
+                         "name":  "The Division 2: Echoes of Central Park",
+                         "date":  "2026-11-03",
+                         "human":  "Nov 03, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-division-2-echoes-of-central-park",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod28o.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
+                     },
+                     {
                          "name":  "Alteredblood+",
                          "date":  "2026-11-04",
                          "human":  "Nov 04, 2026",
@@ -355,15 +346,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
                      },
                      {
-                         "name":  "Headshot Holdout",
-                         "date":  "2026-11-11",
-                         "human":  "Nov 11, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/headshot-holdout",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxku.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxku.jpg"
-                     },
-                     {
                          "name":  "Corridors",
                          "date":  "2026-11-11",
                          "human":  "Nov 11, 2026",
@@ -380,24 +362,6 @@
                          "igdb_url":  "https://www.igdb.com/games/hill-z",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
-                     },
-                     {
-                         "name":  "Powerfuel",
-                         "date":  "2026-11-13",
-                         "human":  "Nov 13, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/powerfuel",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
-                     },
-                     {
-                         "name":  "AsterMaster",
-                         "date":  "2026-11-17",
-                         "human":  "Nov 17, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/astermaster",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxym.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxym.jpg"
                      }
                  ]
 }
