@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-10-07 09:20:13",
+    "_생성시각":  "2026-10-08 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Kill Your Friends",
-                         "date":  "2026-10-08",
-                         "human":  "Oct 08, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/kill-your-friends--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocamu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocamu.jpg"
-                     },
-                     {
-                         "name":  "Kingdom Hearts II Final Mix",
-                         "date":  "2026-10-08",
-                         "human":  "Oct 08, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/kingdom-hearts-ii-final-mix--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8m1s.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8m1s.jpg"
-                     },
                      {
                          "name":  "Paperhead",
                          "date":  "2026-10-09",
@@ -182,6 +164,15 @@
                          "igdb_url":  "https://www.igdb.com/games/i-am-your-beast-quitting-time",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxcd.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxcd.jpg"
+                     },
+                     {
+                         "name":  "Battle Nap",
+                         "date":  "2026-10-22",
+                         "human":  "Oct 22, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/battle-nap",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod11c.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod11c.jpg"
                      },
                      {
                          "name":  "Galactic Bounty",
@@ -346,6 +337,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
                      },
                      {
+                         "name":  "Headshot Holdout",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/headshot-holdout",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxku.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxku.jpg"
+                     },
+                     {
                          "name":  "Corridors",
                          "date":  "2026-11-11",
                          "human":  "Nov 11, 2026",
@@ -362,6 +362,15 @@
                          "igdb_url":  "https://www.igdb.com/games/hill-z",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
+                     },
+                     {
+                         "name":  "Powerfuel",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/powerfuel",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
                      }
                  ]
 }
