@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-10-09 09:20:13",
+    "_생성시각":  "2026-10-10 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Star Conflict",
-                         "date":  "2026-10-10",
-                         "human":  "Oct 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/star-conflict",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co1szt.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co1szt.jpg"
-                     },
                      {
                          "name":  "American Cooking Simulator: Multiplayer",
                          "date":  "2026-10-12",
@@ -31,13 +22,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocykz.jpg"
                      },
                      {
-                         "name":  "Legion Breaker",
+                         "name":  "PigPonyPocalypse",
                          "date":  "2026-10-13",
                          "human":  "Oct 13, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/legion-breaker",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8kj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc8kj.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/pigponypocalypse",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod323.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod323.jpg"
                      },
                      {
                          "name":  "Valor Mortis",
@@ -49,6 +40,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaazc.jpg"
                      },
                      {
+                         "name":  "Legion Breaker",
+                         "date":  "2026-10-13",
+                         "human":  "Oct 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/legion-breaker",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8kj.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc8kj.jpg"
+                     },
+                     {
                          "name":  "Deunocta",
                          "date":  "2026-10-14",
                          "human":  "Oct 14, 2026",
@@ -58,13 +58,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczy5.jpg"
                      },
                      {
-                         "name":  "No Such Place",
+                         "name":  "Shockwave Triggers",
                          "date":  "2026-10-14",
                          "human":  "Oct 14, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/no-such-place",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v89.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9v89.jpg"
+                         "platform":  "Xbox One",
+                         "igdb_url":  "https://www.igdb.com/games/shockwave-triggers",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9j4g.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9j4g.jpg"
                      },
                      {
                          "name":  "Warhammer 40,000: Boltgun 2",
@@ -74,6 +74,15 @@
                          "igdb_url":  "https://www.igdb.com/games/warhammer-40000-boltgun-2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uam.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
+                     },
+                     {
+                         "name":  "No Such Place",
+                         "date":  "2026-10-14",
+                         "human":  "Oct 14, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/no-such-place",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v89.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9v89.jpg"
                      },
                      {
                          "name":  "Wolfsschanze: Operation GÃ¶tterdÃ¤mmerung",
@@ -247,13 +256,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar10.jpg"
                      },
                      {
-                         "name":  "Metro 2033 Redux",
+                         "name":  "HyperViolent",
                          "date":  "2026-10-29",
                          "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-2033-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar0z.jpg"
+                         "platform":  "Xbox Series X|S",
+                         "igdb_url":  "https://www.igdb.com/games/hyperviolent",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coahmz.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coahmz.jpg"
                      },
                      {
                          "name":  "Milo",
@@ -263,6 +272,15 @@
                          "igdb_url":  "https://www.igdb.com/games/milo--2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctbe.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctbe.jpg"
+                     },
+                     {
+                         "name":  "Metro 2033 Redux",
+                         "date":  "2026-10-29",
+                         "human":  "Oct 29, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/metro-2033-redux",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0z.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar0z.jpg"
                      },
                      {
                          "name":  "Pinballoid Crush",
@@ -326,15 +344,6 @@
                          "igdb_url":  "https://www.igdb.com/games/the-division-2-echoes-of-central-park",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod28o.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
-                     },
-                     {
-                         "name":  "Alteredblood+",
-                         "date":  "2026-11-04",
-                         "human":  "Nov 04, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
                      }
                  ]
 }
