@@ -222,8 +222,9 @@
       "mono": "ARC",
       "name": "ARC RAIDERS",
       "steam_appid": "1808500",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/b1379225bf8d50a4b4ad26aad2c637278222a20c/header_alt_assets_7.jpg?t=1789143012",
-      "확인": "2026-09-29 상점 본문 header_alt_assets_7"
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/58fb018c96cf5d0e82d8b33d35043aeae2370f46/capsule_616x353_alt_assets_7.jpg?t=1791231034",
+      "확인": "2026-09-29 상점 본문 header_alt_assets_7",
+      "메모": "2026-10-12 og:image 새 해시로 갱신."
     },
     "에이스 컴뱃 8": {
       "mono": "AC8",
@@ -236,8 +237,22 @@
       "mono": "BG2",
       "name": "WARHAMMER 40,000: BOLTGUN 2",
       "steam_appid": "3115160",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3115160/09adcf16d427fc26e6d1ad48e9f2a05ba015fdef/capsule_616x353.jpg?t=1790785313",
-      "메모": "2026-10-02 스팀 한국어 상점 og:image."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3115160/c23f810053b182f6b723bfed0e1a773966c060ae/capsule_616x353.jpg?t=1787770843",
+      "메모": "2026-10-02 스팀 한국어 상점 og:image. 2026-10-12 og:image 새 해시로 갱신."
+    },
+    "데드록": {
+      "mono": "DL",
+      "name": "DEADLOCK",
+      "steam_appid": "1422450",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1422450/bb234ef2fd0409fffbd0e0d0c470c05167d18535/capsule_616x353.jpg?t=1790716179",
+      "메모": "2026-10-12 스팀 상점 og:image 해시 경로."
+    },
+    "마이코펑크 (Mycopunk)": {
+      "mono": "MYC",
+      "name": "MYCOPUNK",
+      "steam_appid": "3247750",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016",
+      "메모": "2026-10-12 appid는 MassivelyOP 기사로 확인."
     }
   },
   "_이미지필요": [],
