@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-10-10 09:20:13",
+    "_생성시각":  "2026-10-11 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
@@ -292,13 +292,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
                      },
                      {
-                         "name":  "Day 31",
+                         "name":  "Oktoraid",
                          "date":  "2026-10-30",
                          "human":  "Oct 30, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/day-31",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczke.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczke.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/oktoraid",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczey.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczey.jpg"
                      },
                      {
                          "name":  "Mad Ever After",
@@ -308,6 +308,15 @@
                          "igdb_url":  "https://www.igdb.com/games/mad-ever-after",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocncs.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocncs.jpg"
+                     },
+                     {
+                         "name":  "Day 31",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/day-31",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczke.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczke.jpg"
                      },
                      {
                          "name":  "Phosphor",
@@ -335,15 +344,6 @@
                          "igdb_url":  "https://www.igdb.com/games/spaceshooter--1",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpdx.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
-                     },
-                     {
-                         "name":  "The Division 2: Echoes of Central Park",
-                         "date":  "2026-11-03",
-                         "human":  "Nov 03, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-division-2-echoes-of-central-park",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod28o.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
                      }
                  ]
 }
