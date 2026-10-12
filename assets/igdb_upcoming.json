@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-10-11 09:20:14",
+    "_생성시각":  "2026-10-12 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "American Cooking Simulator: Multiplayer",
-                         "date":  "2026-10-12",
-                         "human":  "Oct 12, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/american-cooking-simulator-multiplayer",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobnls.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobnls.jpg"
-                     },
                      {
                          "name":  "Bio-Submariner DX",
                          "date":  "2026-10-13",
@@ -207,8 +198,8 @@
                          "human":  "Oct 27, 2026",
                          "platform":  "PC (Microsoft Windows)",
                          "igdb_url":  "https://www.igdb.com/games/knell",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmjf.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocmjf.jpg"
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3z1.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3z1.jpg"
                      },
                      {
                          "name":  "Firestarters",
@@ -283,15 +274,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar0z.jpg"
                      },
                      {
-                         "name":  "Pinballoid Crush",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
-                     },
-                     {
                          "name":  "Oktoraid",
                          "date":  "2026-10-30",
                          "human":  "Oct 30, 2026",
@@ -299,6 +281,24 @@
                          "igdb_url":  "https://www.igdb.com/games/oktoraid",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczey.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczey.jpg"
+                     },
+                     {
+                         "name":  "Towermouth",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/towermouth",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczex.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczex.jpg"
+                     },
+                     {
+                         "name":  "Pinballoid Crush",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
                      },
                      {
                          "name":  "Mad Ever After",
