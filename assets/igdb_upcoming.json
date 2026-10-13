@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-10-12 09:20:13",
+    "_생성시각":  "2026-10-13 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Bio-Submariner DX",
-                         "date":  "2026-10-13",
-                         "human":  "Oct 13, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bio-submariner-dx",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocykz.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocykz.jpg"
-                     },
-                     {
-                         "name":  "PigPonyPocalypse",
-                         "date":  "2026-10-13",
-                         "human":  "Oct 13, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/pigponypocalypse",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod323.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod323.jpg"
-                     },
-                     {
-                         "name":  "Valor Mortis",
-                         "date":  "2026-10-13",
-                         "human":  "Oct 13, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/valor-mortis",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaazc.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaazc.jpg"
-                     },
-                     {
-                         "name":  "Legion Breaker",
-                         "date":  "2026-10-13",
-                         "human":  "Oct 13, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/legion-breaker",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8kj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc8kj.jpg"
-                     },
                      {
                          "name":  "Deunocta",
                          "date":  "2026-10-14",
@@ -344,6 +308,24 @@
                          "igdb_url":  "https://www.igdb.com/games/spaceshooter--1",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpdx.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
+                     },
+                     {
+                         "name":  "The Division 2: Echoes of Central Park",
+                         "date":  "2026-11-03",
+                         "human":  "Nov 03, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-division-2-echoes-of-central-park",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod28o.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
+                     },
+                     {
+                         "name":  "Alteredblood+",
+                         "date":  "2026-11-04",
+                         "human":  "Nov 04, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
                      }
                  ]
 }
