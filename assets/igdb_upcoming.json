@@ -1,62 +1,8 @@
 {
-    "_생성시각":  "2026-10-13 09:20:13",
+    "_생성시각":  "2026-10-15 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Deunocta",
-                         "date":  "2026-10-14",
-                         "human":  "Oct 14, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/deunocta",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczy5.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczy5.jpg"
-                     },
-                     {
-                         "name":  "Shockwave Triggers",
-                         "date":  "2026-10-14",
-                         "human":  "Oct 14, 2026",
-                         "platform":  "Xbox One",
-                         "igdb_url":  "https://www.igdb.com/games/shockwave-triggers",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9j4g.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9j4g.jpg"
-                     },
-                     {
-                         "name":  "Warhammer 40,000: Boltgun 2",
-                         "date":  "2026-10-14",
-                         "human":  "Oct 14, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/warhammer-40000-boltgun-2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uam.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uam.jpg"
-                     },
-                     {
-                         "name":  "No Such Place",
-                         "date":  "2026-10-14",
-                         "human":  "Oct 14, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/no-such-place",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9v89.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9v89.jpg"
-                     },
-                     {
-                         "name":  "Wolfsschanze: Operation GÃ¶tterdÃ¤mmerung",
-                         "date":  "2026-10-15",
-                         "human":  "Oct 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/wolfsschanze-operation-gotterdammerung",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod20u.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod20u.jpg"
-                     },
-                     {
-                         "name":  "Whispers of The Shadow",
-                         "date":  "2026-10-15",
-                         "human":  "Oct 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/whispers-of-the-shadow",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8uv7.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8uv7.jpg"
-                     },
                      {
                          "name":  "Dimenshot",
                          "date":  "2026-10-16",
@@ -121,6 +67,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxcd.jpg"
                      },
                      {
+                         "name":  "Dreadway",
+                         "date":  "2026-10-22",
+                         "human":  "Oct 22, 2026",
+                         "platform":  "Xbox Series X|S",
+                         "igdb_url":  "https://www.igdb.com/games/dreadway",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coatp6.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coatp6.jpg"
+                     },
+                     {
                          "name":  "Battle Nap",
                          "date":  "2026-10-22",
                          "human":  "Oct 22, 2026",
@@ -128,6 +83,15 @@
                          "igdb_url":  "https://www.igdb.com/games/battle-nap",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod11c.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod11c.jpg"
+                     },
+                     {
+                         "name":  "Darkenstein 3D",
+                         "date":  "2026-10-23",
+                         "human":  "Oct 23, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/darkenstein-3d",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h4n.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8h4n.jpg"
                      },
                      {
                          "name":  "Galactic Bounty",
@@ -202,13 +166,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwrn.jpg"
                      },
                      {
-                         "name":  "Metro: Last Light Redux",
+                         "name":  "The Last Case",
                          "date":  "2026-10-29",
                          "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-last-light-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar10.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar10.jpg"
+                         "platform":  "Xbox One",
+                         "igdb_url":  "https://www.igdb.com/games/the-last-case",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod39c.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod39c.jpg"
                      },
                      {
                          "name":  "HyperViolent",
@@ -218,6 +182,15 @@
                          "igdb_url":  "https://www.igdb.com/games/hyperviolent",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coahmz.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coahmz.jpg"
+                     },
+                     {
+                         "name":  "Metro: Last Light Redux",
+                         "date":  "2026-10-29",
+                         "human":  "Oct 29, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/metro-last-light-redux",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar10.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar10.jpg"
                      },
                      {
                          "name":  "Milo",
@@ -310,6 +283,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
                      },
                      {
+                         "name":  "Desert Echo",
+                         "date":  "2026-11-03",
+                         "human":  "Nov 03, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/desert-echo",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod52r.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod52r.jpg"
+                     },
+                     {
                          "name":  "The Division 2: Echoes of Central Park",
                          "date":  "2026-11-03",
                          "human":  "Nov 03, 2026",
@@ -319,6 +301,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
                      },
                      {
+                         "name":  "Outbreak: Dead City",
+                         "date":  "2026-11-04",
+                         "human":  "Nov 04, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/outbreak-dead-city",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod50n.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod50n.jpg"
+                     },
+                     {
                          "name":  "Alteredblood+",
                          "date":  "2026-11-04",
                          "human":  "Nov 04, 2026",
@@ -326,6 +317,33 @@
                          "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
+                     },
+                     {
+                         "name":  "Blood of Rations",
+                         "date":  "2026-11-05",
+                         "human":  "Nov 05, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/blood-of-rations",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb6y.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocb6y.jpg"
+                     },
+                     {
+                         "name":  "To Be Besieged",
+                         "date":  "2026-11-06",
+                         "human":  "Nov 06, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
+                     },
+                     {
+                         "name":  "Rense",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/rense",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
                      }
                  ]
 }
