@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-10-15 09:20:14",
+    "_생성시각":  "2026-10-16 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Dimenshot",
-                         "date":  "2026-10-16",
-                         "human":  "Oct 16, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/dimenshot",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3c.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3c.jpg"
-                     },
-                     {
-                         "name":  "The Guardians",
-                         "date":  "2026-10-16",
-                         "human":  "Oct 16, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-guardians",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa6tw.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa6tw.jpg"
-                     },
-                     {
-                         "name":  "Call of Duty: Modern Warfare 4",
-                         "date":  "2026-10-16",
-                         "human":  "Oct 16, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4mu.jpg"
-                     },
-                     {
-                         "name":  "Vanisha",
-                         "date":  "2026-10-16",
-                         "human":  "Oct 16, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/vanisha",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobxb3.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobxb3.jpg"
-                     },
                      {
                          "name":  "Athanasia",
                          "date":  "2026-10-19",
@@ -92,6 +56,15 @@
                          "igdb_url":  "https://www.igdb.com/games/darkenstein-3d",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h4n.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8h4n.jpg"
+                     },
+                     {
+                         "name":  "Call of Duty: Modern Warfare 4",
+                         "date":  "2026-10-23",
+                         "human":  "Oct 23, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4mu.jpg"
                      },
                      {
                          "name":  "Galactic Bounty",
@@ -337,6 +310,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
                      },
                      {
+                         "name":  "Deiity (Under Ice)",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/deiity-under-ice",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod35j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod35j.jpg"
+                     },
+                     {
                          "name":  "Rense",
                          "date":  "2026-11-10",
                          "human":  "Nov 10, 2026",
@@ -344,6 +326,51 @@
                          "igdb_url":  "https://www.igdb.com/games/rense",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
+                     },
+                     {
+                         "name":  "Headshot Holdout",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/headshot-holdout",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxku.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxku.jpg"
+                     },
+                     {
+                         "name":  "Corridors",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
+                     },
+                     {
+                         "name":  "Hill-Z",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/hill-z",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
+                     },
+                     {
+                         "name":  "Gee, Tea, Eh, Seven?",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/gee-tea-eh-seven",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3x2.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
+                     },
+                     {
+                         "name":  "Powerfuel",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/powerfuel",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
                      }
                  ]
 }
