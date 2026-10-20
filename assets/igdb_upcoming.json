@@ -1,35 +1,8 @@
 {
-    "_생성시각":  "2026-10-19 09:20:13",
+    "_생성시각":  "2026-10-20 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Dino Crisis 2",
-                         "date":  "2026-10-20",
-                         "human":  "Oct 20, 2026",
-                         "platform":  "PlayStation 4",
-                         "igdb_url":  "https://www.igdb.com/games/dino-crisis-2--2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocthm.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocthm.jpg"
-                     },
-                     {
-                         "name":  "Mycopunk",
-                         "date":  "2026-10-20",
-                         "human":  "Oct 20, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mycopunk",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qrc.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9qrc.jpg"
-                     },
-                     {
-                         "name":  "I Am Your Beast: Quitting Time",
-                         "date":  "2026-10-20",
-                         "human":  "Oct 20, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/i-am-your-beast-quitting-time",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxcd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxcd.jpg"
-                     },
                      {
                          "name":  "Arcs",
                          "date":  "2026-10-21",
@@ -256,6 +229,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclre.jpg"
                      },
                      {
+                         "name":  "Carnor City",
+                         "date":  "2026-11-01",
+                         "human":  "Nov 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/carnor-city",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocvpt.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocvpt.jpg"
+                     },
+                     {
                          "name":  "No Sunrise",
                          "date":  "2026-11-01",
                          "human":  "Nov 2026",
@@ -335,6 +317,42 @@
                          "igdb_url":  "https://www.igdb.com/games/void-slash-breaker",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9nls.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9nls.jpg"
+                     },
+                     {
+                         "name":  "Blood of Rations",
+                         "date":  "2026-11-05",
+                         "human":  "Nov 05, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/blood-of-rations",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb6y.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocb6y.jpg"
+                     },
+                     {
+                         "name":  "To Be Besieged",
+                         "date":  "2026-11-06",
+                         "human":  "Nov 06, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
+                     },
+                     {
+                         "name":  "Deiity (Under Ice)",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/deiity-under-ice",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod35j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod35j.jpg"
+                     },
+                     {
+                         "name":  "Rense",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/rense",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
                      }
                  ]
 }
