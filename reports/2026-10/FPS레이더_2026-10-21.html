@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPS·슈터 데일리 레이더 · 2026-10-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   FPS·슈터 레이더 — 디자인 템플릿 v3
+   상단부(네이비 그라디언트 헤더 + 4-KPI): 확정본 유지
+   그 아래 섹션: v2 템플릿 구조(표·동향 카드·리스크·액션·출처) · 풀폭 단일 컬럼
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#EEF1F6; --card:#FFFFFF; --card-2:#F4F6FA;
+  --ink:#161C29; --ink-2:#3B4354; --muted:#6B7488; --faint:#8B93A5;
+  --line:#E1E6EF; --line-soft:#EDF0F6; --zebra:#F7F9FC;
+  --navy:#1B2A4A; --blue:#2E5AAC; --blue-2:#3E6FCB; --blue-soft:#E7EEFB; --blue-line:#CBD9F2;
+  --red:#B3352F; --red-soft:#FBECEA; --amber:#9A6A12; --amber-soft:#FBF2DD;
+  --green:#1F7A4D; --green-soft:#E7F5EC; --violet:#6D4AA6; --violet-soft:#F0EAFA;
+  --shadow:0 1px 2px rgba(22,28,41,.04), 0 6px 18px -12px rgba(22,28,41,.22);
+  --shadow-lift:0 2px 6px rgba(22,28,41,.07), 0 20px 40px -22px rgba(22,28,41,.34);
+  --ring:var(--blue);
+  --mh-grad:linear-gradient(118deg,#152039 0%,#1F2A44 44%,#2B4A7C 100%);
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:14px; --radius-sm:9px;
+}
+html[data-theme="dark"]{
+  --bg:#0E1016; --card:#171A22; --card-2:#1C2029;
+  --ink:#EAECF1; --ink-2:#C3C8D4; --muted:#8B93A5; --faint:#6E7689;
+  --line:#282D38; --line-soft:#20242D; --zebra:#1B1F27;
+  --navy:#CFE0FF; --blue:#7CA6EE; --blue-2:#8FB4F2; --blue-soft:#16202F; --blue-line:#25344C;
+  --red:#EE7469; --red-soft:#2A1715; --amber:#D9AC55; --amber-soft:#241C0E;
+  --green:#63C793; --green-soft:#0F2018; --violet:#B79BE6; --violet-soft:#1C1630;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 22px -14px rgba(0,0,0,.7);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 44px -22px rgba(0,0,0,.85);
+  --mh-grad:linear-gradient(118deg,#0C1220 0%,#111A2E 46%,#1B3357 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.66;letter-spacing:-.003em;word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:4px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:0 0 6px 0;font-size:14px;font-weight:700}
+.skip:focus{left:0}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--blue),var(--blue-2));transition:width .12s linear}
+
+/* ═══ 상단부(확정본) — 네이비 그라디언트 헤더 + 4-KPI ═══ */
+.masthead{position:relative;background:var(--mh-grad);color:#fff;
+  padding:30px 0 34px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mh-inner{max-width:1400px;margin:0 auto;padding:0 40px}
+.masthead .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#AFC4EC;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.masthead .eyebrow .live{width:7px;height:7px;border-radius:50%;background:#FF6B5E;flex:none;
+  box-shadow:0 0 0 0 rgba(255,107,94,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(255,107,94,0)}100%{box-shadow:0 0 0 0 rgba(255,107,94,0)}}
+.masthead h1{margin:0;font-size:clamp(23px,3.1vw,30px);font-weight:800;line-height:1.24;letter-spacing:-.02em;color:#fff}
+.masthead .meta{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;
+  font-size:13px;color:#C7D2E6}
+.masthead .meta b{color:#fff;font-weight:700}
+.masthead .cover-pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  color:#EAF0FB;padding:3px 12px;border-radius:999px;font-size:12.5px;font-weight:700}
+.themebtn{position:absolute;top:22px;right:24px;min-height:36px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#EAF0FB;border-radius:9px;
+  padding:8px 12px;font-family:var(--sans);font-size:12px;font-weight:600;cursor:pointer;transition:background .15s}
+.themebtn:hover{background:rgba(255,255,255,.18)}
+.themebtn .val{font-family:var(--mono);font-size:11px;letter-spacing:.06em}
+
+.wrap{max-width:1400px;margin:0 auto;padding:22px 40px 80px}
+
+.lead{color:var(--ink-2);font-size:14.5px;line-height:1.8;margin:0 0 16px;max-width:80ch}
+.lead b{color:var(--ink);font-weight:600;box-shadow:inset 0 -8px 0 var(--blue-soft)}
+
+.notice{display:flex;gap:12px;align-items:flex-start;margin:0 0 22px;padding:12px 15px;background:var(--blue-soft);
+  border:1px solid var(--blue-line);border-radius:var(--radius-sm);font-size:13px;color:var(--ink-2);line-height:1.6}
+.notice .k{font-size:11.5px;font-weight:800;color:var(--blue);white-space:nowrap;padding-top:1px}
+.notice b{color:var(--ink)}
+
+/* 4-KPI 행 */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px 16px;
+  box-shadow:var(--shadow);border-top:4px solid var(--blue)}
+.kpi.good{border-top-color:var(--green)} .kpi.warn{border-top-color:var(--amber)} .kpi.risk{border-top-color:var(--red)}
+.kpi .lbl{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.kpi .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:6px;letter-spacing:-.02em}
+.kpi.risk .big{color:var(--red)}
+.kpi .sub{font-size:12.5px;color:var(--muted);line-height:1.55}
+.kpi .sub a{font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.kpi .sub a:hover{text-decoration:none;border-bottom-style:solid}
+.kpi .sep{opacity:.4;padding:0 3px}
+
+/* ═══ 이하 섹션: v2 구조 ═══ */
+.sec{display:flex;align-items:center;gap:12px;margin:44px 0 6px;scroll-margin-top:16px}
+.sec .idx{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--blue);flex:none}
+.sec h2{margin:0;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.sec .rule{flex:1;height:1px;background:var(--line)}
+.sub-lead{color:var(--muted);font-size:13.5px;margin:8px 0 16px;max-width:74ch;line-height:1.7}
+.sub-lead b{color:var(--ink-2);font-weight:600}
+
+/* 표 */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:920px;font-size:13.5px}
+thead th{position:sticky;top:0;z-index:2;background:var(--card-2);color:var(--navy);text-align:left;
+  padding:11px 14px;font-weight:800;font-size:12.5px;white-space:nowrap;border-bottom:2px solid var(--blue)}
+tbody td{padding:12px 14px;border-top:1px solid var(--line-soft);vertical-align:top}
+tbody tr:nth-child(even){background:var(--zebra)}
+tbody tr:hover{background:var(--blue-soft)}
+.g-cell{display:flex;gap:13px;align-items:flex-start;min-width:230px}
+.thumb{width:128px;height:60px;flex:none;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy),#12203b)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.noimg img{display:none}
+.thumb.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.thumb.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 5px,transparent 5px 13px)}.thumb.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:6px 9px;text-align:center;font-weight:800;font-size:12.5px;line-height:1.25;letter-spacing:-.01em;color:rgba(255,255,255,.96);text-shadow:0 1px 5px rgba(0,0,0,.45)}
+.game{font-weight:800;color:var(--navy);line-height:1.3}
+/* ── 근거 유형 라벨: 이 반응이 어디서 나온 것인지 표시 ── */
+.ev{display:inline-flex;align-items:center;gap:4px;vertical-align:middle;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em;padding:2px 7px;border-radius:999px;border:1px solid;white-space:nowrap;margin-right:5px}
+.ev::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.85}
+.ev.kr{color:var(--blue);background:var(--blue-soft);border-color:var(--blue-line)}
+.ev.gl{color:var(--violet);background:var(--violet-soft);border-color:color-mix(in srgb,var(--violet) 30%,transparent)}
+.ev.cm{color:var(--green);background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 30%,transparent)}
+.ev.mt{color:var(--amber);background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 34%,transparent)}
+.ev.na{color:var(--muted);background:var(--card-2);border-color:var(--line)}
+.ev.of{color:var(--ink-2);background:var(--card-2);border-color:var(--line-soft)}
+.evkey{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:2px 0 14px;padding:10px 14px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:var(--radius-sm);background:var(--card-2);font-size:12.5px;color:var(--ink-2)}
+.evkey b{color:var(--navy);font-size:12px;letter-spacing:.01em}
+.evkey span.d{color:var(--muted)}
+
+.game-sub{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
+.date-cell{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.pt{margin:0;color:var(--ink-2);line-height:1.6}
+.pt b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;margin-bottom:2px}
+.t-new{background:var(--blue-soft);color:var(--blue)} .t-live{background:var(--card-2);color:var(--muted)}
+.t-risk{background:var(--red-soft);color:var(--red)} .t-good{background:var(--green-soft);color:var(--green)}
+.t-warn{background:var(--amber-soft);color:var(--amber)}
+.src-inline a{font-size:12px;font-weight:600;border-bottom:1px dashed var(--blue-line)}
+.src-inline a:hover{text-decoration:none;border-bottom-style:solid}
+/* 가독성: 배지 줄 · 출처 줄 분리 (2026-09-04) */
+.evrow{display:block;margin:0 0 7px}
+.evrow .ev{margin-bottom:4px}
+.src-inline{display:block;margin-top:10px;padding-top:7px;border-top:1px dashed var(--line)}
+.src-inline::before{content:'출처';display:inline-block;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-right:7px;vertical-align:1px}
+td .pt-lead{display:block;margin-bottom:5px}
+.lb{display:block;margin-top:5px}
+.hero .under .evrow{margin-bottom:6px}
+
+/* 신작 동향 카드 */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;overflow:hidden;box-shadow:var(--shadow);transition:border-color .18s,box-shadow .18s;display:flex;flex-direction:column}
+.tcard .tbanner{position:relative;aspect-ratio:2.5/1;background:linear-gradient(135deg,var(--navy),#12203b);overflow:hidden}
+.tcard .tbanner img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.tcard .tbanner.noimg img{display:none}
+.tcard .tbanner.noimg{background:linear-gradient(135deg,#25406e 0%,#152039 100%)}.tcard .tbanner.noimg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(118deg,rgba(255,255,255,.055) 0 7px,transparent 7px 18px)}.tcard .tbanner.noimg::after{content:attr(data-name);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10px 16px;text-align:center;font-weight:800;font-size:19px;line-height:1.25;color:rgba(255,255,255,.96);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tcard .tin{padding:16px 18px 17px;flex:1}
+.tcard:hover{border-color:var(--muted);box-shadow:var(--shadow-lift)}
+.tcard .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tcard .gm{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tcard h3{margin:0 0 8px;font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.45;color:var(--ink)}
+.tcard p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.65}
+.tcard p b{color:var(--ink);font-weight:600}
+.tcard .obs{margin-top:9px;padding-left:12px;border-left:2px solid var(--line);font-size:12.5px}
+.tcard .obs .k{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:3px}
+.tcard .src{margin-top:11px;font-size:12px;color:var(--muted)}
+
+
+/* 오늘의 일정 (타임라인) */
+.timeline{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 10px;box-shadow:var(--shadow)}
+.timeline h3{margin:0 0 3px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.timeline .hint{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:78px 50px 1fr;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line-soft)}
+.tl li:first-child{border-top:none}
+.tl .d{font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.tl .s{font-size:11px;font-weight:800;text-align:center;padding:2px 0;border-radius:5px;line-height:1.5}
+.tl .s.end{background:var(--red-soft);color:var(--red)} .tl .s.start{background:var(--blue-soft);color:var(--blue)}
+.tl .s.on{background:var(--green-soft);color:var(--green)} .tl .s.due{background:var(--card-2);color:var(--muted)}
+.tl .t{font-size:14px;color:var(--ink-2);line-height:1.55}
+.tl .t b{color:var(--ink);font-weight:600}
+.tl .t .win{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:6px}
+.tl li.today{background:linear-gradient(90deg,var(--red-soft),transparent 72%);margin:0 -22px;padding-left:22px;padding-right:22px}
+
+/* 오늘의 헤드라인 (히어로) */
+.heroes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hero{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s}
+.hero:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);text-decoration:none}
+.hero .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--navy),#12203b)}
+.hero .shot img{width:100%;height:100%;object-fit:cover}
+.hero .shot.noimg img{display:none}
+.hero .shot.noimg{background:linear-gradient(135deg,#2a4778 0%,#141f38 100%)}.hero .shot.noimg::before{content:attr(data-name);position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;padding:0 22px 46px;text-align:center;font-weight:800;font-size:26px;line-height:1.25;color:rgba(255,255,255,.22);letter-spacing:-.01em}
+.hero .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,14,.94) 0%,rgba(8,10,14,.55) 40%,rgba(8,10,14,.05) 74%)}
+.hero .rank{position:absolute;top:11px;left:13px;z-index:2;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hero .flag{position:absolute;top:12px;right:12px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--red);color:#fff}
+.hero .flag.n{background:rgba(255,255,255,.93);color:#14161A}
+.hero .over{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:14px 16px}
+.hero .over .gm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:5px}
+.hero .over h3{margin:0;color:#fff;font-size:16px;font-weight:700;line-height:1.42;letter-spacing:-.02em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero .under{padding:14px 16px 15px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.hero .under b{color:var(--ink);font-weight:600}
+@media(max-width:820px){ .heroes{grid-template-columns:1fr 1fr} }
+@media(max-width:600px){ .heroes{grid-template-columns:1fr} }
+
+/* 리스크 */
+.risk{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:var(--radius);padding:17px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.risk.high{border-left-color:var(--red)}
+.risk .lvl{font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:7px}
+.risk.high .lvl{color:var(--red)}
+.risk h3{margin:0 0 11px;font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.4}
+.risk .row{display:grid;grid-template-columns:62px 1fr;gap:14px;margin-bottom:8px;font-size:13.5px;color:var(--ink-2);line-height:1.65}
+.risk .row .k{font-size:11.5px;font-weight:700;color:var(--muted);padding-top:4px}
+.risk .row b{color:var(--ink);font-weight:600}
+.risk .lesson{margin-top:12px;background:var(--amber-soft);border-radius:var(--radius-sm);padding:12px 15px;font-size:13px;color:var(--ink-2);line-height:1.7}
+.risk .lesson .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.risk .lesson b{color:var(--ink);font-weight:600}
+.risk .lesson ol{margin:0;padding-left:17px} .risk .lesson li{margin:4px 0}
+
+/* 액션 */
+.act{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.act .num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;flex:none;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.act h3{margin:0 0 6px;font-size:15.5px;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+.act p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.7}
+.act p b{color:var(--ink);font-weight:600}
+
+.caveat{border:1px dashed var(--line);border-radius:var(--radius-sm);padding:14px 17px;margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.7}
+.caveat .k{display:block;font-size:11.5px;font-weight:800;color:var(--amber);margin-bottom:6px}
+.caveat b{color:var(--ink-2)}
+
+/* 출처 */
+.sources{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+.sources summary{cursor:pointer;list-style:none;padding:15px 20px;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--ink);min-height:44px}
+.sources summary::-webkit-details-marker{display:none}
+.sources summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:17px;color:var(--muted);transition:transform .25s}
+.sources[open] summary::after{transform:rotate(45deg)}
+.sources .body{padding:0 20px 18px}
+.sources ul{margin:0;padding:0;list-style:none;columns:2;column-gap:34px}
+.sources li{font-size:12.5px;line-height:1.6;margin:0 0 11px;color:var(--muted);break-inside:avoid;padding-left:12px;border-left:1px solid var(--line-soft)}
+.sources li b{display:block;color:var(--ink-2);font-weight:700;margin-bottom:2px}
+.colophon{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7}
+.colophon b{color:var(--navy)}
+
+.tpl-note{display:flex;gap:9px;align-items:flex-start;margin:16px 0 0;padding:10px 14px;border:1px dashed var(--blue-line);
+  background:var(--blue-soft);border-radius:var(--radius-sm);font-size:12px;color:var(--ink-2);line-height:1.6}
+.tpl-note b{color:var(--navy)}
+
+/* 반응형 */
+@media(max-width:900px){ .mh-inner,.wrap{padding-left:18px;padding-right:18px} .themebtn{right:14px} }
+@media(max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  .masthead h1{font-size:21px} .risk .row{grid-template-columns:1fr;gap:2px} .sources ul{columns:1}
+  .act{grid-template-columns:1fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media print{#prog,.skip,.themebtn,.tpl-note{display:none}.masthead{background:#1F2A44!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{max-width:none}.sources ul{columns:1}body{background:#fff}}
+</style>
+<style>
+/* 2026-09-04 추가: 리드·유의사항 가독성 — 가로를 넓게 쓰고 항목마다 라벨을 단다 */
+.lead{max-width:none}
+.lead .lrow,.caveat .crow{display:grid;grid-template-columns:76px 1fr;gap:0 12px;align-items:baseline}
+.lead .lrow{margin:0 0 8px}
+.lead .lrow:last-child,.caveat .crow:last-child{margin-bottom:0}
+.caveat .crow{margin:0 0 6px}
+.lead .lk,.caveat .ck{font-family:var(--mono);font-weight:700;letter-spacing:.02em;text-align:center;
+  padding:2px 0;border-radius:999px;white-space:nowrap;border:1px solid}
+.lead .lk{font-size:10.5px;border-color:var(--blue-line);background:var(--blue-soft);color:var(--blue)}
+.lead .lrow.hi .lk{border-color:#E6BCB8;background:var(--red-soft);color:var(--red)}
+.lead .lrow.hi .lt{font-size:15.5px;color:var(--ink);line-height:1.6}
+.caveat .ck{font-size:10px;border-color:var(--line);background:var(--card-2);color:var(--muted)}
+@media(max-width:820px){
+  .lead .lrow,.caveat .crow{grid-template-columns:1fr;gap:3px}
+  .lead .lk,.caveat .ck{justify-self:start;padding:2px 10px}
+}
+/* 2026-09-04 추가: 03·04 표 칸 배분 — 반응 칸이 가장 넓어야 한다 */
+.tablewrap table{table-layout:fixed;min-width:1080px}
+.tablewrap th:nth-child(1),.tablewrap td:nth-child(1){width:19%}
+.tablewrap th:nth-child(2),.tablewrap td:nth-child(2){width:22%}
+.tablewrap th:nth-child(3),.tablewrap td:nth-child(3){width:9%}
+.tablewrap th:nth-child(4),.tablewrap td:nth-child(4){width:9%}
+.tablewrap th:nth-child(5),.tablewrap td:nth-child(5){width:41%}
+.tablewrap td{overflow-wrap:anywhere}
+.g-cell{min-width:0;gap:11px}
+.thumb{width:92px;height:52px}
+@media(max-width:1180px){
+  .tablewrap th:nth-child(1),.tablewrap td:nth-child(1){width:22%}
+  .tablewrap th:nth-child(2),.tablewrap td:nth-child(2){width:23%}
+  .tablewrap th:nth-child(5),.tablewrap td:nth-child(5){width:37%}
+}
+
+/* ── 표 2열: 한 줄 요약 + 오버/탭 상세 (2026-09-09 도입) ── */
+.ev2{position:relative}
+.ev2 .e2{display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
+.ev2 .d1{display:block;padding-right:16px}
+.ev2 .e2::after{content:"";position:absolute;top:.45em;right:0;width:6px;height:6px;border-right:1.6px solid var(--muted);border-bottom:1.6px solid var(--muted);transform:rotate(45deg);transition:transform .15s ease;opacity:.75}
+.ev2 .d2{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--muted);font-size:.94em;line-height:1.62}
+.ev2 .e2:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.ev2.open .d2{display:block}
+.ev2.open .e2::after{transform:rotate(-135deg);opacity:1}
+@media (hover:hover) and (pointer:fine){
+  .ev2:hover .d2{display:block}
+  .ev2:hover .e2::after{opacity:1}
+}
+@media print{ .ev2 .d2{display:block} .ev2 .e2::after{display:none} }
+
+/* ── 05 관전 포인트: 라벨만 보이고 오버·탭으로 펼침 (2026-09-09) ── */
+.obs{position:relative}
+.obs .e2{display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
+.obs .k{margin-bottom:0;padding-right:14px}
+.obs .e2::after{content:"";position:absolute;top:.3em;right:0;width:5px;height:5px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);transition:transform .15s ease;opacity:.7}
+.obs .d2{display:none;margin-top:5px}
+.obs .e2:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.obs.open .d2{display:block}
+.obs.open .e2::after{transform:rotate(-135deg);opacity:1}
+@media (hover:hover) and (pointer:fine){
+  .obs:hover .d2{display:block}
+  .obs:hover .e2::after{opacity:1}
+}
+@media print{ .obs .d2{display:block} .obs .e2::after{display:none} }
+
+/* ═══ 05 신작 출시·발표 표 (2026-09-19 신설) ═══ */
+/* 열 순서: 게임(썸네일) / 상태 / 날짜 / 개발·배급 / 관심 신호 / 링크(마지막) */
+/* ⚠ .tablewrap th:nth-child() 너비 규칙(03·04용)이 여기까지 걸리므로 더 높은 특정도로 덮어쓴다. */
+.tablewrap.launch table{min-width:1080px;table-layout:fixed}
+.tablewrap.launch th:nth-child(1),.tablewrap.launch td:nth-child(1){width:28%}
+.tablewrap.launch th:nth-child(2),.tablewrap.launch td:nth-child(2){width:7%}
+.tablewrap.launch th:nth-child(3),.tablewrap.launch td:nth-child(3){width:7%}
+.tablewrap.launch th:nth-child(4),.tablewrap.launch td:nth-child(4){width:9%}
+.tablewrap.launch th:nth-child(5),.tablewrap.launch td:nth-child(5){width:42%}
+.tablewrap.launch th:nth-child(6),.tablewrap.launch td:nth-child(6){width:7%}
+.launch col.c-g{width:28%} .launch col.c-s{width:7%} .launch col.c-d{width:7%}
+.launch col.c-m{width:9%} .launch col.c-sig{width:42%} .launch col.c-l{width:7%}
+.launch thead th,.launch tbody td{padding:11px 10px}
+.launch .g-cell{gap:9px;min-width:0;align-items:center}
+.launch .thumb{width:64px;height:36px;border-radius:6px}
+.launch .thumb.noimg::after{font-size:9px;line-height:1.15;padding:2px 4px;letter-spacing:-.02em}
+.launch .g-name{font-weight:700;color:var(--ink);line-height:1.35;min-width:0;
+  overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.launch .g-name em{display:block;font-style:normal;font-weight:500;font-size:11.5px;color:var(--muted);margin-top:3px}
+.launch td.dt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2);font-weight:600}
+.launch td.dt em{display:block;font-family:var(--sans);font-style:normal;font-weight:500;font-size:11px;color:var(--faint);margin-top:3px;white-space:normal}
+.launch td.mk{color:var(--muted);font-size:12px;line-height:1.45;word-break:keep-all}
+.launch td.sig{color:var(--ink-2);line-height:1.55;word-break:keep-all}
+.launch td.sig b{color:var(--ink);font-weight:700}
+.launch td.lk{font-size:12px;line-height:1.55;border-left:1px solid var(--line-soft)}
+.launch thead th:nth-child(6){border-left:1px solid var(--line-soft)}
+.launch td.lk a{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;margin:1px 0}
+.launch td.lk svg{flex:none;width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.launch td.lk a:hover svg{opacity:1}
+.launch tbody tr:nth-child(even) td{background:var(--zebra)}
+/* 묶음 행(그날 몰린 출시·쇼케이스)은 맨 아래에 모으고 구분선을 둔다 */
+.launch tbody tr.grp td{border-top:2px solid var(--line)}
+.launch tbody tr.grp + tr.grp td{border-top:1px solid var(--line-soft)}
+.launch tbody tr.grp .g-name{color:var(--ink-2)}
+
+/* ═══ 01 일정 — 날짜별 아코디언 (2026-09-19 도입) ═══ */
+.timeline details.dgroup{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);margin:0 0 8px;overflow:hidden}
+.timeline details.dgroup[open]{box-shadow:var(--shadow)}
+.timeline details.dgroup>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+  padding:9px 14px;background:var(--card-2);font-size:13.5px;font-weight:700;letter-spacing:-.01em;
+  border-bottom:1px solid transparent}
+.timeline details.dgroup[open]>summary{border-bottom-color:var(--line-soft)}
+.timeline details.dgroup>summary::-webkit-details-marker{display:none}
+.timeline details.dgroup>summary::after{content:"";margin-left:auto;width:7px;height:7px;flex:none;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s ease}
+.timeline details.dgroup[open]>summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.timeline details.dgroup>summary:hover{background:var(--blue-soft)}
+.timeline details.dgroup>summary:focus-visible{outline:2px solid var(--ring);outline-offset:-2px}
+.timeline details.dgroup>summary .dg-d{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--navy)}
+.timeline details.dgroup>summary .dg-t{font-size:11.5px;font-weight:800;letter-spacing:.04em;
+  background:var(--red);color:#fff;border-radius:999px;padding:1px 8px}
+.timeline details.dgroup>summary .dg-n{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:0 7px}
+.timeline details.dgroup.today>summary{background:var(--red-soft)}
+.timeline details.dgroup.today>summary .dg-d{color:var(--red)}
+.timeline details.dgroup>.tl{padding:2px 14px 8px}
+.timeline details.dgroup>.tl li{grid-template-columns:50px 1fr;gap:12px}
+.timeline details.dgroup>.tl li.today{background:none;margin:0;padding-left:0;padding-right:0}
+@media print{
+  .timeline details.dgroup>summary::after{display:none}
+  .timeline details.dgroup>.tl{display:block}
+}
+@media (max-width:560px){
+  .timeline details.dgroup>.tl li{grid-template-columns:44px 1fr;gap:9px}
+}
+</style></head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+<div id="prog" aria-hidden="true"></div>
+
+<header class="masthead">
+  <button class="themebtn" id="themebtn" type="button" aria-pressed="false" title="화면 테마">
+    <span class="lbltext">테마</span><span class="val" id="themelbl">LIGHT</span>
+  </button>
+  <div class="mh-inner">
+    <p class="eyebrow"><span class="live"></span>FPS · 슈터 데일리 커뮤니티/이벤트 레이더</p>
+    <h1>오늘의 FPS·슈터 동향 레이더</h1>
+    <div class="meta">
+      <span>기준일 <b>2026년 10월 21일 (수)</b></span>
+      <span class="cover-pill">커버기간: 10/20(화) 오전 – 10/21(수) 오전</span>
+      <span>스팀·웹 07시대까지 수집</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<p class="lead"><span class="lrow hi"><b class="lk">핵심</b><span class="lt"><b>마이코펑크 정식 1.0이 10/20 PC와 PS5에 나왔습니다.</b></span></span><span class="lrow"><b class="lk">스팀</b><span class="lt">아크 레이더스 토론 15건 중 9건이 PvE·PvP 제목입니다.</span></span><span class="lrow"><b class="lk">국내</b><span class="lt">인벤 핫벤 상위 60건 중 슈터 글은 0건입니다.</span></span><span class="lrow"><b class="lk">일정</b><span class="lt">배틀필드 6 이벤트는 11/7까지, 2단계는 11/10입니다.</span></span></p>
+<div class="notice"><span class="k">측정 주의</span><span><b>스팀 상점 수치 여럿이 어제와 같아 변화로 쓰지 않았습니다.</b><span class="lb"></span>볼트건 2 한국어 상점은 예약 구매가가 남은 오래된 응답이었습니다.<span class="lb"></span>핫벤 순위의 등록일은 모두 10-19라 새 목록인지 알 수 없습니다.<span class="lb"></span>스팀 목록의 "N분 전" 표기는 캐시일 수 있어 시각을 인용하지 않았습니다.</span></div>
+  <div class="kpis" id="summary"><div class="kpi"><div class="lbl">진행 중 시즌·이벤트</div><div class="big">8건</div><div class="sub"><a href="https://store.steampowered.com/app/3247750/?l=koreana" target="_blank" rel="noopener">마이코펑크 1.0</a><span class="sep">·</span><a href="https://mp1st.com/?p=316422" target="_blank" rel="noopener">배틀필드 6 Dead Space</a><span class="sep">·</span><a href="https://www.playnews.gg/en/updates/wardogs-will-the-season-2-progression-reset-scare-players-away" target="_blank" rel="noopener">워독스 시즌 2</a></div></div><div class="kpi risk"><div class="lbl">논란·리스크 신호</div><div class="big">아크 PvE 종료 여부를 직접 확인하지 못했습니다</div><div class="sub">스팀 토론 값은 어제와 같습니다. <a href="#risk">상세 보기</a></div></div><div class="kpi"><div class="lbl">신작 반응</div><div class="big">마이코펑크가 정식 1.0으로 나왔습니다</div><div class="sub">스팀 평가 <b>4,148개</b>, 긍정 <b>88%</b>는 어제 값입니다</div></div><div class="kpi"><div class="lbl">국내 포커스</div><div class="big">핫벤 상위 60건에 슈터 글은 없습니다</div><div class="sub">인벤 오버워치 글 조회 최다는 <b>995회</b>입니다</div></div></div>
+  <div class="sec" id="today"><span class="idx">01</span><h2>오늘의 일정</h2><span class="rule"></span></div>
+<div class="timeline">
+<h3>움직이는 일정 15건</h3>
+<p class="hint">날짜 머리를 누르면 그 날 일정을 접거나 펼칠 수 있습니다. 붉은 묶음이 오늘(10/21)입니다.</p>
+<details class="dgroup today" open>
+<summary><span class="dg-d">10.21 수</span><span class="dg-t">오늘</span><span class="dg-n">10건</span></summary>
+<ol class="tl">
+<li class="today"><span class="s end">종료</span><span class="t"><b>오버워치 나 혼자만 레벨업 콜라보</b> 오늘 끝납니다<span class="win">넥슨 공지 기준</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>마이코펑크 1.0</b> 출시 2일째입니다<span class="win">PC·PS5</span></span></li>
+<li class="today"><span class="s end">종료</span><span class="t"><b>아크 레이더스 PvE 테스트</b> 종료 예정이었으나 확인하지 못했습니다<span class="win">10/20 18시</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>배틀필드 6 Dead Space 이벤트</b> 이어집니다<span class="win">~11/7 · MP1st 기준</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>워독스 시즌 2</b> 7일째입니다<span class="win">10/15 시작</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>워해머 40,000: 볼트건 2</b> 출시 8일째입니다<span class="win">10/14 출시</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>마블 라이벌즈 시즌 10.5</b> 13일째입니다<span class="win">어제 판 이월</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>오버워치 핼러윈 이벤트</b> 이어집니다<span class="win">맵 ~11/3</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>아크 레이더스 얼어붙은 산길</b> 14일째입니다<span class="win">10/8 시작</span></span></li>
+<li class="today"><span class="s on">진행</span><span class="t"><b>서든어택 시즌4 문라이즈</b> 돌아갑니다<span class="win">~12/10</span></span></li>
+</ol>
+</details>
+<details class="dgroup" open>
+<summary><span class="dg-d">10.22 목</span><span class="dg-n">2건</span></summary>
+<ol class="tl">
+<li><span class="s end">종료</span><span class="t"><b>오버워치 출석체크</b> 마감됩니다<span class="win">오전 10시 · 어제 판 이월</span></span></li>
+<li><span class="s end">종료</span><span class="t"><b>서든어택 브레드 스킨</b> 판매가 끝납니다<span class="win">어제 판 이월</span></span></li>
+</ol>
+</details>
+<details class="dgroup">
+<summary><span class="dg-d">11.03 화</span><span class="dg-n">2건</span></summary>
+<ol class="tl">
+<li><span class="s start">시작</span><span class="t"><b>디비전 2 센트럴 파크의 메아리</b> 확장이 나옵니다<span class="win">유비소프트 공지</span></span></li>
+<li><span class="s end">종료</span><span class="t"><b>오버워치 핼러윈 맵</b> 이벤트가 끝납니다<span class="win">넥슨 공지 기준</span></span></li>
+</ol>
+</details>
+<details class="dgroup">
+<summary><span class="dg-d">11.10 화</span><span class="dg-n">1건</span></summary>
+<ol class="tl">
+<li><span class="s start">시작</span><span class="t"><b>배틀필드 6 카지노 하이스트</b> 2단계가 열립니다<span class="win">MP1st 기준</span></span></li>
+</ol>
+</details>
+</div>
+  <div class="sec" id="headline"><span class="idx">02</span><h2>오늘의 헤드라인</h2><span class="rule"></span></div>
+  <section class="heroes">
+<a class="hero" href="https://outputlag.com/news/mycopunk-leaves-early-access-with-1-0-release-on-pc-and-ps5" target="_blank" rel="noopener">
+<div class="shot" data-mono="MYC" data-name="MYCOPUNK"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016" alt=""><span class="rank">01</span><span class="flag n">정식 1.0</span><div class="over"><div class="gm">마이코펑크 · 1.0 출시</div><h3>정식 1.0 PC·PS5 출시, 스팀 지표는 어제 값</h3></div></div>
+<div class="under"><span class="evrow"><span class="ev gl">글로벌·기사</span><span class="ev mt">지표</span></span> 10/20 기사가 PC와 PS5 정식 1.0 출시를 전했습니다.<span class="lb"></span>PS5는 첫 발매이고 새 총기와 맵 등이 더해졌습니다.<span class="lb"></span>정가 14.99달러에 한시 50% 출시 할인이 붙었습니다.<span class="lb"></span>전체 평가 4,148개(88%)는 어제와 같아 변화가 아닙니다.</div>
+</a>
+<a class="hero" href="https://steamcommunity.com/app/1808500/discussions/0/" target="_blank" rel="noopener">
+<div class="shot" data-mono="ARC" data-name="ARC RAIDERS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/58fb018c96cf5d0e82d8b33d35043aeae2370f46/capsule_616x353_alt_assets_7.jpg?t=1791231034" alt=""><span class="rank">02</span><span class="flag n">종료 미확인</span><div class="over"><div class="gm">아크 레이더스 · PvE 테스트</div><h3>종료 예정일이 지났고 토론 수치는 어제와 같음</h3></div></div>
+<div class="under"><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span></span> PvE는 한국 시각 10/20 18시 종료 예정이었습니다.<span class="lb"></span>끝난 뒤 토글 제거 여부는 직접 확인하지 못했습니다.<span class="lb"></span>스팀 토론 첫 15건 제목 중 9건이 PvE나 PvP입니다.<span class="lb"></span>Embark는 영구 도입을 정하지 않았습니다.</div>
+</a>
+<a class="hero" href="https://mp1st.com/?p=316422" target="_blank" rel="noopener">
+<div class="shot" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt=""><span class="rank">03</span><span class="flag n">11/7까지</span><div class="over"><div class="gm">배틀필드 6 · 시즌 5</div><h3>Dead Space 이벤트 11/7까지, 2단계 11/10</h3></div></div>
+<div class="under"><span class="evrow"><span class="ev gl">글로벌·기사</span></span> Dead Space 이벤트는 10/20부터 11/7까지입니다.<span class="lb"></span>카지노 하이스트는 11/10에 열립니다.<span class="lb"></span>3단계 프로즌 에이스는 12/8로 잡혀 있습니다.<span class="lb"></span>인벤의 10/21 시작 보도는 공지로 확인하지 못했습니다.</div>
+</a>
+</section>
+  <div class="sec" id="kr"><span class="idx">03</span><h2>국내 포커스</h2><span class="rule"></span></div>
+  <p class="sub-lead">국내 서비스·국내 배경 IP·국내 커뮤니티(<b>인벤·루리웹·아카라이브</b>) 반응 중심.</p>
+  <div class="evkey"><b>근거 표기</b><span><span class="ev kr">KR·기사</span><span class="d">국내 매체</span></span><span><span class="ev gl">글로벌·기사</span><span class="d">해외 매체</span></span><span><span class="ev cm">커뮤니티</span><span class="d">원문 직접 확인</span></span><span><span class="ev of">공식</span><span class="d">공식 공지</span></span><span><span class="ev mt">지표</span><span class="d">수치</span></span><span><span class="ev na">국내 반응 미확인</span><span class="d">국내 소스 미확인</span></span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
+    <tbody>
+<tr>
+<td><div class="g-cell"><span class="thumb" data-mono="OW" data-name="OVERWATCH 2"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2357570/26446ff05a359d4942e277f82fd347e89b275be3/header.jpg?t=1786471282" alt=""></span><span class="g-name">오버워치2<em>인벤 자유게시판</em></span></div></td>
+<td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">조회 최다는 넥슨 이벤트 안내 글로 995회입니다.</span></button><span class="d2">인벤 오버워치 목록 맨 위 글의 시각은 05:55입니다.<span class="lb"></span>30글은 약 16시간에 걸쳐 전날 13:54까지 이어집니다.<span class="lb"></span>날짜 표기가 없어 오늘 글인지는 단정하지 못합니다.</span></td>
+<td>10/21<span class="dsub">자유게시판 30글</span></td>
+<td><span class="typ">게시판 · 국내 반응</span></td>
+<td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span></span> <b>① 조회</b> 조회 최다는 넥슨 이벤트 안내로 995회입니다. 이 글의 댓글은 5개, 추천은 6개를 얻었습니다. 다음은 치지직 러너 리그 드롭 안내 337회입니다. 이벤트 두 건이 곧 끝난다는 글은 320회 읽혔습니다.<span class="lb"></span><b>② 댓글</b> 댓글 최다는 모니터 주사율 추천 질문 12개입니다. 6대6 빠른 대전 팀원 이야기에는 7개가 달렸습니다. 시즌 5 3주차 상점 갱신 글은 조회 225회입니다. 전체 30글 중 댓글 5개 이상은 3건뿐입니다.<span class="lb"></span><b>③ 한계</b> 제목은 영어로 옮겨 읽어 따옴표로 인용하지 않습니다. 게시판 수치는 요약 도구가 읽은 값을 옮겼습니다. 목록에 날짜가 없어 오늘 글인지 단정하지 못합니다.<span class="src-inline"><a href="https://www.inven.co.kr/board/overwatch/4538?p=1" target="_blank" rel="noopener">인벤 오버워치 자유게시판</a></span></td>
+</tr>
+<tr>
+<td><div class="g-cell"><span class="thumb noimg" data-mono="RW" data-name="핫벤·루리웹"></span><span class="g-name">인벤 핫벤·루리웹<em>상위 60건 · 신설 14줄</em></span></div></td>
+<td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">핫벤 상위 60건에 슈터 글이 한 건도 없습니다.</span></button><span class="d2">핫벤 상위 60건은 모두 등록일이 10-19입니다.<span class="lb"></span>그중 로스트아크와 메이플스토리 글이 다수를 차지합니다.<span class="lb"></span>1위는 리니지M 게시물로 조회 4,458회입니다.<span class="lb"></span>루리웹 신설 게시판 목록에는 장르 표기가 없습니다.<span class="lb"></span>파밍 캠프·아노말리스·레인98은 어제도 있었습니다.</span></td>
+<td>10/21<span class="dsub">핫벤·루리웹 메인</span></td>
+<td><span class="typ">핫벤 · 신설 목록</span></td>
+<td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span></span> <b>① 핫벤</b> 핫벤 상위 60건 중 슈터 게임 글은 0건입니다. 상위권은 로스트아크와 메이플스토리 글이 다수를 차지합니다. 1위 리니지M 글은 조회 4,458회를 기록했습니다.<span class="lb"></span><b>② 루리웹</b> 루리웹 메인 신설 게시판 목록은 총 14줄입니다. 파밍 캠프·아노말리스·레인98은 어제도 있었습니다. 장르 표기가 없어 슈터로 확인된 곳은 0곳입니다. 이 중 1줄은 대원미디어 판매정보 머리글입니다.<span class="lb"></span><b>③ 한계</b> 장르를 알 수 없어 슈터가 없다고 단정하지 못합니다. 핫벤 목록의 등록일은 모두 10-19이고 시각은 없습니다. 이 순위가 오늘 새로 나온 것인지는 확인하지 못했습니다.<span class="src-inline"><a href="https://hot.inven.co.kr" target="_blank" rel="noopener">인벤 핫벤</a> · <a href="https://bbs.ruliweb.com/" target="_blank" rel="noopener">루리웹 메인</a></span></td>
+</tr>
+    </tbody>
+  </table></div>
+  <div class="sec" id="gl"><span class="idx">04</span><h2>글로벌 포커스</h2><span class="rule"></span></div>
+  <p class="sub-lead">근거는 <b>스팀 커뮤니티 토론 원문</b>과 <b>MP1st·outputlag·KeenGamer</b> 등 매체, 그리고 공식 안내문입니다.</p>
+  <div class="evkey">
+<b>오늘 연 해외 커뮤니티</b>
+<span><span class="ev cm">확인</span><a href="https://steamcommunity.com/app/1808500/discussions/0/" target="_blank" rel="noopener">아크 레이더스</a><span class="d">오전 7시대 확인 · 일반 토론 방 첫 15건 제목만 읽음 · 본문은 열지 못함</span></span>
+<span><span class="ev mt">확인</span><span class="d">스팀 한국어 상점: 워독스 한국어 평가 1,198개 긍정 58% · 5일째 같은 값이라 변화로 쓰지 않음 · 마이코펑크 4,148개 88%도 어제와 같음</span></span>
+<span><span class="ev na">미열람</span><span class="d">배틀필드 6 토론 · 레인보우 식스 시즈 · CS2 · 에이펙스 · 데스티니 2 · THE FINALS</span></span>
+<span><span class="ev na">축 없음</span><span class="d">발로란트와 서든어택은 스팀 미등록</span></span>
+</div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>게임</th><th>이벤트 / 업데이트</th><th>날짜</th><th>유형</th><th>커뮤니티 반응 · 관전 포인트</th></tr></thead>
+    <tbody>
+<tr>
+<td><div class="g-cell"><span class="thumb" data-mono="ARC" data-name="ARC RAIDERS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/58fb018c96cf5d0e82d8b33d35043aeae2370f46/capsule_616x353_alt_assets_7.jpg?t=1791231034" alt=""></span><span class="g-name">아크 레이더스<em>PvE 테스트 종료일</em></span></div></td>
+<td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">PvE 토글 테스트는 10/13부터 10/20 18시까지입니다.</span></button><span class="d2">테스트는 한국 시각 10/13부터 10/20 18시까지입니다.<span class="lb"></span>종료 뒤에는 게임에서 토글이 제거될 예정입니다.<span class="lb"></span>Embark는 영구 도입을 아직 확정하지 않았습니다.<span class="lb"></span>피드백, 대기열, 인게임 경제, 매치메이킹 영향을 봅니다.</span></td>
+<td>10/21<span class="dsub">PvE 10/13~20</span></td>
+<td><span class="typ">테스트 · PvE</span></td>
+<td><span class="evrow"><span class="ev cm">커뮤니티</span><span class="ev mt">지표</span></span> <b>① 주제</b> 스팀 일반 토론에서 첫 15건의 글을 읽었습니다.<span class="lb"></span>그중 PvE나 PvP를 적은 제목이 9건입니다.<span class="lb"></span>절반이 넘는 비중이라 화제가 쏠렸습니다.<span class="lb"></span><b>② 답글</b> 답글이 가장 많은 글은 310개, 두 번째는 282개입니다.<span class="lb"></span>어제와 같은 값이라 캐시로 보고 변화에서 뺐습니다.<span class="lb"></span>PvE가 계속될지 묻는 글에는 답글 82개가 달렸습니다.<span class="lb"></span>그 모드 이용자가 다수라는 숫자를 든 글은 55개입니다.<span class="lb"></span>PvE의 의미를 적은 글에는 48개가 붙었습니다.<span class="lb"></span><b>③ 한계</b> 본문은 열지 못해 제목과 답글 수만 봤습니다.<span class="lb"></span>목록의 N분 전 표기는 캐시일 수 있어 시각을 인용하지 않았습니다.<span class="lb"></span>스팀 일반 토론에서만 본 값이라 전체 여론은 아닙니다.<span class="lb"></span>오늘 종료 여부는 직접 확인하지 못했습니다.<span class="src-inline"><a href="https://steamcommunity.com/app/1808500/discussions/0/" target="_blank" rel="noopener">아크 레이더스 일반 토론</a> · <a href="https://www.keengamer.com/articles/news/arc-raiders-pve-toggle-beta-test-is-now-live-for-one-week/" target="_blank" rel="noopener">KeenGamer PvE 테스트</a></span></td>
+</tr>
+<tr>
+<td><div class="g-cell"><span class="thumb" data-mono="MYC" data-name="MYCOPUNK"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016" alt=""></span><span class="g-name">마이코펑크<em>정식 1.0 출시</em></span></div></td>
+<td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">마이코펑크 정식 1.0이 PC와 PS5에 나왔습니다.</span></button><span class="d2">10/20 13:02 게시된 기사가 출시를 전했습니다.<span class="lb"></span>새 총기·수류탄·모드·맵·플레이어블 캐릭터·모자가 추가됐습니다.<span class="lb"></span>정가 14.99달러에 한시 50% 출시 할인이 붙었습니다.<span class="lb"></span>PS Plus Extra와 Premium에서 이용할 수 있습니다.</span></td>
+<td>10/20<span class="dsub">정식 1.0</span></td>
+<td><span class="typ">정식 출시 · 신작</span></td>
+<td><span class="evrow"><span class="ev gl">글로벌·기사</span><span class="ev mt">지표</span></span> <b>① 출시</b> 기사에 따르면 정식 1.0이 지금 출시됐습니다.<span class="lb"></span>PS5는 이번이 첫 출시입니다.<span class="lb"></span>새 총기와 수류탄, 모드, 맵이 함께 들어왔습니다.<span class="lb"></span>플레이어블 캐릭터와 모자도 추가됐습니다.<span class="lb"></span><b>② 지표</b> 스팀 전체 평가 4,148개 중 긍정은 88%입니다.<span class="lb"></span>최근 30일은 70개 중 74%입니다.<span class="lb"></span>이 값은 어제와 소수점까지 같습니다.<span class="lb"></span>출시 반영 전의 오래된 응답일 수 있어 변화로 쓰지 않습니다.<span class="lb"></span><b>③ 한계</b> 커뮤니티 원문은 열지 않았습니다.<span class="lb"></span>스팀 토론도 읽지 못했습니다.<span class="lb"></span>한국어 평가 수는 상점 페이지에 표시되지 않습니다.<span class="lb"></span>그래서 한국 이용자 반응은 확인하지 못했습니다.<span class="src-inline"><a href="https://outputlag.com/news/mycopunk-leaves-early-access-with-1-0-release-on-pc-and-ps5" target="_blank" rel="noopener">outputlag 1.0 출시</a> · <a href="https://store.steampowered.com/app/3247750/?l=koreana" target="_blank" rel="noopener">마이코펑크 스팀 상점</a></span></td>
+</tr>
+<tr>
+<td><div class="g-cell"><span class="thumb" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt=""></span><span class="g-name">배틀필드 6<em>시즌 5 · Dead Space</em></span></div></td>
+<td class="ev2"><button class="e2" type="button" aria-expanded="false"><span class="d1">시즌 5 1단계는 10/13에 열렸고 2단계는 11/10입니다.</span></button><span class="d2">1단계에는 베이거스 스트립과 에이리어 51 맵이 있습니다.<span class="lb"></span>래피드 로열 모드도 같은 시기에 들어왔습니다.<span class="lb"></span>카지노 하이스트는 11/10, 프로즌 에이스는 12/8입니다.<span class="lb"></span>Dead Space 할로윈 이벤트는 10/20~11/7입니다.</span></td>
+<td>10/21<span class="dsub">시즌 5 일정</span></td>
+<td><span class="typ">시즌 · 이벤트</span></td>
+<td><span class="evrow"><span class="ev gl">글로벌·기사</span></span> <b>① 일정</b> MP1st 기사 기준으로 일정을 정리했습니다.<span class="lb"></span>1단계 Siege of Las Vegas는 10/13에 열렸습니다.<span class="lb"></span>카지노 하이스트는 11/10에 유럽 카지노 맵과 함께 열립니다.<span class="lb"></span>프로즌 에이스는 12/8에 이어집니다.<span class="lb"></span>패치노트는 업데이트 전주에 나올 예정입니다.<span class="lb"></span><b>② 엇갈림</b> 어제 인벤은 Dead Space 시작을 10/21로 전했습니다.<span class="lb"></span>MP1st는 10/20부터 11/7까지로 적었고 시각은 없습니다.<span class="lb"></span>공식 공지로 확인하지 못해 엇갈린 채로 둡니다.<span class="lb"></span><b>③ 한계</b> 스팀 토론은 열지 못했습니다.<span class="lb"></span>이 기사에는 무료 체험 일정이 없습니다.<span class="lb"></span>그래서 종료 시각은 확인하지 못했습니다.<span class="src-inline"><a href="https://mp1st.com/?p=316422" target="_blank" rel="noopener">MP1st 시즌 5 일정</a></span></td>
+</tr>
+    </tbody>
+  </table></div>
+  <div class="sec" id="launch"><span class="idx">05</span><h2>신작 출시·발표</h2><span class="rule"></span></div>
+  <p class="sub-lead">최근 나온 슈터와 곧 나올 슈터를 한 표에 모읍니다. 볼트건 2 한국어 상점은 출시 전 상태의 오래된 응답이라 어제 값을 적었습니다. IGDB 캐시와 어긋난 날짜는 확인한 범위에서 없었습니다. 오늘도 새로 공개된 슈터는 확인하지 못했습니다.</p>
+  <div class="tablewrap launch"><table>
+<colgroup><col class="c-g"><col class="c-s"><col class="c-d"><col class="c-m"><col class="c-sig"><col class="c-l"></colgroup>
+<thead><tr><th>게임</th><th>상태</th><th>날짜</th><th>개발 · 배급</th><th>관심 신호</th><th>링크</th></tr></thead>
+<tbody>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/24c0b6c0621560e922fbed18545921e7eaa9036e/capsule_616x353.jpg?t=1790774170" alt=""></span><span class="g-name">워독스 (WARDOGS)<em>앞서 해보기 42일째</em></span></div></td>
+<td><span class="tag t-new">출시</span></td>
+<td class="dt">09.10<em>한국어 상점 기준</em></td>
+<td class="mk">BULKHEAD · Team17</td>
+<td class="sig">시즌 2 <b>10월 15일</b> 시작 · 한국어 평가 <b>1,198개</b>, 긍정 <b>58%</b>(5일째 같은 값) · 정가 <b>39.99달러</b></td>
+<td class="lk"><a href="https://store.steampowered.com/app/1867240/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://bulkhead.com/games/wardogs" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a></td>
+</tr>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb" data-mono="BG2" data-name="WARHAMMER 40,000: BOLTGUN 2"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3115160/c23f810053b182f6b723bfed0e1a773966c060ae/capsule_616x353.jpg?t=1787770843" alt=""></span><span class="g-name">워해머 40,000: 볼트건 2<em>출시 8일째</em></span></div></td>
+<td><span class="tag t-new">출시</span></td>
+<td class="dt">10.14<em>영어 상점 기준</em></td>
+<td class="mk">Auroch Digital · Big Fan Games, Devolver Digital</td>
+<td class="sig">한국어 상점은 평가 없음·예약가 <b>22.49달러</b>를 띄운 오래된 응답 · 이월 값 평가 <b>456개</b>, 긍정 <b>94%</b>(어제 값) · 정가 <b>24.99달러</b></td>
+<td class="lk"><a href="https://store.steampowered.com/app/3115160/Warhammer_40000_Boltgun_2/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://www.gematsu.com/2026/08/warhammer-40000-boltgun-ii-launches-october-14-for-ps5-xbox-series-and-pc-later-for-switch-2" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a></td>
+</tr>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb" data-mono="ARC" data-name="ARC RAIDERS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1808500/58fb018c96cf5d0e82d8b33d35043aeae2370f46/capsule_616x353_alt_assets_7.jpg?t=1791231034" alt=""></span><span class="g-name">아크 레이더스<em>PvE 전용 테스트</em></span></div></td>
+<td><span class="tag t-warn">종료</span></td>
+<td class="dt">10.13<em>~10.20 18시 예정</em></td>
+<td class="mk">Embark Studios</td>
+<td class="sig">토론 첫 15건 중 PvE·PvP 제목 <b>9건</b> · 답글 최다 <b>310개</b>(어제와 같은 값) · 종료 여부 미확인</td>
+<td class="lk"><a href="https://store.steampowered.com/app/1808500/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://www.keengamer.com/articles/news/arc-raiders-pve-toggle-beta-test-is-now-live-for-one-week/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a></td>
+</tr>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb" data-mono="MYC" data-name="MYCOPUNK"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016" alt=""></span><span class="g-name">마이코펑크 (Mycopunk)<em>정식 1.0 · PC·PS5</em></span></div></td>
+<td><span class="tag t-new">출시</span></td>
+<td class="dt">10.20<em>앞서 해보기 종료</em></td>
+<td class="mk">Pigeons at Play · Devolver Digital</td>
+<td class="sig">정가 <b>14.99달러</b>에 한시 <b>50%</b> 할인 · 스팀 평가 <b>4,148개</b> 중 <b>88%</b>(어제와 같은 값) · PS Plus Extra·Premium 이용 가능</td>
+<td class="lk"><a href="https://store.steampowered.com/app/3247750/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://outputlag.com/news/mycopunk-leaves-early-access-with-1-0-release-on-pc-and-ps5" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a></td>
+</tr>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt=""></span><span class="g-name">배틀필드 6 시즌 5<em>Dead Space 이벤트</em></span></div></td>
+<td><span class="tag t-live">진행</span></td>
+<td class="dt">10.13<em>이벤트 10.20~11.07</em></td>
+<td class="mk">—</td>
+<td class="sig">Dead Space 시작일 <b>10/20 대 10/21</b> 엇갈림 · 2단계 <b>11/10</b>, 3단계 <b>12/8</b> · 토론 수치는 없음</td>
+<td class="lk"><a href="https://store.steampowered.com/app/2807960/?l=koreana" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg><span>스팀</span></a><br><a href="https://mp1st.com/?p=316422" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a></td>
+</tr>
+<tr>
+<td class="g"><div class="g-cell"><span class="thumb noimg" data-mono="DIV" data-name="디비전 2"></span><span class="g-name">디비전 2 센트럴 파크의 메아리<em>확장 DLC</em></span></div></td>
+<td><span class="tag t-live">예정</span></td>
+<td class="dt">11.03<em>어제 공식 공지 확인</em></td>
+<td class="mk">Ubisoft</td>
+<td class="sig">출시까지 <b>13일</b> · IGDB 캐시와 공식 공지 날짜 <b>일치</b></td>
+<td class="lk"><a href="https://www.ubisoft.com/en-us/game/the-division/news-updates/23q5ICm6Mf4PUPuPUUS0uP/the-division-2-echoes-of-central-park-coming-on-november-3" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 7.1 8 2.3l6 4.8v6.2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6.3 14.3V9.7h3.4v4.6"/></svg><span>공식</span></a><br><a href="https://mp1st.com/news/the-division-2-echoes-of-central-park-releases-november-3-brings-new-endgame-experience" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>정리 기사</span></a></td>
+</tr>
+<tr class="grp">
+<td class="g"><div class="g-cell"><span class="thumb noimg" data-mono="IND" data-name="소형작 35종"></span><span class="g-name">IGDB 등재 슈터 35종<em>소형작 위주</em></span></div></td>
+<td><span class="tag t-warn">미확인</span></td>
+<td class="dt">10.21~11.06<em>IGDB 캐시 값</em></td>
+<td class="mk">—</td>
+<td class="sig">캐시에만 있는 슈터 태그 <b>35종</b> · 상점 날짜는 열지 못함</td>
+<td class="lk">—</td>
+</tr>
+<tr class="grp">
+<td class="g"><div class="g-cell"><span class="thumb noimg" data-mono="RW" data-name="루리웹 신설"></span><span class="g-name">루리웹 신설 게시판<em>공개된 새 슈터 점검</em></span></div></td>
+<td><span class="tag t-live">발표</span></td>
+<td class="dt">10.21<em>루리웹 메인</em></td>
+<td class="mk">—</td>
+<td class="sig">신설 블록 <b>14줄</b> 중 슈터로 확인된 곳 <b>0곳</b> · 새로 공개된 슈터는 확인하지 못함</td>
+<td class="lk"><a href="https://bbs.ruliweb.com/" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="3.3" width="13" height="9.4" rx="1.4"/><path d="m2.3 4.7 5.7 3.9 5.7-3.9"/></svg><span>루리웹</span></a></td>
+</tr>
+</tbody>
+</table></div>
+  <div class="sec" id="trend"><span class="idx">06</span><h2>신작 동향</h2><span class="rule"></span></div>
+  <div class="trend-grid">
+<div class="tcard">
+<div class="tbanner" data-mono="MYC" data-name="MYCOPUNK"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016" alt="MYCOPUNK"></div>
+<div class="tin">
+<div class="chips"><span class="tag t-live">정식 출시</span><span class="tag t-good">14.99달러</span></div>
+<div class="gm">신작 슈터 · 마이코펑크</div>
+<h3>마이코펑크가 10/20 정식 출시되고 한시 50% 할인에 들어갔습니다</h3>10/20 정식 1.0이 PC와 PS5로 나왔습니다.<span class="lb"></span>기사는 정가 <b>14.99달러</b>에 한시 <b>50%</b> 할인을 전했습니다.<span class="lb"></span>스팀 평가 <b>4,148개</b>·긍정 <b>88%</b>는 어제와 같은 값입니다.
+<div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">어제와 같은 수치는 출시 반영 전 응답일 수 있습니다.<span class="lb"></span>내일은 값이 갱신되는지, 한국어 평가가 표시되는지 봅니다.<span class="lb"></span>전체 건수가 얼마나 늘었는지도 살핍니다.</span></div>
+<div class="src"><a href="https://outputlag.com/news/mycopunk-leaves-early-access-with-1-0-release-on-pc-and-ps5" target="_blank" rel="noopener">outputlag 1.0 출시</a> · <a href="https://store.steampowered.com/app/3247750/?l=koreana" target="_blank" rel="noopener">스팀 상점</a></div>
+</div>
+</div>
+<div class="tcard">
+<div class="tbanner" data-mono="WD" data-name="WARDOGS"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/24c0b6c0621560e922fbed18545921e7eaa9036e/capsule_616x353.jpg?t=1790774170" alt="WARDOGS"></div>
+<div class="tin">
+<div class="chips"><span class="tag t-new">시즌 2</span><span class="tag t-good">39.99달러</span></div>
+<div class="gm">시즌 · 워독스</div>
+<h3>워독스 시즌 2가 10/15에 시작해 진행도가 초기화됐습니다</h3>한국어 평가 <b>1,198개</b>·긍정 <b>58%</b>가 5일째 같습니다.<span class="lb"></span>최근 30일은 <b>54,140개</b>·<b>68%</b>로 어제와 변함이 없습니다.<span class="lb"></span>기본판 <b>39.99달러</b>, 서포터 에디션 <b>49.99달러</b>입니다.
+<div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">5일째 같은 평가 값이 이번에는 갱신되는지 봅니다.<span class="lb"></span>시즌 2 초기화 뒤 한국어 긍정률이 움직이는지 살핍니다.<span class="lb"></span>상점에 적힌 가격 인상 안내가 바뀌는지도 확인합니다.</span></div>
+<div class="src"><a href="https://store.steampowered.com/app/1867240/?l=koreana" target="_blank" rel="noopener">스팀 상점</a> · <a href="https://www.playnews.gg/en/updates/wardogs-will-the-season-2-progression-reset-scare-players-away" target="_blank" rel="noopener">playnews 시즌 2 초기화</a></div>
+</div>
+</div>
+<div class="tcard">
+<div class="tbanner" data-mono="BF6" data-name="BATTLEFIELD 6"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1789484400" alt="BATTLEFIELD 6"></div>
+<div class="tin">
+<div class="chips"><span class="tag t-live">Dead Space</span><span class="tag t-warn">시작일 엇갈림</span></div>
+<div class="gm">시즌 · 배틀필드 6</div>
+<h3>시즌 5가 10/13에 열려 12/8 3단계까지 이어집니다</h3>MP1st 기준 1단계는 10/13에 시작했습니다.<span class="lb"></span>Dead Space 이벤트는 10/20부터 11/7까지입니다.<span class="lb"></span>2단계 카지노 하이스트는 11/10, 3단계는 12/8입니다.
+<div class="obs"><button class="e2" type="button" aria-expanded="false"><span class="k">관전 포인트</span></button><span class="d2">시즌 5에 관한 공식 공지가 나오는지 먼저 봅니다.<span class="lb"></span>10/20과 10/21로 엇갈린 시작일이 정리되는지 살핍니다.<span class="lb"></span>11/10 2단계 전에 패치노트가 나오는지도 확인합니다.</span></div>
+<div class="src"><a href="https://mp1st.com/?p=316422" target="_blank" rel="noopener">MP1st 시즌 5 일정</a></div>
+</div>
+</div>
+</div>
+  <div class="sec" id="risk"><span class="idx">07</span><h2>리스크 신호와 운영 교훈</h2><span class="rule"></span></div>
+<article class="risk high">
+<div class="lvl">HIGH · 아크 레이더스 PvE 종료</div>
+<h3>아크 레이더스 PvE 테스트의 종료 여부를 아직 확인하지 못했습니다.</h3>
+<div class="row"><span class="k">무엇이</span><span>테스트는 한국 시각 <b>10/20 18시</b> 종료 계획이었습니다.<span class="lb"></span>그 뒤에는 PvE 토글을 제거할 예정이었습니다.<span class="lb"></span>다만 실제 종료 여부는 직접 확인하지 못했습니다.</span></div>
+<div class="row"><span class="k">맥락</span><span>Embark는 영구 도입을 아직 확정하지 않았습니다.<span class="lb"></span>스팀 토론 첫 15건 중 <b>9건</b>이 PvE나 PvP 제목입니다.<span class="lb"></span>유지를 묻는 글은 답글 <b>82개</b>, 이용자 숫자 글은 <b>55개</b>입니다.</span></div>
+<div class="lesson"><span class="k">우리 운영 교훈</span><ol><li><b>토글이 제거된 뒤에 쓸 안내 문구를 준비합니다.</b> 공식 입장이 정해지기 전에도 바로 내보낼 수 있게 둡니다.</li><li><b>종료 뒤 제목 변화를 같은 방식으로 기록합니다.</b> 그래야 오늘 상태와 나란히 견줄 수 있습니다.</li><li><b>어제와 같은 답글 수치는 변화로 쓰지 않습니다.</b> 적대적인 제목은 인용하지 않고 건수로만 셉니다.</li></ol></div>
+</article>
+<article class="risk">
+<div class="lvl">MID · 스팀 지표 정체</div>
+<h3>스팀 평가 지표 여러 건이 어제와 같은 값으로 멈춰 있습니다.</h3>
+<div class="row"><span class="k">무엇이</span><span>마이코펑크 전체 <b>4,148개</b>와 <b>88%</b>가 어제와 소수점까지 같습니다.<span class="lb"></span>워독스 한국어 평가 <b>1,198개</b>와 <b>58%</b>는 5일째 변함없습니다.<span class="lb"></span>볼트건 2 상점이 예약 구매 가격 <b>22.49달러</b>를 띄웁니다.</span></div>
+<div class="row"><span class="k">맥락</span><span>최근 30일 값도 두 게임 모두 어제와 같습니다.<span class="lb"></span>마이코펑크 <b>70개·74%</b>, 워독스 <b>54,140개·68%</b>입니다.<span class="lb"></span>볼트건 2는 출시 8일째인데 오래된 응답으로 보입니다.</span></div>
+<div class="lesson"><span class="k">우리 운영 교훈</span><ol><li><b>어제와 같은 스팀 값은 변화로 보고하지 않습니다.</b> 소수점까지 같아도 정체 원인은 단정할 수 없습니다.</li><li><b>오래된 응답으로 보이면 이월 값이라고 밝힙니다.</b> 볼트건 2의 평가 <b>456개</b>와 긍정 <b>94%</b>는 어제 값입니다.</li><li><b>지표가 갱신되는 날의 첫 비교만 변화로 인정합니다.</b> 그 전까지는 이월 값을 같은 값으로 기록해 둡니다.</li></ol></div>
+</article>
+<article class="risk">
+<div class="lvl">MID · 배틀필드 6 Dead Space 날짜</div>
+<h3>배틀필드 6 Dead Space 시작일을 두 매체가 다르게 전했습니다.</h3>
+<div class="row"><span class="k">무엇이</span><span>MP1st는 이벤트를 <b>10/20~11/7</b>로 전했습니다.<span class="lb"></span>어제 인벤은 시작을 <b>10/21</b>이라고 알렸습니다.<span class="lb"></span>두 날짜 모두 공식 공지로는 확인하지 못했습니다.</span></div>
+<div class="row"><span class="k">맥락</span><span><b>10/20</b>과 <b>10/21</b>로 시작일이 하루 엇갈립니다.<span class="lb"></span>이어지는 카지노 하이스트는 <b>11/10</b>입니다.<span class="lb"></span>3단계 프로즌 에이스 일정은 <b>12/8</b>로 나와 있습니다.</span></div>
+<div class="lesson"><span class="k">우리 운영 교훈</span><ol><li><b>매체 날짜가 엇갈리면 공식 공지가 나올 때까지 보류합니다.</b> 확인되기 전에는 이용자에게 시작일을 안내하지 않습니다.</li><li><b>공식 공지로 직접 확인한 사실만 단정해서 씁니다.</b> 이번 시작일 두 건은 매체 보도 수준에 머뭅니다.</li><li><b>다음 판에서 두 매체의 같은 날짜를 다시 비교합니다.</b> 10/20과 10/21 중 어느 쪽이 맞는지 시작일부터 봅니다.</li></ol></div>
+</article>
+  <div class="sec" id="action"><span class="idx">08</span><h2>CM 액션 제안</h2><span class="rule"></span></div>
+<article class="act">
+<div class="num">1</div>
+<div><h3>아크 PvE 종료 뒤 스팀 토론 첫 15건을 같은 방식으로 재집계</h3>
+<p>테스트가 끝나면 같은 방식으로 스팀 토론 첫 15건을 셉니다.<span class="lb"></span>PvE나 PvP를 적은 제목 9건과 숫자를 비교합니다.<span class="lb"></span>답글 310개와 282개가 갱신되는지 확인합니다.<span class="lb"></span>오늘 값이 어제와 같았으니 캐시가 풀렸는지 먼저 봅니다.</p>
+</div>
+</article>
+<article class="act">
+<div class="num">2</div>
+<div><h3>마이코펑크 출시 첫 주 스팀 지표를 매일 같은 시각에 확인</h3>
+<p>정식 출시 첫 주에는 스팀 지표를 매일 같은 시각에 봅니다.<span class="lb"></span>① 전체 4,148개·88%, ② 최근 30일 70개·74%에서 출발합니다.<span class="lb"></span>오늘 값이 어제와 같아 출시 반영 여부를 먼저 확인합니다.<span class="lb"></span>한국어 평가 수가 표시되는지도 살핍니다.</p>
+</div>
+</article>
+  <div class="caveat">
+<span class="k">유의사항</span>
+<span class="crow"><b class="ck">방법</b><span>스팀 일반 토론 첫 15건은 7시대에 제목만 읽었습니다. 인벤 오버워치 자유게시판과 핫벤, 루리웹 메인을 직접 열었습니다.</span></span><span class="crow"><b class="ck">캐시</b><span>마이코펑크 평가 수치와 워독스 한국어 평가 1,198개·58%는 어제와 같아 뺐습니다. 아크 토론의 답글 최다 두 건도 같은 값입니다.</span></span><span class="crow"><b class="ck">제외</b><span>배틀필드 6 토론은 열지 못했고 무료 체험 종료는 확인하지 못했습니다. 볼트건 2는 어제 값을 이월했습니다.</span></span><span class="crow"><b class="ck">차이</b><span>IGDB 캐시와 스토어 날짜 어긋남은 확인한 범위에서 0건입니다. Dead Space 시작일은 매체마다 하루 다릅니다.</span></span><span class="crow"><b class="ck">이월</b><span>마블 라이벌즈·서든어택·오버워치 이벤트 일정은 어제 판 그대로입니다. 03 표에는 두 행만 담았습니다.</span></span>
+</div>
+  <!-- 09 출처 -->
+  <details class="sources" id="sources" open>
+    <summary>출처 링크 18건</summary>
+    <div class="body">
+      <ul>
+<li><b>마이코펑크</b><a href="https://outputlag.com/news/mycopunk-leaves-early-access-with-1-0-release-on-pc-and-ps5" target="_blank" rel="noopener">outputlag 1.0 출시</a> · <a href="https://store.steampowered.com/app/3247750/?l=koreana" target="_blank" rel="noopener">마이코펑크 스팀 상점</a> · <a href="https://massivelyop.com/2026/09/24/colorful-co-op-shooter-mycopunk-confirms-its-1-0-release-date-of-october-20/" target="_blank" rel="noopener">MassivelyOP 마이코펑크</a></li>
+<li><b>아크 레이더스</b><a href="https://steamcommunity.com/app/1808500/discussions/0/" target="_blank" rel="noopener">아크 레이더스 일반 토론</a> · <a href="https://www.keengamer.com/articles/news/arc-raiders-pve-toggle-beta-test-is-now-live-for-one-week/" target="_blank" rel="noopener">KeenGamer PvE 테스트</a> · <a href="https://store.steampowered.com/app/1808500/?l=koreana" target="_blank" rel="noopener">아크 레이더스 스팀 상점</a></li>
+<li><b>배틀필드 6</b><a href="https://mp1st.com/?p=316422" target="_blank" rel="noopener">MP1st 시즌 5 일정</a> · <a href="https://store.steampowered.com/app/2807960/?l=koreana" target="_blank" rel="noopener">배틀필드 6 스팀 상점</a> · <a href="https://jeu.video/en/article/battlefield-6-free-trial-steam" target="_blank" rel="noopener">jeu.video 무료 체험</a></li>
+<li><b>워독스·볼트건 2</b><a href="https://store.steampowered.com/app/1867240/?l=koreana" target="_blank" rel="noopener">워독스 스팀 상점</a> · <a href="https://www.playnews.gg/en/updates/wardogs-will-the-season-2-progression-reset-scare-players-away" target="_blank" rel="noopener">playnews 시즌 2 초기화</a> · <a href="https://store.steampowered.com/app/3115160/Warhammer_40000_Boltgun_2/?l=koreana" target="_blank" rel="noopener">볼트건 2 스팀</a> · <a href="https://www.gematsu.com/2026/08/warhammer-40000-boltgun-ii-launches-october-14-for-ps5-xbox-series-and-pc-later-for-switch-2" target="_blank" rel="noopener">Gematsu 볼트건 2</a></li>
+<li><b>오버워치·핫벤·루리웹</b><a href="https://www.inven.co.kr/board/overwatch/4538?p=1" target="_blank" rel="noopener">인벤 오버워치 자유게시판</a> · <a href="https://hot.inven.co.kr" target="_blank" rel="noopener">인벤 핫벤</a> · <a href="https://bbs.ruliweb.com/" target="_blank" rel="noopener">루리웹 메인</a></li>
+<li><b>디비전 2</b><a href="https://www.ubisoft.com/en-us/game/the-division/news-updates/23q5ICm6Mf4PUPuPUUS0uP/the-division-2-echoes-of-central-park-coming-on-november-3" target="_blank" rel="noopener">유비소프트 확장 공지</a> · <a href="https://mp1st.com/news/the-division-2-echoes-of-central-park-releases-november-3-brings-new-endgame-experience" target="_blank" rel="noopener">mp1st 확장 보도</a></li>
+      </ul>
+      <div class="colophon">
+        <b>FPS 이벤트 동향 레이더</b> · 라이온하트 · 자동 생성 리포트 · No.104<br>
+        모니터링: 루리웹 · 인벤 · 아카라이브 · 스팀 커뮤니티 · 해외 전문지 (국내+글로벌 병행)
+      </div>
+    </div>
+  </details>
+
+</div>
+
+
+</main>
+
+<script>
+(function(){
+  /* 이미지 로드 실패 → 약어 타일 대체 */
+  document.querySelectorAll('.thumb img, .tbanner img, .hero .shot img').forEach(function(img){
+    if(!img.getAttribute('src')){var p0=img.parentElement;if(p0)p0.classList.add('noimg');return;}
+    img.addEventListener('error',function(){var p=img.parentElement;if(p)p.classList.add('noimg');});
+  });
+  /* 표 2열 상세 펼치기 (오버는 CSS, 클릭·키보드는 여기) */
+  document.querySelectorAll('td.ev2 .e2, .obs .e2').forEach(function(b){
+    b.addEventListener('click',function(){
+      var box=b.closest('td.ev2, .obs'),on=box.classList.toggle('open');
+      b.setAttribute('aria-expanded',on?'true':'false');
+    });
+  });
+  /* 01 일정 아코디언 — 인쇄 시 전부 펼침 */
+  window.addEventListener('beforeprint',function(){document.querySelectorAll('details.dgroup').forEach(function(d){d.open=true;});});
+  /* 읽기 진행바 */
+  var prog=document.getElementById('prog');
+  function tick(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';}
+  document.addEventListener('scroll',tick,{passive:true});window.addEventListener('resize',tick);tick();
+  /* 테마 토글 (리포트/뷰어와 동일 localStorage 키 공유) */
+  var root=document.documentElement,btn=document.getElementById('themebtn'),lbl=document.getElementById('themelbl');
+  function apply(t){root.setAttribute('data-theme',t);lbl.textContent=(t==='dark'?'DARK':'LIGHT');
+    btn.setAttribute('aria-pressed',t==='dark'?'true':'false');try{localStorage.setItem('fpsradar-theme',t);}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('fpsradar-theme');}catch(e){}
+  if(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)saved='dark';
+  apply(saved||'light');
+  btn.addEventListener('click',function(){apply(root.getAttribute('data-theme')==='dark'?'light':'dark');});
+})();
+</script>
+</body>
+</html>
