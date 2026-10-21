@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-10-20 09:20:14",
+    "_생성시각":  "2026-10-21 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Arcs",
-                         "date":  "2026-10-21",
-                         "human":  "Oct 21, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/arcs--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5eg.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5eg.jpg"
-                     },
                      {
                          "name":  "Dreadway",
                          "date":  "2026-10-22",
@@ -29,6 +20,15 @@
                          "igdb_url":  "https://www.igdb.com/games/battle-nap",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod11c.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod11c.jpg"
+                     },
+                     {
+                         "name":  "Empires Shall Fall",
+                         "date":  "2026-10-23",
+                         "human":  "Oct 23, 2026",
+                         "platform":  "Xbox One",
+                         "igdb_url":  "https://www.igdb.com/games/empires-shall-fall",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7pyl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co7pyl.jpg"
                      },
                      {
                          "name":  "Darkenstein 3D",
@@ -335,15 +335,6 @@
                          "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
-                     },
-                     {
-                         "name":  "Deiity (Under Ice)",
-                         "date":  "2026-11-10",
-                         "human":  "Nov 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/deiity-under-ice",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod35j.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod35j.jpg"
                      },
                      {
                          "name":  "Rense",
