@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-10-22 09:20:13",
+    "_생성시각":  "2026-10-23 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Empires Shall Fall",
-                         "date":  "2026-10-23",
-                         "human":  "Oct 23, 2026",
-                         "platform":  "Xbox One",
-                         "igdb_url":  "https://www.igdb.com/games/empires-shall-fall",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7pyl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co7pyl.jpg"
-                     },
-                     {
-                         "name":  "Strikem",
-                         "date":  "2026-10-23",
-                         "human":  "Oct 23, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/strikem",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6ef.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6ef.jpg"
-                     },
-                     {
-                         "name":  "Call of Duty: Modern Warfare 4",
-                         "date":  "2026-10-23",
-                         "human":  "Oct 23, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/call-of-duty-modern-warfare-4",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc4mu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc4mu.jpg"
-                     },
-                     {
-                         "name":  "Darkenstein 3D",
-                         "date":  "2026-10-23",
-                         "human":  "Oct 23, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/darkenstein-3d",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h4n.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8h4n.jpg"
-                     },
                      {
                          "name":  "Galactic Bounty",
                          "date":  "2026-10-26",
@@ -121,15 +85,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwrn.jpg"
                      },
                      {
-                         "name":  "Metro Redux",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4b2q.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co4b2q.jpg"
-                     },
-                     {
                          "name":  "The Last Case",
                          "date":  "2026-10-29",
                          "human":  "Oct 29, 2026",
@@ -146,6 +101,24 @@
                          "igdb_url":  "https://www.igdb.com/games/hyperviolent",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coahmz.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coahmz.jpg"
+                     },
+                     {
+                         "name":  "Cop Bastard",
+                         "date":  "2026-10-29",
+                         "human":  "Oct 29, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/cop-bastard",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7gqn.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co7gqn.jpg"
+                     },
+                     {
+                         "name":  "Metro Redux",
+                         "date":  "2026-10-29",
+                         "human":  "Oct 29, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/metro-redux",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4b2q.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co4b2q.jpg"
                      },
                      {
                          "name":  "Milo",
@@ -193,13 +166,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczex.jpg"
                      },
                      {
-                         "name":  "Pinballoid Crush",
+                         "name":  "Neurospasm",
                          "date":  "2026-10-30",
                          "human":  "Oct 30, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/neurospasm",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5s4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5s4.jpg"
                      },
                      {
                          "name":  "Mad Ever After",
@@ -220,13 +193,31 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczke.jpg"
                      },
                      {
+                         "name":  "Pinballoid Crush",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
+                     },
+                     {
+                         "name":  "Postal Adrenalin",
+                         "date":  "2026-10-31",
+                         "human":  "Oct 31, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/postal-adrenalin",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7k3.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7k3.jpg"
+                     },
+                     {
                          "name":  "Phosphor",
                          "date":  "2026-10-31",
                          "human":  "Oct 31, 2026",
                          "platform":  "PC (Microsoft Windows)",
                          "igdb_url":  "https://www.igdb.com/games/phosphor--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coclre.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coclre.jpg"
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7ee.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7ee.jpg"
                      },
                      {
                          "name":  "Carnor City",
@@ -337,6 +328,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocb6y.jpg"
                      },
                      {
+                         "name":  "Nutshot Simulator",
+                         "date":  "2026-11-06",
+                         "human":  "Nov 06, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/nutshot-simulator",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6qd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6qd.jpg"
+                     },
+                     {
                          "name":  "To Be Besieged",
                          "date":  "2026-11-06",
                          "human":  "Nov 06, 2026",
@@ -344,6 +344,42 @@
                          "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
+                     },
+                     {
+                         "name":  "Deiity (Under Ice)",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/deiity-under-ice",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod35j.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod35j.jpg"
+                     },
+                     {
+                         "name":  "Rense",
+                         "date":  "2026-11-10",
+                         "human":  "Nov 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/rense",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
+                     },
+                     {
+                         "name":  "Corridors",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
+                     },
+                     {
+                         "name":  "Hill-Z",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/hill-z",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
                      }
                  ]
 }
