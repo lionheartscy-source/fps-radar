@@ -260,6 +260,13 @@
       "steam_appid": "286690",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/286690/c13a5182c949424888d045898782b4ca9cb5ae22/capsule_616x353_alt_assets_1.jpg?t=1792681167",
       "확인": "2026-10-23 스팀 한국어 상점 og:image"
+    },
+    "Sulfur": {
+      "mono": "SUL",
+      "name": "SULFUR",
+      "steam_appid": "2124120",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124120/c800801a8d013e599dc0b76ecbc6fbe7161eeaf4/capsule_616x353.jpg?t=1791482498",
+      "메모": "2026-10-24 스팀 한국어 상점 og:image"
     }
   },
   "_이미지필요": [],
