@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-10-23 09:20:13",
+    "_생성시각":  "2026-10-24 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
@@ -362,24 +362,6 @@
                          "igdb_url":  "https://www.igdb.com/games/rense",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
-                     },
-                     {
-                         "name":  "Corridors",
-                         "date":  "2026-11-11",
-                         "human":  "Nov 11, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
-                     },
-                     {
-                         "name":  "Hill-Z",
-                         "date":  "2026-11-11",
-                         "human":  "Nov 11, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/hill-z",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
                      }
                  ]
 }
