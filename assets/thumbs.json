@@ -267,6 +267,13 @@
       "steam_appid": "2124120",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2124120/c800801a8d013e599dc0b76ecbc6fbe7161eeaf4/capsule_616x353.jpg?t=1791482498",
       "메모": "2026-10-24 스팀 한국어 상점 og:image"
+    },
+    "HYPERVIOLENT": {
+      "mono": "HV",
+      "name": "HYPERVIOLENT",
+      "steam_appid": "1409200",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1409200/813bbac746079c9fb3c940ca2f6ff1de1f6d4c97/capsule_616x353.jpg?t=1761836810",
+      "메모": "2026-10-26 스팀 상점 og:image에서 해시 경로 확인."
     }
   },
   "_이미지필요": [],
