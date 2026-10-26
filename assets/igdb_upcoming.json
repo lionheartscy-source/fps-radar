@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-10-25 09:20:14",
+    "_생성시각":  "2026-10-26 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Galactic Bounty",
-                         "date":  "2026-10-26",
-                         "human":  "Oct 26, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/galactic-bounty",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxjp.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxjp.jpg"
-                     },
                      {
                          "name":  "Divine Frequency",
                          "date":  "2026-10-27",
@@ -148,15 +139,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar10.jpg"
                      },
                      {
-                         "name":  "Oktoraid",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/oktoraid",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczey.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczey.jpg"
-                     },
-                     {
                          "name":  "Towermouth",
                          "date":  "2026-10-30",
                          "human":  "Oct 30, 2026",
@@ -173,6 +155,24 @@
                          "igdb_url":  "https://www.igdb.com/games/neurospasm",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5s4.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5s4.jpg"
+                     },
+                     {
+                         "name":  "The Trivia Show",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-trivia-show",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod87y.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod87y.jpg"
+                     },
+                     {
+                         "name":  "Oktoraid",
+                         "date":  "2026-10-30",
+                         "human":  "Oct 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/oktoraid",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczey.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczey.jpg"
                      },
                      {
                          "name":  "Mad Ever After",
