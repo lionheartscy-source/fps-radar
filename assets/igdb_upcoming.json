@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-10-26 09:20:14",
+    "_생성시각":  "2026-10-27 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Divine Frequency",
-                         "date":  "2026-10-27",
-                         "human":  "Oct 27, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/divine-frequency--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co79k2.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co79k2.jpg"
-                     },
-                     {
-                         "name":  "Neon Breaker: Endless Arcade",
-                         "date":  "2026-10-27",
-                         "human":  "Oct 27, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/neon-breaker-endless-arcade",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6n1.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6n1.jpg"
-                     },
-                     {
-                         "name":  "Knell",
-                         "date":  "2026-10-27",
-                         "human":  "Oct 27, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/knell",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3z1.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3z1.jpg"
-                     },
-                     {
-                         "name":  "You Are Empty: Absolute Edition",
-                         "date":  "2026-10-27",
-                         "human":  "Oct 27, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/you-are-empty-absolute-edition",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocswn.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocswn.jpg"
-                     },
                      {
                          "name":  "Firestarters",
                          "date":  "2026-10-28",
@@ -362,6 +326,42 @@
                          "igdb_url":  "https://www.igdb.com/games/rense",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
+                     },
+                     {
+                         "name":  "Headshot Holdout",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/headshot-holdout",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxku.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxku.jpg"
+                     },
+                     {
+                         "name":  "Corridors",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
+                     },
+                     {
+                         "name":  "Hill-Z",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/hill-z",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
+                     },
+                     {
+                         "name":  "Gee, Tea, Eh, Seven?",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/gee-tea-eh-seven",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3x2.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
                      }
                  ]
 }
