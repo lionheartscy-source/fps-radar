@@ -71,8 +71,8 @@
       "mono": "MR",
       "name": "MARVEL RIVALS",
       "steam_appid": "2767030",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/088fc787d8513a6f9782d03968e5ac1a01840087/header.jpg?t=1789119923",
-      "메모": "2026-09-16 해시 경로가 44ca658e…에서 088fc787…로 바뀐 것을 확인(스팀 og:image). 해시는 고정이 아니므로 매번 og:image로 재확인할 것."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/25b6ac0d0d85740ee9bf38462a19243e50c70648/capsule_616x353.jpg?t=1789119923",
+      "메모": "2026-10-28 스팀 상점 og:image로 해시 25b6ac0d…(capsule_616x353)로 재확인. 해시는 고정이 아니므로 매번 확인할 것."
     },
     "타임 테이커즈": {
       "mono": "TT",
