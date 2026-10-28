@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-10-27 09:20:13",
+    "_생성시각":  "2026-10-28 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Firestarters",
-                         "date":  "2026-10-28",
-                         "human":  "Oct 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/firestarters",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobbvx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobbvx.jpg"
-                     },
-                     {
-                         "name":  "Sulfur",
-                         "date":  "2026-10-28",
-                         "human":  "Oct 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/sulfur",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6a6w.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6a6w.jpg"
-                     },
-                     {
-                         "name":  "Anomalith",
-                         "date":  "2026-10-28",
-                         "human":  "Oct 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/anomalith",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc3jf.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc3jf.jpg"
-                     },
-                     {
-                         "name":  "Bulletjump",
-                         "date":  "2026-10-28",
-                         "human":  "Oct 28, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bulletjump",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocwrn.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwrn.jpg"
-                     },
                      {
                          "name":  "The Last Case",
                          "date":  "2026-10-29",
@@ -162,8 +126,8 @@
                          "human":  "Oct 30, 2026",
                          "platform":  "PC (Microsoft Windows)",
                          "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocx1j.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocx1j.jpg"
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8py.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8py.jpg"
                      },
                      {
                          "name":  "Postal Adrenalin",
@@ -355,6 +319,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
                      },
                      {
+                         "name":  "All Eyes on Me",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/all-eyes-on-me--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6uo.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6uo.jpg"
+                     },
+                     {
                          "name":  "Gee, Tea, Eh, Seven?",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
@@ -362,6 +335,69 @@
                          "igdb_url":  "https://www.igdb.com/games/gee-tea-eh-seven",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3x2.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
+                     },
+                     {
+                         "name":  "Derelikt",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/derelikt",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa07m.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa07m.jpg"
+                     },
+                     {
+                         "name":  "Powerfuel",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/powerfuel",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
+                     },
+                     {
+                         "name":  "Overspray",
+                         "date":  "2026-11-15",
+                         "human":  "Nov 15, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/overspray",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7me.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7me.jpg"
+                     },
+                     {
+                         "name":  "Pluck Em!",
+                         "date":  "2026-11-17",
+                         "human":  "Nov 17, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/pluck-em",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod51r.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod51r.jpg"
+                     },
+                     {
+                         "name":  "AsterMaster",
+                         "date":  "2026-11-17",
+                         "human":  "Nov 17, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/astermaster",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxym.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxym.jpg"
+                     },
+                     {
+                         "name":  "Strato Alto",
+                         "date":  "2026-11-18",
+                         "human":  "Nov 18, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/strato-alto",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5rh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5rh.jpg"
+                     },
+                     {
+                         "name":  "Grand Theft Auto VI",
+                         "date":  "2026-11-19",
+                         "human":  "Nov 19, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vi",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv1v.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv1v.jpg"
                      }
                  ]
 }
