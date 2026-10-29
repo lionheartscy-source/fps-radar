@@ -1,71 +1,8 @@
 {
-    "_생성시각":  "2026-10-28 09:20:14",
+    "_생성시각":  "2026-10-29 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "The Last Case",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "Xbox One",
-                         "igdb_url":  "https://www.igdb.com/games/the-last-case",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod39c.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod39c.jpg"
-                     },
-                     {
-                         "name":  "HyperViolent",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "Xbox Series X|S",
-                         "igdb_url":  "https://www.igdb.com/games/hyperviolent",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coahmz.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coahmz.jpg"
-                     },
-                     {
-                         "name":  "Cop Bastard",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/cop-bastard",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co7gqn.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co7gqn.jpg"
-                     },
-                     {
-                         "name":  "Metro Redux",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co4b2q.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co4b2q.jpg"
-                     },
-                     {
-                         "name":  "Milo",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/milo--2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctbe.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctbe.jpg"
-                     },
-                     {
-                         "name":  "Metro 2033 Redux",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-2033-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0z.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar0z.jpg"
-                     },
-                     {
-                         "name":  "Metro: Last Light Redux",
-                         "date":  "2026-10-29",
-                         "human":  "Oct 29, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/metro-last-light-redux",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coar10.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coar10.jpg"
-                     },
                      {
                          "name":  "Towermouth",
                          "date":  "2026-10-30",
@@ -164,6 +101,15 @@
                          "igdb_url":  "https://www.igdb.com/games/no-sunrise",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5ru.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5ru.jpg"
+                     },
+                     {
+                         "name":  "The Omega Strain",
+                         "date":  "2026-11-02",
+                         "human":  "Nov 02, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-omega-strain",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8yd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8yd.jpg"
                      },
                      {
                          "name":  "ShootyCraft",
@@ -319,6 +265,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
                      },
                      {
+                         "name":  "Mad Dvizhuha: Benzovoz",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mad-dvizhuha-benzovoz",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8ti.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8ti.jpg"
+                     },
+                     {
                          "name":  "All Eyes on Me",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
@@ -391,6 +346,24 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5rh.jpg"
                      },
                      {
+                         "name":  "The Binding of Isaac: Repentance+",
+                         "date":  "2026-11-19",
+                         "human":  "Nov 19, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/the-binding-of-isaac-repentance-plus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co949f.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co949f.jpg"
+                     },
+                     {
+                         "name":  "Kuroshio: Neon Blood",
+                         "date":  "2026-11-19",
+                         "human":  "Nov 19, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/kuroshio-neon-blood",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7ud.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7ud.jpg"
+                     },
+                     {
                          "name":  "Grand Theft Auto VI",
                          "date":  "2026-11-19",
                          "human":  "Nov 19, 2026",
@@ -398,6 +371,60 @@
                          "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vi",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv1v.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocv1v.jpg"
+                     },
+                     {
+                         "name":  "Grand Theft Auto VI: Vintage Vice City Pack",
+                         "date":  "2026-11-19",
+                         "human":  "Nov 19, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vi-vintage-vice-city-pack",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocbha.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocbha.jpg"
+                     },
+                     {
+                         "name":  "Tanks Sweet Tanks",
+                         "date":  "2026-11-20",
+                         "human":  "Nov 20, 2026",
+                         "platform":  "Xbox Series X|S",
+                         "igdb_url":  "https://www.igdb.com/games/tanks-sweet-tanks",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5do.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5do.jpg"
+                     },
+                     {
+                         "name":  "Blackout Route",
+                         "date":  "2026-11-23",
+                         "human":  "Nov 23, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/blackout-route",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod04s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod04s.jpg"
+                     },
+                     {
+                         "name":  "Project Atlas",
+                         "date":  "2026-11-25",
+                         "human":  "Nov 25, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/project-atlas--4",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobdmc.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobdmc.jpg"
+                     },
+                     {
+                         "name":  "Appulse",
+                         "date":  "2026-11-26",
+                         "human":  "Nov 26, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/appulse",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9u83.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9u83.jpg"
+                     },
+                     {
+                         "name":  "Chronal Chain",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/chronal-chain",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc2ff.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
                      }
                  ]
 }
