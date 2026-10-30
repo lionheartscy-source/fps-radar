@@ -1,71 +1,8 @@
 {
-    "_생성시각":  "2026-10-29 09:20:13",
+    "_생성시각":  "2026-10-30 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Towermouth",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/towermouth",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczex.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczex.jpg"
-                     },
-                     {
-                         "name":  "Neurospasm",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/neurospasm",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc5s4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc5s4.jpg"
-                     },
-                     {
-                         "name":  "The Trivia Show",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-trivia-show",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod87y.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod87y.jpg"
-                     },
-                     {
-                         "name":  "Oktoraid",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/oktoraid",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczey.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczey.jpg"
-                     },
-                     {
-                         "name":  "Mad Ever After",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mad-ever-after",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocncs.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocncs.jpg"
-                     },
-                     {
-                         "name":  "Day 31",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/day-31",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coczke.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coczke.jpg"
-                     },
-                     {
-                         "name":  "Pinballoid Crush",
-                         "date":  "2026-10-30",
-                         "human":  "Oct 30, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/pinballoid-crush",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8py.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8py.jpg"
-                     },
                      {
                          "name":  "Postal Adrenalin",
                          "date":  "2026-10-31",
@@ -418,6 +355,60 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9u83.jpg"
                      },
                      {
+                         "name":  "Void Skirmisher",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/void-skirmisher",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod1vg.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod1vg.jpg"
+                     },
+                     {
+                         "name":  "Call of Blood",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/call-of-blood--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0ih.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0ih.jpg"
+                     },
+                     {
+                         "name":  "Abandoned Below",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/abandoned-below",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8kh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8kh.jpg"
+                     },
+                     {
+                         "name":  "Black Mesa: Classic",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/black-mesa-classic",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa0gu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
+                     },
+                     {
+                         "name":  "Trenchblocks",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/trenchblocks",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
+                     },
+                     {
+                         "name":  "They Are Rising",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/they-are-rising",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coboa6.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coboa6.jpg"
+                     },
+                     {
                          "name":  "Chronal Chain",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
@@ -425,6 +416,33 @@
                          "igdb_url":  "https://www.igdb.com/games/chronal-chain",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc2ff.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
+                     },
+                     {
+                         "name":  "Bold: Networked Newt Action",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
+                     },
+                     {
+                         "name":  "Beautiful Light",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/beautiful-light",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9v9.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
+                     },
+                     {
+                         "name":  "Akashic Slingshot",
+                         "date":  "2026-12-03",
+                         "human":  "Dec 03, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/akashic-slingshot",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa8j6.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa8j6.jpg"
                      }
                  ]
 }
