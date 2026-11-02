@@ -1,71 +1,8 @@
 {
-    "_생성시각":  "2026-10-30 09:20:13",
+    "_생성시각":  "2026-11-02 10:00:55",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Postal Adrenalin",
-                         "date":  "2026-10-31",
-                         "human":  "Oct 31, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/postal-adrenalin",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7k3.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7k3.jpg"
-                     },
-                     {
-                         "name":  "Phosphor",
-                         "date":  "2026-10-31",
-                         "human":  "Oct 31, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/phosphor--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7ee.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7ee.jpg"
-                     },
-                     {
-                         "name":  "Carnor City",
-                         "date":  "2026-11-01",
-                         "human":  "Nov 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/carnor-city",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocvpt.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocvpt.jpg"
-                     },
-                     {
-                         "name":  "No Sunrise",
-                         "date":  "2026-11-01",
-                         "human":  "Nov 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/no-sunrise",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5ru.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5ru.jpg"
-                     },
-                     {
-                         "name":  "The Omega Strain",
-                         "date":  "2026-11-02",
-                         "human":  "Nov 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-omega-strain",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8yd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8yd.jpg"
-                     },
-                     {
-                         "name":  "ShootyCraft",
-                         "date":  "2026-11-02",
-                         "human":  "Nov 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/shootycraft",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocwea.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocwea.jpg"
-                     },
-                     {
-                         "name":  "SpaceShooter",
-                         "date":  "2026-11-02",
-                         "human":  "Nov 02, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/spaceshooter--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocpdx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocpdx.jpg"
-                     },
                      {
                          "name":  "Havker-Man X",
                          "date":  "2026-11-03",
@@ -436,6 +373,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
                      },
                      {
+                         "name":  "Cronos: Lazarus",
+                         "date":  "2026-12-03",
+                         "human":  "Dec 03, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/cronos-lazarus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocm93.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocm93.jpg"
+                     },
+                     {
                          "name":  "Akashic Slingshot",
                          "date":  "2026-12-03",
                          "human":  "Dec 03, 2026",
@@ -443,6 +389,42 @@
                          "igdb_url":  "https://www.igdb.com/games/akashic-slingshot",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa8j6.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa8j6.jpg"
+                     },
+                     {
+                         "name":  "The Comyths",
+                         "date":  "2026-12-07",
+                         "human":  "Dec 07, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-comyths",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvi8.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvi8.jpg"
+                     },
+                     {
+                         "name":  "Witch War I",
+                         "date":  "2026-12-07",
+                         "human":  "Dec 07, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/witch-war-i",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa2yp.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa2yp.jpg"
+                     },
+                     {
+                         "name":  "Squid Hunt 1923",
+                         "date":  "2026-12-07",
+                         "human":  "Dec 07, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/squid-hunt-1923",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc852.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc852.jpg"
+                     },
+                     {
+                         "name":  "Guns of Eschaton",
+                         "date":  "2026-12-08",
+                         "human":  "Dec 08, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/guns-of-eschaton",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocrqy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocrqy.jpg"
                      }
                  ]
 }
