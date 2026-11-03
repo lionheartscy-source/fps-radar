@@ -1,35 +1,8 @@
 {
-    "_생성시각":  "2026-11-02 10:00:55",
+    "_생성시각":  "2026-11-03 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Havker-Man X",
-                         "date":  "2026-11-03",
-                         "human":  "Nov 03, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/havker-man-x",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9w5m.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9w5m.jpg"
-                     },
-                     {
-                         "name":  "Desert Echo",
-                         "date":  "2026-11-03",
-                         "human":  "Nov 03, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/desert-echo",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod52r.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod52r.jpg"
-                     },
-                     {
-                         "name":  "The Division 2: Echoes of Central Park",
-                         "date":  "2026-11-03",
-                         "human":  "Nov 03, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/the-division-2-echoes-of-central-park",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod28o.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod28o.jpg"
-                     },
                      {
                          "name":  "Outbreak: Dead City",
                          "date":  "2026-11-04",
@@ -58,6 +31,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9nls.jpg"
                      },
                      {
+                         "name":  "Hijura Scarlet Gear",
+                         "date":  "2026-11-05",
+                         "human":  "Nov 05, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/hijura-scarlet-gear",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coda33.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda33.jpg"
+                     },
+                     {
                          "name":  "Mono Chameleon",
                          "date":  "2026-11-05",
                          "human":  "Nov 05, 2026",
@@ -76,13 +58,22 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocb6y.jpg"
                      },
                      {
-                         "name":  "Nutshot Simulator",
+                         "name":  "Ammo Dump",
                          "date":  "2026-11-06",
                          "human":  "Nov 06, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/nutshot-simulator",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6qd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6qd.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/ammo-dump",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod9vh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod9vh.jpg"
+                     },
+                     {
+                         "name":  "V.O.L.T. Survivors",
+                         "date":  "2026-11-06",
+                         "human":  "Nov 06, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/volt-survivors",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coda5w.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda5w.jpg"
                      },
                      {
                          "name":  "To Be Besieged",
@@ -92,6 +83,15 @@
                          "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
+                     },
+                     {
+                         "name":  "Nutshot Simulator",
+                         "date":  "2026-11-06",
+                         "human":  "Nov 06, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/nutshot-simulator",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6qd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6qd.jpg"
                      },
                      {
                          "name":  "Deiity (Under Ice)",
@@ -164,6 +164,15 @@
                          "igdb_url":  "https://www.igdb.com/games/gee-tea-eh-seven",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3x2.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
+                     },
+                     {
+                         "name":  "Logosmancer",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/logosmancer",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coda9k.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda9k.jpg"
                      },
                      {
                          "name":  "Derelikt",
@@ -292,6 +301,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9u83.jpg"
                      },
                      {
+                         "name":  "Tin Coffins",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/tin-coffins",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4tx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4tx.jpg"
+                     },
+                     {
                          "name":  "Void Skirmisher",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
@@ -301,13 +319,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod1vg.jpg"
                      },
                      {
-                         "name":  "Call of Blood",
+                         "name":  "Dead Exodus",
                          "date":  "2026-12-01",
-                         "human":  "Dec 2026",
+                         "human":  "Dec 01, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/call-of-blood--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0ih.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0ih.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/dead-exodus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4jd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
                      },
                      {
                          "name":  "Abandoned Below",
@@ -328,13 +346,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
                      },
                      {
-                         "name":  "Trenchblocks",
+                         "name":  "Call of Blood",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/trenchblocks",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/call-of-blood--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0ih.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0ih.jpg"
                      },
                      {
                          "name":  "They Are Rising",
@@ -355,15 +373,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
                      },
                      {
-                         "name":  "Bold: Networked Newt Action",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
-                     },
-                     {
                          "name":  "Beautiful Light",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
@@ -371,6 +380,24 @@
                          "igdb_url":  "https://www.igdb.com/games/beautiful-light",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9v9.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
+                     },
+                     {
+                         "name":  "Trenchblocks",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/trenchblocks",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
+                     },
+                     {
+                         "name":  "Bold: Networked Newt Action",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
                      },
                      {
                          "name":  "Cronos: Lazarus",
