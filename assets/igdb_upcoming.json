@@ -1,34 +1,16 @@
 {
-    "_생성시각":  "2026-11-03 09:20:14",
+    "_생성시각":  "2026-11-04 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
                      {
-                         "name":  "Outbreak: Dead City",
-                         "date":  "2026-11-04",
-                         "human":  "Nov 04, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/outbreak-dead-city",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod50n.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod50n.jpg"
-                     },
-                     {
-                         "name":  "Alteredblood+",
-                         "date":  "2026-11-04",
-                         "human":  "Nov 04, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/alteredblood-plus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0vx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0vx.jpg"
-                     },
-                     {
-                         "name":  "Void/Breaker",
-                         "date":  "2026-11-04",
-                         "human":  "Nov 04, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/void-slash-breaker",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9nls.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9nls.jpg"
+                         "name":  "Hell of Fear: Mind Breach",
+                         "date":  "2026-11-05",
+                         "human":  "Nov 05, 2026",
+                         "platform":  "Xbox Series X|S",
+                         "igdb_url":  "https://www.igdb.com/games/hell-of-fear-mind-breach",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coabqn.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coabqn.jpg"
                      },
                      {
                          "name":  "Hijura Scarlet Gear",
@@ -40,15 +22,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda33.jpg"
                      },
                      {
-                         "name":  "Mono Chameleon",
-                         "date":  "2026-11-05",
-                         "human":  "Nov 05, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mono-chameleon",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6cj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6cj.jpg"
-                     },
-                     {
                          "name":  "Blood of Rations",
                          "date":  "2026-11-05",
                          "human":  "Nov 05, 2026",
@@ -56,6 +29,15 @@
                          "igdb_url":  "https://www.igdb.com/games/blood-of-rations",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb6y.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocb6y.jpg"
+                     },
+                     {
+                         "name":  "Mono Chameleon",
+                         "date":  "2026-11-05",
+                         "human":  "Nov 05, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mono-chameleon",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6cj.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6cj.jpg"
                      },
                      {
                          "name":  "Ammo Dump",
@@ -202,6 +184,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7me.jpg"
                      },
                      {
+                         "name":  "Ratchet \u0026 Clank",
+                         "date":  "2026-11-17",
+                         "human":  "Nov 17, 2026",
+                         "platform":  "PlayStation 4",
+                         "igdb_url":  "https://www.igdb.com/games/ratchet-and-clank--3",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctk4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctk4.jpg"
+                     },
+                     {
                          "name":  "Pluck Em!",
                          "date":  "2026-11-17",
                          "human":  "Nov 17, 2026",
@@ -346,15 +337,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
                      },
                      {
-                         "name":  "Call of Blood",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/call-of-blood--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod0ih.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod0ih.jpg"
-                     },
-                     {
                          "name":  "They Are Rising",
                          "date":  "2026-12-01",
                          "human":  "Dec 01, 2026",
@@ -452,6 +434,24 @@
                          "igdb_url":  "https://www.igdb.com/games/guns-of-eschaton",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocrqy.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocrqy.jpg"
+                     },
+                     {
+                         "name":  "Caladrius 2: Dark Element",
+                         "date":  "2026-12-10",
+                         "human":  "Dec 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/caladrius-2-dark-element",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocrzy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocrzy.jpg"
+                     },
+                     {
+                         "name":  "Wilder World: Super Early Access",
+                         "date":  "2026-12-10",
+                         "human":  "Dec 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/wilder-world-super-early-access",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coax16.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
                      }
                  ]
 }
