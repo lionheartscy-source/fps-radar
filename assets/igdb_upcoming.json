@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-11-05 09:20:13",
+    "_생성시각":  "2026-11-06 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Ammo Dump",
-                         "date":  "2026-11-06",
-                         "human":  "Nov 06, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/ammo-dump",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod9vh.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod9vh.jpg"
-                     },
-                     {
-                         "name":  "V.O.L.T. Survivors",
-                         "date":  "2026-11-06",
-                         "human":  "Nov 06, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/volt-survivors",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coda5w.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda5w.jpg"
-                     },
-                     {
-                         "name":  "To Be Besieged",
-                         "date":  "2026-11-06",
-                         "human":  "Nov 06, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/to-be-besieged",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocurf.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocurf.jpg"
-                     },
-                     {
-                         "name":  "Nutshot Simulator",
-                         "date":  "2026-11-06",
-                         "human":  "Nov 06, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/nutshot-simulator",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6qd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6qd.jpg"
-                     },
                      {
                          "name":  "Deiity (Under Ice)",
                          "date":  "2026-11-10",
@@ -94,13 +58,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8ti.jpg"
                      },
                      {
-                         "name":  "All Eyes on Me",
+                         "name":  "Upshot",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/all-eyes-on-me--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6uo.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6uo.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/upshot",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codaz0.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codaz0.jpg"
                      },
                      {
                          "name":  "Gee, Tea, Eh, Seven?",
@@ -110,6 +74,15 @@
                          "igdb_url":  "https://www.igdb.com/games/gee-tea-eh-seven",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod3x2.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
+                     },
+                     {
+                         "name":  "All Eyes on Me",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/all-eyes-on-me--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6uo.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6uo.jpg"
                      },
                      {
                          "name":  "Logosmancer",
@@ -427,13 +400,22 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
                      },
                      {
-                         "name":  "Crimson Frontier",
+                         "name":  "Splash Girls",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/crimson-frontier",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jle.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
+                     },
+                     {
+                         "name":  "The Shadow Syndicate",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-shadow-syndicate",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9rbr.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9rbr.jpg"
                      },
                      {
                          "name":  "Mearcair/System Pulse",
@@ -443,6 +425,15 @@
                          "igdb_url":  "https://www.igdb.com/games/mearcair-slash-system-pulse",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m1r.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6m1r.jpg"
+                     },
+                     {
+                         "name":  "Crimson Frontier",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/crimson-frontier",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jle.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
                      }
                  ]
 }
