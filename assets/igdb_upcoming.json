@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-11-07 09:20:16",
+    "_생성시각":  "2026-11-08 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
@@ -94,13 +94,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda9k.jpg"
                      },
                      {
-                         "name":  "Derelikt",
+                         "name":  "Mellings",
                          "date":  "2026-11-13",
                          "human":  "Nov 13, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/derelikt",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa07m.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa07m.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/mellings",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob5kb.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob5kb.jpg"
                      },
                      {
                          "name":  "Powerfuel",
@@ -110,6 +110,15 @@
                          "igdb_url":  "https://www.igdb.com/games/powerfuel",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobmrm.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobmrm.jpg"
+                     },
+                     {
+                         "name":  "Derelikt",
+                         "date":  "2026-11-13",
+                         "human":  "Nov 13, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/derelikt",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa07m.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa07m.jpg"
                      },
                      {
                          "name":  "Overspray",
@@ -409,13 +418,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
                      },
                      {
-                         "name":  "Grav My Balls",
+                         "name":  "Crimson Frontier",
                          "date":  "2026-12-31",
-                         "human":  "Q4 2026",
+                         "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/grav-my-balls",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9unr.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9unr.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/crimson-frontier",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jle.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
                      },
                      {
                          "name":  "Mearcair/System Pulse",
@@ -425,15 +434,6 @@
                          "igdb_url":  "https://www.igdb.com/games/mearcair-slash-system-pulse",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m1r.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6m1r.jpg"
-                     },
-                     {
-                         "name":  "Crimson Frontier",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/crimson-frontier",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jle.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
                      }
                  ]
 }
