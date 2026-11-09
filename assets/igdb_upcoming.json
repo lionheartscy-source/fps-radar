@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-11-08 09:20:14",
+    "_생성시각":  "2026-11-09 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
@@ -49,22 +49,49 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
                      },
                      {
-                         "name":  "Mad Dvizhuha: Benzovoz",
+                         "name":  "Irreverence",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mad-dvizhuha-benzovoz",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8ti.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8ti.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/irreverence",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocmmn.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocmmn.jpg"
                      },
                      {
-                         "name":  "Upshot",
+                         "name":  "Keepsake County",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/upshot",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codaz0.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codaz0.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/keepsake-county",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6uja.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6uja.jpg"
+                     },
+                     {
+                         "name":  "Deadboot",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/deadboot",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coag7o.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coag7o.jpg"
+                     },
+                     {
+                         "name":  "Explosiovania",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/explosiovania",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa8g.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa8g.jpg"
+                     },
+                     {
+                         "name":  "All Eyes on Me",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/all-eyes-on-me--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6uo.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6uo.jpg"
                      },
                      {
                          "name":  "Gee, Tea, Eh, Seven?",
@@ -76,13 +103,22 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod3x2.jpg"
                      },
                      {
-                         "name":  "All Eyes on Me",
+                         "name":  "Upshot",
                          "date":  "2026-11-12",
                          "human":  "Nov 12, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/all-eyes-on-me--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod6uo.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod6uo.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/upshot",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codaz0.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codaz0.jpg"
+                     },
+                     {
+                         "name":  "Mad Dvizhuha: Benzovoz",
+                         "date":  "2026-11-12",
+                         "human":  "Nov 12, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mad-dvizhuha-benzovoz",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod8ti.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8ti.jpg"
                      },
                      {
                          "name":  "Logosmancer",
@@ -146,15 +182,6 @@
                          "igdb_url":  "https://www.igdb.com/games/pluck-em",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod51r.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod51r.jpg"
-                     },
-                     {
-                         "name":  "AsterMaster",
-                         "date":  "2026-11-17",
-                         "human":  "Nov 17, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/astermaster",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxym.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxym.jpg"
                      },
                      {
                          "name":  "Strato Alto",
@@ -407,33 +434,6 @@
                          "igdb_url":  "https://www.igdb.com/games/wilder-world-super-early-access",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coax16.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
-                     },
-                     {
-                         "name":  "Splash Girls",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
-                     },
-                     {
-                         "name":  "Crimson Frontier",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/crimson-frontier",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jle.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
-                     },
-                     {
-                         "name":  "Mearcair/System Pulse",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mearcair-slash-system-pulse",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m1r.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6m1r.jpg"
                      }
                  ]
 }
