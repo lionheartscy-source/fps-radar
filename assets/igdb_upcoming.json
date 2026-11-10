@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-11-09 09:20:14",
+    "_생성시각":  "2026-11-10 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Deiity (Under Ice)",
-                         "date":  "2026-11-10",
-                         "human":  "Nov 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/deiity-under-ice",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod35j.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod35j.jpg"
-                     },
-                     {
-                         "name":  "Rense",
-                         "date":  "2026-11-10",
-                         "human":  "Nov 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/rense",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocz24.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocz24.jpg"
-                     },
                      {
                          "name":  "Headshot Holdout",
                          "date":  "2026-11-11",
@@ -31,13 +13,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxku.jpg"
                      },
                      {
-                         "name":  "Corridors",
+                         "name":  "Assassination Contracts",
                          "date":  "2026-11-11",
                          "human":  "Nov 11, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/assassination-contracts",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod89h.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod89h.jpg"
                      },
                      {
                          "name":  "Hill-Z",
@@ -47,6 +29,15 @@
                          "igdb_url":  "https://www.igdb.com/games/hill-z",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocazy.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocazy.jpg"
+                     },
+                     {
+                         "name":  "Corridors",
+                         "date":  "2026-11-11",
+                         "human":  "Nov 11, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/corridors--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxhy.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxhy.jpg"
                      },
                      {
                          "name":  "Irreverence",
@@ -166,6 +157,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7me.jpg"
                      },
                      {
+                         "name":  "Star-Coat",
+                         "date":  "2026-11-17",
+                         "human":  "Nov 17, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/star-coat",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc96q.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc96q.jpg"
+                     },
+                     {
                          "name":  "Ratchet \u0026 Clank",
                          "date":  "2026-11-17",
                          "human":  "Nov 17, 2026",
@@ -173,15 +173,6 @@
                          "igdb_url":  "https://www.igdb.com/games/ratchet-and-clank--3",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctk4.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctk4.jpg"
-                     },
-                     {
-                         "name":  "Pluck Em!",
-                         "date":  "2026-11-17",
-                         "human":  "Nov 17, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/pluck-em",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod51r.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod51r.jpg"
                      },
                      {
                          "name":  "Strato Alto",
@@ -261,26 +252,17 @@
                          "human":  "Nov 26, 2026",
                          "platform":  "PC (Microsoft Windows)",
                          "igdb_url":  "https://www.igdb.com/games/appulse",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9u83.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9u83.jpg"
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codc28.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codc28.jpg"
                      },
                      {
-                         "name":  "Tin Coffins",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 01, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/tin-coffins",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4tx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4tx.jpg"
-                     },
-                     {
-                         "name":  "Void Skirmisher",
+                         "name":  "Black Mesa: Classic",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/void-skirmisher",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod1vg.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod1vg.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/black-mesa-classic",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa0gu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
                      },
                      {
                          "name":  "Dead Exodus",
@@ -292,6 +274,33 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
                      },
                      {
+                         "name":  "Tin Coffins",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/tin-coffins",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4tx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4tx.jpg"
+                     },
+                     {
+                         "name":  "Redstream Dispatch",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/redstream-dispatch",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvhh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvhh.jpg"
+                     },
+                     {
+                         "name":  "Damashi Game",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/damashi-game",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9105.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9105.jpg"
+                     },
+                     {
                          "name":  "Abandoned Below",
                          "date":  "2026-12-01",
                          "human":  "Dec 01, 2026",
@@ -301,13 +310,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod8kh.jpg"
                      },
                      {
-                         "name":  "Black Mesa: Classic",
+                         "name":  "Beautiful Light",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/black-mesa-classic",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa0gu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/beautiful-light",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9v9.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
                      },
                      {
                          "name":  "They Are Rising",
@@ -328,13 +337,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
                      },
                      {
-                         "name":  "Beautiful Light",
+                         "name":  "Void Skirmisher",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/beautiful-light",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9v9.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/void-skirmisher",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod1vg.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod1vg.jpg"
                      },
                      {
                          "name":  "Trenchblocks",
