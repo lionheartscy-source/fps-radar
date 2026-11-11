@@ -175,10 +175,10 @@
       "메모": "2026-09-01 스팀 커뮤니티 허브 og:image에서 실제 해시 경로 확인."
     },
     "워독스 (WARDOGS)": {
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/24c0b6c0621560e922fbed18545921e7eaa9036e/capsule_616x353.jpg?t=1790774170",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/24c0b6c0621560e922fbed18545921e7eaa9036e/capsule_616x353.jpg?t=1794420220",
       "mono": "WD",
       "name": "WARDOGS",
-      "메모": "스팀 appid 1867240. 2026-10-03 상점 og:image(capsule_616x353)로 갱신."
+      "메모": "스팀 appid 1867240. 2026-10-03 상점 og:image(capsule_616x353)로 갱신. / 2026-11-12 상점 og:image(akamai, 해시 동일) t값 갱신."
     },
     "EVE Vanguard": {
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1872800/43fda50b449bce12be79d9db69cbc803749a4db1/header.jpg?t=1784552548",
@@ -251,8 +251,8 @@
       "mono": "MYC",
       "name": "MYCOPUNK",
       "steam_appid": "3247750",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3247750/ce2ff8d6f4f5fad5747e11af62db70b2754c32f9/capsule_616x353_alt_assets_3.jpg?t=1791555016",
-      "메모": "2026-10-12 appid는 MassivelyOP 기사로 확인."
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3247750/10d8324410486e5bd63628316f90576c372fe625/capsule_616x353.jpg?t=1793358365",
+      "메모": "2026-10-12 appid는 MassivelyOP 기사로 확인. / 2026-11-12 상점 og:image로 해시 10d83244…(capsule_616x353) 교체."
     },
     "메트로 2033 리덕스": {
       "mono": "MTR",
@@ -274,6 +274,18 @@
       "steam_appid": "1409200",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1409200/813bbac746079c9fb3c940ca2f6ff1de1f6d4c97/capsule_616x353.jpg?t=1761836810",
       "메모": "2026-10-26 스팀 상점 og:image에서 해시 경로 확인."
+    },
+    "GTA VI": {
+      "mono": "GTA6",
+      "name": "GTA VI",
+      "url": "https://images.igdb.com/igdb/image/upload/t_720p/cocv1v.jpg",
+      "메모": "2026-11-12 등록. 스팀 없는 콘솔 전용작이라 IGDB banner_url 사용(세로 커버라 가운데가 잘림)."
+    },
+    "라쳇 & 클랭: 레인저 럼블": {
+      "mono": "R&C",
+      "name": "RANGER RUMBLE",
+      "url": null,
+      "메모": "2026-11-12 등록. 모바일 전용·스팀 없음, 개발 중단(11/6). 브랜드 타일."
     }
   },
   "_이미지필요": [],
