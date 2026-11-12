@@ -286,6 +286,27 @@
       "name": "RANGER RUMBLE",
       "url": null,
       "메모": "2026-11-12 등록. 모바일 전용·스팀 없음, 개발 중단(11/6). 브랜드 타일."
+    },
+    "신더시티 (CINDER CITY)": {
+      "mono": "CC",
+      "name": "CINDER CITY",
+      "steam_appid": "4651830",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4651830/74e648073c2d2db0cdbafc3a456b2849bb5d0aaf/capsule_616x353.jpg?t=1794492099",
+      "메모": "2026-11-13 등록. 스팀 상점 og:image."
+    },
+    "DERELIKT": {
+      "mono": "DRK",
+      "name": "DERELIKT",
+      "steam_appid": "3810510",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3810510/ecd586ce4f242e46d4febaf9209c3d09d5f9d4c8/capsule_616x353.jpg?t=1794494816",
+      "메모": "2026-11-13 등록. 스팀 상점 og:image."
+    },
+    "John Carpenter's Toxic Commando": {
+      "mono": "TXC",
+      "name": "TOXIC COMMANDO",
+      "steam_appid": "2157830",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2157830/faacb57bff8ef8589623324843a85919b87f7a8d/capsule_616x353.jpg?t=1793632913",
+      "메모": "2026-11-13 등록. 스팀 상점 og:image."
     }
   },
   "_이미지필요": [],

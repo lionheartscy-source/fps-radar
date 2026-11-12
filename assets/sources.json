@@ -208,6 +208,24 @@
       "아카라이브": null,
       "인벤": null,
       "확인": "2026-11-12 등록. 소니·Oh BiBi 모바일 히어로 슈터, 11/6 개발 중단 발표(Gematsu). 상점 내림 11/21, 서비스 종료 2027-05-01. 스팀 없음. IGDB 캐시의 11/17 'Ratchet & Clank'는 PS4판 별개 항목."
+    },
+    "신더시티 (CINDER CITY)": {
+      "자유게시판": null,
+      "게임DB": null,
+      "메모": "2026-11-13 신규 등록. 엔씨 배급·BIG FIRE GAMES 개발, 근미래 서울 배경 오픈월드 3인칭 슈터. 11/11 실적 콘퍼런스콜에서 2027 상반기 출시 예고.",
+      "확인": "2026-11-13 국내 전용 경로 미확인."
+    },
+    "DERELIKT": {
+      "자유게시판": null,
+      "게임DB": null,
+      "메모": "2026-11-13 신규 등록. 레트로 SF 호러 FPS, Visuwyg 개발·Hyperstrange 배급, 스팀 출시 11/14(KST), 한국어 미지원. IGDB 11/13.",
+      "확인": null
+    },
+    "John Carpenter's Toxic Commando": {
+      "자유게시판": null,
+      "게임DB": null,
+      "메모": "2026-11-13 신규 등록. Saber Interactive·Focus, 스팀 2026-03-13 출시, 11/12 엑스박스 게임 패스 합류.",
+      "확인": null
     }
   },
   "_관찰메모": {
@@ -384,6 +402,21 @@
         "appid": "3247750",
         "토론": "https://steamcommunity.com/app/3247750/discussions/",
         "확인": "2026-11-12 활성 주제 281건"
+      },
+      "신더시티 (CINDER CITY)": {
+        "appid": "4651830",
+        "토론": "https://steamcommunity.com/app/4651830/discussions/",
+        "확인": "2026-11-13 활성 주제 62건, 튀르키예어 자막 요청 231개·64 GB RAM 88개."
+      },
+      "DERELIKT": {
+        "appid": "3810510",
+        "토론": "https://steamcommunity.com/app/3810510/discussions/",
+        "확인": "2026-11-13 출시 전, 평가 없음."
+      },
+      "John Carpenter's Toxic Commando": {
+        "appid": "2157830",
+        "토론": "https://steamcommunity.com/app/2157830/discussions/",
+        "확인": "2026-11-13 전체 6,466개 71%, 30일 111개 60%."
       }
     },
     "_관찰메모": {
