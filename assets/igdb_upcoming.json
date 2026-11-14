@@ -1,5 +1,5 @@
 {
-    "_생성시각":  "2026-11-13 09:20:13",
+    "_생성시각":  "2026-11-14 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
@@ -110,6 +110,15 @@
                          "igdb_url":  "https://www.igdb.com/games/appulse",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codc28.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codc28.jpg"
+                     },
+                     {
+                         "name":  "The Brave Few",
+                         "date":  "2026-11-30",
+                         "human":  "Nov 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/the-brave-few--2",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codcz4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codcz4.jpg"
                      },
                      {
                          "name":  "Black Mesa: Classic",
@@ -328,15 +337,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
                      },
                      {
-                         "name":  "BoB: Battle of Bots",
-                         "date":  "2026-12-31",
-                         "human":  "Q4 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bob-battle-of-bots",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4kj.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
-                     },
-                     {
                          "name":  "Escape Velocity",
                          "date":  "2026-12-31",
                          "human":  "2026",
@@ -346,22 +346,22 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
                      },
                      {
-                         "name":  "Mech Log Zero",
+                         "name":  "Mudang: Two Hearts",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/mudang-two-hearts",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xzl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
                      },
                      {
-                         "name":  "Black Vultures: Prey of Greed",
+                         "name":  "BoB: Battle of Bots",
                          "date":  "2026-12-31",
-                         "human":  "2026",
+                         "human":  "Q4 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/black-vultures-prey-of-greed--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa69h.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/bob-battle-of-bots",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4kj.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
                      },
                      {
                          "name":  "Work In Progress",
@@ -373,13 +373,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
                      },
                      {
-                         "name":  "Mudang: Two Hearts",
+                         "name":  "Mech Log Zero",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mudang-two-hearts",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xzl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
                      },
                      {
                          "name":  "Crimson Frontier",
