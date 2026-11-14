@@ -307,6 +307,13 @@
       "steam_appid": "2157830",
       "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2157830/faacb57bff8ef8589623324843a85919b87f7a8d/capsule_616x353.jpg?t=1793632913",
       "메모": "2026-11-13 등록. 스팀 상점 og:image."
+    },
+    "KUROSHIO: Neon Blood": {
+      "mono": "KURO",
+      "name": "KUROSHIO",
+      "steam_appid": "5453070",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5453070/e36a41c4417db9d3447fda232b297ead30849890/capsule_616x353.jpg?t=1794502516",
+      "메모": "2026-11-15 등록. 스팀 상점 og:image."
     }
   },
   "_이미지필요": [],
