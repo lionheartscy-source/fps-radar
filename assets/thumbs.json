@@ -314,6 +314,12 @@
       "steam_appid": "5453070",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5453070/e36a41c4417db9d3447fda232b297ead30849890/capsule_616x353.jpg?t=1794502516",
       "메모": "2026-11-15 등록. 스팀 상점 og:image."
+    },
+    "Strato Alto": {
+      "mono": "SA",
+      "name": "STRATO ALTO",
+      "steam_appid": "4823770",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4823770/3f6f8df34c5f725c7f9a4db5c091f682be2c364b/capsule_616x353.jpg?t=1794600359"
     }
   },
   "_이미지필요": [],

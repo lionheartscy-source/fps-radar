@@ -232,6 +232,12 @@
       "아카라이브": null,
       "인벤": null,
       "메모": "2026-11-15 등록. ISEKAI Games 오픈월드 3인칭 슈터, 스팀 11/19 출시."
+    },
+    "Strato Alto": {
+      "루리웹": null,
+      "아카라이브": null,
+      "인벤": null,
+      "메모": "2026-11-16 등록. Reject Games 개발·배급 아케이드 비행 슈팅 로그라이트, 스팀 appid 4823770. 상점 출시일 2026-11-26(IGDB 캐시 11/18과 8일 어긋남). 한국어 미지원."
     }
   },
   "_관찰메모": {
@@ -428,6 +434,12 @@
         "appid": "5453070",
         "토론": "https://steamcommunity.com/app/5453070/discussions/",
         "확인": "2026-11-15 출시 전(스팀 11/19), 평가 없음."
+      },
+      "Strato Alto": {
+        "appid": "4823770",
+        "토론": "https://steamcommunity.com/app/4823770/discussions/",
+        "상점": "https://store.steampowered.com/app/4823770/?l=koreana",
+        "확인": "2026-11-16 상점 확인 — 출시 11/26, 한국어 미지원, 출시 전이라 평가 없음."
       }
     },
     "_관찰메모": {
