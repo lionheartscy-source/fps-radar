@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-11-14 09:20:14",
+    "_생성시각":  "2026-11-15 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Overspray",
-                         "date":  "2026-11-15",
-                         "human":  "Nov 15, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/overspray",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod7me.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod7me.jpg"
-                     },
                      {
                          "name":  "Star-Coat",
                          "date":  "2026-11-17",
@@ -247,6 +238,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codcl8.jpg"
                      },
                      {
+                         "name":  "Zero Hour",
+                         "date":  "2026-12-03",
+                         "human":  "Dec 03, 2026",
+                         "platform":  "PlayStation 5",
+                         "igdb_url":  "https://www.igdb.com/games/zero-hour--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co2yeh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co2yeh.jpg"
+                     },
+                     {
                          "name":  "Cronos: Lazarus",
                          "date":  "2026-12-03",
                          "human":  "Dec 03, 2026",
@@ -355,6 +355,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
                      },
                      {
+                         "name":  "Mech Log Zero",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
+                     },
+                     {
                          "name":  "BoB: Battle of Bots",
                          "date":  "2026-12-31",
                          "human":  "Q4 2026",
@@ -364,22 +373,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
                      },
                      {
-                         "name":  "Work In Progress",
+                         "name":  "Shrine Protectors",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/work-in-progress",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa68a.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
-                     },
-                     {
-                         "name":  "Mech Log Zero",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
                      },
                      {
                          "name":  "Crimson Frontier",
@@ -400,24 +400,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6m1r.jpg"
                      },
                      {
-                         "name":  "Splash Girls",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
-                     },
-                     {
-                         "name":  "Shrine Protectors",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
-                     },
-                     {
                          "name":  "Grav My Balls",
                          "date":  "2026-12-31",
                          "human":  "Q4 2026",
@@ -425,6 +407,15 @@
                          "igdb_url":  "https://www.igdb.com/games/grav-my-balls",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9unr.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9unr.jpg"
+                     },
+                     {
+                         "name":  "Splash Girls",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
                      }
                  ]
 }
