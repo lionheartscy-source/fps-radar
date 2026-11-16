@@ -238,6 +238,18 @@
       "아카라이브": null,
       "인벤": null,
       "메모": "2026-11-16 등록. Reject Games 개발·배급 아케이드 비행 슈팅 로그라이트, 스팀 appid 4823770. 상점 출시일 2026-11-26(IGDB 캐시 11/18과 8일 어긋남). 한국어 미지원."
+    },
+    "Star-Coat": {
+      "루리웹": null,
+      "아카라이브": null,
+      "인벤": null,
+      "메모": "2026-11-17 등록. Burger Cage Studios 개발·배급 3인칭 메카 약탈 슈팅(앞서 해보기), appid 3692030. 상점 출시 2026-11-18(IGDB 11/17과 하루 차이). 한국어 미지원."
+    },
+    "Blackout Route": {
+      "루리웹": null,
+      "아카라이브": null,
+      "인벤": null,
+      "메모": "2026-11-17 등록. Blackout Inc. 개발·배급 1인칭 협동 파밍 탈출 호러(앞서 해보기), appid 4434380. 상점 출시 2026-11-24(IGDB 11/23과 하루 차이). 상점 한국어 소개문 있음."
     }
   },
   "_관찰메모": {
@@ -440,6 +452,18 @@
         "토론": "https://steamcommunity.com/app/4823770/discussions/",
         "상점": "https://store.steampowered.com/app/4823770/?l=koreana",
         "확인": "2026-11-16 상점 확인 — 출시 11/26, 한국어 미지원, 출시 전이라 평가 없음."
+      },
+      "Star-Coat": {
+        "appid": "3692030",
+        "토론": "https://steamcommunity.com/app/3692030/discussions/",
+        "상점": "https://store.steampowered.com/app/3692030/?l=koreana",
+        "확인": "2026-11-17 상점 확인 — 출시 전이라 평가 없음."
+      },
+      "Blackout Route": {
+        "appid": "4434380",
+        "토론": "https://steamcommunity.com/app/4434380/discussions/",
+        "상점": "https://store.steampowered.com/app/4434380/?l=koreana",
+        "확인": "2026-11-17 상점 확인 — 출시 전이라 평가 없음."
       }
     },
     "_관찰메모": {

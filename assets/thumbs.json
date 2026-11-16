@@ -298,7 +298,7 @@
       "mono": "DRK",
       "name": "DERELIKT",
       "steam_appid": "3810510",
-      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3810510/ecd586ce4f242e46d4febaf9209c3d09d5f9d4c8/capsule_616x353.jpg?t=1794494816",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3810510/ecd586ce4f242e46d4febaf9209c3d09d5f9d4c8/capsule_616x353.jpg?t=1794855109",
       "메모": "2026-11-13 등록. 스팀 상점 og:image."
     },
     "John Carpenter's Toxic Commando": {
@@ -320,6 +320,20 @@
       "name": "STRATO ALTO",
       "steam_appid": "4823770",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4823770/3f6f8df34c5f725c7f9a4db5c091f682be2c364b/capsule_616x353.jpg?t=1794600359"
+    },
+    "Star-Coat": {
+      "mono": "SC",
+      "name": "STAR-COAT",
+      "steam_appid": "3692030",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3692030/fce9875b0bd989df0c6a0b3b7654304abd5e34a9/capsule_616x353.jpg?t=1793744162",
+      "메모": "2026-11-17 등록. 스팀 상점 og:image."
+    },
+    "Blackout Route": {
+      "mono": "BR",
+      "name": "BLACKOUT ROUTE",
+      "steam_appid": "4434380",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/b06252f738db5ed161aeb86a4ca4cbb941d1964f/capsule_616x353.jpg?t=1794198274",
+      "메모": "2026-11-17 등록. 스팀 상점 og:image."
     }
   },
   "_이미지필요": [],
