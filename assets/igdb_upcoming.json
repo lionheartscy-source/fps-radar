@@ -1,26 +1,8 @@
 {
-    "_생성시각":  "2026-11-16 09:20:13",
+    "_생성시각":  "2026-11-17 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Star-Coat",
-                         "date":  "2026-11-17",
-                         "human":  "Nov 17, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/star-coat",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coc96q.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc96q.jpg"
-                     },
-                     {
-                         "name":  "Ratchet \u0026 Clank",
-                         "date":  "2026-11-17",
-                         "human":  "Nov 17, 2026",
-                         "platform":  "PlayStation 4",
-                         "igdb_url":  "https://www.igdb.com/games/ratchet-and-clank--3",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coctk4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coctk4.jpg"
-                     },
                      {
                          "name":  "Strato Alto",
                          "date":  "2026-11-18",
@@ -337,24 +319,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
                      },
                      {
-                         "name":  "Escape Velocity",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
-                     },
-                     {
-                         "name":  "Mudang: Two Hearts",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mudang-two-hearts",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xzl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
-                     },
-                     {
                          "name":  "Mech Log Zero",
                          "date":  "2026-12-31",
                          "human":  "2026",
@@ -373,13 +337,49 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
                      },
                      {
-                         "name":  "Shrine Protectors",
+                         "name":  "Escape Velocity",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
+                     },
+                     {
+                         "name":  "CrisisX",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/crisisx",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa9ik.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa9ik.jpg"
+                     },
+                     {
+                         "name":  "Black Vultures: Prey of Greed",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/black-vultures-prey-of-greed--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa69h.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
+                     },
+                     {
+                         "name":  "Work In Progress",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/work-in-progress",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa68a.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
+                     },
+                     {
+                         "name":  "Splash Girls",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
                      },
                      {
                          "name":  "Crimson Frontier",
@@ -400,6 +400,24 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co6m1r.jpg"
                      },
                      {
+                         "name":  "Mudang: Two Hearts",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/mudang-two-hearts",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xzl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
+                     },
+                     {
+                         "name":  "Shrine Protectors",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
+                     },
+                     {
                          "name":  "Grav My Balls",
                          "date":  "2026-12-31",
                          "human":  "Q4 2026",
@@ -407,15 +425,6 @@
                          "igdb_url":  "https://www.igdb.com/games/grav-my-balls",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9unr.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9unr.jpg"
-                     },
-                     {
-                         "name":  "Splash Girls",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/splash-girls--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobo71.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobo71.jpg"
                      }
                  ]
 }
