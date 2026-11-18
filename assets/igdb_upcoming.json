@@ -1,17 +1,8 @@
 {
-    "_생성시각":  "2026-11-17 09:20:13",
+    "_생성시각":  "2026-11-18 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Strato Alto",
-                         "date":  "2026-11-18",
-                         "human":  "Nov 18, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/strato-alto",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5rh.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod5rh.jpg"
-                     },
                      {
                          "name":  "The Binding of Isaac: Repentance+",
                          "date":  "2026-11-19",
@@ -319,6 +310,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
                      },
                      {
+                         "name":  "Work In Progress",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/work-in-progress",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa68a.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
+                     },
+                     {
                          "name":  "Mech Log Zero",
                          "date":  "2026-12-31",
                          "human":  "2026",
@@ -337,13 +337,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
                      },
                      {
-                         "name":  "Escape Velocity",
+                         "name":  "Crimson System: VÉ\u0085Î Protocol",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/crimson-system-v-d-protocol",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3f.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3f.jpg"
                      },
                      {
                          "name":  "CrisisX",
@@ -364,13 +364,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
                      },
                      {
-                         "name":  "Work In Progress",
+                         "name":  "Escape Velocity",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/work-in-progress",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa68a.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
                      },
                      {
                          "name":  "Splash Girls",
