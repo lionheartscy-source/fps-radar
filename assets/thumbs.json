@@ -312,8 +312,8 @@
       "mono": "KURO",
       "name": "KUROSHIO",
       "steam_appid": "5453070",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5453070/e36a41c4417db9d3447fda232b297ead30849890/capsule_616x353.jpg?t=1794502516",
-      "메모": "2026-11-15 등록. 스팀 상점 og:image."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5453070/e36a41c4417db9d3447fda232b297ead30849890/capsule_616x353.jpg?t=1795107715",
+      "메모": "2026-11-15 등록. 스팀 상점 og:image. / 2026-11-20 t 값 갱신(해시 동일)."
     },
     "Strato Alto": {
       "mono": "SA",
@@ -332,11 +332,18 @@
       "mono": "BR",
       "name": "BLACKOUT ROUTE",
       "steam_appid": "4434380",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/b06252f738db5ed161aeb86a4ca4cbb941d1964f/capsule_616x353.jpg?t=1794198274",
-      "메모": "2026-11-17 등록. 스팀 상점 og:image."
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/e4ae8975f072b3d62f39d692d9750e7338f9b078/capsule_616x353.jpg?t=1795080787",
+      "메모": "2026-11-17 등록. 스팀 상점 og:image. / 2026-11-20 상점 og:image 해시 e4ae8975… 로 교체."
     }
   },
-  "_이미지필요": [],
+  "_이미지필요": [
+    {
+      "game": "소녀전선: 블루코버넌트",
+      "mono": "GFL",
+      "등록": "2026-11-20",
+      "메모": "스팀 상점 검색 결과 없음. AGF 2026(12/4~6) 출전. 공식 키아트 확보 전까지 브랜드 타일."
+    }
+  ],
   "_검증완료": {
     "화면에서 실제 렌더 확인": [
       "콜오브듀티: MW4",
