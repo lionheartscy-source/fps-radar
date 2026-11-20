@@ -334,6 +334,12 @@
       "steam_appid": "4434380",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/e4ae8975f072b3d62f39d692d9750e7338f9b078/capsule_616x353.jpg?t=1795080787",
       "메모": "2026-11-17 등록. 스팀 상점 og:image. / 2026-11-20 상점 og:image 해시 e4ae8975… 로 교체."
+    },
+    "건즈: 더 듀얼 리마스터": {
+      "mono": "GZ",
+      "name": "GUNZ: THE DUEL",
+      "steam_appid": "3139440",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3139440/1a654db478194a3ca15dc64310ab8b3d2d56d847/capsule_616x353.jpg?t=1786696577"
     }
   },
   "_이미지필요": [
