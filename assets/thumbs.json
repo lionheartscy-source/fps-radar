@@ -340,6 +340,13 @@
       "name": "GUNZ: THE DUEL",
       "steam_appid": "3139440",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3139440/1a654db478194a3ca15dc64310ab8b3d2d56d847/capsule_616x353.jpg?t=1786696577"
+    },
+    "GUNBOAT-8": {
+      "mono": "G8",
+      "name": "GUNBOAT-8",
+      "steam_appid": "4783980",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4783980/00b44a553fb18b11352263ba42481d917d8d3910/capsule_616x353.jpg?t=1795016421",
+      "메모": "2026-11-22 스팀 상점 og:image(capsule_616x353, 해시 포함) 확인."
     }
   },
   "_이미지필요": [
