@@ -332,7 +332,7 @@
       "mono": "BR",
       "name": "BLACKOUT ROUTE",
       "steam_appid": "4434380",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/e4ae8975f072b3d62f39d692d9750e7338f9b078/capsule_616x353.jpg?t=1795080787",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4434380/e4ae8975f072b3d62f39d692d9750e7338f9b078/capsule_616x353.jpg?t=1795446162",
       "메모": "2026-11-17 등록. 스팀 상점 og:image. / 2026-11-20 상점 og:image 해시 e4ae8975… 로 교체."
     },
     "건즈: 더 듀얼 리마스터": {
@@ -348,7 +348,14 @@
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4783980/00b44a553fb18b11352263ba42481d917d8d3910/capsule_616x353.jpg?t=1795016421",
       "메모": "2026-11-22 스팀 상점 og:image(capsule_616x353, 해시 포함) 확인."
     },
-    "Cronos: Lazarus": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4768180/411a12bf6a84488dfa98243ac44afd670beb3166/capsule_616x353.jpg?t=1793200387"
+    "Cronos: Lazarus": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4768180/411a12bf6a84488dfa98243ac44afd670beb3166/capsule_616x353.jpg?t=1793200387",
+    "HUNGER": {
+      "mono": "HG",
+      "name": "HUNGER",
+      "steam_appid": "1752080",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1752080/capsule_616x353.jpg?t=1794322378",
+      "메모": "2026-11-24 상점 og:image. 2021년 등록 앱이라 해시 없는 주소가 og:image 그대로임."
+    }
   },
   "_이미지필요": [
     {
