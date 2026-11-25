@@ -319,7 +319,7 @@
       "mono": "SA",
       "name": "STRATO ALTO",
       "steam_appid": "4823770",
-      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4823770/3f6f8df34c5f725c7f9a4db5c091f682be2c364b/capsule_616x353.jpg?t=1794600359"
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4823770/3f6f8df34c5f725c7f9a4db5c091f682be2c364b/capsule_616x353.jpg?t=1795626542"
     },
     "Star-Coat": {
       "mono": "SC",
@@ -361,6 +361,13 @@
       "name": "SPECIAL FORCE 2 S.K.I.L.L.",
       "url": "https://cdn.gamemeca.com/gmdata/0001/784/056/gm131633_thumb_2_.webp",
       "메모": "2026-11-25 게임메카 기사(gid=1784056) og:image. 스팀 미등록(파파야플레이)."
+    },
+    "엑조프라이멀 (Exoprimal)": {
+      "mono": "EXO",
+      "name": "EXOPRIMAL",
+      "steam_appid": "1286320",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1286320/capsule_616x353.jpg?t=1795568630",
+      "메모": "2026-11-26 스팀 상점 og:image(capsule_616x353, 해시 없는 경로 그대로 og:image에 노출됨)."
     }
   },
   "_이미지필요": [
