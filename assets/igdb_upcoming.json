@@ -1,44 +1,8 @@
 {
-    "_생성시각":  "2026-11-25 09:20:14",
+    "_생성시각":  "2026-11-26 09:20:13",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
-                     {
-                         "name":  "Antarctica 88",
-                         "date":  "2026-11-26",
-                         "human":  "Nov 26, 2026",
-                         "platform":  "PlayStation 5",
-                         "igdb_url":  "https://www.igdb.com/games/antarctica-88",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co57xx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co57xx.jpg"
-                     },
-                     {
-                         "name":  "No Mercy",
-                         "date":  "2026-11-26",
-                         "human":  "Nov 26, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/no-mercy--3",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codfk8.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codfk8.jpg"
-                     },
-                     {
-                         "name":  "Appulse",
-                         "date":  "2026-11-26",
-                         "human":  "Nov 26, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/appulse",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codc28.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codc28.jpg"
-                     },
-                     {
-                         "name":  "Rifle MarksMan",
-                         "date":  "2026-11-26",
-                         "human":  "Nov 26, 2026",
-                         "platform":  "Xbox One",
-                         "igdb_url":  "https://www.igdb.com/games/rifle-marksman",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codfpx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codfpx.jpg"
-                     },
                      {
                          "name":  "Desert Echo",
                          "date":  "2026-11-30",
@@ -56,6 +20,15 @@
                          "igdb_url":  "https://www.igdb.com/games/the-brave-few--2",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codcz4.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codcz4.jpg"
+                     },
+                     {
+                         "name":  "Damashi Game",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/damashi-game",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9105.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9105.jpg"
                      },
                      {
                          "name":  "Abandoned Below",
@@ -76,13 +49,31 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa0gu.jpg"
                      },
                      {
-                         "name":  "Dead Exodus",
+                         "name":  "Redstream Dispatch",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/redstream-dispatch",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvhh.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvhh.jpg"
+                     },
+                     {
+                         "name":  "Finish Your Meatballs!",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/finish-your-meatballs",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coda3s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coda3s.jpg"
+                     },
+                     {
+                         "name":  "Sanatorium of Evil",
                          "date":  "2026-12-01",
                          "human":  "Dec 01, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/dead-exodus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4jd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/sanatorium-of-evil",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codfyg.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codfyg.jpg"
                      },
                      {
                          "name":  "Metal",
@@ -94,31 +85,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codfei.jpg"
                      },
                      {
-                         "name":  "Redstream Dispatch",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/redstream-dispatch",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvhh.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobvhh.jpg"
-                     },
-                     {
-                         "name":  "Damashi Game",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/damashi-game",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9105.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9105.jpg"
-                     },
-                     {
-                         "name":  "Tin Coffins",
+                         "name":  "Dead Exodus",
                          "date":  "2026-12-01",
                          "human":  "Dec 01, 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/tin-coffins",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4tx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4tx.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/dead-exodus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4jd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
                      },
                      {
                          "name":  "Beautiful Light",
@@ -148,6 +121,24 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
                      },
                      {
+                         "name":  "Bold: Networked Newt Action",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
+                     },
+                     {
+                         "name":  "Tin Coffins",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/tin-coffins",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4tx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4tx.jpg"
+                     },
+                     {
                          "name":  "Void Skirmisher",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
@@ -164,15 +155,6 @@
                          "igdb_url":  "https://www.igdb.com/games/trenchblocks",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
-                     },
-                     {
-                         "name":  "Bold: Networked Newt Action",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
                      },
                      {
                          "name":  "Deeper Still",
@@ -220,6 +202,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa8j6.jpg"
                      },
                      {
+                         "name":  "Paper Tanks: Doodle Warzone",
+                         "date":  "2026-12-04",
+                         "human":  "Dec 04, 2026",
+                         "platform":  "Xbox One",
+                         "igdb_url":  "https://www.igdb.com/games/paper-tanks-doodle-warzone",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codge4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codge4.jpg"
+                     },
+                     {
                          "name":  "Goblinfall: Defend Da Fort",
                          "date":  "2026-12-04",
                          "human":  "Dec 04, 2026",
@@ -227,6 +218,15 @@
                          "igdb_url":  "https://www.igdb.com/games/goblinfall-defend-da-fort",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/codadg.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codadg.jpg"
+                     },
+                     {
+                         "name":  "Fur Squadron Phoenix",
+                         "date":  "2026-12-06",
+                         "human":  "Dec 06, 2026",
+                         "platform":  "Xbox Series X|S",
+                         "igdb_url":  "https://www.igdb.com/games/fur-squadron-phoenix",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coan1a.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coan1a.jpg"
                      },
                      {
                          "name":  "The Comyths",
@@ -274,15 +274,6 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaxvc.jpg"
                      },
                      {
-                         "name":  "Caladrius 2: Dark Element",
-                         "date":  "2026-12-10",
-                         "human":  "Dec 10, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/caladrius-2-dark-element",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocrzy.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocrzy.jpg"
-                     },
-                     {
                          "name":  "Wilder World: Super Early Access",
                          "date":  "2026-12-10",
                          "human":  "Dec 10, 2026",
@@ -290,6 +281,15 @@
                          "igdb_url":  "https://www.igdb.com/games/wilder-world-super-early-access",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coax16.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coax16.jpg"
+                     },
+                     {
+                         "name":  "Grand Theft Auto: Vice City Stories 20th Anniversary Edition",
+                         "date":  "2026-12-15",
+                         "human":  "Dec 15, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/grand-theft-auto-vice-city-stories-20th-anniversary-edition",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobm6t.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobm6t.jpg"
                      },
                      {
                          "name":  "Project Atlas",
@@ -337,13 +337,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
                      },
                      {
-                         "name":  "Rotten Survivor",
+                         "name":  "Inspektor",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/rotten-survivor",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coadxx.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coadxx.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/inspektor",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coafzt.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coafzt.jpg"
                      },
                      {
                          "name":  "Wanted 3D: Dead or Alive",
@@ -355,13 +355,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jl8.jpg"
                      },
                      {
-                         "name":  "Kvlt",
+                         "name":  "Rotten Survivor",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/kvlt",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fcm.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8fcm.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/rotten-survivor",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coadxx.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coadxx.jpg"
                      },
                      {
                          "name":  "Hellfire Poncho",
@@ -373,13 +373,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8bv4.jpg"
                      },
                      {
-                         "name":  "Inspektor",
+                         "name":  "Mech Log Zero",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/inspektor",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coafzt.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coafzt.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
                      },
                      {
                          "name":  "Splash Girls",
@@ -418,13 +418,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jle.jpg"
                      },
                      {
-                         "name":  "Shrine Protectors",
+                         "name":  "Escape Velocity",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
                      },
                      {
                          "name":  "BoB: Battle of Bots",
@@ -436,13 +436,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa4kj.jpg"
                      },
                      {
-                         "name":  "Mech Log Zero",
+                         "name":  "Shrine Protectors",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/shrine-protectors",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9uwr.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9uwr.jpg"
                      },
                      {
                          "name":  "Mudang: Two Hearts",
@@ -452,15 +452,6 @@
                          "igdb_url":  "https://www.igdb.com/games/mudang-two-hearts",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xzl.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9xzl.jpg"
-                     },
-                     {
-                         "name":  "Escape Velocity",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/escape-velocity--3",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa01s.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa01s.jpg"
                      }
                  ]
 }
