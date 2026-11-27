@@ -375,6 +375,27 @@
       "steam_appid": "3734220",
       "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3734220/d7bbf1a79027e0d819187cf7e17f785375887d1d/capsule_616x353.jpg?t=1795618362",
       "메모": "2026-11-27 상점 og:image."
+    },
+    "Desert Echo": {
+      "mono": "DE",
+      "name": "DESERT ECHO",
+      "steam_appid": "4714830",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4714830/4a97eb208fd69d19ef11766a1be85b054284f271/capsule_616x353.jpg?t=1795200998",
+      "메모": "2026-11-28 스팀 상점 og:image(해시 포함) 확인."
+    },
+    "The Brave Few": {
+      "mono": "TBF",
+      "name": "THE BRAVE FEW",
+      "steam_appid": "4653750",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4653750/01164ac838c4305df20612eb3eddf57dd85cb893/capsule_616x353.jpg?t=1795816227",
+      "메모": "2026-11-28 스팀 상점 og:image(해시 포함) 확인."
+    },
+    "크로스파이어 (CFS)": {
+      "mono": "CF",
+      "name": "CROSSFIRE",
+      "steam_appid": null,
+      "url": null,
+      "메모": "2026-11-28 스팀 미등록·인벤 이미지는 핫링크 차단이라 브랜드 타일 사용."
     }
   },
   "_이미지필요": [
