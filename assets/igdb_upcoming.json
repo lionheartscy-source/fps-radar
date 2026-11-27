@@ -1,8 +1,17 @@
 {
-    "_생성시각":  "2026-11-26 09:20:13",
+    "_생성시각":  "2026-11-27 09:20:14",
     "_범위":  "향후 60일 · 장르=Shooter · PC/PS/Xbox",
     "_주의":  "IGDB 등록 기준이라 국내 게임·미등록 신작은 빠질 수 있음. 웹 검색으로 보완할 것.",
     "releases":  [
+                     {
+                         "name":  "Haunted House Hellshift",
+                         "date":  "2026-11-30",
+                         "human":  "Nov 30, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/haunted-house-hellshift",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxiq.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocxiq.jpg"
+                     },
                      {
                          "name":  "Desert Echo",
                          "date":  "2026-11-30",
@@ -85,22 +94,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/codfei.jpg"
                      },
                      {
-                         "name":  "Dead Exodus",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 01, 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/dead-exodus",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4jd.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
-                     },
-                     {
-                         "name":  "Beautiful Light",
+                         "name":  "Bold: Networked Newt Action",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/beautiful-light",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9v9.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cob9v9.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
                      },
                      {
                          "name":  "They Are Rising",
@@ -121,13 +121,22 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coc2ff.jpg"
                      },
                      {
-                         "name":  "Bold: Networked Newt Action",
+                         "name":  "Trenchblocks",
                          "date":  "2026-12-01",
                          "human":  "Dec 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/bold-networked-newt-action",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cobwhu.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobwhu.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/trenchblocks",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
+                     },
+                     {
+                         "name":  "Dead Exodus",
+                         "date":  "2026-12-01",
+                         "human":  "Dec 01, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/dead-exodus",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod4jd.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod4jd.jpg"
                      },
                      {
                          "name":  "Tin Coffins",
@@ -146,15 +155,6 @@
                          "igdb_url":  "https://www.igdb.com/games/void-skirmisher",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cod1vg.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cod1vg.jpg"
-                     },
-                     {
-                         "name":  "Trenchblocks",
-                         "date":  "2026-12-01",
-                         "human":  "Dec 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/trenchblocks",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/cocw0i.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocw0i.jpg"
                      },
                      {
                          "name":  "Deeper Still",
@@ -265,6 +265,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cocrqy.jpg"
                      },
                      {
+                         "name":  "Runz",
+                         "date":  "2026-12-10",
+                         "human":  "Dec 10, 2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/runz--1",
+                         "cover_url":  null,
+                         "banner_url":  null
+                     },
+                     {
                          "name":  "Angelian Trigger",
                          "date":  "2026-12-10",
                          "human":  "Dec 10, 2026",
@@ -301,6 +310,15 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/cobdmc.jpg"
                      },
                      {
+                         "name":  "Black Vultures: Prey of Greed",
+                         "date":  "2026-12-31",
+                         "human":  "2026",
+                         "platform":  "PC (Microsoft Windows)",
+                         "igdb_url":  "https://www.igdb.com/games/black-vultures-prey-of-greed--1",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa69h.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
+                     },
+                     {
                          "name":  "CrisisX",
                          "date":  "2026-12-31",
                          "human":  "2026",
@@ -310,13 +328,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa9ik.jpg"
                      },
                      {
-                         "name":  "Crimson System: VÉ\u0085Î Protocol",
+                         "name":  "Mech Log Zero",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/crimson-system-v-d-protocol",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3f.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3f.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
                      },
                      {
                          "name":  "Work In Progress",
@@ -328,13 +346,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa68a.jpg"
                      },
                      {
-                         "name":  "Black Vultures: Prey of Greed",
+                         "name":  "Hellfire Poncho",
                          "date":  "2026-12-31",
-                         "human":  "2026",
+                         "human":  "Q4 2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/black-vultures-prey-of-greed--1",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa69h.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa69h.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/hellfire-poncho",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bv4.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8bv4.jpg"
                      },
                      {
                          "name":  "Inspektor",
@@ -346,13 +364,13 @@
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coafzt.jpg"
                      },
                      {
-                         "name":  "Wanted 3D: Dead or Alive",
+                         "name":  "Crimson System: VÉ\u0085Î Protocol",
                          "date":  "2026-12-31",
                          "human":  "2026",
                          "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/wanted-3d-dead-or-alive",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jl8.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co9jl8.jpg"
+                         "igdb_url":  "https://www.igdb.com/games/crimson-system-v-d-protocol",
+                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coaa3f.jpg",
+                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coaa3f.jpg"
                      },
                      {
                          "name":  "Rotten Survivor",
@@ -362,24 +380,6 @@
                          "igdb_url":  "https://www.igdb.com/games/rotten-survivor",
                          "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coadxx.jpg",
                          "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coadxx.jpg"
-                     },
-                     {
-                         "name":  "Hellfire Poncho",
-                         "date":  "2026-12-31",
-                         "human":  "Q4 2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/hellfire-poncho",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/co8bv4.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/co8bv4.jpg"
-                     },
-                     {
-                         "name":  "Mech Log Zero",
-                         "date":  "2026-12-31",
-                         "human":  "2026",
-                         "platform":  "PC (Microsoft Windows)",
-                         "igdb_url":  "https://www.igdb.com/games/mech-log-zero",
-                         "cover_url":  "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5yl.jpg",
-                         "banner_url":  "https://images.igdb.com/igdb/image/upload/t_720p/coa5yl.jpg"
                      },
                      {
                          "name":  "Splash Girls",
